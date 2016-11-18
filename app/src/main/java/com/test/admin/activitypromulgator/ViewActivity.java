@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsActivity;
+import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsAppForm;
 
 import java.util.ArrayList;
@@ -79,8 +80,10 @@ public class ViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                AsAppForm asAppForm = new AsAppForm();
-                asAppForm.acParApply(staticObjectdId,pObjectdId);
+                showToast("报名成功");
+                pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+                //AsAppForm asAppForm = new AsAppForm();
+                //asAppForm.acParApply(staticObjectdId,pObjectdId);
             }
         });
     }

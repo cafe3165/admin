@@ -8,14 +8,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.cafe3165.activitypromulgator.newNotice">
+    tools:context="com.test.admin.promulgator.newNotice">
 
     <AbsoluteLayout
         android:id="@+id/widget136"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
         <TextView
             android:id="@+id/widget138"
             android:layout_width="wrap_content"
@@ -62,42 +63,20 @@
             >
         </TextView>
         <EditText
-            android:id="@+id/widget143"
+            android:id="@+id/imTitle"
             android:layout_width="170dp"
             android:layout_height="50dp"
-            android:text="单行输入"
             android:background="@android:drawable/alert_light_frame"
             android:textSize="15sp"
             android:layout_x="130dp"
             android:layout_y="52dp"
             >
         </EditText>
-        <EditText
-            android:id="@+id/widget144"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:background="@android:drawable/alert_light_frame"
-            android:text="多行输入"
-            android:textSize="15sp"
-            android:layout_x="130dp"
-            android:layout_y="132dp"
-            >
-        </EditText>
-        <TextView
-            android:id="@+id/widget145"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:text="——"
-            android:layout_x="130dp"
-            android:layout_y="102dp"
-            >
-        </TextView>
         <EditText
-            android:id="@+id/widget146"
+            android:id="@+id/imAudiences"
             android:layout_width="170dp"
             android:layout_height="50dp"
-            android:text="单行输入"
             android:background="@android:drawable/alert_light_frame"
             android:textSize="15sp"
             android:layout_x="130dp"
@@ -105,10 +84,9 @@
             >
         </EditText>
         <EditText
-            android:id="@+id/widget147"
+            android:id="@+id/imPushScope"
             android:layout_width="170dp"
             android:layout_height="50dp"
-            android:text="单行输入"
             android:background="@android:drawable/alert_light_frame"
             android:textSize="15sp"
             android:layout_x="130dp"
@@ -117,7 +95,7 @@
         </EditText>
 
         <Button
-            android:id="@+id/widget148"
+            android:id="@+id/publish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="发布"
@@ -125,6 +103,27 @@
             android:layout_y="400dp"
             >
         </Button>
+
+        <EditText
+            android:id="@+id/imContent"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:background="@android:drawable/alert_light_frame"
+            android:textSize="15sp"
+            android:layout_x="130dp"
+            android:layout_y="137dp"
+            >
+        </EditText>
+
+        <EditText
+            android:id="@+id/imOrganizer"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:background="@android:drawable/alert_light_frame"
+            android:layout_x="130dp"
+            android:layout_y="95dp"
+            >
+        </EditText>
     </AbsoluteLayout>
 
 </RelativeLayout>
