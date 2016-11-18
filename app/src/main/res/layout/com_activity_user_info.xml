@@ -8,11 +8,13 @@
     android:background="#FFFFFF"
     >
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4c5caf"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minHeight="?attr/actionBarSize"
         >
 
 
@@ -30,8 +32,8 @@
     </LinearLayout>
     <View
         android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_height="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_height="1dp"
         android:background="#FFFAFA" />
 
 
@@ -39,7 +41,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#4c5caf"
+        android:background="@drawable/frame_gray"
 
         >
         <TableRow>
@@ -93,8 +95,8 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
 
@@ -113,13 +115,13 @@
                 android:layout_marginLeft="50dp"
                 android:layout_height="match_parent"
                 android:padding="6dp"
-                android:background="#4c5caf"
+                android:background="@drawable/frame_gray"
                 android:src="@mipmap/ic_action_arrow_right" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -137,7 +139,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_height="match_parent"
                 android:padding="6dp"
-                android:background="#4c5caf"
+                android:background="@drawable/frame_gray"
                 android:src="@mipmap/ic_action_arrow_right" />
         </TableRow>
         <View
