@@ -50,7 +50,7 @@ public class FragmentOne extends Fragment {
         bean.setImg(R.drawable.ic_03);bean.setT1("早安福大");bean.setT1("早起使人快乐...");datas.add(bean);*/
 
         BmobQuery<AsAcApplying> bmobQuery = new BmobQuery<AsAcApplying>();
-        bmobQuery.addQueryKeys("objectdId,acApplyTitle,acApplyContent");
+        bmobQuery.addQueryKeys("objectId,acApplyTitle,acApplyContent");
         bmobQuery.findObjects(new FindListener<AsAcApplying>() {
             @Override
             public void done(List<AsAcApplying> list, BmobException e) {

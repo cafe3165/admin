@@ -31,7 +31,7 @@ public class AsActi {
         asActivity.setAcDeadline(acEnd);
         asActivity.setAcPlace(acPlace);
         asActivity.setAcPushScope_1(acPushScope1);
-        asActivity.setAcPushScope_2(acPushScope1);
+        asActivity.setAcPushScope_2(acPushScope2);
 
         asActivity.save(new SaveListener<String>() {
             @Override

@@ -51,8 +51,6 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
         acApplyContent = (TextView)findViewById(R.id.acApplyContent);
         acApplyAudiences = (TextView)findViewById(R.id.acApplyAudiences);
         acApplyLabel = (TextView)findViewById(R.id.acApplyLabel);
-        pass = (Button)findViewById(R.id.actPass_button) ;
-        not_pass = (Button)findViewById(R.id.actNoPass_button);
 
         //查找当前item对应的活动申请对象并返回值显示在TextView上
         BmobQuery<AsAcApplying> query = new BmobQuery<AsAcApplying>();
