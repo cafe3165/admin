@@ -8,11 +8,19 @@
     android:background="#FFFFFF"
     >
     <LinearLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
         android:orientation="horizontal"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+        <!--android:orientation="horizontal"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="@drawable/side_nav_bar"-->
         >
 
 
@@ -30,8 +38,8 @@
     </LinearLayout>
     <View
         android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_height="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_height="1dp"
         android:background="#FFFAFA" />
 
 
@@ -51,10 +59,10 @@
             />
         <Spinner
             android:layout_width="125dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:id="@+id/spinner0"
             android:entries="@array/quan"
-            android:background="#4285F4"
+            android:background="#A5C5E1"
 
 
             />
@@ -66,10 +74,10 @@
             />
         <Spinner
             android:layout_width="125dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:entries="@array/re"
             android:id="@+id/spinner1"
-            android:background="#4285F4"
+            android:background="#A5C5E1"
             />
         <View
             android:layout_width="3dip"
@@ -79,10 +87,10 @@
             />
         <Spinner
             android:layout_width="125dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:id="@+id/spinner2"
             android:entries="@array/shai"
-            android:background="#4285F4"
+            android:background="#A5C5E1"
             />
         <View
             android:layout_width="3dip"
@@ -96,15 +104,16 @@
     </LinearLayout>
 
 
+    <ListView
+        android:id="@+id/itemList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
     <View
         android:layout_width="fill_parent"
 
         android:layout_height="3dip"
         android:background="#FFFFFF" />
 
-    <ListView
-        android:id="@+id/itemList"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        />
 </LinearLayout>
