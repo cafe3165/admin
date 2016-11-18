@@ -41,18 +41,17 @@ public class AsAppForm {
 
         //获取当前活动对应的报名表
         BmobQuery<AsApplicationForm> query = new BmobQuery<AsApplicationForm>();
-        query.addWhereEqualTo("apAcId",acObjectdId);
-        query.setLimit(1);//设置获取数据的上限为1
+        query.addWhereContainedIn("apAcId",Arrays.asList(acObjectdId));
         query.findObjects(new FindListener<AsApplicationForm>() {
             @Override
             public void done(List<AsApplicationForm> list, BmobException e) {
 
                 //将当前用户的Id添加到报名表的参与者数组
-                list.get(0).add("apParId",parObjectdId);
-                list.get(0).add("apParStatus",false);
-                list.get(0).save(new SaveListener<String>() {
+                list.get(0).addUnique("apParId",parObjectdId);
+                list.get(0).addUnique("apParStatus",false);
+                list.get(0).update(new UpdateListener() {
                     @Override
-                    public void done(String s, BmobException e) {
+                    public void done(BmobException e) {
 
                         if(e == null){
 

@@ -38,6 +38,9 @@ public class AsActi {
             public void done(String s, BmobException e) {
                 if (e == null) {
                     showToast("审核成功");
+
+                    AsAppForm asAppForm = new AsAppForm();
+                    asAppForm.creatForm(s);
                 } else {
                     showToast("审核失败");
                 }
