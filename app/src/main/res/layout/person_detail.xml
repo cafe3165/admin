@@ -20,7 +20,6 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="社团负责人"
             android:textSize="17sp"
             android:id="@+id/proIdentity"/>
     </TableRow>
@@ -36,7 +35,6 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="xiaoming@qq.com"
             android:textSize="17sp"
             android:id="@+id/proEmail"/>
     </TableRow>
@@ -53,7 +51,6 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="18788888888"
             android:textSize="17sp"
             android:id="@+id/proPhone"/>
 
@@ -70,7 +67,6 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="1111222222"
             android:textSize="17sp"
             android:id="@+id/proQQ"/>
     </TableRow>
@@ -88,7 +84,6 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:gravity="center"
-            android:text="全部 "
             android:textSize="17sp"
             android:id="@+id/imPushScope_1"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
@@ -96,7 +91,6 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:gravity="center"
-            android:text="全部"
             android:textSize="17sp"
             android:id="@+id/imPushScope_2"/>
     </TableRow>
@@ -112,7 +106,6 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:gravity="center"
-            android:text="全部 "
             android:textSize="17sp"
             android:id="@+id/acPushScope_1"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
@@ -120,7 +113,6 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:gravity="center"
-            android:text="全部"
             android:textSize="17sp"
             android:id="@+id/acPushScope_2"/>
     </TableRow>
@@ -136,7 +128,6 @@
         android:layout_marginTop="2dp"
         android:background="@drawable/frame_gray"
         android:padding="10dp"
-        android:text="我要搞事搞事搞事搞事...\n\n"
         android:textSize="17sp"
         android:id="@+id/proSupplement"/>
 

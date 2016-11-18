@@ -5,7 +5,10 @@ import com.test.admin.bean.AsPromulgator;
 
 import java.util.Arrays;
 
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
@@ -18,7 +21,7 @@ import static com.test.admin.model.Function.showToast;
 public class AsActi {
 
 
-    public void asAcAdd(String acAudiences, String acStart, String acPushScope1, String acPushScope2,
+    public void asAcAdd(final String proObjectId, String acAudiences, String acStart, String acPushScope1, String acPushScope2,
                         String acPlace, String acOrgan, String acEnd, String acContent, String acTitle) {
 
         AsActivity asActivity = new AsActivity();
@@ -35,12 +38,29 @@ public class AsActi {
 
         asActivity.save(new SaveListener<String>() {
             @Override
-            public void done(String s, BmobException e) {
+            public void done(final String s, BmobException e) {
                 if (e == null) {
                     showToast("审核成功");
 
                     AsAppForm asAppForm = new AsAppForm();
                     asAppForm.creatForm(s);
+
+                    BmobQuery<AsPromulgator> query = new BmobQuery<AsPromulgator>();
+                    query.getObject(proObjectId, new QueryListener<AsPromulgator>() {
+                        @Override
+                        public void done(AsPromulgator bmobUser, BmobException e) {
+
+                            if(e == null) {
+                                bmobUser.addUnique("proAcId", s);
+                                bmobUser.update(new UpdateListener() {
+                                    @Override
+                                    public void done(BmobException e) {
+
+                                    }
+                                });
+                            }
+                        }
+                    });
                 } else {
                     showToast("审核失败");
                 }
