@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_head"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.test.admin.promulgator.headAct">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minHeight="?attr/actionBarSize"
+
         >
 
 
@@ -25,95 +26,148 @@
             android:text="活动助手"
             android:textSize="@dimen/biao_z"
             android:textColor="#FFFFFF"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             />
-        <!-- 定义返回按钮 -->
 
     </LinearLayout>
-    <AbsoluteLayout
-        android:id="@+id/widget0"
+
+    <View
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_height="70dp"
+        android:background="#FFF"
+        android:id="@+id/view2" />
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/widget31"
+                android:text="活动权限"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/widget32"
+
+                android:text="XXXX"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                >
+            </TextView>
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+
+            android:layout_height="20dp"
+            android:background="#FFF" />
+        <TableRow>
+            <TextView
+                android:id="@+id/widget33"
+                android:layout_marginLeft="50dp"
+                android:text="通知权限"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/widget38"
+                android:text="XXXX"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                >
+            </TextView>
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+
+            android:layout_height="20dp"
+            android:background="#FFF" />
+        <TableRow>
+
+            <TextView
+                android:id="@+id/widget37"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:text="发布者身份"
+
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/widget34"
+                android:text="XXXX"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                >
+            </TextView>
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:layout_width="fill_parent"
+
+        android:layout_height="50dp"
+        android:background="#FFF"
+        android:id="@+id/view4" />
+
+    <Button
+        android:id="@+id/widget39"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发布新活动"
+        android:textSize="23dp"
+        android:layout_x="0dp"
+        android:layout_y="182dp"
         >
-        <TextView
-            android:id="@+id/widget31"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="活动权限"
-            android:layout_x="50dp"
-            android:layout_y="72dp"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/widget32"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="——"
-            android:layout_x="150dp"
-            android:layout_y="72dp"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/widget33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="通知权限"
-            android:layout_x="50dp"
-            android:layout_y="102dp"
-            >
-        </TextView>
+    </Button>
+    <Button
+        android:id="@+id/widget40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发布新通知"
+        android:textSize="23dp"
 
-        <TextView
-            android:id="@+id/widget37"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="发布者身份"
-            android:layout_x="50dp"
-            android:layout_y="132dp"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/widget38"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="——"
-            android:layout_x="150dp"
-            android:layout_y="132dp"
-            >
-        </TextView>
-        <Button
-            android:id="@+id/widget39"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="发布新活动"
-            android:layout_x="0dp"
-            android:layout_y="182dp"
-            >
-        </Button>
-        <Button
-            android:id="@+id/widget40"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="发布新通知"
-            android:layout_x="0dp"
-            android:layout_y="242dp"
-            >
-        </Button>
-
-        <TextView
-            android:id="@+id/widget34"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="——"
-            android:layout_x="150dp"
-            android:layout_y="102dp"
-            >
-        </TextView>
+        >
+    </Button>
 
 
-    </AbsoluteLayout>
+
+    <View
+        android:layout_width="fill_parent"
+
+        android:layout_height="fill_parent"
+        android:background="#FFF" />
 
 
-</RelativeLayout>
+
+</LinearLayout>

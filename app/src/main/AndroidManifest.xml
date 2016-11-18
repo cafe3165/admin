@@ -25,7 +25,10 @@
         <activity
             android:name=".activity.PersonDetail"
             android:label="@string/title_activity_detail" />
-        <activity android:name=".login.MainActivity">
+
+        <activity android:name=".login.MainActivity"/>
+
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,10 +57,14 @@
         <activity android:name=".activitypromulgator.no_find" />
         <activity android:name=".activitypromulgator.settingAct" />
         <activity android:name=".activitypromulgator.userInfo" />
-        <activity android:name=".activitypromulgator.ViewActivity" />
+        <!--<activity android:name=".activitypromulgator.ViewActivity" />-->
         <activity android:name=".activitypromulgator.ImformViewActivity" />
         <activity android:name=".promulgator.ActInfomation" />
-        <activity android:name=".WelcomeActivity"></activity>
+
+
+
+
+
     </application>
 
 </manifest>
