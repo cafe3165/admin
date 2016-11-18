@@ -12,7 +12,7 @@ android:orientation="horizontal"
 android:gravity="center"
 android:layout_width="fill_parent"
 android:layout_height="wrap_content"
-android:background="#4285F4"
+android:background="@drawable/frame_gray"
     >
 
 
@@ -38,7 +38,7 @@ android:background="#FFFAFA" />
 android:orientation="vertical"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:background="#4285F4"
+android:background="@drawable/frame_gray"
 
     >
 <TableRow>
@@ -260,7 +260,7 @@ android:background="#4285F4"
             android:text="报名"
             android:id="@+id/button"
             android:textColor="#FFFFFF"
-            android:background="#4285F4"
+            android:background="#ccd1d8"
     />
 
     <View

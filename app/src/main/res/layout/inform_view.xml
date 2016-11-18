@@ -12,7 +12,7 @@
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="#4c5caf"
         >
 
 
@@ -38,7 +38,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="#4c5caf"
         android:stretchColumns="2"
         >
         <TableRow>

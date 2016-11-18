@@ -13,7 +13,7 @@
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="#4c5caf"
         >
 
         <TableRow>
@@ -21,7 +21,7 @@
                 android:id="@+id/ge_edit_quxiao"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#4285F4"
+                android:textColor="#4c5caf"
                 android:background="#FFFFFF"
                 android:text="取消"
                 android:textSize="@dimen/biao_z"
@@ -46,7 +46,7 @@
                 android:id="@+id/ge_edit_baocun"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#4285F4"
+                android:textColor="#4c5caf"
                 android:background="#FFFFFF"
                 android:text="保存"
                 android:textSize="@dimen/biao_z"
@@ -70,7 +70,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="#4c5caf"
 
         >
         <TableRow>
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#4285F4"
+                android:textColor="#4c5caf"
                 android:background="#FFFFFF"
                 android:id="@+id/ge_touchuan" />
         </TableRow>
@@ -137,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#4285F4"
+                android:textColor="#4c5caf"
                 android:background="#FFFFFf"
                 android:id="@+id/ge_age" />
         </TableRow>
@@ -273,7 +273,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/biao_z"
-        android:textColor="#4285F4"
+        android:textColor="#4c5caf"
         android:id="@+id/ge_editm" />
 
     <View

@@ -12,7 +12,7 @@
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="#4c5caf"
         >
 
 
@@ -39,7 +39,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="#4c5caf"
 
         >
         <TableRow>
@@ -68,7 +68,7 @@
                         android:layout_height="35dp"
                         android:textSize="20dp"
                         android:background="#FFFFFF"
-                        android:textColor="#4285F4"
+                        android:textColor="#4c5caf"
                         android:id="@+id/ge_edit" />
                 </TableRow>
 
@@ -113,7 +113,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_height="match_parent"
                 android:padding="6dp"
-                android:background="#4285F4"
+                android:background="#4c5caf"
                 android:src="@mipmap/ic_action_arrow_right" />
         </TableRow>
         <View
@@ -137,7 +137,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_height="match_parent"
                 android:padding="6dp"
-                android:background="#4285F4"
+                android:background="#4c5caf"
                 android:src="@mipmap/ic_action_arrow_right" />
         </TableRow>
         <View
