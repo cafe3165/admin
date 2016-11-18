@@ -80,10 +80,9 @@ public class ViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                showToast("报名成功");
                 pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
-                //AsAppForm asAppForm = new AsAppForm();
-                //asAppForm.acParApply(staticObjectdId,pObjectdId);
+                AsAppForm asAppForm = new AsAppForm();
+                asAppForm.acParApply(staticObjectdId,pObjectdId);
             }
         });
     }
