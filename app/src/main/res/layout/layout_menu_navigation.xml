@@ -1,98 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/left_drawer"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_gravity="start"
-              android:layout_marginRight="56dp"
-              android:background="#546E7A"
-              android:clickable="true"
-              android:focusable="true"
-              android:focusableInTouchMode="true"
-              android:orientation="vertical"
->
+    android:id="@+id/left_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:layout_marginRight="56dp"
+    android:background="#546E7A"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    >
 
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="#78909C"
-                  android:gravity="center"
-                  android:orientation="horizontal"
-                  android:padding="10dp"
-    >
+        android:layout_height="wrap_content"
+        android:background="#4c5caf"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="50dp"
+        >
         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                   android:src="@drawable/iv_avatar"/>
+            android:src="@drawable/iv_avatar"/>
 
         <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginLeft="10dp"
-                      android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
 
             <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:lineSpacingExtra="5dp" android:text="小明"
-                      android:textColor="#ffffff" android:textSize="17sp"/>
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp" android:text="小明"
+                android:textColor="#ffffff" android:textSize="17sp"/>
 
             <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:lineSpacingExtra="5dp" android:text="我爱软工"
-                      android:textColor="#ffffff" android:textSize="17sp"/>
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp" android:text="我爱软工"
+                android:textColor="#ffffff" android:textSize="17sp"/>
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical"
-    >
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
         <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="0dp"
-                      android:layout_weight="1"
-                      android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <Button android:id="@+id/btn_01" android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/frame_gray_with_bg"
-                    android:text="活动审核" android:textColor="#ffffff"/>
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:text="活动审核" android:textColor="#000"/>
+
             <Button android:id="@+id/btn_02" android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/frame_gray_with_bg"
-                    android:text="权限审核" android:textColor="#ffffff"/>
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+
+                android:text="权限审核" android:textColor="#000"/>
 
             <Button android:id="@+id/btn_03" android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/frame_gray_with_bg"
-                    android:text="用户信息更改" android:textColor="#ffffff"/>
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:text="用户信息更改" android:textColor="#000"/>
 
             <Button android:id="@+id/btn_04" android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/frame_gray_with_bg"
-                    android:text="账号注销"
-                    android:textColor="#ffffff" android:visibility="gone"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/frame_gray_with_bg"
+                android:text="账号注销"
+                android:textColor="#ffffff" android:visibility="gone"/>
 
             <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-                      android:background="#78909C"/>
+                android:background="#ffffff"/>
 
         </LinearLayout>
 
 
         <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_alignParentBottom="true"
-                      android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
             <Button android:id="@+id/btn_setting" android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/frame_gray_with_bg"
-                    android:text="设置" android:textColor="#ffffff"
-            />
+                android:layout_height="wrap_content"
+                android:layout_weight="0.86"
+                android:background="#ffffff"
+                android:text="设置" android:textColor="#000"
+                />
 
             <Button android:id="@+id/btn_exit" android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/frame_gray_with_bg"
-                    android:text="退出" android:textColor="#ffffff"
-            />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:text="退出" android:textColor="#000"
+                />
         </LinearLayout>
 
 
