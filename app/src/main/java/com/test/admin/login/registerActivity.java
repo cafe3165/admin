@@ -178,6 +178,12 @@ public class registerActivity extends AppCompatActivity {
             BmobException a= par.AsParSignup(pnum,pw,stunum,stuname,college,grade);
             if (a==null){
                 toast("注册成功");
+                StuNum.setText("");
+                StuName.setText("");
+                VerifyCode.setText("");
+                PhoneNum.setText("");
+                Password.setText("");
+                PasswordCon.setText("");
             }else{
                 toast("注册失败");
             }
