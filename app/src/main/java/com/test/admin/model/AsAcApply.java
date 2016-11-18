@@ -80,37 +80,9 @@ public class AsAcApply {
         AsActi asActivity = new AsActi();
         asActivity.asAcAdd(acAudience,acStart,acPushScope_1,acPushScope_2,acPlace,acOrgan,acEnd,acContent,acTitle);
 
-        //获取新创建的活动对应的Id
-        BmobQuery<AsActivity> query = new BmobQuery<AsActivity>();
-        query.addQueryKeys("objectId");
-        query.findObjects(new FindListener<AsActivity>() {
-            @Override
-            public void done(List<AsActivity> list, BmobException e) {
-
-                if(e == null) {
-
-                    Toast.makeText(getApplicationContext(),list.size(),Toast.LENGTH_SHORT);
-                    //创建活动对应的报名表
-                    AsAppForm appForm = new AsAppForm();
-                    appForm.creatForm(list.get(0).getObjectId());
-                    //将发布的活动的Id添加到对应的发布者的"已发布的活动的编号"的数组
-                    /*BmobUser asPromulgator = new BmobUser();
-                    asPromulgator.setObjectId(proObjectdId);
-                    asPromulgator.add("proAcId", list.get(0).getObjectId());
-                    asPromulgator.save(new SaveListener<String>() {
-
-                        @Override
-                        public void done(String s, BmobException e) {
-
-                        }
-                    });*/
-                    //从申请表里删除审核通过的活动
-                    AsAcApply acApply = new AsAcApply();
-                    acApply.acApplyDelete(appObjectdId);
-                }
-            }
-        });
-        ;
+        //从申请表里删除审核通过的活动
+        AsAcApply acApply = new AsAcApply();
+        acApply.acApplyDelete(appObjectdId);
     }
 
     //删除活动申请表里的活动

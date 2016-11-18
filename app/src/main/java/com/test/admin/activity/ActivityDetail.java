@@ -4,18 +4,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsAcApplying;
+import com.test.admin.bean.AsActivity;
 import com.test.admin.model.AsAcApply;
+import com.test.admin.model.AsAppForm;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListener;
 
+import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 import static com.test.admin.model.Function.showToast;
 
@@ -92,6 +97,35 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
                         myAsAcApplying.get(0).getAcApplyOrganizer(),myAsAcApplying.get(0).getAcApplyPlace(),
                         myAsAcApplying.get(0).getAcApplyTitle(),myAsAcApplying.get(0).getAcApplyPushScope_1(),
                         myAsAcApplying.get(0).getAcApplyPushScope_2());
+
+                //获取新创建的活动对应的Id
+                BmobQuery<AsActivity> query = new BmobQuery<AsActivity>();
+                query.addQueryKeys("objectId");
+                query.findObjects(new FindListener<AsActivity>() {
+                    @Override
+                    public void done(List<AsActivity> list, BmobException e) {
+
+                        if(e == null) {
+
+                            Toast.makeText(getApplicationContext(),list.size(),Toast.LENGTH_SHORT);
+                            //创建活动对应的报名表
+                            AsAppForm appForm = new AsAppForm();
+                            appForm.creatForm(list.get(0).getObjectId());
+                            //将发布的活动的Id添加到对应的发布者的"已发布的活动的编号"的数组
+                    /*BmobUser asPromulgator = new BmobUser();
+                    asPromulgator.setObjectId(proObjectdId);
+                    asPromulgator.add("proAcId", list.get(0).getObjectId());
+                    asPromulgator.save(new SaveListener<String>() {
+
+                        @Override
+                        public void done(String s, BmobException e) {
+
+                        }
+                    });*/
+
+                        }
+                    }
+                });
         }
     }
 
