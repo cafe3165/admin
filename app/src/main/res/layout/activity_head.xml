@@ -10,7 +10,27 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.test.admin.promulgator.headAct">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+        >
 
+
+        <TextView
+            android:id="@+id/view_titile"
+            android:gravity="center"
+            android:text="活动助手"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <!-- 定义返回按钮 -->
+
+    </LinearLayout>
     <AbsoluteLayout
         android:id="@+id/widget0"
         android:layout_width="fill_parent"

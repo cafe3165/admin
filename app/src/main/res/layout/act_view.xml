@@ -7,261 +7,261 @@
     android:layout_height="fill_parent"
     android:background="#FFFFFF"
     >
-<LinearLayout
-android:orientation="horizontal"
-android:gravity="center"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:background="@drawable/frame_gray"
-    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame_gray"
+        >
 
 
-<TextView
-    android:id="@+id/view_titile"
-    android:gravity="center"
-    android:text="活动详情"
-    android:textSize="@dimen/biao_z"
-    android:textColor="#FFFFFF"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    />
-<!-- 定义返回按钮 -->
+        <TextView
+            android:id="@+id/view_titile"
+            android:gravity="center"
+            android:text="活动详情"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <!-- 定义返回按钮 -->
 
-</LinearLayout>
-<View
-android:layout_width="fill_parent"
-android:layout_marginTop="5dp"
-android:layout_height="3dp"
-android:background="#FFFAFA" />
-
-<TableLayout
-android:orientation="vertical"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:background="@drawable/frame_gray"
-
-    >
-<TableRow>
-    <TextView
-        android:text="活动标题"
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_biao1" />
-    <TextView
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_biao" />
-</TableRow>
-<View
-    android:layout_width="fill_parent"
-    android:layout_marginTop="5dp"
-    android:layout_height="3dp"
-    android:background="#FFFAFA" />
-<TableRow>
-
-    <TextView
-        android:text="活动状态"
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_zhuangtai1" />
-
-    <TextView
-        android:text="报名阶段"
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_zhuangtai" />
-</TableRow>
-<View
-    android:layout_width="fill_parent"
-    android:layout_marginTop="5dp"
-    android:layout_height="3dp"
-    android:background="#FFFAFA" />
-<TableRow>
-    <TextView
-        android:text="举办方"
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_time1" />
-    <TextView
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_fang" />
-</TableRow>
-<View
-    android:layout_width="fill_parent"
-    android:layout_marginTop="5dp"
-    android:layout_height="3dp"
-    android:background="#FFFAFA" />
-<TableRow>
-    <TextView
-        android:text="活动时间"
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/inform_nei1" />
-    <TextView
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_time" />
-</TableRow>
+    </LinearLayout>
     <View
         android:layout_width="fill_parent"
         android:layout_marginTop="5dp"
         android:layout_height="3dp"
         android:background="#FFFAFA" />
-    <TableRow>
-        <TextView
-            android:text="活动时间"
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/inform_nei2" />
-        <TextView
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/act_time2" />
-</TableRow>
 
-<View
-    android:layout_width="fill_parent"
-    android:layout_marginTop="5dp"
-    android:layout_height="3dp"
-    android:background="#FFFAFA"
-    />
-<TableRow>
-    <TextView
-        android:text="活动地点"
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_place1" />
+        android:background="@drawable/frame_gray"
 
-    <TextView
-        android:layout_marginLeft="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/biao_z"
-        android:textColor="#FFFFFF"
-        android:id="@+id/act_place" />
-</TableRow>
-    <View
-        android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_height="3dp"
-        android:background="#FFFAFA"
-        />
-    <TableRow>
-        <TextView
-            android:text="活动内容"
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/act_nei1" />
-        <TextView
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/act_nei" />
-    </TableRow>
-    <View
-        android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_height="3dp"
-        android:background="#FFFAFA"
-        />
-    <TableRow>
-        <TextView
-            android:text="活动受众"
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/act_shouzhong1" />
+        >
+        <TableRow>
+            <TextView
+                android:text="活动标题"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_biao1" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_biao" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
 
-        <TextView
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/act_shouzhong" />
-    </TableRow>
-    <View
-        android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_height="3dp"
-        android:background="#FFFAFA"
-        />
-    <TableRow>
-        <TextView
-            android:text="活动标签"
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/act_biaoq1" />
-        <TextView
-            android:text="综测 礼品 名人 户外"
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/act_biaoq" />
-    </TableRow>
+            <TextView
+                android:text="活动状态"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_zhuangtai1" />
+
+            <TextView
+                android:text="报名阶段"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_zhuangtai" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="举办方"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_time1" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_fang" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="活动时间"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_nei1" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_time" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="活动时间"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_nei2" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_time2" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+            <TextView
+                android:text="活动地点"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_place1" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_place" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+            <TextView
+                android:text="活动内容"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_nei1" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_nei" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+            <TextView
+                android:text="活动受众"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_shouzhong1" />
+
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_shouzhong" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+            <TextView
+                android:text="活动标签"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_biaoq1" />
+            <TextView
+                android:text="综测 礼品 名人 户外"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_biaoq" />
+        </TableRow>
 
 
-</TableLayout>
+    </TableLayout>
     <View
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#FFFAFA"
         android:id="@+id/view2" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="报名"
-            android:id="@+id/button"
-            android:textColor="#FFFFFF"
-            android:background="#ccd1d8"
-    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="报名"
+        android:id="@+id/button"
+        android:textColor="#FFFFFF"
+        android:background="#ccd1d8"
+        />
 
     <View
         android:layout_width="fill_parent"

@@ -32,6 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activitypromulgator.ViewActivity"/>
         <activity android:name=".login.forgetPasswordActivity" />
         <activity android:name=".login.registerActivity" />
         <activity android:name=".login.Registered" />
@@ -54,7 +56,12 @@
         <activity android:name=".activitypromulgator.settingAct" />
         <activity android:name=".activitypromulgator.userInfo" />
         <activity android:name=".activitypromulgator.ViewActivity" />
-        <activity android:name=".activitypromulgator.ImformViewActivity"></activity>
+        <activity android:name=".activitypromulgator.ImformViewActivity">
+
+
+        </activity>
+
+
     </application>
 
 </manifest>
