@@ -51,6 +51,8 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
         acApplyContent = (TextView)findViewById(R.id.acApplyContent);
         acApplyAudiences = (TextView)findViewById(R.id.acApplyAudiences);
         acApplyLabel = (TextView)findViewById(R.id.acApplyLabel);
+        pass = (Button)findViewById(R.id.actPass_button) ;
+        not_pass = (Button)findViewById(R.id.actNoPass_button);
 
         //查找当前item对应的活动申请对象并返回值显示在TextView上
         BmobQuery<AsAcApplying> query = new BmobQuery<AsAcApplying>();
@@ -85,7 +87,6 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
 
             case R.id.actPass_button:
 
-                showToast("按下了按钮");
                 AsAcApply asAcApply = new AsAcApply();
                 asAcApply.acApplySend(myAsAcApplying.get(0).getAcApplyProId(),myAsAcApplying.get(0).getObjectId(),
                         myAsAcApplying.get(0).getAcApplyAudiences(),myAsAcApplying.get(0).getAcApplyContent(),

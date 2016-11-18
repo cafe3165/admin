@@ -98,13 +98,6 @@
             android:gravity="center"
             android:text="全部"
             android:textSize="17sp"/>
-        <!--<TextView android:layout_width="match_parent" android:layout_weight="1"-->
-            <!--android:layout_marginTop="2dp"-->
-            <!--android:background="@drawable/frame_gray"-->
-            <!--android:padding="10dp"-->
-            <!--android:gravity="center"-->
-            <!--android:text="全部"-->
-            <!--android:textSize="17sp"/>-->
     </TableRow>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -127,13 +120,6 @@
             android:gravity="center"
             android:text="全部"
             android:textSize="17sp"/>
-        <!--<TextView android:layout_width="match_parent" android:layout_weight="1"-->
-            <!--android:layout_marginTop="2dp"-->
-            <!--android:background="@drawable/frame_gray"-->
-            <!--android:padding="10dp"-->
-            <!--android:gravity="center"-->
-            <!--android:text="全部"-->
-            <!--android:textSize="17sp"/>-->
     </TableRow>
 
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -150,13 +136,6 @@
         android:text="我要搞事搞事搞事搞事...\n\n"
         android:textSize="17sp"/>
 
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/frame_gray"
-        android:padding="10dp"
-        android:text="活动受众  大一新生"
-        android:textSize="17sp"/>
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -171,6 +150,7 @@
                 android:background="#488ddb"
                 android:layout_weight="0.6"
                 android:text="不通过"
+                android:onClick="onClick"
                 android:layout_margin="0.5dip"
                 android:visibility="visible" />
 
@@ -181,6 +161,7 @@
                 android:layout_weight="0.6"
                 android:layout_margin="0.5dip"
                 android:text="通过"
+                android:onClick="onClick"
                 android:visibility="visible" />
 
         </TableRow>

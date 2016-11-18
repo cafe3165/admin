@@ -6,6 +6,6 @@ package com.test.admin.bean;
 
 public class Parameters {
 
-    public static int staticPosition;
-    public static String staticObjectdId;
+    public static String staticObjectdId;//保存活动Id或者通知Id
+    public static String pObjectdId;//保存当前用户Id
 }
