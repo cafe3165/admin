@@ -21,6 +21,8 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
+import static com.test.admin.bean.Parameters.staticObjectdId;
+
 /**
  * Created by hc6 on 2016/11/16.
  */
@@ -64,6 +66,9 @@ public class FragmentTwo extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 startActivity(new Intent(getActivity(), PersonDetail.class));
+
+                AsPermissionApplying asPermissionApplying = asPermissionApplyingList.get(position);
+                staticObjectdId = asPermissionApplying.getObjectId().toString();
             }
         });
 

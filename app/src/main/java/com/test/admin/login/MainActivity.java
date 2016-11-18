@@ -18,7 +18,10 @@ import com.test.admin.model.Asadmin;
 import com.test.admin.model.Aspar;
 
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+
+import static com.test.admin.bean.Parameters.pObjectdId;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -170,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
             toast("登录成功");
             Intent intent=new Intent(MainActivity.this,com.test.admin.activitypromulgator.MainActivity.class);
             startActivity(intent);
+
+            pObjectdId = (String) BmobUser.getObjectByKey("objectdId");
         }else {
             toast("登录失败");
         }
@@ -194,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
         if (a==null){
             Intent login_intent=new Intent(MainActivity.this,com.test.admin.promulgator.MainActivity.class);
             startActivity(login_intent);
+
         }else {
             toast("登录失败"+a.getErrorCode());
         }
@@ -220,6 +226,7 @@ public class MainActivity extends AppCompatActivity {
             toast("登录成功");
             Intent login_intent=new Intent(MainActivity.this, com.test.admin.activity.MainActivity.class);
             startActivity(login_intent);
+
         }else {
             toast("登录失败");
         }

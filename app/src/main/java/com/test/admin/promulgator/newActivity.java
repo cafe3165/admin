@@ -7,7 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.test.admin.R;
+import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsAcApply;
+
+import cn.bmob.v3.BmobUser;
+
+import static com.test.admin.bean.Parameters.pObjectdId;
 
 public class newActivity extends AppCompatActivity {
 
@@ -39,7 +44,7 @@ public class newActivity extends AppCompatActivity {
         acIssue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //获取EditText上的输入
                 String myAcTitle = acTitle.getText().toString();
                 String myAcOrganizer = acOrganizer.getText().toString();
                 String myAcStarTime = acStartTime.getText().toString();
@@ -49,10 +54,11 @@ public class newActivity extends AppCompatActivity {
                 String myAcAudiences = acAudiences.getText().toString();
                 String myAcPushScope_1 = acPushScope_1.getText().toString();
                 String myAcPushScope_2 = acPushScope_1.getText().toString();
-                String proObjectId = new String();
+                pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+                //发布活动，成功推到活动申请表
                 AsAcApply asAcApply = new AsAcApply();
                 asAcApply.acApplyAdd(myAcTitle, myAcOrganizer, myAcStarTime, myAcDeadTime, myAcPlace, myAcContent,
-                        myAcAudiences, myAcPushScope_1, myAcPushScope_2,proObjectId);
+                        myAcAudiences, myAcPushScope_1, myAcPushScope_2,pObjectdId);
             }
         });
     }

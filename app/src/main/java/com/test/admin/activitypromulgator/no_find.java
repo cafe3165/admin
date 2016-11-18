@@ -34,7 +34,7 @@ public class no_find extends AppCompatActivity {
         lv_imformation = (ListView)findViewById(R.id.itemList);
 
         BmobQuery<AsImformation> bmobQuery = new BmobQuery<AsImformation>();
-        bmobQuery.addQueryKeys("objectdId,imTitle,imContent");
+        bmobQuery.addQueryKeys("objectId,imTitle,imContent");
         bmobQuery.findObjects(new FindListener<AsImformation>() {
             @Override
             public void done(List<AsImformation> list, BmobException e) {

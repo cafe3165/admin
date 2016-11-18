@@ -85,7 +85,6 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
 
             case R.id.actPass_button:
 
-                showToast("按下了按钮");
                 AsAcApply asAcApply = new AsAcApply();
                 asAcApply.acApplySend(myAsAcApplying.get(0).getAcApplyProId(),myAsAcApplying.get(0).getObjectId(),
                         myAsAcApplying.get(0).getAcApplyAudiences(),myAsAcApplying.get(0).getAcApplyContent(),

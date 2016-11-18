@@ -2,11 +2,13 @@ package com.test.admin.activitypromulgator;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsActivity;
+import com.test.admin.model.AsAppForm;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,9 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 
+import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
+import static com.test.admin.model.Function.showToast;
 
 public class ViewActivity extends AppCompatActivity {
 
@@ -47,6 +51,7 @@ public class ViewActivity extends AppCompatActivity {
         acContent = (TextView)findViewById(R.id.act_nei);
         acAudiences = (TextView)findViewById(R.id.act_shouzhong);
         acLabel = (TextView)findViewById(R.id.act_biaoq);
+        apply = (Button)findViewById(R.id.button);
 
         //查找当前item对应的活动申请对象并返回值显示在TextView上
         BmobQuery<AsActivity> query = new BmobQuery<AsActivity>();
@@ -69,5 +74,15 @@ public class ViewActivity extends AppCompatActivity {
                 }
             }
         });
+
+        apply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AsAppForm asAppForm = new AsAppForm();
+                asAppForm.acParApply(staticObjectdId,pObjectdId);
+            }
+        });
     }
+
 }

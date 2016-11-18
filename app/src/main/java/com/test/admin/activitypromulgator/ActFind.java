@@ -33,7 +33,7 @@ public class ActFind extends AppCompatActivity {
         lv_activity = (ListView)findViewById(R.id.itemList);
 
         BmobQuery<AsActivity> bmobQuery = new BmobQuery<AsActivity>();
-        bmobQuery.addQueryKeys("acTitle,acContent");
+        bmobQuery.addQueryKeys("objectId,acTitle,acContent");
         bmobQuery.findObjects(new FindListener<AsActivity>() {
             @Override
             public void done(List<AsActivity> list, BmobException e) {
