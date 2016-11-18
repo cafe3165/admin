@@ -2,6 +2,7 @@ package com.test.admin.model;
 
 import com.test.admin.bean.AsApplicationForm;
 import com.test.admin.bean.AsParticipant;
+import com.test.admin.bean.AsPromulgator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,6 +11,7 @@ import java.util.List;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
+import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
@@ -58,13 +60,20 @@ public class AsAppForm {
                             showToast("报名成功");
 
                             //将用户报名的活动添加到用户已报名的活动数组
-                            AsParticipant asParticipant = new AsParticipant();
-                            asParticipant.setObjectId(parObjectdId);
-                            asParticipant.add("parAcId",acObjectdId);
-                            asParticipant.update(new UpdateListener() {
+                            BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
+                            query.getObject(parObjectdId, new QueryListener<AsParticipant>() {
                                 @Override
-                                public void done(BmobException e) {
+                                public void done(AsParticipant bmobUser, BmobException e) {
 
+                                    if (e == null) {
+                                        bmobUser.addUnique("parAcId", acObjectdId);
+                                        bmobUser.update(new UpdateListener() {
+                                            @Override
+                                            public void done(BmobException e) {
+
+                                            }
+                                        });
+                                    }
                                 }
                             });
                         }else{

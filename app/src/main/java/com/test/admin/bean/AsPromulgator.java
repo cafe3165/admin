@@ -83,4 +83,5 @@ public class AsPromulgator extends BmobUser{
     public void setProAcIdEnd(List<String> proAcIdEnd) {
         this.proAcIdEnd = proAcIdEnd;
     }
+
 }

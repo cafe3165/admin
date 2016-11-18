@@ -78,7 +78,7 @@ public class AsAcApply {
                             String acOrgan, String acPlace, String acTitle, String acPushScope_1, String acPushScope_2) {
         //将通过审核的活动推到活动列表
         AsActi asActivity = new AsActi();
-        asActivity.asAcAdd(acAudience,acStart,acPushScope_1,acPushScope_2,acPlace,acOrgan,acEnd,acContent,acTitle);
+        asActivity.asAcAdd(proObjectdId,acAudience,acStart,acPushScope_1,acPushScope_2,acPlace,acOrgan,acEnd,acContent,acTitle);
 
         //从申请表里删除审核通过的活动
         AsAcApply acApply = new AsAcApply();

@@ -93,6 +93,10 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
                         myAsAcApplying.get(0).getAcApplyTitle(),myAsAcApplying.get(0).getAcApplyPushScope_1(),
                         myAsAcApplying.get(0).getAcApplyPushScope_2());
 
+            case R.id.actNoPass_button:
+
+                AsAcApply asAcApply_not = new AsAcApply();
+                asAcApply_not.acApplyDelete(myAsAcApplying.get(0).getObjectId());
         }
     }
 
