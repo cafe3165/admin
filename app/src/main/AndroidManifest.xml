@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.test.admin">
+    package="com.test.admin">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="cn.bmob.permission.push"/>
+    <uses-permission android:name="cn.bmob.permission.push" />
 
     <application
         android:allowBackup="true"
@@ -18,108 +18,43 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:label="@string/app_name"
-        >
-
-        </activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".activity.ActivityDetail"
-            android:label="@string/title_activity_detail"
-        >
-        </activity>
+            android:label="@string/title_activity_detail" />
         <activity
-            android:name=".login.MainActivity"
-            >
+            android:name=".activity.PersonDetail"
+            android:label="@string/title_activity_detail" />
+        <activity android:name=".login.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".login.forgetPasswordActivity"
-            >
-        </activity>
-        <activity
-            android:name=".login.registerActivity"
-            >
-        </activity>
-        <activity
-            android:name=".login.Registered"
-            >
-        </activity>
-        <activity
-            android:name=".promulgator.MainActivity"
-            >
-        </activity>
-        <activity
-            android:name=".promulgator.settingAct"
-            >
-        </activity>
-        <activity
-            android:name=".promulgator.headAct"
-            >
-        </activity>
-        <activity
-            android:name=".promulgator.Main2Activity"
-            >
-        </activity>
-        <activity
-            android:name=".promulgator.Main3Activity"
-            >
-        </activity>
-        <activity
-            android:name=".promulgator.Main4Activity"
-            >
-        </activity>
-        <activity
-            android:name=".promulgator.newActivity"
-            >
-        </activity>
-        <activity
-            android:name=".promulgator.newNotice"
-            >
-        </activity>
-        <activity
-            android:name=".login.applyPromulgator"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.ComHead"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.HistoryAct"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.InfoEdit"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.MainActivity"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.MyAct"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.ActFind"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.no_find"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.settingAct"
-            >
-        </activity>
-        <activity
-            android:name=".activitypromulgator.userInfo"
-            >
-        </activity>
+        <activity android:name=".login.forgetPasswordActivity" />
+        <activity android:name=".login.registerActivity" />
+        <activity android:name=".login.Registered" />
+        <activity android:name=".promulgator.MainActivity" />
+        <activity android:name=".promulgator.settingAct" />
+        <activity android:name=".promulgator.headAct" />
+        <activity android:name=".promulgator.Main2Activity" />
+        <activity android:name=".promulgator.Main3Activity" />
+        <activity android:name=".promulgator.Main4Activity" />
+        <activity android:name=".promulgator.newActivity" />
+        <activity android:name=".promulgator.newNotice" />
+        <activity android:name=".login.applyPromulgator" />
+        <activity android:name=".activitypromulgator.ComHead" />
+        <activity android:name=".activitypromulgator.HistoryAct" />
+        <activity android:name=".activitypromulgator.InfoEdit" />
+        <activity android:name=".activitypromulgator.MainActivity" />
+        <activity android:name=".activitypromulgator.MyAct" />
+        <activity android:name=".activitypromulgator.ActFind" />
+        <activity android:name=".activitypromulgator.no_find" />
+        <activity android:name=".activitypromulgator.settingAct" />
+        <activity android:name=".activitypromulgator.userInfo" />
+        <activity android:name=".activitypromulgator.ViewActivity" />
+        <activity android:name=".activitypromulgator.ImformViewActivity"></activity>
     </application>
 
 </manifest>

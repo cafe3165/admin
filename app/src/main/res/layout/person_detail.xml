@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
+    <TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,15 +13,16 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="活动标题"
-            android:textSize="17sp"/>
+            android:text="申请者身份 "
+            android:textSize="17sp" />
 
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
+            android:text="社团负责人"
             android:textSize="17sp"
-            android:id="@+id/acApplyTitle"/>
+            android:id="@+id/proIdentity"/>
     </TableRow>
 
     <TableRow>
@@ -29,14 +30,15 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="活动状态"
+            android:text="邮箱  "
             android:textSize="17sp"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
+            android:text="xiaoming@qq.com"
             android:textSize="17sp"
-            android:id="@+id/acApplyStatus"/>
+            android:id="@+id/proEmail"/>
     </TableRow>
 
     <TableRow>
@@ -44,15 +46,16 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="举办方"
+            android:text="手机"
             android:textSize="17sp"/>
 
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
+            android:text="18788888888"
             android:textSize="17sp"
-            android:id="@+id/acApplyOrganizer"/>
+            android:id="@+id/proPhone"/>
 
     </TableRow>
 
@@ -61,46 +64,78 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="开始时间"
+            android:text="QQ "
             android:textSize="17sp"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
+            android:text="1111222222"
             android:textSize="17sp"
-            android:id="@+id/acApplyStartTime"/>
+            android:id="@+id/proQQ"/>
     </TableRow>
 
 
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/frame_gray"
+        android:padding="10dp"
+        android:text="通知权限申请"
+        android:textSize="17sp"/>
     <TableRow>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="结束时间"
-            android:textSize="17sp"/>
+            android:gravity="center"
+            android:text="全部 "
+            android:textSize="17sp"
+            android:id="@+id/imPushScope_1"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:textSize="17sp"
-            android:id="@+id/acApplyDeadLine"/>
+            android:gravity="center"
+            android:text="全部"
+            android:textSize="17sp"/>
+        <!--<TextView android:layout_width="match_parent" android:layout_weight="1"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:background="@drawable/frame_gray"-->
+            <!--android:padding="10dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="全部"-->
+            <!--android:textSize="17sp"/>-->
     </TableRow>
-
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/frame_gray"
+        android:padding="10dp"
+        android:text="活动权限申请"
+        android:textSize="17sp"/>
     <TableRow>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:text="活动地点"
+            android:gravity="center"
+            android:text="全部 "
             android:textSize="17sp"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:textSize="17sp"
-            android:id="@+id/acApplyPlace"/>
+            android:gravity="center"
+            android:text="全部"
+            android:textSize="17sp"/>
+        <!--<TextView android:layout_width="match_parent" android:layout_weight="1"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:background="@drawable/frame_gray"-->
+            <!--android:padding="10dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="全部"-->
+            <!--android:textSize="17sp"/>-->
     </TableRow>
+
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@drawable/frame_gray"
@@ -112,45 +147,15 @@
         android:layout_marginTop="2dp"
         android:background="@drawable/frame_gray"
         android:padding="10dp"
-        android:textSize="17sp"
-        android:id="@+id/acApplyContent"/>
+        android:text="我要搞事搞事搞事搞事...\n\n"
+        android:textSize="17sp"/>
 
-    <TableRow>
-        <TextView android:layout_width="match_parent" android:layout_weight="1"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/frame_gray"
-            android:padding="10dp"
-            android:gravity="center"
-            android:text="活动受众"
-            android:textSize="17sp"/>
-        <TextView android:layout_width="match_parent" android:layout_weight="1"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/frame_gray"
-            android:padding="10dp"
-            android:gravity="center"
-            android:textSize="17sp"
-            android:id="@+id/acApplyAudiences"/>
-    </TableRow>
-
-    <TableRow>
-        <TextView android:layout_width="match_parent" android:layout_weight="1"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/frame_gray"
-            android:padding="10dp"
-            android:gravity="center"
-            android:text="活动标签"
-            android:textSize="17sp"/>
-        <TextView android:layout_width="match_parent" android:layout_weight="1"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/frame_gray"
-            android:padding="10dp"
-            android:gravity="center"
-            android:text="综测  礼物  "
-            android:textSize="17sp"
-            android:id="@+id/acApplyLabel"/>
-    </TableRow>
-
-
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/frame_gray"
+        android:padding="10dp"
+        android:text="活动受众  大一新生"
+        android:textSize="17sp"/>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -163,20 +168,20 @@
             <Button
                 android:id="@+id/actNoPass_button"
                 android:layout_height="wrap_content"
-                android:background="#ccd1d8"
+                android:background="#488ddb"
                 android:layout_weight="0.6"
                 android:text="不通过"
-                android:onClick="onClick"
-                android:layout_margin="0.5dip" />
+                android:layout_margin="0.5dip"
+                android:visibility="visible" />
 
             <Button
                 android:id="@+id/actPass_button"
                 android:layout_height="wrap_content"
-                android:background="#c6cdd5"
+                android:background="#488ddb"
                 android:layout_weight="0.6"
                 android:layout_margin="0.5dip"
-                android:onClick="onClick"
-                android:text="通过" />
+                android:text="通过"
+                android:visibility="visible" />
 
         </TableRow>
     </TableLayout>
