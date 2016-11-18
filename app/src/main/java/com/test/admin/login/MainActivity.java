@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String[] items = new String[]{"管理员", "发布者", "参与者"};
     private String str1 = "忘记密码?";
     private String str2 = "还未注册?";
-    Button btn1,btn2,btn3;
+    Button btn1,btn2,btn3,btn4;
     TextView tv1,tv2;
     String str;//选择的身份
     String s1 = "管理员";
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         btn1=(Button)findViewById(R.id.login);
         btn2=(Button)findViewById(R.id.btn2);
         btn3=(Button)findViewById(R.id.btn3);
+        btn4=(Button)findViewById(R.id.btn4);
         //tv1=(TextView)findViewById(tv5);
         //tv2=(TextView)findViewById(tv6);
 
@@ -131,6 +132,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //申请成为发布者跳转
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,applyPromulgator.class);
+                startActivity(intent);
+            }
+        });
+
 /*
         ss1.setSpan(new ClickableSpan()
         {
@@ -153,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
     //参与者验证（限定用手机号登录）
     private void parverify(){
         String username=Username.getText().toString();
-        final String moblienum="^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$";
+        final String moblienum="^((13[0-9])|(15[^4,\\D])|(18[0,5-9])|(17[0-8])|(147))\\d{8}$";
         if (username.matches(moblienum)){
             parsignin();
         }else {
