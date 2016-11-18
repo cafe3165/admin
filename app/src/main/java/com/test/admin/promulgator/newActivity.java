@@ -1,18 +1,13 @@
 package com.test.admin.promulgator;
-import android.support.annotation.BoolRes;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.test.admin.R;
-import com.test.admin.bean.AsAcApplying;
 import com.test.admin.model.AsAcApply;
-
-import cn.bmob.v3.Bmob;
-import cn.bmob.v3.listener.FindListener;
 
 public class newActivity extends AppCompatActivity {
 

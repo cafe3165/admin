@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+        >
+
+
+        <TextView
+            android:id="@+id/view_titile"
+            android:gravity="center"
+            android:text="通知详情"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <!-- 定义返回按钮 -->
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="3dp"
+        android:background="#FFFAFA" />
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+        android:stretchColumns="2"
+        >
+        <TableRow>
+            <TextView
+                android:text="通知标题"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_biao1" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_biao" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="通知方"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_fang1" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_fang" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="通知时间"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_time1" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_time" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+        <TextView
+            android:text="通知内容"
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:id="@+id/inform_nei1" />
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:id="@+id/inform_nei" />
+    </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+
+            <TextView
+                  android:text="通知受众"
+                  android:layout_marginLeft="50dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/biao_z"
+                  android:textColor="#FFFFFF"
+                  android:id="@+id/inform_shouzhong1" />
+
+            <TextView
+             android:layout_marginLeft="50dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="@dimen/biao_z"
+             android:textColor="#FFFFFF"
+             android:id="@+id/inform_shouzhong" />
+        </TableRow>
+</TableLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFAFA"
+      />
+</LinearLayout>

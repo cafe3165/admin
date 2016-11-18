@@ -10,7 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.test.admin.R;
-import com.test.admin.activity.ActivityDetail;
+import com.test.admin.activity.PersonDetail;
 import com.test.admin.adapter.PermissionAdapter;
 import com.test.admin.bean.AsPermissionApplying;
 
@@ -63,7 +63,7 @@ public class FragmentTwo extends Fragment {
         lv_permission.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(getActivity(), ActivityDetail.class));
+                startActivity(new Intent(getActivity(), PersonDetail.class));
             }
         });
 

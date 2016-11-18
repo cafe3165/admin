@@ -12,9 +12,7 @@ import android.widget.ListView;
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
 import com.test.admin.adapter.AcApplyAdapter;
-import com.test.admin.adapter.ActivityAdapter;
 import com.test.admin.bean.AsAcApplying;
-import com.test.admin.bean.AsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +20,8 @@ import java.util.List;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
+
+import static com.test.admin.bean.Parameters.staticObjectdId;
 
 /**
  * Created by hc6 on 2016/11/16.
@@ -44,30 +44,13 @@ public class FragmentOne extends Fragment {
 
         lv_activity = (ListView) view.findViewById(R.id.lv_activity);
 
-        //List<ActivityBean> datas = new ArrayList<>();
-
-        /*ActivityBean bean = null;
-
-        bean = new ActivityBean();
-        bean.setImg(R.drawable.ic_01);
-        bean.setT1("读书笔记");
-        bean.setT1("读书使人快乐...");
-        datas.add(bean);
-
-        bean = new ActivityBean();
-        bean.setImg(R.drawable.ic_02);
-        bean.setT1("数计迎新");
-        bean.setT1("又是一年...");
-        datas.add(bean);
-
-        bean = new ActivityBean();
-        bean.setImg(R.drawable.ic_03);
-        bean.setT1("早安福大");
-        bean.setT1("早起使人快乐...");
-        datas.add(bean);*/
+        /*用于ListView的item监听测试
+        /*List<ActivityBean> datas = new ArrayList<>();ActivityBean bean = null;bean = new ActivityBean();bean.setImg(R.drawable.ic_01);bean.setT1("读书笔记");bean.setT1("读书使人快乐...");
+        datas.add(bean);bean = new ActivityBean();bean.setImg(R.drawable.ic_02);bean.setT1("数计迎新");bean.setT1("又是一年...");datas.add(bean);bean = new ActivityBean();
+        bean.setImg(R.drawable.ic_03);bean.setT1("早安福大");bean.setT1("早起使人快乐...");datas.add(bean);*/
 
         BmobQuery<AsAcApplying> bmobQuery = new BmobQuery<AsAcApplying>();
-        bmobQuery.addQueryKeys("acApplyTitle,acApplyContent");
+        bmobQuery.addQueryKeys("objectdId,acApplyTitle,acApplyContent");
         bmobQuery.findObjects(new FindListener<AsAcApplying>() {
             @Override
             public void done(List<AsAcApplying> list, BmobException e) {
@@ -87,6 +70,9 @@ public class FragmentOne extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 startActivity(new Intent(getActivity(), ActivityDetail.class));
+
+                AsAcApplying asAcApplying  = asActivityList.get(position);
+                staticObjectdId = asAcApplying.getObjectId().toString();
             }
         });
 
