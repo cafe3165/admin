@@ -224,8 +224,9 @@ public class MainActivity extends AppCompatActivity {
             public void done(AsPromulgator asPromulgator, BmobException e) {
                 if (e==null){
                     toast("登录成功");
-                    Intent intent = new Intent(MainActivity.this,com.test.admin.activitypromulgator.MainActivity.class);
+                    Intent intent = new Intent(MainActivity.this,com.test.admin.promulgator.MainActivity.class);
                     startActivity(intent);
+                    btn1.setEnabled(true);
                     Password.setText("");
                 }else {
                     toast("登录失败");
@@ -259,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
                     toast("登录成功");
                     Intent login_intent=new Intent(MainActivity.this, com.test.admin.activity.MainActivity.class);
                     startActivity(login_intent);
+                    btn1.setEnabled(true);
                     Password.setText("");
                 }else{
                     toast("登录失败");
