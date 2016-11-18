@@ -8,11 +8,13 @@
     android:background="#FFFFFF"
     >
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4c5caf"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minHeight="?attr/actionBarSize"
         >
 
 
@@ -30,15 +32,15 @@
     </LinearLayout>
     <View
         android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_height="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_height="1dp"
         android:background="#FFFAFA" />
 
     <TableLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#4c5caf"
+        android:background="@drawable/frame_gray"
         android:stretchColumns="2"
         >
         <TableRow>
@@ -48,20 +50,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/inform_biao1" />
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/inform_biao" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -70,20 +72,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#FFFFFF"
+                android:textColor="#302c2c"
                 android:id="@+id/inform_fang1" />
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/inform_fang" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -92,68 +94,67 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/inform_time1" />
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/inform_time" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
-        <TextView
-            android:text="通知内容"
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/inform_nei1" />
-        <TextView
-            android:layout_marginLeft="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:id="@+id/inform_nei" />
-    </TableRow>
+            <TextView
+                android:text="通知内容"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                android:id="@+id/inform_nei1" />
+            <TextView
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                android:id="@+id/inform_nei" />
+        </TableRow>
 
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
 
             <TextView
-                  android:text="通知受众"
-                  android:layout_marginLeft="50dp"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textSize="@dimen/biao_z"
-                  android:textColor="#FFFFFF"
-                  android:id="@+id/inform_shouzhong1" />
+                android:text="通知受众"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                android:id="@+id/inform_shouzhong1" />
 
             <TextView
-             android:layout_marginLeft="50dp"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:textSize="@dimen/biao_z"
-             android:textColor="#FFFFFF"
-             android:id="@+id/inform_shouzhong" />
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#000"
+                android:id="@+id/inform_shouzhong" />
         </TableRow>
-</TableLayout>
+    </TableLayout>
     <View
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:background="#FFFAFA"
-      />
+        />
 </LinearLayout>

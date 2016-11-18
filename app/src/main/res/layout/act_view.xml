@@ -8,11 +8,14 @@
     android:background="#FFFFFF"
     >
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/frame_gray"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
         >
 
 
@@ -30,8 +33,8 @@
     </LinearLayout>
     <View
         android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_height="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_height="1dp"
         android:background="#FFFAFA" />
 
     <TableLayout
@@ -60,8 +63,8 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
 
@@ -85,8 +88,8 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -107,8 +110,8 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -129,8 +132,8 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -152,10 +155,9 @@
 
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="活动地点"
@@ -176,10 +178,9 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="活动内容"
@@ -199,10 +200,9 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="活动受众"
@@ -223,10 +223,9 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="活动标签"
@@ -237,7 +236,7 @@
                 android:textColor="#FFFFFF"
                 android:id="@+id/act_biaoq1" />
             <TextView
-                android:text="综测 礼品 名人 户外"
+                android:text="综测 礼品 名人 "
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -249,15 +248,16 @@
 
     </TableLayout>
     <View
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#FFFAFA"
-        android:id="@+id/view2" />
+        android:layout_width="fill_parent"
+        android:layout_marginTop="1dp"
+        android:layout_height="1dp"
+        android:background="#FFFAFA" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="报名"
+        android:textSize="22dp"
         android:id="@+id/button"
         android:textColor="#FFFFFF"
         android:background="#ccd1d8"
