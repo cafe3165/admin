@@ -13,6 +13,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.test.admin.R;
+import com.test.admin.bean.AsAdministrator;
+import com.test.admin.bean.AsParticipant;
+import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsProm;
 import com.test.admin.model.Asadmin;
 import com.test.admin.model.Aspar;
@@ -20,6 +23,7 @@ import com.test.admin.model.Aspar;
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 
 import static com.test.admin.bean.Parameters.pObjectdId;
 
@@ -35,13 +39,16 @@ public class MainActivity extends AppCompatActivity {
     String s2 = "发布者";
     String s3 = "参与者";
 
-    private Aspar par;//参与者身份
-    private AsProm prom;//发布者身份
-    private Asadmin admin;//管理员身份
+    //private AsParticipant par;//参与者身份
+    //private AsProm prom;//发布者身份
+    //private Asadmin admin;//管理员身份
 
     private EditText Username;//用户名
     private EditText Password;//密码
 
+    private boolean a;//管理员
+    private boolean b;//发布者
+    private boolean c;//参与者
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
         //tv1=(TextView)findViewById(tv5);
         //tv2=(TextView)findViewById(tv6);
 
-        par=new Aspar();
-        prom=new AsProm();
-        admin=new Asadmin();
+        //par=new AsParticipant();
+        //prom=new AsProm();
+        //admin=new Asadmin();
 
         Username=(EditText)findViewById(R.id.Username);
         Password=(EditText)findViewById(R.id.Password);
@@ -85,7 +92,11 @@ public class MainActivity extends AppCompatActivity {
                     btn1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            adminverify();
+                            a=true;
+                            if (a){
+                                adminverify();
+                            }
+
                         }
                     });
                 }
@@ -96,7 +107,11 @@ public class MainActivity extends AppCompatActivity {
                     btn1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            promverify();
+                            b=true;
+                            if (b){
+                                promverify();
+                            }
+
                         }
                     });
                 }
@@ -107,7 +122,10 @@ public class MainActivity extends AppCompatActivity {
                     btn1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            parverify();
+                            c=true;
+                            if (c){
+                                parverify();
+                            }
                         }
                     });
                 }
@@ -177,19 +195,29 @@ public class MainActivity extends AppCompatActivity {
 
     //参与者登录
     private void parsignin(){
-        String username=Username.getText().toString();
-        String password=Password.getText().toString();
-        BmobException a= par.AsParSignin(username,password);
-        if (a==null){
-            toast("登录成功");
-            Intent intent=new Intent(MainActivity.this,com.test.admin.activitypromulgator.MainActivity.class);
-            startActivity(intent);
+        //String username=Username.getText().toString();
+        //String password=Password.getText().toString();
+        //BmobException a= par.AsParSignin(username,password);
+        final AsParticipant par=new AsParticipant();
+        par.setUsername(Username.getText().toString());
+        par.setPassword(Password.getText().toString());
+        par.login(new SaveListener<AsParticipant>() {
+            @Override
+            public void done(AsParticipant asParticipant, BmobException e) {
+                if (e == null) {
+                    toast("登录成功");
+                    c=false;
+                    Intent intent = new Intent(MainActivity.this, com.test.admin.activitypromulgator.MainActivity.class);
+                    startActivity(intent);
+                    Password.setText("");
+                    pObjectdId = (String) BmobUser.getObjectByKey("objectdId");
+                } else {
+                    toast("登录失败");
+                }
+            }
+        });
 
-            pObjectdId = (String) BmobUser.getObjectByKey("objectdId");
-        }else {
-            toast("登录失败");
-        }
-    }
+       }
 
     //发布者验证（限定用邮箱登录）
     private void promverify(){
@@ -204,16 +232,23 @@ public class MainActivity extends AppCompatActivity {
 
     //发布者登录
     private void promsignin(){
-        String username=Username.getText().toString();
-        String password=Password.getText().toString();
-        BmobException a=prom.ProSignIn(username,password);
-        if (a==null){
-            Intent login_intent=new Intent(MainActivity.this,com.test.admin.promulgator.MainActivity.class);
-            startActivity(login_intent);
-
-        }else {
-            toast("登录失败"+a.getErrorCode());
-        }
+        final AsPromulgator asp=new AsPromulgator();
+        asp.setUsername(Username.getText().toString());
+        asp.setPassword(Password.getText().toString());
+        asp.login(new SaveListener<AsPromulgator>() {
+            @Override
+            public void done(AsPromulgator asPromulgator, BmobException e) {
+                if (e==null){
+                    toast("登录成功");
+                    b=false;
+                    Intent intent = new Intent(MainActivity.this,com.test.admin.activitypromulgator.MainActivity.class);
+                    startActivity(intent);
+                    Password.setText("");
+                }else {
+                    toast("登录失败");
+                }
+            }
+        });
     }
 
     //管理员验证（限定用4位数登录）
@@ -229,18 +264,26 @@ public class MainActivity extends AppCompatActivity {
 
     //管理员登录
     private void adminsignin(){
-        String username=Username.getText().toString();
-        String password=Password.getText().toString();
-        BmobException a=admin.Asadminsignin(username,password);
-        if (a==null){
-            //登录成功，跳转
-            toast("登录成功");
-            Intent login_intent=new Intent(MainActivity.this, com.test.admin.activity.MainActivity.class);
-            startActivity(login_intent);
-
-        }else {
-            toast("登录失败");
-        }
+        //String username=Username.getText().toString();
+        //String password=Password.getText().toString();
+        ///BmobException a=admin.Asadminsignin(username,password);
+        final AsAdministrator admin=new AsAdministrator();
+        admin.setUsername(Username.getText().toString());
+        admin.setPassword(Password.getText().toString());
+        admin.login(new SaveListener<AsAdministrator>() {
+            @Override
+            public void done(AsAdministrator asAdministrator, BmobException e) {
+                if (e==null){
+                    toast("登录成功");
+                    a=false;
+                    Intent login_intent=new Intent(MainActivity.this, com.test.admin.activity.MainActivity.class);
+                    startActivity(login_intent);
+                    Password.setText("");
+                }else{
+                    toast("登录失败");
+                }
+            }
+        });
     }
 
 }
