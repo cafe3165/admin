@@ -3,12 +3,13 @@ package com.test.admin.bean;
 import java.util.List;
 
 import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.BmobUser;
 
 /**
  * Created by Administrator on 2016/11/18 0018.
  */
 
-public class AsPromulgator extends BmobObject{
+public class AsPromulgator extends BmobUser{
 
     private List<String> proAcId;//已发布活动编号
     private String proQQNumber;//QQ号

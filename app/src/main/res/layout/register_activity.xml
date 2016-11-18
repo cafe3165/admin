@@ -33,6 +33,7 @@
         />
 
     <EditText
+        android:id="@+id/StuNum"
         android:layout_width="150dp"
         android:layout_height="fill_parent"
         android:maxLength="9"
@@ -53,6 +54,7 @@
         android:textSize="20sp"
         />
     <EditText
+        android:id="@+id/StuName"
         android:layout_width="150dp"
         android:layout_height="fill_parent"
         android:background="@android:drawable/alert_light_frame"
@@ -97,7 +99,7 @@
         android:layout_height="50dp"
         >
     <EditText
-
+        android:id="@+id/PhoneNum"
         android:layout_marginLeft="40dp"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
@@ -106,6 +108,7 @@
         android:background="@android:drawable/alert_light_frame"
         />
     <Button
+        android:id="@+id/SmsSend"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="发送验证码"
@@ -124,6 +127,7 @@
         android:textSize="20sp"
         />
     <EditText
+        android:id="@+id/VerifyCode"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:maxLength="6"
@@ -168,6 +172,7 @@
             android:textSize="20dp"
             />
         <EditText
+            android:id="@+id/pwconfigure"
             android:layout_toRightOf="@+id/tv4"
             android:layout_below="@+id/et3"
             android:layout_width="150dp"
