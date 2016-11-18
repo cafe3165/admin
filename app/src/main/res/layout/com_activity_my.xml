@@ -8,11 +8,14 @@
 
     >
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4285F4"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
         >
 
 
@@ -28,13 +31,7 @@
         <!-- 定义返回按钮 -->
 
     </LinearLayout>
-    <View
-        android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
-        android:layout_height="3dp"
-        android:background="#FFFAFA" />
 
-    <!-- 查看物品列表的ListView -->
 
 
     <View

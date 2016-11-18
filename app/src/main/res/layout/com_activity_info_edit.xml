@@ -9,11 +9,14 @@
     >
 
     <TableLayout
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4c5caf"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
         >
 
         <TableRow>
@@ -22,10 +25,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="#4c5caf"
-                android:background="#FFFFFF"
+                android:background="?attr/colorPrimary"
                 android:text="取消"
                 android:textSize="@dimen/biao_z"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginBottom="2dp"
                 />
@@ -47,12 +50,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="#4c5caf"
-                android:background="#FFFFFF"
+                android:background="?attr/colorPrimary"
                 android:text="保存"
                 android:textSize="@dimen/biao_z"
                 android:layout_marginBottom="2dp"
                 android:layout_marginLeft="52dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="6dp"
                 />
         </TableRow>
 
@@ -62,7 +65,7 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="1dp"
         android:layout_height="1dp"
         android:background="#FFFAFA" />
 
@@ -70,7 +73,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#4c5caf"
+        android:background="@drawable/frame_gray"
 
         >
         <TableRow>
@@ -90,13 +93,13 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
                 android:textColor="#4c5caf"
-                android:background="#FFFFFF"
+                android:background="@drawable/frame_gray"
                 android:id="@+id/ge_touchuan" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -114,13 +117,13 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
                 android:entries="@array/sex"
-                android:background="#FFFFFF"
+                android:background="@drawable/frame_gray"
                 android:id="@+id/ge_sex" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -138,13 +141,13 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
                 android:textColor="#4c5caf"
-                android:background="#FFFFFf"
+                android:background="@drawable/frame_gray"
                 android:id="@+id/ge_age" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
             android:background="#FFFAFA" />
         <TableRow>
             <TextView
@@ -162,16 +165,15 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
                 android:entries="@array/xueyuan"
-                android:background="#FFFFFF"
+                android:background="@drawable/frame_gray"
                 android:id="@+id/ge_yuan" />
         </TableRow>
 
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="年级"
@@ -187,16 +189,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
-                android:background="#FFFFFF"
+                android:background="@drawable/frame_gray"
                 android:entries="@array/grade"
                 android:id="@+id/ge_grade" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="手机信息"
@@ -217,10 +218,9 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="学号"
@@ -242,10 +242,9 @@
         </TableRow>
         <View
             android:layout_width="fill_parent"
-            android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA"
-            />
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="姓名"
