@@ -55,9 +55,9 @@
             android:textSize="20sp"
             />
         <EditText
+            android:id="@+id/Username"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:hint="手机号码"
             />
     </LinearLayout>
     <LinearLayout
@@ -72,6 +72,7 @@
             android:textSize="20sp"
             />
         <EditText
+            android:id="@+id/Password"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:password="true"
