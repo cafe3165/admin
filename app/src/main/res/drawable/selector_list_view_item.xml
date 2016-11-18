@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 默认颜色 -->
+<item android:state_pressed="false" android:drawable="@color/switch_thumb_normal_material_light"></item>
+<!-- 点击时的颜色 -->
+<item android:state_pressed="true" android:drawable="@color/material_blue_grey_950"></item>
+</selector>

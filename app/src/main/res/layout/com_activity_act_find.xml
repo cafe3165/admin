@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+        >
+
+
+        <TextView
+            android:id="@+id/view_titile"
+            android:gravity="center"
+            android:text="活动查找"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <!-- 定义返回按钮 -->
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="3dp"
+        android:background="#FFFAFA" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+        <View
+            android:layout_width="3dip"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+
+            />
+        <Spinner
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner0"
+            android:entries="@array/quan"
+            android:background="#4285F4"
+
+
+            />
+        <View
+            android:layout_width="3dip"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+
+            />
+        <Spinner
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/re"
+            android:id="@+id/spinner1"
+            android:background="#4285F4"
+            />
+        <View
+            android:layout_width="3dip"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+
+            />
+        <Spinner
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:entries="@array/shai"
+            android:background="#4285F4"
+            />
+        <View
+            android:layout_width="3dip"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+
+        android:layout_height="3dip"
+        android:background="#FFFFFF" />
+
+    <ListView
+        android:id="@+id/itemList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+</LinearLayout>

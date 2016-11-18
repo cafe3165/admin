@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
+
+    <TableLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+        >
+
+        <TableRow>
+            <Button
+                android:id="@+id/ge_edit_quxiao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#4285F4"
+                android:background="#FFFFFF"
+                android:text="取消"
+                android:textSize="@dimen/biao_z"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="2dp"
+                />
+
+            <TextView
+                android:id="@+id/view_titile"
+
+                android:layout_marginLeft="52dp"
+                android:text="编辑资料"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                />
+
+            <Button
+                android:id="@+id/ge_edit_baocun"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#4285F4"
+                android:background="#FFFFFF"
+                android:text="保存"
+                android:textSize="@dimen/biao_z"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="3dp"
+                />
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp"
+        android:background="#FFFAFA" />
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+
+        >
+        <TableRow>
+            <ImageView
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/tou"
+                android:id="@+id/ge_touxian" />
+
+            <Button
+                android:text="上传头像"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="28dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#4285F4"
+                android:background="#FFFFFF"
+                android:id="@+id/ge_touchuan" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="性别"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_sex1" />
+            <Spinner
+
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:entries="@array/sex"
+                android:background="#FFFFFF"
+                android:id="@+id/ge_sex" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="年龄"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_age1" />
+            <EditText
+
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#4285F4"
+                android:background="#FFFFFf"
+                android:id="@+id/ge_age" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="学院"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_yuan1" />
+            <Spinner
+                android:text="2016.10.15"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:entries="@array/xueyuan"
+                android:background="#FFFFFF"
+                android:id="@+id/ge_yuan" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+            <TextView
+                android:text="年级"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_grade1" />
+
+            <Spinner
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:background="#FFFFFF"
+                android:entries="@array/grade"
+                android:id="@+id/ge_grade" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+            <TextView
+                android:text="手机信息"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_phone1" />
+            <TextView
+                android:text="15622223333"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_phone" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+            <TextView
+                android:text="学号"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_num1" />
+
+            <TextView
+                android:text="031400000"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_num" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA"
+            />
+        <TableRow>
+            <TextView
+                android:text="姓名"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_name1" />
+            <TextView
+                android:text="小明"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ge_name" />
+        </TableRow>
+    </TableLayout>
+
+
+    <TextView
+        android:text="修改学号和姓名请联系管理员"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/biao_z"
+        android:textColor="#4285F4"
+        android:id="@+id/ge_editm" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFAFA"
+        />
+</LinearLayout>

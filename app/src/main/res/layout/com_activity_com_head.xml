@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+        >
+
+        <TextView
+            android:id="@+id/view_titile"
+            android:gravity="center"
+            android:text="@string/activity_help"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <!-- 定义返回按钮 -->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="3dp"
+        android:background="#FFFAFA" />
+
+    <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+        >
+
+        <TableRow>
+
+
+            <TextView
+                android:text="通知"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+
+                />
+            <TextView
+                android:text="更多"
+                android:layout_marginLeft="250dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/inform_more2"
+                />
+            <ImageButton
+                android:id="@+id/inform_more1"
+                android:layout_width="50dp"
+                android:layout_marginLeft="0dp"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:background="#4285F4"
+                android:src="@mipmap/ic_action_arrow_right" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/itemList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
+
+    <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TableRow>
+
+
+            <TextView
+                android:text="活动"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                />
+            <TextView
+                android:text="更多"
+                android:layout_marginLeft="250dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/act_more2"
+                />
+            <ImageButton
+                android:id="@+id/act_more1"
+                android:layout_width="50dp"
+                android:layout_marginLeft="0dp"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:background="#4285F4"
+                android:src="@mipmap/ic_action_arrow_right" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <View
+        android:layout_width="fill_parent"
+
+        android:layout_height="3dip"
+        android:background="#FFFFFF" />
+
+    <ListView
+        android:id="@+id/itemList1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
+
+</LinearLayout>
+

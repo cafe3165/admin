@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dedede"
+    android:orientation="vertical"
+>
+    <include layout="@layout/include_app_bar"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/frame_gray"
+              android:padding="10dp"
+              android:text="活动详情  读书笔记"
+              android:textSize="17sp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/frame_gray"
+              android:padding="10dp"
+              android:text="活动状态  报名阶段"
+              android:textSize="17sp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/frame_gray"
+              android:padding="10dp"
+              android:text="举办方  学习部"
+              android:textSize="17sp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/frame_gray"
+              android:padding="10dp"
+              android:text="开始时间  2016.10.15 19:00"
+              android:textSize="17sp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/frame_gray"
+              android:padding="10dp"
+              android:text="结束时间  2016.10.15 22:00"
+              android:textSize="17sp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/frame_gray"
+              android:padding="10dp"
+              android:text="活动地点  博学厅"
+              android:textSize="17sp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/frame_gray"
+              android:padding="10dp"
+              android:text="活动内容  读书使人快乐...\n\n"
+              android:textSize="17sp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:background="@drawable/frame_gray"
+              android:padding="10dp"
+              android:text="活动受众  大一新生"
+              android:textSize="17sp"/>
+</LinearLayout>

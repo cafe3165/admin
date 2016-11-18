@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="grade">
+    <item>全部</item>
+    <item>2016</item>
+    <item>2015</item>
+    <item>2014</item>
+    <item>2013</item>
+</string-array>
+    <string-array name="quan">
+    <item>全部</item>
+    <item>校级</item>
+    <item>院级</item>
+    <item>年级</item>
+    </string-array>
+    <string-array name="re">
+        <item>热门</item>
+        <item>时间</item>
+        <item>推荐</item>
+
+    </string-array>
+    <string-array name="shai">
+        <item>筛选</item>
+        <item>综测</item>
+        <item>礼品</item>
+        <item>名人</item>
+        <item>户外</item>
+    </string-array>
+ <string-array name="sex">
+        <item>----</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="xueyuan">
+        <item>----</item>
+        <item>数计学院</item>
+        <item>经管学院</item>
+        <item>海洋学院</item>
+        <item>化学学院</item>
+    </string-array>
+</resources>

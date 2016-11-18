@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#61ABE8</color>
+    <color name="colorPrimaryDark">#555555</color>
+    <color name="colorAccent">#000103</color>
+    <color name="colorBlue">#FF40EFFF</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+
+    <!--
+    -->
+
+    <!---->
+
+
+    <color name="tou">#f00</color>
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="snow">#FFFAFA</color><!--雪白色 -->
+    <color name="blue">#4285F4</color>
+    <color name="darkgray">#A9A9A9</color><!--暗灰色 -->
+    <color name="darkgrey">#A9A9A9</color><!--暗灰色 -->
+    <color name="brown">#A52A2A</color><!--褐色 -->
+    <color name="sienna">#A0522D</color><!--赭色 -->
+    <color name="darkorchid">#9932CC</color><!--暗紫色-->
+    <color name="palegreen">#98FB98</color><!--苍绿色 -->
+    <color name="darkviolet">#9400D3</color><!--暗紫罗兰色 -->
+    <color name="mediumpurple">#9370DB</color><!--中紫色 -->
+    <color name="lightgreen">#90EE90</color><!--亮绿色 -->
+    <color name="darkseagreen">#8FBC8F</color><!--暗海兰色 -->
+    <color name="saddlebrown">#8B4513</color><!--重褐色 -->
+    <color name="darkmagenta">#8B008B</color><!--暗洋红 -->
+    <color name="darkred">#8B0000</color><!--暗红色 -->
+    <color name="blueviolet">#8A2BE2</color><!--紫罗兰蓝色 -->
+    <color name="lightskyblue">#87CEFA</color><!--亮天蓝色 -->
+    <color name="skyblue">#87CEEB</color><!--天蓝色 -->
+    <color name="gray">#808080</color><!--灰色 -->
+    <color name="grey">#808080</color><!--灰色 -->
+    <color name="olive">#808000</color><!--橄榄色 -->
+    <color name="purple">#800080</color><!--紫色 -->
+    <color name="maroon">#800000</color><!--粟色 -->
+    <color name="aquamarine">#7FFFD4</color><!--碧绿色-->
+    <color name="chartreuse">#7FFF00</color><!--黄绿色 -->
+    <color name="lawngreen">#7CFC00</color><!--草绿色 -->
+    <color name="mediumslateblue">#7B68EE</color><!--中暗蓝色 -->
+    <color name="lightslategray">#778899</color><!--亮蓝灰 -->
+    <color name="lightslategrey">#778899</color><!--亮蓝灰 -->
+    <color name="slategray">#708090</color><!--灰石色 -->
+    <color name="slategrey">#708090</color><!--灰石色 -->
+    <color name="olivedrab">#6B8E23</color><!--深绿褐色 -->
+    <color name="slateblue">#6A5ACD</color><!--石蓝色 -->
+    <color name="dimgray">#696969</color><!--暗灰色 -->
+    <color name="dimgrey">#696969</color><!--暗灰色 -->
+    <color name="mediumaquamarine">#66CDAA</color><!--中绿色 -->
+    <color name="cornflowerblue">#6495ED</color><!--菊兰色 -->
+    <color name="cadetblue">#5F9EA0</color><!--军兰色 -->
+    <color name="darkolivegreen">#556B2F</color><!--暗橄榄绿  -->
+    <color name="indigo">#4B0082</color><!--靛青色 -->
+    <color name="mediumturquoise">#48D1CC</color><!--中绿宝石 -->
+    <color name="darkslateblue">#483D8B</color><!--暗灰蓝色 -->
+    <color name="steelblue">#4682B4</color><!--钢兰色 -->
+    <color name="royalblue">#4169E1</color><!--皇家蓝 -->
+    <color name="turquoise">#40E0D0</color><!--青绿色 -->
+    <color name="mediumseagreen">#3CB371</color><!--中海蓝 -->
+    <color name="limegreen">#32CD32</color><!--橙绿色 -->
+    <color name="darkslategray">#2F4F4F</color><!--暗瓦灰色 -->
+    <color name="darkslategrey">#2F4F4F</color><!--暗瓦灰色 -->
+    <color name="seagreen">#2E8B57</color><!--海绿色 -->
+    <color name="forestgreen">#228B22</color><!--森林绿 -->
+    <color name="lightseagreen">#20B2AA</color><!--亮海蓝色 -->
+    <color name="dodgerblue">#1E90FF</color><!--闪兰色 -->
+    <color name="midnightblue">#191970</color><!--中灰兰色 -->
+    <color name="aqua">#00FFFF</color><!--浅绿色 -->
+    <color name="cyan">#00FFFF</color><!--青色 -->
+    <color name="springgreen">#00FF7F</color><!--春绿色-->
+    <color name="lime">#00FF00</color><!--酸橙色 -->
+    <color name="mediumspringgreen">#00FA9A</color><!--中春绿色 -->
+    <color name="darkturquoise">#00CED1</color><!--暗宝石绿 -->
+    <color name="deepskyblue">#00BFFF</color><!--深天蓝色 -->
+    <color name="darkcyan">#008B8B</color><!--暗青色 -->
+    <color name="teal">#008080</color><!--水鸭色 -->
+    <color name="green">#008000</color><!--绿色 -->
+    <color name="darkgreen">#006400</color><!--暗绿色 -->
+    <color name="mediumblue">#0000CD</color><!--中兰色 -->
+    <color name="darkblue">#00008B</color><!--暗蓝色 -->
+    <color name="navy">#000080</color><!--海军色 -->
+    <color name="black">#000000</color><!--黑色 -->
+</resources>

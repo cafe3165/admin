@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+        >
+
+
+        <TextView
+            android:id="@+id/view_titile"
+            android:gravity="center"
+            android:text="个人中心"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <!-- 定义返回按钮 -->
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="3dp"
+        android:background="#FFFAFA" />
+
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4285F4"
+
+        >
+        <TableRow>
+            <ImageView
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/tou"
+                android:id="@+id/ge_touxian" />
+            <TableLayout>
+                <TableRow>
+                    <TextView
+                        android:text="小明"
+                        android:layout_marginTop="28dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/ge_name" />
+                    <Button
+                        android:text="编辑资料"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:textSize="20dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4285F4"
+                        android:id="@+id/ge_edit" />
+                </TableRow>
+
+                <TextView
+                    android:text="福州大学"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/ge_school" />
+
+                <TextView
+                    android:text="数学与计算机科学"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/ge_yuan" />
+
+            </TableLayout>
+
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+
+            <TextView
+                android:text="我的报名"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/my_apply1" />
+
+            <ImageButton
+                android:id="@+id/my_apply"
+                android:layout_width="100dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:background="#4285F4"
+                android:src="@mipmap/ic_action_arrow_right" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+        <TableRow>
+            <TextView
+                android:text="历史参与活动"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/biao_z"
+                android:textColor="#FFFFFF"
+                android:id="@+id/my_applied1" />
+
+            <ImageButton
+                android:id="@+id/my_applied"
+                android:layout_width="100dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:background="#4285F4"
+                android:src="@mipmap/ic_action_arrow_right" />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="3dp"
+            android:background="#FFFAFA" />
+    </TableLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFAFA"
+        android:id="@+id/view" />
+</LinearLayout>

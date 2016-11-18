@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_one"
+            android:title="活动审核" />
+        <item
+            android:id="@+id/item_two"
+            android:title="权限审核" />
+        <item
+            android:id="@+id/item_three"
+            android:title="用户管理" />
+    </group>
+
+</menu>
