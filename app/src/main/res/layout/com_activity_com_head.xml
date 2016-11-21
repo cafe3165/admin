@@ -23,7 +23,7 @@
             android:id="@+id/view_titile"
             android:gravity="center"
             android:text="@string/activity_help"
-            android:textSize="@dimen/biao_z"
+            android:textSize="@dimen/biao_k"
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

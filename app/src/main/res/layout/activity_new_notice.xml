@@ -1,98 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_new_notice"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.test.admin.promulgator.newNotice">
+    <LinearLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:minHeight="?attr/actionBarSize"
+        >
 
-    <AbsoluteLayout
+
+        <TextView
+            android:id="@+id/view_titile"
+            android:gravity="center"
+            android:text="活动详情"
+            android:textSize="@dimen/biao_z"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <!-- 定义返回按钮 -->
+
+    </LinearLayout>
+
+    <TableLayout
         android:id="@+id/widget136"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-        <TextView
-            android:id="@+id/widget138"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="通知标题"
-            android:layout_x="50dp"
-            android:layout_y="52dp"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/widget139"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="通知方"
-            android:layout_x="50dp"
-            android:layout_y="102dp"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/widget140"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="通知内容"
-            android:layout_x="50dp"
-            android:layout_y="142dp"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/widget141"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="通知受众"
-            android:layout_x="50dp"
-            android:layout_y="242dp"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/widget142"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="推送范围"
-            android:layout_x="50dp"
-            android:layout_y="342dp"
-            >
-        </TextView>
-        <EditText
-            android:id="@+id/imTitle"
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:background="@android:drawable/alert_light_frame"
-            android:textSize="15sp"
-            android:layout_x="130dp"
-            android:layout_y="52dp"
-            >
-        </EditText>
+        android:layout_alignParentStart="true"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView
+                android:id="@+id/widget138"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通知标题"
+                android:layout_x="50dp"
+                android:layout_y="52dp" />
 
-        <EditText
-            android:id="@+id/imAudiences"
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:background="@android:drawable/alert_light_frame"
-            android:textSize="15sp"
-            android:layout_x="130dp"
-            android:layout_y="242dp"
-            >
-        </EditText>
-        <EditText
-            android:id="@+id/imPushScope"
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:background="@android:drawable/alert_light_frame"
-            android:textSize="15sp"
-            android:layout_x="130dp"
-            android:layout_y="342dp"
-            >
-        </EditText>
+            <EditText
+                android:id="@+id/imTitle"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:textSize="15sp"
+                android:layout_x="130dp"
+                android:layout_y="52dp"
+                >
+            </EditText>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/widget139"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通知方"
+                android:layout_x="50dp"
+                android:layout_y="102dp" />
+            <EditText
+                android:id="@+id/imAudiences"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:textSize="15sp"
+                android:layout_x="130dp"
+                android:layout_y="242dp"
+                >
+            </EditText>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/widget140"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通知内容"
+                android:layout_x="50dp"
+                android:layout_y="142dp"
+                >
+            </TextView>
+
+            <EditText
+                android:id="@+id/imPushScope"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:textSize="15sp"
+                android:layout_x="130dp"
+                android:layout_y="342dp"
+                >
+            </EditText>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/widget141"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通知受众"
+                android:layout_x="50dp"
+                android:layout_y="242dp"
+                >
+            </TextView>
+
+            <EditText
+                android:id="@+id/imContent"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:textSize="15sp"
+                android:layout_x="130dp"
+                android:layout_y="137dp"
+                >
+            </EditText>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/widget142"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推送范围"
+                android:layout_x="50dp"
+                android:layout_y="342dp"
+                >
+            </TextView>
+            <EditText
+                android:id="@+id/imOrganizer"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:layout_x="130dp"
+                android:layout_y="95dp"
+                >
+            </EditText>
+
+
+        </TableRow>
 
         <Button
             android:id="@+id/publish"
@@ -104,26 +161,7 @@
             >
         </Button>
 
-        <EditText
-            android:id="@+id/imContent"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:background="@android:drawable/alert_light_frame"
-            android:textSize="15sp"
-            android:layout_x="130dp"
-            android:layout_y="137dp"
-            >
-        </EditText>
 
-        <EditText
-            android:id="@+id/imOrganizer"
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:background="@android:drawable/alert_light_frame"
-            android:layout_x="130dp"
-            android:layout_y="95dp"
-            >
-        </EditText>
-    </AbsoluteLayout>
+    </TableLayout>
 
-</RelativeLayout>
+</LinearLayout>

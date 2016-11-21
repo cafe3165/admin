@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/graph5">
     <LinearLayout
         android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
@@ -18,7 +19,7 @@
         </LinearLayout>
     <LinearLayout
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         >
         <TextView
@@ -30,13 +31,13 @@
             />
         <Spinner
             android:id="@+id/spinner1"
-            android:layout_width="200dp"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             />
         </LinearLayout>
     <LinearLayout
         android:layout_marginTop="0dp"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         >
         <TextView
@@ -48,14 +49,14 @@
             />
         <EditText
             android:id="@+id/email"
-            android:layout_width="200dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@android:drawable/alert_light_frame"
             />
         </LinearLayout>
     <LinearLayout
         android:layout_marginTop="0dp"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         >
         <TextView
@@ -67,14 +68,14 @@
             />
         <EditText
             android:id="@+id/pnum"
-            android:layout_width="200dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@android:drawable/alert_light_frame"
             />
         </LinearLayout>
     <LinearLayout
         android:layout_marginTop="0dp"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         >
         <TextView
@@ -86,14 +87,14 @@
             />
         <EditText
             android:id="@+id/QQnum"
-            android:layout_width="200dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@android:drawable/alert_light_frame"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_marginTop="0dp"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="50dp"
         >
         <TextView
@@ -103,17 +104,19 @@
             android:text="通 知   权 限:"
             android:textSize="20sp"
             />
+
         <Spinner
             android:id="@+id/spinner2"
-            android:layout_width="100dp"
+            android:layout_width="130dp"
             android:layout_height="fill_parent"
             />
+
         <Spinner
             android:id="@+id/spinner3"
-            android:layout_width="100dp"
-            android:layout_height="fill_parent"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
             />
-        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_marginTop="0dp"
         android:layout_width="wrap_content"
@@ -126,17 +129,20 @@
         android:text="活 动   权 限:"
         android:textSize="20sp"
         />
-    <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="100dp"
-        android:layout_height="fill_parent"
-        />
-    <Spinner
+
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="130dp"
+            android:layout_height="fill_parent"
+            />
+
+        <Spinner
         android:id="@+id/spinner5"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="fill_parent"
         />
 </LinearLayout>
+
     <LinearLayout
         android:layout_marginTop="0dp"
         android:layout_width="wrap_content"
@@ -151,6 +157,7 @@
             android:textSize="20sp"
             />
         </LinearLayout>
+
     <LinearLayout
         android:layout_marginTop="0dp"
         android:layout_width="fill_parent"

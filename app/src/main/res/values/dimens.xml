@@ -19,5 +19,5 @@
 
 
     <dimen name="biao_k">28dp</dimen>
-    <dimen name="biao_z">17sp</dimen>
+    <dimen name="biao_z">20sp</dimen>
 </resources>

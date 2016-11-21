@@ -9,7 +9,7 @@
     >
     <LinearLayout
         android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:gravity="center"
@@ -28,7 +28,7 @@
             android:id="@+id/view_titile"
             android:gravity="center"
             android:text="活动查找"
-            android:textSize="@dimen/biao_z"
+            android:textSize="@dimen/biao_k"
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
 
             />
         <Spinner
-            android:layout_width="125dp"
+            android:layout_width="130dp"
             android:layout_height="30dp"
             android:id="@+id/spinner0"
             android:entries="@array/quan"
@@ -73,7 +73,7 @@
 
             />
         <Spinner
-            android:layout_width="125dp"
+            android:layout_width="130dp"
             android:layout_height="30dp"
             android:entries="@array/re"
             android:id="@+id/spinner1"
@@ -85,13 +85,15 @@
             android:background="#FFFFFF"
 
             />
+
         <Spinner
-            android:layout_width="125dp"
+            android:layout_width="130dp"
             android:layout_height="30dp"
             android:id="@+id/spinner2"
             android:entries="@array/shai"
             android:background="#A5C5E1"
             />
+
         <View
             android:layout_width="3dip"
             android:layout_height="match_parent"
