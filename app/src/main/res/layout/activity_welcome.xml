@@ -8,7 +8,7 @@ tools:context="com.test.admin.WelcomeActivity" >
     <ImageView
         android:id="@+id/welcome"
         android:layout_width="1000dp"
-        android:layout_height="1000dp"
+        android:layout_height="1300dp"
         android:src="@drawable/w3"
          />
 

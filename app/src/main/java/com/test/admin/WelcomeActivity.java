@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
 import android.view.Window;
-
+import android.widget.Toast;
+import android.widget.ImageView;
 import static com.test.admin.R.id.login;
 
 
@@ -33,8 +34,27 @@ public class WelcomeActivity extends AppCompatActivity {
 }, 2500);
 
 
-}
 
+//        super.onCreate(savedInstanceState);
+//        ///setContentView(R.layout.activity_welcome);
+//        //定义一个Toast对象
+//        Toast imageToast=new Toast(WelcomeActivity.this);
+//        //定义一个InageView对象
+//        ImageView imageView=new ImageView(WelcomeActivity.this);
+//        //为ImageView对象设置上去一张图片
+//        imageView.setImageResource(R.drawable.w3);
+//        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+//        //将ImageView对象绑定到Toast对象imageToasr上面去
+//        imageToast.setView(imageView);
+//        //设置Toast对象显示的时间长短
+//        imageToast.setDuration(Toast.LENGTH_LONG);
+//        //显示Toast
+//        imageToast.show();
+//
+//        Intent intent2 = new Intent(WelcomeActivity.this,com.test.admin.login.MainActivity.class);
+//       startActivity(intent2);
+}
+//
 
 
 }
