@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsActivity;
+import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsAppForm;
 
@@ -79,7 +80,7 @@ public class ViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+                pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
                 AsAppForm asAppForm = new AsAppForm();
                 asAppForm.acParApply(staticObjectdId,pObjectdId);
             }
