@@ -14,11 +14,15 @@ import android.widget.Toast;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsAdministrator;
+import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
 
 import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
+
+import static com.test.admin.bean.Parameters.pObjectdId;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -171,26 +175,26 @@ public class MainActivity extends AppCompatActivity {
 
     //参与者登录
     private void parsignin(){
-        //btn1.setEnabled(false);
-        //final AsParticipant par=new AsParticipant();
-        //par.setUsername(Username.getText().toString());
-        //par.setPassword(Password.getText().toString());
-        //par.login(new SaveListener<AsParticipant>() {
-            //@Override
-            //public void done(AsParticipant asParticipant, BmobException e) {
-                //if (e == null) {
+        btn1.setEnabled(false);
+        final AsParticipant par=new AsParticipant();
+        par.setUsername(Username.getText().toString());
+        par.setPassword(Password.getText().toString());
+        par.login(new SaveListener<AsParticipant>() {
+            @Override
+            public void done(AsParticipant asParticipant, BmobException e) {
+                if (e == null) {
                     toast("登录成功");
                     Intent intent = new Intent(MainActivity.this, com.test.admin.Participant.newMain.class);
                     startActivity(intent);
-//                    Password.setText("");
-//                    btn1.setEnabled(true);
-//                    pObjectdId = (String) BmobUser.getObjectByKey("objectdId");
-//                } else {
-//                    toast("登录失败");
-//                    btn1.setEnabled(true);
-//                }
-//            }
-//        });
+                    Password.setText("");
+                    btn1.setEnabled(true);
+                    pObjectdId = (String) BmobUser.getObjectByKey("objectdId");
+                } else {
+                    toast("登录失败");
+                    btn1.setEnabled(true);
+                }
+            }
+        });
 
        }
 

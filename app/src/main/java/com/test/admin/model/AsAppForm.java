@@ -1,5 +1,7 @@
 package com.test.admin.model;
 
+import android.widget.Toast;
+
 import com.test.admin.bean.AsApplicationForm;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
@@ -15,6 +17,7 @@ import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
+import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.model.Function.showToast;
 
 /**
@@ -50,7 +53,7 @@ public class AsAppForm {
 
                 //将当前用户的Id添加到报名表的参与者数组
                 list.get(0).addUnique("apParId",parObjectdId);
-                list.get(0).addUnique("apParStatus",false);
+                list.get(0).add("apParStatus","0");
                 list.get(0).update(new UpdateListener() {
                     @Override
                     public void done(BmobException e) {
@@ -61,13 +64,14 @@ public class AsAppForm {
 
                             //将用户报名的活动添加到用户已报名的活动数组
                             BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
-                            query.getObject(parObjectdId, new QueryListener<AsParticipant>() {
+                            query.addWhereEqualTo("objectId",parObjectdId);
+                            query.findObjects(new FindListener<AsParticipant>() {
                                 @Override
-                                public void done(AsParticipant bmobUser, BmobException e) {
+                                public void done(List<AsParticipant> list, BmobException e) {
 
                                     if (e == null) {
-                                        bmobUser.addUnique("parAcId", acObjectdId);
-                                        bmobUser.update(new UpdateListener() {
+                                        list.get(0).addUnique("parAcId", acObjectdId);
+                                        list.get(0).update(new UpdateListener() {
                                             @Override
                                             public void done(BmobException e) {
 
