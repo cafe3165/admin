@@ -60,6 +60,11 @@
         <!--<activity android:name=".activitypromulgator.ViewActivity" />-->
         <activity android:name=".Participant.ImformViewActivity" />
         <activity android:name=".promulgator.ActInfomation" />
+       /////////////////////////////////////////////////////////
+
+        <activity android:name=".Participant.newMain"/>
+        <activity android:name=".Participant.BaseActivity"/>
+
 
 
 

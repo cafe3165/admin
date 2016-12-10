@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
             //public void done(AsParticipant asParticipant, BmobException e) {
                 //if (e == null) {
                     toast("登录成功");
-                    Intent intent = new Intent(MainActivity.this, com.test.admin.Participant.MainActivity.class);
+                    Intent intent = new Intent(MainActivity.this, com.test.admin.Participant.newMain.class);
                     startActivity(intent);
 //                    Password.setText("");
 //                    btn1.setEnabled(true);
