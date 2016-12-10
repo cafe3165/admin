@@ -8,6 +8,7 @@
     >
 
     <include layout="@layout/include_app_bar"/>
+
     <TableRow>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"

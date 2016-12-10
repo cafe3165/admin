@@ -1,4 +1,4 @@
-package com.test.admin.activitypromulgator;
+package com.test.admin.Participant;
 
 import android.content.Intent;
 import android.os.Bundle;

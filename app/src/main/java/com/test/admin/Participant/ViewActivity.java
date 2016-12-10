@@ -1,4 +1,4 @@
-package com.test.admin.activitypromulgator;
+package com.test.admin.Participant;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +20,6 @@ import cn.bmob.v3.listener.QueryListener;
 
 import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
-import static com.test.admin.model.Function.showToast;
 
 public class ViewActivity extends AppCompatActivity {
 

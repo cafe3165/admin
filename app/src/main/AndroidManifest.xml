@@ -35,7 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activitypromulgator.ViewActivity" />
+        <activity android:name=".Participant.ViewActivity" />
         <activity android:name=".login.forgetPasswordActivity" />
         <activity android:name=".login.registerActivity" />
         <activity android:name=".login.Registered" />
@@ -48,17 +48,17 @@
         <activity android:name=".promulgator.newActivity" />
         <activity android:name=".promulgator.newNotice" />
         <activity android:name=".login.applyPromulgator" />
-        <activity android:name=".activitypromulgator.ComHead" />
-        <activity android:name=".activitypromulgator.HistoryAct" />
-        <activity android:name=".activitypromulgator.InfoEdit" />
-        <activity android:name=".activitypromulgator.MainActivity" />
-        <activity android:name=".activitypromulgator.MyAct" />
-        <activity android:name=".activitypromulgator.ActFind" />
-        <activity android:name=".activitypromulgator.no_find" />
-        <activity android:name=".activitypromulgator.settingAct" />
-        <activity android:name=".activitypromulgator.userInfo" />
+        <activity android:name=".Participant.ComHead" />
+        <activity android:name=".Participant.HistoryAct" />
+        <activity android:name=".Participant.InfoEdit" />
+        <activity android:name=".Participant.MainActivity" />
+        <activity android:name=".Participant.MyAct" />
+        <activity android:name=".Participant.ActFind" />
+        <activity android:name=".Participant.no_find" />
+        <activity android:name=".Participant.settingAct" />
+        <activity android:name=".Participant.userInfo" />
         <!--<activity android:name=".activitypromulgator.ViewActivity" />-->
-        <activity android:name=".activitypromulgator.ImformViewActivity" />
+        <activity android:name=".Participant.ImformViewActivity" />
         <activity android:name=".promulgator.ActInfomation" />
 
 

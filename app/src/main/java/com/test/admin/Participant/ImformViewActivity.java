@@ -1,4 +1,4 @@
-package com.test.admin.activitypromulgator;
+package com.test.admin.Participant;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

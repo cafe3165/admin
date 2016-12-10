@@ -14,18 +14,11 @@ import android.widget.Toast;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsAdministrator;
-import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
-import com.test.admin.model.AsProm;
-import com.test.admin.model.Asadmin;
-import com.test.admin.model.Aspar;
 
 import cn.bmob.v3.Bmob;
-import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
-
-import static com.test.admin.bean.Parameters.pObjectdId;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -187,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
             //public void done(AsParticipant asParticipant, BmobException e) {
                 //if (e == null) {
                     toast("登录成功");
-                    Intent intent = new Intent(MainActivity.this, com.test.admin.activitypromulgator.MainActivity.class);
+                    Intent intent = new Intent(MainActivity.this, com.test.admin.Participant.MainActivity.class);
                     startActivity(intent);
 //                    Password.setText("");
 //                    btn1.setEnabled(true);

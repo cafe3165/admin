@@ -15,7 +15,6 @@
         android:background="?attr/colorPrimary"
         android:gravity="center"
         android:orientation="horizontal"
-        android:minHeight="?attr/actionBarSize"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         >
 
