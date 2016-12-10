@@ -81,8 +81,8 @@ public class AsAcApply {
         asActivity.asAcAdd(proObjectdId,acAudience,acStart,acPushScope_1,acPushScope_2,acPlace,acOrgan,acEnd,acContent,acTitle);
 
         //从申请表里删除审核通过的活动
-        AsAcApply acApply = new AsAcApply();
-        acApply.acApplyDelete(appObjectdId);
+        //AsAcApply acApply = new AsAcApply();
+        //acApply.acApplyDelete(appObjectdId);
     }
 
     //删除活动申请表里的活动

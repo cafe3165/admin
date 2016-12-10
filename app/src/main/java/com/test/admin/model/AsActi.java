@@ -1,17 +1,22 @@
 package com.test.admin.model;
 
+import android.widget.Toast;
+
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsPromulgator;
 
 import java.util.Arrays;
+import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
+import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.model.Function.showToast;
 
 /**
@@ -42,20 +47,30 @@ public class AsActi {
                 if (e == null) {
                     showToast("审核成功");
 
+                    //创建一张报名表
                     AsAppForm asAppForm = new AsAppForm();
                     asAppForm.creatForm(s);
 
+                    //将活动对应的Id添加到发布者已发布的活动字段
                     BmobQuery<AsPromulgator> query = new BmobQuery<AsPromulgator>();
-                    query.getObject(proObjectId, new QueryListener<AsPromulgator>() {
+                    query.addWhereEqualTo("objectId",proObjectId);
+                    query.findObjects(new FindListener<AsPromulgator>() {
                         @Override
-                        public void done(AsPromulgator bmobUser, BmobException e) {
+                        public void done(List<AsPromulgator> list, BmobException e) {
 
-                            if(e == null) {
-                                bmobUser.addUnique("proAcId", s);
-                                bmobUser.update(new UpdateListener() {
+                            if(e == null){
+
+                                list.get(0).addUnique("proAcId",s);
+                                list.get(0).update(new UpdateListener() {
                                     @Override
-                                    public void done(BmobException e) {
+                                    public void done(BmobException e){
 
+                                        if(e == null){
+                                            showToast("添加成功");
+                                        }else{
+
+                                            Toast.makeText(getApplicationContext(),"添加失败 " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        }
                                     }
                                 });
                             }

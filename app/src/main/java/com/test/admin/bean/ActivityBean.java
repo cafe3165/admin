@@ -1,7 +1,7 @@
 package com.test.admin.bean;
 
 /**
- * Created by Charles Lui on 2016/11/16.
+ * UI功能测试用例
  */
 
 public class ActivityBean {

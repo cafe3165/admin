@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsActivity;
+import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsAppForm;
 
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
 
@@ -36,7 +38,7 @@ public class ViewActivity extends AppCompatActivity {
     private Button apply;
 
     //声明活动对象，保存当前查找到的活动对象
-    private List<AsActivity> myAsAcApplying = new ArrayList<AsActivity>();
+    private List<AsActivity> myAsActivity = new ArrayList<AsActivity>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +64,7 @@ public class ViewActivity extends AppCompatActivity {
 
                 if(e == null){
 
-                    myAsAcApplying.add(asActivity);
+                    myAsActivity.add(asActivity);
 
                     acTitle.setText(asActivity.getAcTitle());
                     acStatus.setText("报名中");
@@ -80,7 +82,7 @@ public class ViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+                pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
                 AsAppForm asAppForm = new AsAppForm();
                 asAppForm.acParApply(staticObjectdId,pObjectdId);
             }

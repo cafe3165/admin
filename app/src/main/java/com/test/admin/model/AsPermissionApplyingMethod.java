@@ -4,6 +4,7 @@ import android.widget.Toast;
 
 import com.test.admin.bean.AsPermissionApplying;
 import com.test.admin.bean.AsPromulgator;
+import com.test.admin.bean.AsPromulgator_AcOrImId;
 
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
@@ -13,7 +14,7 @@ import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.model.Function.showToast;
 
 /**
- * Created by Administrator on 2016/11/19 0019.
+ * 管理员权限审核功能
  */
 
 public class AsPermissionApplyingMethod {
@@ -42,12 +43,21 @@ public class AsPermissionApplyingMethod {
                 if(e == null){
 
                     showToast("审核通过");
-
+                    //将该申请从权限审核列表中删除
                     AsPermissionApplying asPermissionApplying = new AsPermissionApplying();
                     asPermissionApplying.setObjectId(perObjectId);
                     asPermissionApplying.delete(new UpdateListener() {
                         @Override
                         public void done(BmobException e) {
+
+                        }
+                    });
+
+                    AsPromulgator_AcOrImId asPromulgator_acOrImId = new AsPromulgator_AcOrImId();
+                    asPromulgator_acOrImId.setProId(s.getObjectId());
+                    asPermissionApplying.save(new SaveListener<String>() {
+                        @Override
+                        public void done(String s, BmobException e) {
 
                         }
                     });
