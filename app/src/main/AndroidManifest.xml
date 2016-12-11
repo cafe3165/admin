@@ -25,9 +25,7 @@
         <activity
             android:name=".activity.PersonDetail"
             android:label="@string/title_activity_detail" />
-
-        <activity android:name=".login.MainActivity"/>
-
+        <activity android:name=".login.MainActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".newLogin.loginRegisterActivity" />
         <activity android:name=".Participant.ViewActivity" />
         <activity android:name=".login.forgetPasswordActivity" />
         <activity android:name=".login.registerActivity" />
@@ -57,19 +56,13 @@
         <activity android:name=".Participant.no_find" />
         <activity android:name=".Participant.settingAct" />
         <activity android:name=".Participant.userInfo" />
-        <!--<activity android:name=".activitypromulgator.ViewActivity" />-->
+        <!-- <activity android:name=".activitypromulgator.ViewActivity" /> -->
         <activity android:name=".Participant.ImformViewActivity" />
         <activity android:name=".promulgator.ActInfomation" />
-       /////////////////////////////////////////////////////////
-
-        <activity android:name=".Participant.newMain"/>
-        <activity android:name=".Participant.BaseActivity"/>
-
-
-
-
-
-
+        /////////////////////////////////////////////////////////
+        <activity android:name=".Participant.newMain" />
+        <activity android:name=".Participant.BaseActivity" />
+        <activity android:name=".newLogin.loginRegisterActivity"></activity>
     </application>
 
 </manifest>

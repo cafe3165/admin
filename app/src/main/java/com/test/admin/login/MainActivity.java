@@ -154,24 +154,6 @@ public class MainActivity extends AppCompatActivity {
         //tv5.setMovementMethod(LinkMovementMethod.getInstance());
         */
     }
-        long exitTime = 0;
-        public boolean onKeyDown(int keyCode, KeyEvent event) {
-            if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
-                if(System.currentTimeMillis() - exitTime > 2000) {Toast.makeText(this,"再点击一次返回键退出",5000).show();
-                 exitTime = System.currentTimeMillis();
-                }
-                else{
-                    finish();
-                    Intent home = new Intent(Intent.ACTION_MAIN);
-                    home.addCategory(Intent.CATEGORY_HOME);
-                    startActivity(home);
-                    //System.exit(0);
-                }
-
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
 
 
     public void toast(String msg) {

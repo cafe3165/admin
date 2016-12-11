@@ -8,6 +8,11 @@ import android.content.Intent;
 import android.view.Window;
 import android.widget.Toast;
 import android.widget.ImageView;
+
+import com.test.admin.login.MainActivity;
+import com.test.admin.login.registerActivity;
+
+import static com.test.admin.R.id.activity_login_register;
 import static com.test.admin.R.id.login;
 
 
@@ -19,7 +24,6 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-
         new Handler().postDelayed(new Runnable(){
     @Override
     public void run() {
@@ -27,12 +31,26 @@ public class WelcomeActivity extends AppCompatActivity {
         startActivity(intent);
         WelcomeActivity.this.finish();
 
-        Intent intent2 = new Intent(WelcomeActivity.this,com.test.admin.login.MainActivity.class);
+        Intent intent2 = new Intent(WelcomeActivity.this,com.test.admin.newLogin.loginRegisterActivity.class);
         startActivity(intent2);
     }
 
 }, 2500);
 
+/*
+        final Handler handler=new Handler();
+        Runnable runnable=new Runnable(){
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                //要做的事情，这里再次调用此Runnable对象，以实现每两秒实现一次的定时器操作
+                handler.postDelayed(this, 2000);
+            }
+        };
+        handler.postDelayed(runnable, 2000);
+        handler.removeCallbacks(runnable);
+
+*/
 
 
 //        super.onCreate(savedInstanceState);
