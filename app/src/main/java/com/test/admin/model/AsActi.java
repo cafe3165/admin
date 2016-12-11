@@ -1,17 +1,21 @@
 package com.test.admin.model;
 
+import android.widget.Toast;
+
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsPromulgator;
+import com.test.admin.bean.AsPromulgator_AcImId;
 
 import java.util.Arrays;
+import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
-import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.QueryListener;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
+import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.model.Function.showToast;
 
 /**
@@ -41,24 +45,23 @@ public class AsActi {
             public void done(final String s, BmobException e) {
                 if (e == null) {
                     showToast("审核成功");
-
+                    //创建活动对应的报名表
                     AsAppForm asAppForm = new AsAppForm();
                     asAppForm.creatForm(s);
-
-                    BmobQuery<AsPromulgator> query = new BmobQuery<AsPromulgator>();
-                    query.getObject(proObjectId, new QueryListener<AsPromulgator>() {
+                    //将审核通过的活动ID添加到对应发布者的已发布的活动ID字段
+                    BmobQuery<AsPromulgator_AcImId> query = new BmobQuery<AsPromulgator_AcImId>();
+                    query.addWhereEqualTo("proId",proObjectId);
+                    query.findObjects(new FindListener<AsPromulgator_AcImId>() {
                         @Override
-                        public void done(AsPromulgator bmobUser, BmobException e) {
+                        public void done(List<AsPromulgator_AcImId> list, BmobException e) {
 
-                            if(e == null) {
-                                bmobUser.addUnique("proAcId", s);
-                                bmobUser.update(new UpdateListener() {
-                                    @Override
-                                    public void done(BmobException e) {
+                            list.get(0).addUnique("proAcId",s);
+                            list.get(0).update(new UpdateListener() {
+                                @Override
+                                public void done(BmobException e) {
 
-                                    }
-                                });
-                            }
+                                }
+                            });
                         }
                     });
                 } else {
