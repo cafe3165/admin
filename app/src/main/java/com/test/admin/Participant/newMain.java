@@ -7,8 +7,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.View;
 
+import com.test.admin.PaticipantFragment.HuoDongChaZhao;
 import com.test.admin.PaticipantFragment.PersonData;
 import com.test.admin.PaticipantFragment.Setting;
+import com.test.admin.PaticipantFragment.TongZhi;
 import com.test.admin.R;
 import com.test.admin.PaticipantFragment.Head;//////
 import com.test.admin.fragment.FragmentSetting;
@@ -21,14 +23,14 @@ public class newMain extends BaseActivity implements View.OnClickListener {
     public static final String TAG_ONE = "one";
     public static final String TAG_TWO = "two";
     public static final String TAG_THREE = "three";
-    public static final String TAG_FOUR = "four";/////
+    public static final String TAG_FOUR = "four";                       /////
     public static final String TAG_SETTING = "setting";
     private DrawerLayout mDrawerLayout;
     private FragmentManager mFragmentManager;
     private Head mFragmentOne;
     private PersonData mFragmentTwo;
-    private FragmentThree mFragmentThree;
-
+    private HuoDongChaZhao mFragmentThree;                      //xcz
+    private TongZhi mFragmentFour;                      //xcz
     private Setting mFragmentSetting;///////////
 
     @Override
@@ -66,7 +68,8 @@ public class newMain extends BaseActivity implements View.OnClickListener {
         if (savedInstanceState != null) {
             mFragmentOne = (Head) mFragmentManager.findFragmentByTag(TAG_ONE);
             mFragmentTwo = (PersonData) mFragmentManager.findFragmentByTag(TAG_TWO);///////////////
-            mFragmentThree = (FragmentThree) mFragmentManager.findFragmentByTag(TAG_THREE);
+            mFragmentThree = (HuoDongChaZhao) mFragmentManager.findFragmentByTag(TAG_THREE);
+            mFragmentFour = (TongZhi) mFragmentManager.findFragmentByTag(TAG_FOUR);
         }
         if (mFragmentOne == null) {
             mFragmentOne = new Head();
@@ -79,9 +82,14 @@ public class newMain extends BaseActivity implements View.OnClickListener {
                     .add(R.id.vf_container, mFragmentTwo, TAG_TWO).commit();
         }
         if (mFragmentThree == null) {
-            mFragmentThree = new FragmentThree();
+            mFragmentThree = new HuoDongChaZhao();
             mFragmentManager.beginTransaction()
                     .add(R.id.vf_container, mFragmentThree, TAG_THREE).commit();
+        }
+        if (mFragmentFour == null) {
+            mFragmentFour = new TongZhi();
+            mFragmentManager.beginTransaction()
+                    .add(R.id.vf_container, mFragmentFour, TAG_FOUR).commit();
         }
 
 //        if (mFragmentThree == null) {
@@ -103,26 +111,26 @@ public class newMain extends BaseActivity implements View.OnClickListener {
     private void showContent(String tag) {
 
         if (tag.equals(TAG_ONE)) {
-            mFragmentManager.beginTransaction().show(mFragmentOne).hide(mFragmentTwo).hide(mFragmentThree).hide(mFragmentSetting).commit();
+            mFragmentManager.beginTransaction().show(mFragmentOne).hide(mFragmentTwo).hide(mFragmentThree).hide(mFragmentFour).hide(mFragmentSetting).commit();
             setCustomTitle("首页", true);
         } else if (tag.equals(TAG_TWO)) {
-            mFragmentManager.beginTransaction().hide(mFragmentOne).show(mFragmentTwo).hide(mFragmentThree).hide(mFragmentSetting).commit();
+            mFragmentManager.beginTransaction().hide(mFragmentOne).show(mFragmentTwo).hide(mFragmentThree).hide(mFragmentFour).hide(mFragmentSetting).commit();
             setCustomTitle("个人中心", true);
         } else if (tag.equals(TAG_THREE)) {
-            mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).show(mFragmentThree).hide(mFragmentSetting).commit();
+            mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).show(mFragmentThree).hide(mFragmentFour).hide(mFragmentSetting).commit();
             setCustomTitle("活动查找", true);
 
         }
 
         else if (tag.equals(TAG_FOUR)) {
-            mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).show(mFragmentThree).hide(mFragmentSetting).commit();
+            mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).hide(mFragmentThree).show(mFragmentFour).hide(mFragmentSetting).commit();
             setCustomTitle("通知", true);
 
 
         }
 
         else if (tag.equals(TAG_SETTING)) {
-            mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).show(mFragmentThree).show(mFragmentSetting).commit();
+            mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).hide(mFragmentThree).hide(mFragmentFour).show(mFragmentSetting).commit();
             setCustomTitle("设置", true);
         }
 
@@ -146,8 +154,11 @@ public class newMain extends BaseActivity implements View.OnClickListener {
             case R.id.btn_person:
                 showContent(TAG_TWO);
                 break;
-            case R.id.btn_03:
+            case R.id.btn_find:
                 showContent(TAG_THREE);
+                break;
+            case R.id.btn_notice:
+                showContent(TAG_FOUR);
                 break;
             case R.id.btn_setting:
                 showContent(TAG_SETTING);
