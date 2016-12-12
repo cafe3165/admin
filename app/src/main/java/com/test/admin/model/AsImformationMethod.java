@@ -51,6 +51,9 @@ public class AsImformationMethod {
                     }
                 }
             });
+        }else{
+
+            showToast("输入不准为空");
         }
     }
 
