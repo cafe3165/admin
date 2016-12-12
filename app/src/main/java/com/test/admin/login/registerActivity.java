@@ -17,9 +17,20 @@ import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 
 import com.test.admin.R;
+import com.test.admin.bean.AsParticipant;
 import com.test.admin.model.Aspar;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.List;
+
+import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
+import cn.bmob.v3.listener.QueryListener;
 
 public class registerActivity extends AppCompatActivity {
 
@@ -95,10 +106,21 @@ public class registerActivity extends AppCompatActivity {
                                 {
                                     public void onClick(View v)
                                     {
-                                        smsvetify();
+                                        //检测用户名是否已存在
+                                        BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
+                                        query.addWhereEqualTo("username",PhoneNum.getText().toString());
+                                        query.findObjects(new FindListener<AsParticipant>() {
+                                            @Override
+                                            public void done(List<AsParticipant> list, BmobException e) {
+                                                if (e==null){
+                                                    toast("存在");
+                                                }else{
+                                                    toast("不存在"+e.getMessage());
+                                                }
+                                            }
+                                        });
                                         //showDialog(1);
                                     }
-
                                 }
         );
 
@@ -192,23 +214,23 @@ public class registerActivity extends AppCompatActivity {
 
 
 
-    protected Dialog onCreateDialog(int id)
-    {
-        Dialog dialog = null;
-        switch(id)
-        {
-            case 1:
-                AlertDialog.Builder b = new AlertDialog.Builder(this);
-                b.setMessage("注册成功！");
-                b.setPositiveButton(
-                        "确定", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {}
-                        });
-                dialog = b.create();
-                break;
-            default:break;
-        }
-        return dialog;
-    }
+//    protected Dialog onCreateDialog(int id)
+//    {
+//        Dialog dialog = null;
+//        switch(id)
+//        {
+//            case 1:
+//                AlertDialog.Builder b = new AlertDialog.Builder(this);
+//                b.setMessage("注册成功！");
+//                b.setPositiveButton(
+//                        "确定", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {}
+//                        });
+//                dialog = b.create();
+//                break;
+//            default:break;
+//        }
+//        return dialog;
+//    }
 }
