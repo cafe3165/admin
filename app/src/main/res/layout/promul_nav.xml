@@ -50,27 +50,27 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <Button android:id="@+id/btn_01" android:layout_width="match_parent"
+            <Button android:id="@+id/btn_head_promul" android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
-                android:text="活动审核" android:textColor="#000"/>
+                android:text="首页" android:textColor="#000"/>
 
-            <Button android:id="@+id/btn_02" android:layout_width="match_parent"
+            <Button android:id="@+id/btn_issuedAct" android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
 
-                android:text="权限审核" android:textColor="#000"/>
+                android:text="已发布活动" android:textColor="#000"/>
 
-            <Button android:id="@+id/btn_03" android:layout_width="match_parent"
+            <Button android:id="@+id/btn_issuedNotice" android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
-                android:text="用户信息更改" android:textColor="#000"/>
+                android:text="已发布通知" android:textColor="#000"/>
 
-            <Button android:id="@+id/btn_04" android:layout_width="match_parent"
+            <Button android:id="@+id/btn_finishedAct" android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/frame_gray_with_bg"
-                android:text="账号注销"
-                android:textColor="#ffffff" android:visibility="gone"/>
+                android:background="#ffff"
+                android:text="已结束活动"
+                android:textColor="#000" />
 
             <TextView android:layout_width="match_parent" android:layout_height="match_parent"
                 android:background="#ffffff"
