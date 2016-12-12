@@ -7,35 +7,35 @@
     android:layout_height="fill_parent"
     android:background="#FFFFFF"
     >
-    <LinearLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/AppTheme.PopupOverlay">
-        <!--android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/side_nav_bar"-->
-        >
+    <!--<LinearLayout-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--app:popupTheme="@style/AppTheme.PopupOverlay">-->
+        <!--&lt;!&ndash;android:orientation="horizontal"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/side_nav_bar"&ndash;&gt;-->
+        <!--&gt;-->
 
 
-        <TextView
-            android:id="@+id/view_titile"
-            android:gravity="center"
-            android:text="活动查找"
-            android:textSize="@dimen/biao_k"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-        <!-- 定义返回按钮 -->
+        <!--<TextView-->
+            <!--android:id="@+id/view_titile"-->
+            <!--android:gravity="center"-->
+            <!--android:text="活动查找"-->
+            <!--android:textSize="@dimen/biao_k"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--/>-->
+        <!--&lt;!&ndash; 定义返回按钮 &ndash;&gt;-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
     <View
         android:layout_width="fill_parent"
         android:layout_marginTop="1dp"
