@@ -97,7 +97,6 @@ public class AsAppForm {
         //获取当前活动对应的报名表
         BmobQuery<AsApplicationForm> query = new BmobQuery<AsApplicationForm>();
         query.addWhereEqualTo("apParId",acObjectdId);
-        query.setLimit(1);//设置获取的数据上限为1
         query.findObjects(new FindListener<AsApplicationForm>() {
             @Override
             public void done(List<AsApplicationForm> list, BmobException e) {
@@ -107,7 +106,7 @@ public class AsAppForm {
                 list1.addAll(list.get(0).getApParId());
                 int index = list1.indexOf(parObjectdId);
                 //获取当前报名表的参与者状态数组并删除指定位置的值
-                List<Boolean> list2 = new ArrayList<Boolean>();
+                List<String> list2 = new ArrayList<String>();
                 list2.addAll(list.get(0).getApParStatus());
                 list2.remove(index);
                 //将当前用户的Id从报名表中删除
@@ -136,6 +135,26 @@ public class AsAppForm {
                         }
                     });
                 }
+            }
+        });
+    }
+
+    //发布者签到
+    public void acProSignIn(String acObjectId,int position){
+
+        BmobQuery<AsApplicationForm> query = new BmobQuery<AsApplicationForm>();
+        query.addWhereEqualTo("apAcId",acObjectId);
+        query.findObjects(new FindListener<AsApplicationForm>() {
+            @Override
+            public void done(List<AsApplicationForm> list, BmobException e) {
+
+                list.get(0).setValue("apParStatus.position","1");
+                list.get(0).update(new UpdateListener() {
+                    @Override
+                    public void done(BmobException e) {
+
+                    }
+                });
             }
         });
     }
