@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/left_drawer"
-    android:layout_width="match_parent"
+    android:layout_width="250"
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:layout_marginRight="56dp"
@@ -12,9 +12,9 @@
     android:orientation="vertical"
     >
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4c5caf"
+    <LinearLayout android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/cehualan"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="50dp"
@@ -73,7 +73,8 @@
                 android:textColor="#ffffff" android:visibility="gone"/>
 
             <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-                android:background="#ffffff"/>
+                android:background="#ffffff"
+                android:id="@+id/textView3" />
 
         </LinearLayout>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/left_drawer"
-    android:layout_width="match_parent"
+    android:layout_width="250dp"
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:layout_marginRight="56dp"
@@ -12,15 +12,20 @@
     android:orientation="vertical"
     >
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4c5caf"
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="232dp"
+        android:background="@drawable/cehualan"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="50dp"
         >
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:src="@drawable/iv_avatar"/>
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/iv_avatar"
+
+            android:id="@+id/imageView2" />
 
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,10 +37,6 @@
                 android:lineSpacingExtra="5dp" android:text="小明"
                 android:textColor="#ffffff" android:textSize="17sp"/>
 
-            <TextView android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:lineSpacingExtra="5dp" android:text="我爱软工"
-                android:textColor="#ffffff" android:textSize="17sp"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -73,7 +74,8 @@
                 android:textColor="#000000" />
 
             <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-                android:background="#ffffff"/>
+                android:background="#ffffff"
+                android:id="@+id/textView2" />
 
         </LinearLayout>
 
