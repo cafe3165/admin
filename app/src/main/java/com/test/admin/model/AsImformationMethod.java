@@ -1,11 +1,15 @@
 package com.test.admin.model;
 
 import com.test.admin.bean.AsImformation;
+import com.test.admin.bean.AsParticipant;
+import com.test.admin.bean.AsPromulgator_AcImId;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
@@ -20,7 +24,7 @@ public class AsImformationMethod {
 
     //发布通知
     public void asImAdd(String imTitle, String imOrganizer, String imContent, String imAudiences,
-                        String imPushScope_1,String imPushScope_2) {
+                        String imPushScope_1,String imPushScope_2,final String proObjectId) {
 
         List<String> list = new ArrayList<String>();
         list.add(imTitle);
@@ -43,9 +47,27 @@ public class AsImformationMethod {
 
             asImformation.save(new SaveListener<String>() {
                 @Override
-                public void done(String s, BmobException e) {
+                public void done(final String s, BmobException e) {
                     if (e == null) {
                         showToast("发布成功");
+                        //保存新发布的通知的ID到该发布者的已发布的通知ID字段
+                        BmobQuery<AsPromulgator_AcImId> query = new BmobQuery<AsPromulgator_AcImId>();
+                        query.addWhereEqualTo("proId",proObjectId);
+                        query.findObjects(new FindListener<AsPromulgator_AcImId>() {
+                            @Override
+                            public void done(List<AsPromulgator_AcImId> list, BmobException e) {
+
+                                if (e == null) {
+                                    list.get(0).addUnique("proImId", s);
+                                    list.get(0).update(new UpdateListener() {
+                                        @Override
+                                        public void done(BmobException e) {
+
+                                        }
+                                    });
+                                }
+                            }
+                        });
                     } else {
                         showToast("发布失败");
                     }

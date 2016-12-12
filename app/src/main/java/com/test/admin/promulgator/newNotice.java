@@ -7,7 +7,10 @@ import android.widget.EditText;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsImformation;
+import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsImformationMethod;
+
+import static com.test.admin.bean.Parameters.pObjectdId;
 
 public class newNotice extends AppCompatActivity {
 
@@ -39,9 +42,10 @@ public class newNotice extends AppCompatActivity {
                 String myImContent = imContent.getText().toString();
                 String myImAudiences = imAudiences.getText().toString();
                 String myImPushScope = imPushScope.getText().toString();
+                pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
 
                 AsImformationMethod asImformation = new AsImformationMethod();
-                asImformation.asImAdd(myImTitle,myImOrganizer,myImContent,myImAudiences,myImPushScope,myImPushScope);
+                asImformation.asImAdd(myImTitle,myImOrganizer,myImContent,myImAudiences,myImPushScope,myImPushScope,pObjectdId);
             }
         });
 
