@@ -33,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".newLogin.loginActivity" />
         <activity android:name=".newLogin.loginRegisterActivity" />
         <activity android:name=".Participant.ViewActivity" />
         <activity android:name=".login.forgetPasswordActivity" />
@@ -62,7 +63,6 @@
         /////////////////////////////////////////////////////////
         <activity android:name=".Participant.newMain" />
         <activity android:name=".Participant.BaseActivity" />
-        <activity android:name=".newLogin.loginRegisterActivity"></activity>
     </application>
 
 </manifest>
