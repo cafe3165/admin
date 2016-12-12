@@ -26,6 +26,7 @@ public class AsPermissionApplyingMethod {
         asPromulgator.setProIdentity(perIdentity);
         asPromulgator.setMobilePhoneNumber(perTelNumber);
         asPromulgator.setProQQNumber(perQQNumber);
+        asPromulgator.setParStuNumber(perEmail);//新增该字段赋值避免唯一键发生冲突
         asPromulgator.setProImPermission_1(perImPushScope_1);
         asPromulgator.setProImPermission_2(perImPushScope_2);
         asPromulgator.setProAcPermission_1(perAsPushScope_1);

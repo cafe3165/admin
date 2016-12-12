@@ -55,13 +55,15 @@ public class AsActi {
                         @Override
                         public void done(List<AsPromulgator_AcImId> list, BmobException e) {
 
-                            list.get(0).addUnique("proAcId",s);
-                            list.get(0).update(new UpdateListener() {
-                                @Override
-                                public void done(BmobException e) {
+                            if(e == null) {
+                                list.get(0).addUnique("proAcId", s);
+                                list.get(0).update(new UpdateListener() {
+                                    @Override
+                                    public void done(BmobException e) {
 
-                                }
-                            });
+                                    }
+                                });
+                            }
                         }
                     });
                 } else {

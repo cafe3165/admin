@@ -21,6 +21,11 @@ public class AsParticipant extends BmobUser {
     private String parCollege;//学院
     private String parAge;//年龄
     private List<String> parAcIdEnd;//历史参与活动编号
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
 
     public BmobFile getParHeadPortrait(){
         return parHeadPortrait;
