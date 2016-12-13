@@ -30,6 +30,8 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
     private TextView acApplyContent;
     private TextView acApplyAudiences;
     private TextView acApplyLabel;
+    private Button pass;
+    private Button not_pass;
     private String acLabel1;
     private String acLabel2;
     private String acLabel3;
@@ -54,6 +56,8 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
         acApplyContent = (TextView)findViewById(R.id.acApplyContent);
         acApplyAudiences = (TextView)findViewById(R.id.acApplyAudiences);
         acApplyLabel = (TextView)findViewById(R.id.acApplyLabel);
+        pass = (Button)findViewById(R.id.actPass_button);
+        not_pass = (Button)findViewById(R.id.actNoPass_button);
 
         //查找当前item对应的活动申请对象并返回值显示在TextView上
         BmobQuery<AsAcApplying> query = new BmobQuery<AsAcApplying>();
@@ -97,7 +101,7 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
             case R.id.actPass_button:
 
                 AsAcApply asAcApply = new AsAcApply();
-                asAcApply.acApplySend(myAsAcApplying.get(0).getAcApplyProId(),myAsAcApplying.get(0).getObjectId(),
+                asAcApply.acApplySend(pass,not_pass,myAsAcApplying.get(0).getAcApplyProId(),myAsAcApplying.get(0).getObjectId(),
                         myAsAcApplying.get(0).getAcApplyAudiences(),myAsAcApplying.get(0).getAcApplyContent(),
                         myAsAcApplying.get(0).getAcApplyStartTime(),myAsAcApplying.get(0).getAcApplyDeadline(),
                         myAsAcApplying.get(0).getAcApplyOrganizer(),myAsAcApplying.get(0).getAcApplyPlace(),
@@ -108,6 +112,10 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
 
                 AsAcApply asAcApply_not = new AsAcApply();
                 asAcApply_not.acApplyDelete(myAsAcApplying.get(0).getObjectId());
+                //更改按钮状态
+                not_pass.setText("审核不通过");
+                pass.setEnabled(false);
+                not_pass.setEnabled(false);
         }
     }
 

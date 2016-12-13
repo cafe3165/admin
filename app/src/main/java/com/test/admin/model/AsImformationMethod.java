@@ -1,5 +1,7 @@
 package com.test.admin.model;
 
+import android.widget.Button;
+
 import com.test.admin.bean.AsImformation;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator_AcImId;
@@ -23,8 +25,8 @@ import static com.test.admin.model.Function.showToast;
 public class AsImformationMethod {
 
     //发布通知
-    public void asImAdd(String imTitle, String imOrganizer, String imContent, String imAudiences,
-                        String imPushScope_1,String imPushScope_2,final String proObjectId) {
+    public void asImAdd(final Button pulish,String imTitle, String imOrganizer, String imContent, String imAudiences,
+                        String imPushScope_1, String imPushScope_2, final String proObjectId) {
 
         List<String> list = new ArrayList<String>();
         list.add(imTitle);
@@ -50,6 +52,9 @@ public class AsImformationMethod {
                 public void done(final String s, BmobException e) {
                     if (e == null) {
                         showToast("发布成功");
+                        //更改按钮状态和text
+                        pulish.setText("发布成功");
+                        pulish.setEnabled(false);
                         //保存新发布的通知的ID到该发布者的已发布的通知ID字段
                         BmobQuery<AsPromulgator_AcImId> query = new BmobQuery<AsPromulgator_AcImId>();
                         query.addWhereEqualTo("proId",proObjectId);
