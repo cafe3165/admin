@@ -1,4 +1,4 @@
-package com.test.admin.login;
+package com.test.admin.newLogin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,16 +24,19 @@ import com.test.admin.R;
 import com.test.admin.bean.AsAdministrator;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
+import com.test.admin.login.forgetPasswordActivity;
+import com.test.admin.login.noLine;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
+import static com.test.admin.R.layout.forget_password_activity;
 import static com.test.admin.bean.Parameters.pObjectdId;
 
 
-public class MainActivity extends AppCompatActivity {
+public class loginActivity extends AppCompatActivity {
     private static final String[] items = new String[]{"管理员", "发布者", "参与者"};
     private String str1 = "忘记密码?";
     private String str2 = "还未注册?";
@@ -53,16 +56,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Bmob.initialize(this, "b00c3fa99b902d98cfed5e24a278166d");//初始化
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_activity);
+        setContentView(R.layout.login);
 
         ArrayAdapter<String> source = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items);
 
         final Spinner Spinner1 = (Spinner) findViewById(R.id.Spinner1);
         Spinner1.setAdapter(source);
         btn1 = (Button) findViewById(R.id.login);
-        btn2 = (Button) findViewById(R.id.btn2);
-        btn3 = (Button) findViewById(R.id.btn3);
-        btn4 = (Button) findViewById(R.id.btn4);
         //tv1=(TextView)findViewById(tv5);
         //tv2=(TextView)findViewById(tv6);
 
@@ -122,43 +122,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         //忘记密码跳转
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent login_intent = new Intent(MainActivity.this, forgetPasswordActivity.class);
-                startActivity(login_intent);
-            }
-        });
-
-        //还未注册跳转
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, registerActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //申请成为发布者跳转
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, applyPromulgator.class);
-                startActivity(intent);
-            }
-        });
 
         TextView textView1=(TextView)findViewById(R.id.text3);
 
 
 
-        String text1="注册";
+        String text1="忘记密码?";
         SpannableString spannableString1=new SpannableString(text1);
 
         spannableString1.setSpan(new ClickableSpan() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,registerActivity.class);
+                Intent intent=new Intent(loginActivity.this,forgetPasswordActivity.class);
                 startActivity(intent);
             }
         }, 0, text1.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -202,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
             public void done(AsParticipant asParticipant, BmobException e) {
                 if (e == null) {
                     toast("登录成功");
-                    Intent intent = new Intent(MainActivity.this, com.test.admin.Participant.newMain.class);
+                    Intent intent = new Intent(loginActivity.this, com.test.admin.Participant.newMain.class);
                     startActivity(intent);
                     Password.setText("");
                     btn1.setEnabled(true);
@@ -238,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
             public void done(AsPromulgator asPromulgator, BmobException e) {
                 if (e == null) {
                     toast("登录成功");
-                    Intent intent = new Intent(MainActivity.this, com.test.admin.promulgator.newMain.class);
+                    Intent intent = new Intent(loginActivity.this, com.test.admin.promulgator.newMain.class);
                     startActivity(intent);
                     btn1.setEnabled(true);
                     Password.setText("");
@@ -272,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
             public void done(AsAdministrator asAdministrator, BmobException e) {
                 if (e == null) {
                     toast("登录成功");
-                    Intent login_intent = new Intent(MainActivity.this, com.test.admin.activity.MainActivity.class);
+                    Intent login_intent = new Intent(loginActivity.this, com.test.admin.activity.MainActivity.class);
                     startActivity(login_intent);
                     btn1.setEnabled(true);
                     Password.setText("");
