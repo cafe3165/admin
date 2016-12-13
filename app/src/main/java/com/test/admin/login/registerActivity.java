@@ -106,19 +106,13 @@ public class registerActivity extends AppCompatActivity {
                                 {
                                     public void onClick(View v)
                                     {
-                                        //检测用户名是否已存在
-                                        BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
-                                        query.addWhereEqualTo("username",PhoneNum.getText().toString());
-                                        query.findObjects(new FindListener<AsParticipant>() {
-                                            @Override
-                                            public void done(List<AsParticipant> list, BmobException e) {
-                                                if (e==null){
-                                                    toast("存在");
-                                                }else{
-                                                    toast("不存在"+e.getMessage());
-                                                }
-                                            }
-                                        });
+                                        //检测信息是否完全输入
+                                        if(TextUtils.isEmpty(StuNum.getText())||TextUtils.isEmpty(StuName.getText())||TextUtils.isEmpty(PhoneNum.getText())||TextUtils.isEmpty(VerifyCode.getText())||TextUtils.isEmpty(Password.getText())||TextUtils.isEmpty(PasswordCon.getText())){
+                                            toast("请输入完整信息");
+                                        }
+                                        else{
+                                            smsvetify();
+                                        }
                                         //showDialog(1);
                                     }
                                 }
@@ -142,25 +136,43 @@ public class registerActivity extends AppCompatActivity {
             }
         });
 
-        //发送验证码
+        //发送验证码按钮
         btn4.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
-                String pnum=PhoneNum.getText().toString();
-                if (!TextUtils.isEmpty(pnum)){
-                    BmobException a = par.AsParSendSms(pnum);
-                    if(a==null){
-                        toast("验证码发送成功");
-                    }else{
-                        toast("验证码发送失败");
-                    }
+                //当输入为手机号时检测手机号是否已被注册
+                if (PhoneNum.getText().toString().matches("^((13[0-9])|(15[^4,\\D])|(18[0,5-9])|(17[0-8])|(147))\\d{8}$")){
+                    //检测手机号是否已被注册
+                    BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
+                    query.addWhereEqualTo("username",PhoneNum.getText().toString());
+                    query.findObjects(new FindListener<AsParticipant>() {
+                        @Override
+                        public void done(List<AsParticipant> list, BmobException e) {
+                            if (e==null&&list.size()!=0){
+                                toast("手机号已被注册,请使用其它号码注册");//手机号已被注册
+                            }else if(e==null&&list.isEmpty()){
+                                //手机号未被注册，发送验证码
+                               sendsms();
+                            }else{
+                                toast("查询失败:"+e.getErrorCode()+" "+e.getMessage());
+                            }
+                        }
+                    });
                 }else{
                     toast("请输入手机号");
                 }
             }
         });
 
+    }
+    //发送验证码
+    private void sendsms(){
+        BmobException a = par.AsParSendSms(PhoneNum.getText().toString());
+        if(a==null){
+            toast("验证码发送成功");
+        }else{
+            toast("验证码发送失败");
+        }
     }
 
     //短信验证码验证

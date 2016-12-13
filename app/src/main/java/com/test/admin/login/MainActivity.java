@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
                     btn1.setEnabled(true);
                     pObjectdId = (String) BmobUser.getObjectByKey("objectdId");
                 } else {
-                    toast("登录失败");
+                    toast("登录失败"+e.getMessage());
                     btn1.setEnabled(true);
                 }
             }
