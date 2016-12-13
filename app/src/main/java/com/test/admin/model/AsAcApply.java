@@ -59,7 +59,7 @@ public class AsAcApply {
                 public void done(String s, BmobException e) {
                     if (e == null) {
                         showToast("发布成功,等待管理员审核");
-
+                        //更改按钮状态和text
                         acIssue.setText("发布成功");
                         acIssue.setEnabled(false);
                     } else {
@@ -73,15 +73,24 @@ public class AsAcApply {
     }
 
     //将通过审核的活动推到活动列表
-    public void acApplySend(final String proObjectdId, final String appObjectdId, String acAudience, String acContent, String acStart, String acEnd,
-                            String acOrgan, String acPlace, String acTitle, String acPushScope_1, String acPushScope_2,List<String> acLabel) {
+    public void acApplySend(Button pass,Button not_pass,final String proObjectdId, final String appObjectdId,
+                            String acAudience, String acContent, String acStart, String acEnd, String acOrgan,
+                            String acPlace, String acTitle, String acPushScope_1, String acPushScope_2,List<String> acLabel) {
+
         //将通过审核的活动推到活动列表
         AsActi asActivity = new AsActi();
-        asActivity.asAcAdd(proObjectdId,acAudience,acStart,acPushScope_1,acPushScope_2,acPlace,acOrgan,acEnd,acContent,acTitle,acLabel);
+        asActivity.asAcAdd(pass,not_pass,proObjectdId,acAudience,acStart,acPushScope_1,acPushScope_2,
+                acPlace,acOrgan,acEnd,acContent,acTitle,acLabel);
 
         //从申请表里删除审核通过的活动
-        AsAcApply acApply = new AsAcApply();
-        acApply.acApplyDelete(appObjectdId);
+        AsAcApplying acApplying = new AsAcApplying();
+        acApplying.setObjectId(appObjectdId);
+        acApplying.delete(new UpdateListener() {
+            @Override
+            public void done(BmobException e) {
+
+            }
+        });
     }
 
     //删除活动申请表里的活动
@@ -93,6 +102,10 @@ public class AsAcApply {
             @Override
             public void done(BmobException e) {
 
+                if (e == null){
+
+                    showToast("审核不通过");
+                }
             }
         });
     }
