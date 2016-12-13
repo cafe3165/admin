@@ -21,7 +21,8 @@ import static com.test.admin.model.Function.showToast;
 public class AsAcApply {
 
     public void acApplyAdd(final Button acIssue,String acTitle, String acOrgan, String acStart, String acPlace, String acEnd,
-                           String acContent, String acAudience, String acPushScope_1, String acPushScope_2, List<String> acLabel, String proObjectdId) {
+                           String acContent, String acAudience, String acPushScope_1, String acPushScope_2, List<String> acLabel,
+                           String proObjectdId) {
 
         List<String> list = new ArrayList<String>();
         list.add(acTitle);
