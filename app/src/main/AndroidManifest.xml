@@ -66,9 +66,10 @@
         <activity android:name=".newLogin.loginRegisterActivity" />
         <activity android:name=".newLogin.identityActivity" />
         <activity android:name=".newLogin.loginActivity" />
-        <activity android:name=".newLogin.register1Activity" />
+        <activity android:name=".newLogin.register1_1Activity" />
         <activity android:name=".newLogin.register2_1Activity" />
-        <activity android:name=".newLogin.register2_2Activity"></activity>
+        <activity android:name=".newLogin.register2_2Activity" />
+        <activity android:name=".newLogin.register1_2Activity"></activity>
     </application>
 
 </manifest>
