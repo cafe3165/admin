@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="请联系管理员并提供相关证明"
         android:textSize="25sp"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/login_register"
         />
 
     <TextView
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="QQ:123456789"
         android:textSize="25sp"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/login_register"
         />
     <TextView
         android:layout_marginTop="30dp"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:text="手机:12345678901"
         android:textSize="25sp"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/login_register"
         />
     <TextView
         android:layout_marginTop="30dp"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:text="邮箱:123456789@qq.com"
         android:textSize="25sp"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/login_register"
         />
     <Button
         android:id="@+id/btn1"
