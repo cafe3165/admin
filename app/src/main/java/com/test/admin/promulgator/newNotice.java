@@ -45,7 +45,7 @@ public class newNotice extends AppCompatActivity {
                 pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
 
                 AsImformationMethod asImformation = new AsImformationMethod();
-                asImformation.asImAdd(myImTitle,myImOrganizer,myImContent,myImAudiences,myImPushScope,myImPushScope,pObjectdId);
+                asImformation.asImAdd(publish,myImTitle,myImOrganizer,myImContent,myImAudiences,myImPushScope,myImPushScope,pObjectdId);
             }
         });
 
