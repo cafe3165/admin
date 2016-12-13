@@ -34,7 +34,7 @@ public class FragmentOne extends Fragment {
 
     private ListView lv_activity;
     private List<AsAcApplying> asActivityList = new ArrayList<AsAcApplying>();
-    public static AcApplyAdapter mAdapter;
+    public AcApplyAdapter mAdapter;
 
     /*public static Handler handler = new Handler(){
 
