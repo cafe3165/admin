@@ -123,6 +123,8 @@ public class newActivity extends AppCompatActivity {
         acIssue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //改变按钮状态为不可按
+                acIssue.setEnabled(false);
                 //获取EditText上的输入
                 String myAcTitle = acTitle.getText().toString();
                 String myAcOrganizer = acOrganizer.getText().toString();

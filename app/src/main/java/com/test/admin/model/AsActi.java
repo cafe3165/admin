@@ -74,7 +74,9 @@ public class AsActi {
                         }
                     });
                 } else {
-                    showToast("审核失败");
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    pass.setEnabled(true);
                 }
             }
         });

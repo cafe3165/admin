@@ -93,30 +93,34 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        //findViewById(R.id.actNoPass_button).setOnClickListener(this);
-        //(R.id.actPass_button).setOnClickListener(this);
 
-        switch (v.getId()){
+        pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            case R.id.actPass_button:
-
-                AsAcApply asAcApply = new AsAcApply();
-                asAcApply.acApplySend(pass,not_pass,myAsAcApplying.get(0).getAcApplyProId(),myAsAcApplying.get(0).getObjectId(),
-                        myAsAcApplying.get(0).getAcApplyAudiences(),myAsAcApplying.get(0).getAcApplyContent(),
-                        myAsAcApplying.get(0).getAcApplyStartTime(),myAsAcApplying.get(0).getAcApplyDeadline(),
-                        myAsAcApplying.get(0).getAcApplyOrganizer(),myAsAcApplying.get(0).getAcApplyPlace(),
-                        myAsAcApplying.get(0).getAcApplyTitle(),myAsAcApplying.get(0).getAcApplyPushScope_1(),
-                        myAsAcApplying.get(0).getAcApplyPushScope_2(),myAsAcApplying.get(0).getAcApplyLabel());
-
-            case R.id.actNoPass_button:
-
-                AsAcApply asAcApply_not = new AsAcApply();
-                asAcApply_not.acApplyDelete(myAsAcApplying.get(0).getObjectId());
-                //更改按钮状态
-                not_pass.setText("审核不通过");
+                //改变按钮状态为不可按
                 pass.setEnabled(false);
-                not_pass.setEnabled(false);
-        }
-    }
+                //审核通过,推送活动
+                AsAcApply asAcApply = new AsAcApply();
+                asAcApply.acApplySend(pass, not_pass, myAsAcApplying.get(0).getAcApplyProId(), myAsAcApplying.get(0).getObjectId(),
+                        myAsAcApplying.get(0).getAcApplyAudiences(), myAsAcApplying.get(0).getAcApplyContent(),
+                        myAsAcApplying.get(0).getAcApplyStartTime(), myAsAcApplying.get(0).getAcApplyDeadline(),
+                        myAsAcApplying.get(0).getAcApplyOrganizer(), myAsAcApplying.get(0).getAcApplyPlace(),
+                        myAsAcApplying.get(0).getAcApplyTitle(), myAsAcApplying.get(0).getAcApplyPushScope_1(),
+                        myAsAcApplying.get(0).getAcApplyPushScope_2(), myAsAcApplying.get(0).getAcApplyLabel());
+            }
+        });
 
+        not_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //改变按钮状态为不可按
+                not_pass.setEnabled(false);
+                //审核不通过,删除审核列表的活动
+                AsAcApply asAcApply_not = new AsAcApply();
+                asAcApply_not.acApplyDelete(pass, not_pass, myAsAcApplying.get(0).getObjectId());
+            }
+        });
+    }
 }

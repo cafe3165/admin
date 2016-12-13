@@ -74,13 +74,17 @@ public class AsImformationMethod {
                             }
                         });
                     } else {
-                        showToast("发布失败");
+                        showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                        //更改按钮状态
+                        pulish.setEnabled(true);
                     }
                 }
             });
         }else{
 
             showToast("输入不准为空");
+            //更改按钮状态
+            pulish.setEnabled(true);
         }
     }
 
