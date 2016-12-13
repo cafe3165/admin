@@ -16,11 +16,12 @@ public class identityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.identity);
         ImageButton btn1 = (ImageButton) findViewById(R.id.imaBtn1);
+        /*
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
-        });
+        });*/
     }
 }
