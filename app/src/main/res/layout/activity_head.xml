@@ -8,29 +8,29 @@
     android:background="#FFFFFF"
     >
 
-    <LinearLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:minHeight="?attr/actionBarSize"
+    <!--<LinearLayout-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
 
-        >
+        <!--&gt;-->
 
 
-        <TextView
-            android:id="@+id/view_titile"
-            android:gravity="center"
-            android:text="活动助手"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+        <!--<TextView-->
+            <!--android:id="@+id/view_titile"-->
+            <!--android:gravity="center"-->
+            <!--android:text="活动助手"-->
+            <!--android:textSize="@dimen/biao_z"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--/>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <View
         android:layout_width="fill_parent"
