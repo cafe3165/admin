@@ -7,12 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
+import com.test.admin.Participant.InfoEdit;
 import com.test.admin.R;
 import com.test.admin.activity.PersonDetail;
 import com.test.admin.adapter.PermissionAdapter;
 import com.test.admin.bean.AsPermissionApplying;
+import com.test.admin.login.MainActivity;
+import com.test.admin.login.forgetPasswordActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +46,17 @@ public class PersonData extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.com_activity_user_info, container, false);
+
+
+
+        Button button =(Button) view.findViewById(R.id.ge_edit);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getActivity(),InfoEdit.class);
+                startActivity(intent);
+            }
+        });
 
 //        lv_permission = (ListView) view.findViewById(R.id.lv_permission);
 //

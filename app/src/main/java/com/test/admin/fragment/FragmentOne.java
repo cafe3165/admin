@@ -32,6 +32,7 @@ public class FragmentOne extends Fragment {
     private ListView lv_activity;
     private AcApplyAdapter mAdapter;
     private List<AsAcApplying> asActivityList = new ArrayList<AsAcApplying>();
+
     public FragmentOne() {
         // Required empty public constructor
     }
@@ -43,11 +44,6 @@ public class FragmentOne extends Fragment {
         View view = inflater.inflate(R.layout.layout_one, container, false);
 
         lv_activity = (ListView) view.findViewById(R.id.lv_activity);
-
-        /*用于ListView的item监听测试
-        /*List<ActivityBean> datas = new ArrayList<>();ActivityBean bean = null;bean = new ActivityBean();bean.setImg(R.drawable.ic_01);bean.setT1("读书笔记");bean.setT1("读书使人快乐...");
-        datas.add(bean);bean = new ActivityBean();bean.setImg(R.drawable.ic_02);bean.setT1("数计迎新");bean.setT1("又是一年...");datas.add(bean);bean = new ActivityBean();
-        bean.setImg(R.drawable.ic_03);bean.setT1("早安福大");bean.setT1("早起使人快乐...");datas.add(bean);*/
 
         BmobQuery<AsAcApplying> bmobQuery = new BmobQuery<AsAcApplying>();
         bmobQuery.addQueryKeys("objectId,acApplyTitle,acApplyContent");
@@ -64,7 +60,6 @@ public class FragmentOne extends Fragment {
                 }
             }
         });
-
 
         lv_activity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

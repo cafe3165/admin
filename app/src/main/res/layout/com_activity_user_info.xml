@@ -7,29 +7,7 @@
     android:layout_height="fill_parent"
     android:background="#FFFFFF"
     >
-    <!--<LinearLayout-->
-        <!--android:fitsSystemWindows="true"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="?attr/colorPrimary"-->
-        <!--android:gravity="center"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:minHeight="?attr/actionBarSize"-->
-        <!--&gt;-->
 
-
-        <!--<TextView-->
-            <!--android:id="@+id/view_titile"-->
-            <!--android:gravity="center"-->
-            <!--android:text="个人中心"-->
-            <!--android:textSize="@dimen/biao_z"-->
-            <!--android:textColor="#FFFFFF"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--/>-->
-        <!--&lt;!&ndash; 定义返回按钮 &ndash;&gt;-->
-
-    <!--</LinearLayout>-->
     <View
         android:layout_width="fill_parent"
         android:layout_marginTop="1dp"

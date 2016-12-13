@@ -11,22 +11,13 @@ import cn.bmob.v3.BmobUser;
 
 public class AsPromulgator extends BmobUser{
 
-    private List<String> proAcId;//已发布活动编号
     private String proQQNumber;//QQ号
     private String proImPermission_2;//通知权限_年级
     private String proImPermission_1;//通知权限_学院
-    private List<String> proImId;//已发布通知编号
     private String proIdentity;//身份
     private String proAcPermission_2;//活动权限_年级
     private String proAcPermission_1;//活动权限_学院
-    private List<String> proAcIdEnd;//已结束活动编号
-
-    public List<String> getProAcId() {
-        return proAcId;
-    }
-    public void setProAcId(List<String> proAcId) {
-        this.proAcId = proAcId;
-    }
+    private String parStuNumber;//学号--该字段是为了避免唯一键冲突
 
     public String getProQQNumber() {
         return proQQNumber;
@@ -47,13 +38,6 @@ public class AsPromulgator extends BmobUser{
     }
     public void setProImPermission_1(String proImPermission_1) {
         this.proImPermission_1 = proImPermission_1;
-    }
-
-    public List<String> getProImId() {
-        return proImId;
-    }
-    public void setProImId(List<String> proImId) {
-        this.proImId = proImId;
     }
 
     public String getProIdentity() {
@@ -77,11 +61,10 @@ public class AsPromulgator extends BmobUser{
         this.proAcPermission_1 = proAcPermission_1;
     }
 
-    public List<String> getProAcIdEnd() {
-        return proAcIdEnd;
+    public void setParStuNumber(String parStuNumber) {
+        this.parStuNumber = parStuNumber;
     }
-    public void setProAcIdEnd(List<String> proAcIdEnd) {
-        this.proAcIdEnd = proAcIdEnd;
+    public String getParStuNumber() {
+        return parStuNumber;
     }
-
 }

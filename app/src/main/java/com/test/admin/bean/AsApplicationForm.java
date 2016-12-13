@@ -11,7 +11,7 @@ import cn.bmob.v3.BmobObject;
 public class AsApplicationForm extends BmobObject {
     private String apAcId;//活动编号
     private List<String> apParId;//报名参与者编号
-    private List<Boolean> apParStatus;//参与者签到状态
+    private List<String> apParStatus;//参与者签到状态
 
     public String getApAcId() {
         return apAcId;
@@ -27,10 +27,10 @@ public class AsApplicationForm extends BmobObject {
         this.apParId = apParId;
     }
 
-    public List<Boolean> getApParStatus() {
+    public List<String> getApParStatus() {
         return apParStatus;
     }
-    public void setApParStatus(List<Boolean> apParStatus) {
+    public void setApParStatus(List<String> apParStatus) {
         this.apParStatus = apParStatus;
     }
 }
