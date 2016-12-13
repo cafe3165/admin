@@ -36,14 +36,16 @@ public class newNotice extends AppCompatActivity {
         publish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //改变按钮状态为不可按
+                publish.setEnabled(false);
+                //获取EditText信息
                 String myImTitle = imTitle.getText().toString();
                 String myImOrganizer = imOrganizer.getText().toString();
                 String myImContent = imContent.getText().toString();
                 String myImAudiences = imAudiences.getText().toString();
                 String myImPushScope = imPushScope.getText().toString();
                 pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
-
+                //发布通知
                 AsImformationMethod asImformation = new AsImformationMethod();
                 asImformation.asImAdd(publish,myImTitle,myImOrganizer,myImContent,myImAudiences,myImPushScope,myImPushScope,pObjectdId);
             }

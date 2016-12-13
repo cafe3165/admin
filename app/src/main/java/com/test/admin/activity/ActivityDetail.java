@@ -93,13 +93,13 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        //findViewById(R.id.actNoPass_button).setOnClickListener(this);
-        //(R.id.actPass_button).setOnClickListener(this);
 
         switch (v.getId()){
 
             case R.id.actPass_button:
-
+                //改变按钮状态为不可按
+                pass.setEnabled(false);
+                //审核通过,推送活动
                 AsAcApply asAcApply = new AsAcApply();
                 asAcApply.acApplySend(pass,not_pass,myAsAcApplying.get(0).getAcApplyProId(),myAsAcApplying.get(0).getObjectId(),
                         myAsAcApplying.get(0).getAcApplyAudiences(),myAsAcApplying.get(0).getAcApplyContent(),
@@ -109,13 +109,11 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
                         myAsAcApplying.get(0).getAcApplyPushScope_2(),myAsAcApplying.get(0).getAcApplyLabel());
 
             case R.id.actNoPass_button:
-
-                AsAcApply asAcApply_not = new AsAcApply();
-                asAcApply_not.acApplyDelete(myAsAcApplying.get(0).getObjectId());
-                //更改按钮状态
-                not_pass.setText("审核不通过");
-                pass.setEnabled(false);
+                //改变按钮状态为不可按
                 not_pass.setEnabled(false);
+                //审核不通过,删除审核列表的活动
+                AsAcApply asAcApply_not = new AsAcApply();
+                asAcApply_not.acApplyDelete(pass,not_pass,myAsAcApplying.get(0).getObjectId());
         }
     }
 

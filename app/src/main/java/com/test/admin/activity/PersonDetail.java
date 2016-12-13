@@ -91,9 +91,11 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
         pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //更改按钮状态为不可按
+                pass.setEnabled(false);
+                //审核通过，推送发布者信息
                 AsPermissionApplyingMethod asPermissionApplyingMethod = new AsPermissionApplyingMethod();
-                asPermissionApplyingMethod.applyAccess(myAsPermissionApplying.get(0).getPerIdentity(),
+                asPermissionApplyingMethod.applyAccess(pass,not_pass,myAsPermissionApplying.get(0).getPerIdentity(),
                         myAsPermissionApplying.get(0).getPerEmail(), myAsPermissionApplying.get(0).getPerTelNumber(),
                         myAsPermissionApplying.get(0).getPerQQNumber(), myAsPermissionApplying.get(0).getPerImPermission_1(),
                         myAsPermissionApplying.get(0).getPerImPermission_2(), myAsPermissionApplying.get(0).getPerAcPermission_1(),
@@ -104,9 +106,11 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
         not_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //更改按钮状态为不可按
+                not_pass.setEnabled(false);
+                //审核失败，删除权限申请
                 AsPermissionApplyingMethod asPermissionApplyingMethod_not = new AsPermissionApplyingMethod();
-                asPermissionApplyingMethod_not.applyNotAccess(myAsPermissionApplying.get(0).getObjectId());
+                asPermissionApplyingMethod_not.applyNotAccess(pass,not_pass,myAsPermissionApplying.get(0).getObjectId());
             }
         });
     }

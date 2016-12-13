@@ -63,12 +63,16 @@ public class AsAcApply {
                         acIssue.setText("发布成功");
                         acIssue.setEnabled(false);
                     } else {
-                        showToast("发布失败");
+                        showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                        //更改按钮状态
+                        acIssue.setEnabled(true);
                     }
                 }
             });
         }else{
             showToast("输入不准为空");
+            //更改按钮状态
+            acIssue.setEnabled(true);
         }
     }
 
@@ -94,7 +98,7 @@ public class AsAcApply {
     }
 
     //删除活动申请表里的活动
-    public void acApplyDelete(String appObjectdId){
+    public void acApplyDelete(final Button pass, final Button not_pass, String appObjectdId){
 
         AsAcApplying acApplying = new AsAcApplying();
         acApplying.setObjectId(appObjectdId);
@@ -105,6 +109,15 @@ public class AsAcApply {
                 if (e == null){
 
                     showToast("审核不通过");
+                    //更改按钮状态
+                    not_pass.setText("审核不通过");
+                    pass.setEnabled(false);
+                    not_pass.setEnabled(false);
+                }else{
+
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    not_pass.setEnabled(true);
                 }
             }
         });

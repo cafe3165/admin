@@ -1,5 +1,7 @@
 package com.test.admin.model;
 
+import android.widget.Button;
+
 import com.test.admin.bean.AsPermissionApplying;
 import com.test.admin.bean.AsPromulgator;
 import com.test.admin.bean.AsPromulgator_AcImId;
@@ -17,7 +19,7 @@ import static com.test.admin.model.Function.showToast;
 public class AsPermissionApplyingMethod {
 
     //审核通过
-    public void applyAccess(String perIdentity, String perEmail, String perTelNumber, String perQQNumber,
+    public void applyAccess(final Button pass,final Button not_pass,String perIdentity, String perEmail, String perTelNumber, String perQQNumber,
                             String perImPushScope_1, String perImPushScope_2, String perAsPushScope_1,
                             String perAsPushScope_2, final String perObjectId){
 
@@ -41,6 +43,10 @@ public class AsPermissionApplyingMethod {
                 if(e == null){
 
                     showToast("审核通过");
+                    //更改按钮状态
+                    pass.setText("审核通过");
+                    pass.setEnabled(false);
+                    not_pass.setEnabled(false);
                     //将该申请从权限审核列表中删除
                     AsPermissionApplying asPermissionApplying = new AsPermissionApplying();
                     asPermissionApplying.setObjectId(perObjectId);
@@ -60,15 +66,16 @@ public class AsPermissionApplyingMethod {
                         }
                     });
                 }else{
-                    showToast("审核失败"+e.getLocalizedMessage()+e.getErrorCode());
-                    // Toast.makeText(getApplicationContext(),e.getLocalizedMessage() + e.getErrorCode(),Toast.LENGTH_SHORT);
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    pass.setEnabled(true);
                 }
             }
         });
     }
 
     //审核失败
-    public void applyNotAccess(String perObjectId){
+    public void applyNotAccess(final Button pass,final Button not_pass,String perObjectId){
 
         AsPermissionApplying asPermissionApplying = new AsPermissionApplying();
         asPermissionApplying.setObjectId(perObjectId);
@@ -79,6 +86,14 @@ public class AsPermissionApplyingMethod {
                 if(e == null){
 
                     showToast("审核未通过");
+                    //改变按钮状态
+                    not_pass.setText("审核未通过");
+                    pass.setEnabled(false);
+                    not_pass.setEnabled(false);
+                }else{
+
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    not_pass.setEnabled(true);
                 }
             }
         });
