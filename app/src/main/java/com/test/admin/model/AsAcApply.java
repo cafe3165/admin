@@ -27,7 +27,7 @@ import static com.test.admin.model.Function.showToast;
 public class AsAcApply {
 
     public void acApplyAdd(String acTitle,String acOrgan, String acStart,String acPlace, String acEnd,
-                           String acContent,String acAudience,String acPushScope_1,String acPushScope_2,String proObjectdId) {
+                           String acContent,String acAudience,String acPushScope_1,String acPushScope_2,List<String> acLabel,String proObjectdId) {
 
         List<String> list = new ArrayList<String>();
         list.add(acTitle);
@@ -39,6 +39,7 @@ public class AsAcApply {
         list.add(acPlace);
         list.add(acPushScope_1);
         list.add(acPushScope_2);
+        list.addAll(acLabel);
 
         boolean flag = judge(list);
 
@@ -54,6 +55,7 @@ public class AsAcApply {
         acApplying.setAcApplyPushScope_1(acPushScope_1);
         acApplying.setAcApplyPushScope_2(acPushScope_2);
         acApplying.setAcApplyProId(proObjectdId);
+        acApplying.setAcApplyLabel(acLabel);
 
         //判断输入是否有空值
         if(flag) {
@@ -75,10 +77,10 @@ public class AsAcApply {
 
     //将通过审核的活动推到活动列表
     public void acApplySend(final String proObjectdId, final String appObjectdId, String acAudience, String acContent, String acStart, String acEnd,
-                            String acOrgan, String acPlace, String acTitle, String acPushScope_1, String acPushScope_2) {
+                            String acOrgan, String acPlace, String acTitle, String acPushScope_1, String acPushScope_2,List<String> acLabel) {
         //将通过审核的活动推到活动列表
         AsActi asActivity = new AsActi();
-        asActivity.asAcAdd(proObjectdId,acAudience,acStart,acPushScope_1,acPushScope_2,acPlace,acOrgan,acEnd,acContent,acTitle);
+        asActivity.asAcAdd(proObjectdId,acAudience,acStart,acPushScope_1,acPushScope_2,acPlace,acOrgan,acEnd,acContent,acTitle,acLabel);
 
         //从申请表里删除审核通过的活动
         AsAcApply acApply = new AsAcApply();

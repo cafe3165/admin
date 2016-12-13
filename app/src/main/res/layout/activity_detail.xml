@@ -121,14 +121,12 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:gravity="center"
             android:text="活动受众"
             android:textSize="17sp"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:gravity="center"
             android:textSize="17sp"
             android:id="@+id/acApplyAudiences"/>
     </TableRow>
@@ -138,15 +136,12 @@
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:gravity="center"
             android:text="活动标签"
             android:textSize="17sp"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
-            android:gravity="center"
-            android:text="综测  礼物  "
             android:textSize="17sp"
             android:id="@+id/acApplyLabel"/>
     </TableRow>
