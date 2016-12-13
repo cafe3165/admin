@@ -143,7 +143,7 @@ public class newActivity extends AppCompatActivity {
                 if(myGrade != null)myLabel.add(myGrade);
                 //发布活动，成功推到活动申请表
                 AsAcApply asAcApply = new AsAcApply();
-                asAcApply.acApplyAdd(myAcTitle, myAcOrganizer, myAcStarTime, myAcDeadTime, myAcPlace, myAcContent,
+                asAcApply.acApplyAdd(acIssue,myAcTitle, myAcOrganizer, myAcStarTime, myAcDeadTime, myAcPlace, myAcContent,
                         myAcAudiences, myAcPushScope_1, myAcPushScope_2,myLabel,pObjectdId);
             }
         });

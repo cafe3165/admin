@@ -1,33 +1,27 @@
 package com.test.admin.model;
 
-import android.widget.Toast;
+import android.widget.Button;
 
 import com.test.admin.bean.AsAcApplying;
-import com.test.admin.bean.AsActivity;
-import com.test.admin.bean.AsPromulgator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.bmob.v3.BmobQuery;
-import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
-import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.model.Function.judge;
 import static com.test.admin.model.Function.showToast;
 
 /**
- * Created by Administrator on 2016/11/17 0017.
+ * 申请表操作方法
  */
 
 public class AsAcApply {
 
-    public void acApplyAdd(String acTitle,String acOrgan, String acStart,String acPlace, String acEnd,
-                           String acContent,String acAudience,String acPushScope_1,String acPushScope_2,List<String> acLabel,String proObjectdId) {
+    public void acApplyAdd(final Button acIssue,String acTitle, String acOrgan, String acStart, String acPlace, String acEnd,
+                           String acContent, String acAudience, String acPushScope_1, String acPushScope_2, List<String> acLabel, String proObjectdId) {
 
         List<String> list = new ArrayList<String>();
         list.add(acTitle);
@@ -65,6 +59,9 @@ public class AsAcApply {
                 public void done(String s, BmobException e) {
                     if (e == null) {
                         showToast("发布成功,等待管理员审核");
+
+                        acIssue.setText("发布成功");
+                        acIssue.setEnabled(false);
                     } else {
                         showToast("发布失败");
                     }
