@@ -57,14 +57,14 @@ public class AsPermissionApplyingMethod {
                         }
                     });
                     //创建活动发布者对应的用来保存已发布活动Id或者通知Id的表
-                    AsPromulgator_AcImId asPromulgator_acOrImId = new AsPromulgator_AcImId();
+                    /*AsPromulgator_AcImId asPromulgator_acOrImId = new AsPromulgator_AcImId();
                     asPromulgator_acOrImId.setProId(s.getObjectId());
                     asPromulgator_acOrImId.save(new SaveListener<String>() {
                         @Override
                         public void done(String s, BmobException e) {
 
                         }
-                    });
+                    });*/
                 }else{
                     showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
                     //更改按钮状态
