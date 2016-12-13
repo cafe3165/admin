@@ -44,6 +44,7 @@ public class AsImformationMethod {
         asImformation.setImAudiences(imAudiences);
         asImformation.setImPushScope_1(imPushScope_1);
         asImformation.setImPushScope_2(imPushScope_2);
+        asImformation.setImPromulgator(proObjectId);
 
         if (judge(list)){
 
@@ -56,7 +57,7 @@ public class AsImformationMethod {
                         pulish.setText("发布成功");
                         pulish.setEnabled(false);
                         //保存新发布的通知的ID到该发布者的已发布的通知ID字段
-                        BmobQuery<AsPromulgator_AcImId> query = new BmobQuery<AsPromulgator_AcImId>();
+                        /*BmobQuery<AsPromulgator_AcImId> query = new BmobQuery<AsPromulgator_AcImId>();
                         query.addWhereEqualTo("proId",proObjectId);
                         query.findObjects(new FindListener<AsPromulgator_AcImId>() {
                             @Override
@@ -72,7 +73,7 @@ public class AsImformationMethod {
                                     });
                                 }
                             }
-                        });
+                        });*/
                     } else {
                         showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
                         //更改按钮状态

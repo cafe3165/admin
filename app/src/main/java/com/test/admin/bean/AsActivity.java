@@ -19,6 +19,7 @@ public class AsActivity extends BmobObject {
     private String acDeadline;//结束时间
     private String acContent;//活动内容
     private String acTitle;//活动标题
+    private String acPromulgator;//发布者ID
 
     public String getAcAudiences() {
         return acAudiences;
@@ -88,5 +89,12 @@ public class AsActivity extends BmobObject {
     }
     public void setAcTitle(String acTitle) {
         this.acTitle = acTitle;
+    }
+
+    public String getAcPromulgator() {
+        return acPromulgator;
+    }
+    public void setAcPromulgator(String acPromulgator) {
+        this.acPromulgator = acPromulgator;
     }
 }

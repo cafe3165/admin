@@ -12,6 +12,8 @@ import static cn.bmob.v3.Bmob.getApplicationContext;
 
 public class Function {
 
+    public static final int UPDATE_TEXT = 1;
+
     public static void showToast(String msg){
 
         Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_SHORT).show();

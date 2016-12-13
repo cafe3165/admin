@@ -12,15 +12,20 @@ import android.widget.ListView;
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
 import com.test.admin.adapter.AcApplyAdapter;
+import com.test.admin.adapter.ImformationAdapter;
 import com.test.admin.bean.AsAcApplying;
+import com.test.admin.bean.AsImformation;
+import com.test.admin.bean.AsPromulgator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
+import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
 /**
@@ -29,9 +34,10 @@ import static com.test.admin.bean.Parameters.staticObjectdId;
 
 public class YiFaBuTongZhi extends Fragment {
 
-    private ListView lv_activity;
-    private AcApplyAdapter mAdapter;
-    private List<AsAcApplying> asActivityList = new ArrayList<AsAcApplying>();
+    private ListView lv_imformation;
+    private ImformationAdapter myImformationAdapter;
+    private List<AsImformation> asImformationsList = new ArrayList<AsImformation>();
+
     public YiFaBuTongZhi() {
         // Required empty public constructor
     }
@@ -40,9 +46,26 @@ public class YiFaBuTongZhi extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fabuzhe_yifabutongzhi, container, false);
+        View view = inflater.inflate(R.layout.fragment_main4, container, false);
 
+        lv_imformation = (ListView) view.findViewById(R.id.lv_imformation);
+        pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
 
+        BmobQuery<AsImformation> bmobQuery = new BmobQuery<AsImformation>();
+        bmobQuery.addWhereContainsAll("imPromulgator", Arrays.asList(pObjectdId));
+        bmobQuery.findObjects(new FindListener<AsImformation>() {
+            @Override
+            public void done(List<AsImformation> list, BmobException e) {
+
+                if (e == null) {
+                    asImformationsList.addAll(list);
+
+                    myImformationAdapter = new ImformationAdapter(getActivity(),asImformationsList);
+
+                    lv_imformation.setAdapter(myImformationAdapter);
+                }
+            }
+        });
 
         return view;
     }
