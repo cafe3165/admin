@@ -25,7 +25,7 @@ public class identityActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(identityActivity.this,registerActivity.class);
+                Intent intent = new Intent(identityActivity.this,register1Activity.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +33,7 @@ public class identityActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(identityActivity.this,applyPromulgator.class);
+                Intent intent = new Intent(identityActivity.this,register1Activity.class);
                 startActivity(intent);
             }
         });

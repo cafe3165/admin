@@ -1,5 +1,6 @@
 package com.test.admin.PromulgatorFragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,15 +13,20 @@ import android.widget.ListView;
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
 import com.test.admin.adapter.AcApplyAdapter;
+import com.test.admin.adapter.ActivityAdapter;
 import com.test.admin.bean.AsAcApplying;
+import com.test.admin.bean.AsActivity;
+import com.test.admin.bean.AsPromulgator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
+import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
 /**
@@ -30,8 +36,9 @@ import static com.test.admin.bean.Parameters.staticObjectdId;
 public class YiFaBuHuoDong extends Fragment {
 
     private ListView lv_activity;
-    private AcApplyAdapter mAdapter;
-    private List<AsAcApplying> asActivityList = new ArrayList<AsAcApplying>();
+    private ActivityAdapter myActivityAdapter;
+    private List<AsActivity> asActivityList = new ArrayList<AsActivity>();
+
     public YiFaBuHuoDong() {
         // Required empty public constructor
     }
@@ -40,8 +47,27 @@ public class YiFaBuHuoDong extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fabuzhe_yifabuhuodong, container, false);
+        View view = inflater.inflate(R.layout.fragment_main2, container, false);
 
+        lv_activity = (ListView) view.findViewById(R.id.lv_activity);
+
+        pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+
+        BmobQuery<AsActivity> bmobQuery = new BmobQuery<AsActivity>();
+        bmobQuery.addWhereContainsAll("acPromulgator", Arrays.asList(pObjectdId));
+        bmobQuery.findObjects(new FindListener<AsActivity>() {
+            @Override
+            public void done(List<AsActivity> list, BmobException e) {
+
+                if (e == null) {
+                    asActivityList.addAll(list);
+
+                    myActivityAdapter = new ActivityAdapter(getActivity(),asActivityList);
+
+                    lv_activity.setAdapter(myActivityAdapter);
+                }
+            }
+        });
 
 
         return view;

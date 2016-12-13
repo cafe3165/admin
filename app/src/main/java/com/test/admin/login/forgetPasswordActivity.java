@@ -98,29 +98,27 @@ public class forgetPasswordActivity extends AppCompatActivity {
         }else{
             toast("修改失败");
         }
-
-
     }
 
-    protected Dialog onCreateDialog(int id)
-    {
-        Dialog dialog = null;
-        switch(id)
-        {
-            case 1:
-                AlertDialog.Builder b = new AlertDialog.Builder(this);
-                b.setMessage("修改成功！");
-                b.setPositiveButton(
-                        "确定", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        });
-                dialog = b.create();
-                break;
-            default:break;
-        }
-        return dialog;
-    }
+//    protected Dialog onCreateDialog(int id)
+//    {
+//        Dialog dialog = null;
+//        switch(id)
+//        {
+//            case 1:
+//                AlertDialog.Builder b = new AlertDialog.Builder(this);
+//                b.setMessage("修改成功！");
+//                b.setPositiveButton(
+//                        "确定", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//
+//                            }
+//                        });
+//                dialog = b.create();
+//                break;
+//            default:break;
+//        }
+//        return dialog;
+//    }
 }

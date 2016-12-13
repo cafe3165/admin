@@ -13,6 +13,7 @@ public class AsImformation extends BmobObject {
     private String imPushScope_1;//推送范围_学院
     private String imPushScope_2;//推送范围_年级
     private String imTitle;//通知标题
+    private String imPromulgator;//发布者Id
 
     public String getImAudiences() {
         return imAudiences;
@@ -54,5 +55,12 @@ public class AsImformation extends BmobObject {
     }
     public void setImTitle(String imTitle) {
         this.imTitle = imTitle;
+    }
+
+    public String getImPromulgator() {
+        return imPromulgator;
+    }
+    public void setImPromulgator(String imPromulgator) {
+        this.imPromulgator = imPromulgator;
     }
 }

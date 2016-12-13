@@ -1,7 +1,6 @@
 package com.test.admin.model;
 
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsPromulgator;
@@ -16,7 +15,6 @@ import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
-import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.model.Function.showToast;
 
 /**
@@ -42,6 +40,7 @@ public class AsActi {
         asActivity.setAcPushScope_1(acPushScope1);
         asActivity.setAcPushScope_2(acPushScope2);
         asActivity.setAcLabel(acLabel);
+        asActivity.setAcPromulgator(proObjectId);
 
         asActivity.save(new SaveListener<String>() {
             @Override
@@ -52,11 +51,16 @@ public class AsActi {
                     pass.setText("审核通过");
                     pass.setEnabled(false);
                     not_pass.setEnabled(false);
+                    //更新listView
+                    /*Message message = new Message();
+                    message.what = UPDATE_TEXT;
+                    FragmentOne fragmentOne = new FragmentOne();
+                    fragmentOne.handler.sendMessage(message);*/
                     //创建活动对应的报名表
                     AsAppForm asAppForm = new AsAppForm();
                     asAppForm.creatForm(s);
                     //将审核通过的活动ID添加到对应发布者的已发布的活动ID字段
-                    BmobQuery<AsPromulgator_AcImId> query = new BmobQuery<AsPromulgator_AcImId>();
+                    /*BmobQuery<AsPromulgator_AcImId> query = new BmobQuery<AsPromulgator_AcImId>();
                     query.addWhereEqualTo("proId",proObjectId);
                     query.findObjects(new FindListener<AsPromulgator_AcImId>() {
                         @Override
@@ -72,7 +76,7 @@ public class AsActi {
                                 });
                             }
                         }
-                    });
+                    });*/
                 } else {
                     showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
                     //更改按钮状态

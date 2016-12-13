@@ -8,7 +8,9 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="cn.bmob.permission.push" />
+
 
     <application
         android:allowBackup="true"
@@ -25,9 +27,7 @@
         <activity
             android:name=".activity.PersonDetail"
             android:label="@string/title_activity_detail" />
-
-        <activity android:name=".login.MainActivity"/>
-
+        <activity android:name=".login.MainActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,27 +57,20 @@
         <activity android:name=".Participant.no_find" />
         <activity android:name=".Participant.settingAct" />
         <activity android:name=".Participant.userInfo" />
-        <!--<activity android:name=".activitypromulgator.ViewActivity" />-->
+        <!-- <activity android:name=".activitypromulgator.ViewActivity" /> -->
         <activity android:name=".Participant.ImformViewActivity" />
         <activity android:name=".promulgator.ActInfomation" />
-       /////////////////////////////////////////////////////////
-
-        <activity android:name=".Participant.newMain"/>
-        <activity android:name=".Participant.BaseActivity"/>
-
-        <activity android:name=".promulgator.BaseActivity"/>
-        <activity android:name=".promulgator.newMain"/>
-
-
-        <activity android:name=".newLogin.loginRegisterActivity"/>
-        <activity android:name=".newLogin.identityActivity"/>
-        <activity android:name=".newLogin.loginActivity"/>
-
-
-
-
-
-
+        /////////////////////////////////////////////////////////
+        <activity android:name=".Participant.newMain" />
+        <activity android:name=".Participant.BaseActivity" />
+        <activity android:name=".promulgator.BaseActivity" />
+        <activity android:name=".promulgator.newMain" />
+        <activity android:name=".newLogin.loginRegisterActivity" />
+        <activity android:name=".newLogin.identityActivity" />
+        <activity android:name=".newLogin.loginActivity" />
+        <activity android:name=".newLogin.register1Activity" />
+        <activity android:name=".newLogin.register2_1Activity" />
+        <activity android:name=".newLogin.register2_2Activity"></activity>
     </application>
 
 </manifest>
