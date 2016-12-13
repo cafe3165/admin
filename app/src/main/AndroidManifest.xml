@@ -63,6 +63,7 @@
         /////////////////////////////////////////////////////////
         <activity android:name=".Participant.newMain" />
         <activity android:name=".Participant.BaseActivity" />
+        <activity android:name=".newLogin.identityActivity"/>
     </application>
 
 </manifest>
