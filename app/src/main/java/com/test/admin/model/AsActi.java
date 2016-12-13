@@ -1,7 +1,6 @@
 package com.test.admin.model;
 
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsPromulgator;
@@ -16,7 +15,6 @@ import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
-import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.model.Function.showToast;
 
 /**
@@ -52,6 +50,11 @@ public class AsActi {
                     pass.setText("审核通过");
                     pass.setEnabled(false);
                     not_pass.setEnabled(false);
+                    //更新listView
+                    /*Message message = new Message();
+                    message.what = UPDATE_TEXT;
+                    FragmentOne fragmentOne = new FragmentOne();
+                    fragmentOne.handler.sendMessage(message);*/
                     //创建活动对应的报名表
                     AsAppForm asAppForm = new AsAppForm();
                     asAppForm.creatForm(s);
