@@ -32,7 +32,7 @@ public class loginRegisterActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(loginRegisterActivity.this, registerActivity.class);
+                Intent intent = new Intent(loginRegisterActivity.this, identityActivity.class);
                 startActivity(intent);
             }
         });

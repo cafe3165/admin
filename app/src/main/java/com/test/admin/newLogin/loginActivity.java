@@ -213,7 +213,7 @@ public class loginActivity extends AppCompatActivity {
             public void done(AsPromulgator asPromulgator, BmobException e) {
                 if (e == null) {
                     toast("登录成功");
-                    Intent intent = new Intent(loginActivity.this, com.test.admin.promulgator.MainActivity.class);
+                    Intent intent = new Intent(loginActivity.this, com.test.admin.promulgator.newMain.class);
                     startActivity(intent);
                     btn1.setEnabled(true);
                     Password.setText("");
