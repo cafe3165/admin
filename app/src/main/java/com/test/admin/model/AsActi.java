@@ -1,5 +1,6 @@
 package com.test.admin.model;
 
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.test.admin.bean.AsActivity;
@@ -25,8 +26,9 @@ import static com.test.admin.model.Function.showToast;
 public class AsActi {
 
 
-    public void asAcAdd(final String proObjectId, String acAudiences, String acStart, String acPushScope1, String acPushScope2,
-                        String acPlace, String acOrgan, String acEnd, String acContent, String acTitle) {
+    public void asAcAdd(final Button pass,final Button not_pass,final String proObjectId, String acAudiences,
+                        String acStart, String acPushScope1, String acPushScope2, String acPlace, String acOrgan,
+                        String acEnd, String acContent, String acTitle, List<String>acLabel) {
 
         AsActivity asActivity = new AsActivity();
 
@@ -39,12 +41,17 @@ public class AsActi {
         asActivity.setAcPlace(acPlace);
         asActivity.setAcPushScope_1(acPushScope1);
         asActivity.setAcPushScope_2(acPushScope2);
+        asActivity.setAcLabel(acLabel);
 
         asActivity.save(new SaveListener<String>() {
             @Override
             public void done(final String s, BmobException e) {
                 if (e == null) {
                     showToast("审核成功");
+                    //更改按钮状态和text
+                    pass.setText("审核通过");
+                    pass.setEnabled(false);
+                    not_pass.setEnabled(false);
                     //创建活动对应的报名表
                     AsAppForm asAppForm = new AsAppForm();
                     asAppForm.creatForm(s);
@@ -55,17 +62,21 @@ public class AsActi {
                         @Override
                         public void done(List<AsPromulgator_AcImId> list, BmobException e) {
 
-                            list.get(0).addUnique("proAcId",s);
-                            list.get(0).update(new UpdateListener() {
-                                @Override
-                                public void done(BmobException e) {
+                            if(e == null) {
+                                list.get(0).addUnique("proAcId", s);
+                                list.get(0).update(new UpdateListener() {
+                                    @Override
+                                    public void done(BmobException e) {
 
-                                }
-                            });
+                                    }
+                                });
+                            }
                         }
                     });
                 } else {
-                    showToast("审核失败");
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    pass.setEnabled(true);
                 }
             }
         });

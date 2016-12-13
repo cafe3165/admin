@@ -149,7 +149,16 @@
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
             android:background="#FFFAFA" />
-        <TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#FFFAFA" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
             <TextView
                 android:text="学院"
                 android:layout_marginLeft="50dp"
@@ -169,11 +178,6 @@
                 android:id="@+id/ge_yuan" />
         </TableRow>
 
-        <View
-            android:layout_width="fill_parent"
-            android:layout_marginTop="1dp"
-            android:layout_height="1dp"
-            android:background="#FFFAFA" />
         <TableRow>
             <TextView
                 android:text="年级"

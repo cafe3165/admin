@@ -32,6 +32,11 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
     private TextView acApplyLabel;
     private Button pass;
     private Button not_pass;
+    private String acLabel1;
+    private String acLabel2;
+    private String acLabel3;
+    private String acLabel4;
+    private String acLabel5;
 
     //声明活动申请对象，保存当前查找到的活动申请对象
     private List<AsAcApplying> myAsAcApplying = new ArrayList<AsAcApplying>();
@@ -51,6 +56,8 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
         acApplyContent = (TextView)findViewById(R.id.acApplyContent);
         acApplyAudiences = (TextView)findViewById(R.id.acApplyAudiences);
         acApplyLabel = (TextView)findViewById(R.id.acApplyLabel);
+        pass = (Button)findViewById(R.id.actPass_button);
+        not_pass = (Button)findViewById(R.id.actNoPass_button);
 
         //查找当前item对应的活动申请对象并返回值显示在TextView上
         BmobQuery<AsAcApplying> query = new BmobQuery<AsAcApplying>();
@@ -70,6 +77,14 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
                     acApplyPlace.setText(asAcApplying.getAcApplyPlace());
                     acApplyContent.setText(asAcApplying.getAcApplyContent());
                     acApplyAudiences.setText(asAcApplying.getAcApplyAudiences());
+                    acApplyLabel.setText(asAcApplying.getAcApplyLabel().toString());
+                    /*acLabel1 = asAcApplying.getAcApplyLabel().get(0);
+                    acLabel2 = asAcApplying.getAcApplyLabel().get(1);
+                    acLabel3 = asAcApplying.getAcApplyLabel().get(2);
+                    acLabel4 = asAcApplying.getAcApplyLabel().get(3);
+                    acLabel5 = asAcApplying.getAcApplyLabel().get(4);
+
+                    acApplyLabel.setText(acLabel1 + acLabel2 + acLabel3 + acLabel4 + acLabel5 );*/
                 }
             }
         });
@@ -78,26 +93,34 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        //findViewById(R.id.actNoPass_button).setOnClickListener(this);
-        //(R.id.actPass_button).setOnClickListener(this);
 
-        switch (v.getId()){
+        pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            case R.id.actPass_button:
-
+                //改变按钮状态为不可按
+                pass.setEnabled(false);
+                //审核通过,推送活动
                 AsAcApply asAcApply = new AsAcApply();
-                asAcApply.acApplySend(myAsAcApplying.get(0).getAcApplyProId(),myAsAcApplying.get(0).getObjectId(),
-                        myAsAcApplying.get(0).getAcApplyAudiences(),myAsAcApplying.get(0).getAcApplyContent(),
-                        myAsAcApplying.get(0).getAcApplyStartTime(),myAsAcApplying.get(0).getAcApplyDeadline(),
-                        myAsAcApplying.get(0).getAcApplyOrganizer(),myAsAcApplying.get(0).getAcApplyPlace(),
-                        myAsAcApplying.get(0).getAcApplyTitle(),myAsAcApplying.get(0).getAcApplyPushScope_1(),
-                        myAsAcApplying.get(0).getAcApplyPushScope_2());
+                asAcApply.acApplySend(pass, not_pass, myAsAcApplying.get(0).getAcApplyProId(), myAsAcApplying.get(0).getObjectId(),
+                        myAsAcApplying.get(0).getAcApplyAudiences(), myAsAcApplying.get(0).getAcApplyContent(),
+                        myAsAcApplying.get(0).getAcApplyStartTime(), myAsAcApplying.get(0).getAcApplyDeadline(),
+                        myAsAcApplying.get(0).getAcApplyOrganizer(), myAsAcApplying.get(0).getAcApplyPlace(),
+                        myAsAcApplying.get(0).getAcApplyTitle(), myAsAcApplying.get(0).getAcApplyPushScope_1(),
+                        myAsAcApplying.get(0).getAcApplyPushScope_2(), myAsAcApplying.get(0).getAcApplyLabel());
+            }
+        });
 
-            case R.id.actNoPass_button:
+        not_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                //改变按钮状态为不可按
+                not_pass.setEnabled(false);
+                //审核不通过,删除审核列表的活动
                 AsAcApply asAcApply_not = new AsAcApply();
-                asAcApply_not.acApplyDelete(myAsAcApplying.get(0).getObjectId());
-        }
+                asAcApply_not.acApplyDelete(pass, not_pass, myAsAcApplying.get(0).getObjectId());
+            }
+        });
     }
-
 }
