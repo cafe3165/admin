@@ -30,8 +30,11 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
     private TextView acApplyContent;
     private TextView acApplyAudiences;
     private TextView acApplyLabel;
-    private Button pass;
-    private Button not_pass;
+    private String acLabel1;
+    private String acLabel2;
+    private String acLabel3;
+    private String acLabel4;
+    private String acLabel5;
 
     //声明活动申请对象，保存当前查找到的活动申请对象
     private List<AsAcApplying> myAsAcApplying = new ArrayList<AsAcApplying>();
@@ -70,6 +73,14 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
                     acApplyPlace.setText(asAcApplying.getAcApplyPlace());
                     acApplyContent.setText(asAcApplying.getAcApplyContent());
                     acApplyAudiences.setText(asAcApplying.getAcApplyAudiences());
+                    acApplyLabel.setText(asAcApplying.getAcApplyLabel().toString());
+                    /*acLabel1 = asAcApplying.getAcApplyLabel().get(0);
+                    acLabel2 = asAcApplying.getAcApplyLabel().get(1);
+                    acLabel3 = asAcApplying.getAcApplyLabel().get(2);
+                    acLabel4 = asAcApplying.getAcApplyLabel().get(3);
+                    acLabel5 = asAcApplying.getAcApplyLabel().get(4);
+
+                    acApplyLabel.setText(acLabel1 + acLabel2 + acLabel3 + acLabel4 + acLabel5 );*/
                 }
             }
         });
@@ -91,7 +102,7 @@ public class ActivityDetail extends BaseActivity implements View.OnClickListener
                         myAsAcApplying.get(0).getAcApplyStartTime(),myAsAcApplying.get(0).getAcApplyDeadline(),
                         myAsAcApplying.get(0).getAcApplyOrganizer(),myAsAcApplying.get(0).getAcApplyPlace(),
                         myAsAcApplying.get(0).getAcApplyTitle(),myAsAcApplying.get(0).getAcApplyPushScope_1(),
-                        myAsAcApplying.get(0).getAcApplyPushScope_2());
+                        myAsAcApplying.get(0).getAcApplyPushScope_2(),myAsAcApplying.get(0).getAcApplyLabel());
 
             case R.id.actNoPass_button:
 

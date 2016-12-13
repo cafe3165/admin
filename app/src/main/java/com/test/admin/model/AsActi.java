@@ -26,7 +26,7 @@ public class AsActi {
 
 
     public void asAcAdd(final String proObjectId, String acAudiences, String acStart, String acPushScope1, String acPushScope2,
-                        String acPlace, String acOrgan, String acEnd, String acContent, String acTitle) {
+                        String acPlace, String acOrgan, String acEnd, String acContent, String acTitle,List<String>acLabel) {
 
         AsActivity asActivity = new AsActivity();
 
@@ -39,6 +39,7 @@ public class AsActi {
         asActivity.setAcPlace(acPlace);
         asActivity.setAcPushScope_1(acPushScope1);
         asActivity.setAcPushScope_2(acPushScope2);
+        asActivity.setAcLabel(acLabel);
 
         asActivity.save(new SaveListener<String>() {
             @Override
