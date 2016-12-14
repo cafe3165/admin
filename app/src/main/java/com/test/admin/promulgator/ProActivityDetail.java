@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.test.admin.R;
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsParticipant;
+import com.test.admin.model.AsActi;
 import com.test.admin.model.AsAppForm;
 
 import java.util.ArrayList;
@@ -76,6 +77,9 @@ public class ProActivityDetail extends AppCompatActivity {
                     acContent.setText(asActivity.getAcContent());
                     acAudiences.setText(asActivity.getAcAudiences());
                     acLabel.setText(asActivity.getAcLabel().toString());
+
+                    if(asActivity.getAcStatus() == true)endActivity.setEnabled(true);
+                    else endActivity.setEnabled(false);
                 }
             }
         });
@@ -90,7 +94,11 @@ public class ProActivityDetail extends AppCompatActivity {
         endActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //更改按钮状态
+                endActivity.setEnabled(false);
+                //结束活动
+                AsActi asActi = new AsActi();
+                asActi.endActivity(endActivity,staticObjectdId);
             }
         });
 
