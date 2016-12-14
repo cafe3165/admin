@@ -47,8 +47,8 @@ public class newActivity extends AppCompatActivity {
 
         acTitle = (EditText)findViewById(R.id.acTitle);
         acOrganizer = (EditText)findViewById(R.id.acOrganizer);
-        acStartTime = (EditText)findViewById(R.id.acStartTime);
-        acDeadLine = (EditText)findViewById(R.id.acDeadLine);
+        //acStartTime = (EditText)findViewById(R.id.acStartTime);
+        //acDeadLine = (EditText)findViewById(R.id.acDeadLine);
         acPlace = (EditText)findViewById(R.id.acPlace);
         acContent = (EditText)findViewById(R.id.acContent);
         acAudiences = (EditText)findViewById(R.id.acAudiences);

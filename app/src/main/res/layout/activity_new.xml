@@ -49,7 +49,7 @@
                 >
             </TextView>
             <EditText
-                android:id="@+id/widget32"
+                android:id="@+id/acTitle"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@android:drawable/alert_light_frame"
@@ -74,7 +74,7 @@
                 >
             </TextView>
             <EditText
-                android:id="@+id/widget37"
+                android:id="@+id/acOrganizer"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@android:drawable/alert_light_frame"
@@ -197,9 +197,10 @@
 
         </TableRow>
     </TableLayout>
+
     <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TableRow>
             <TextView
@@ -214,7 +215,7 @@
 
             </TextView>
             <EditText
-                android:id="@+id/widget47"
+                android:id="@+id/acPlace"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:textSize="15sp"
@@ -235,7 +236,7 @@
                 >
             </TextView>
             <EditText
-                android:id="@+id/widget59"
+                android:id="@+id/acContent"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:textSize="15sp"
@@ -257,8 +258,9 @@
                 android:layout_marginLeft="48dp"
                 >
             </TextView>
+
             <EditText
-                android:id="@+id/widget40"
+                android:id="@+id/acAudiences"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@android:drawable/alert_light_frame"
@@ -283,7 +285,7 @@
                 >
             </TextView>
             <EditText
-                android:id="@+id/widget44"
+                android:id="@+id/acPushScope"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:textSize="15sp"
@@ -347,7 +349,7 @@
     </TableLayout>
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="44dp">
 
 
 <TableRow>
@@ -378,7 +380,7 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/widget66"
+        android:id="@+id/acIssue"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="发布"
