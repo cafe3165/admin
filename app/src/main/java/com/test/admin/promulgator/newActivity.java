@@ -45,15 +45,15 @@ public class newActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new);
 
-        acTitle = (EditText)findViewById(R.id.widget32);
-        acOrganizer = (EditText)findViewById(R.id.widget47);
-        acStartTime = (EditText)findViewById(R.id.widget37);
-        acDeadLine = (EditText)findViewById(R.id.widget40);
-        acPlace = (EditText)findViewById(R.id.widget42);
-        acContent = (EditText)findViewById(R.id.widget44);
-        acAudiences = (EditText)findViewById(R.id.widget46);
-        acPushScope_1 = (EditText)findViewById(R.id.widget59);
-        acIssue = (Button)findViewById(R.id.widget66);
+        acTitle = (EditText)findViewById(R.id.acTitle);
+        acOrganizer = (EditText)findViewById(R.id.acOrganizer);
+        //acStartTime = (EditText)findViewById(R.id.acStartTime);
+        //acDeadLine = (EditText)findViewById(R.id.acDeadLine);
+        acPlace = (EditText)findViewById(R.id.acPlace);
+        acContent = (EditText)findViewById(R.id.acContent);
+        acAudiences = (EditText)findViewById(R.id.acAudiences);
+        acPushScope_1 = (EditText)findViewById(R.id.acPushScope);
+        acIssue = (Button)findViewById(R.id.acIssue);
         present = (CheckBox)findViewById(R.id.present);
         outdoors = (CheckBox)findViewById(R.id.outdoors);
         official = (CheckBox)findViewById(R.id.official);

@@ -35,13 +35,12 @@
     <TableLayout
         android:id="@+id/widget0"
         android:layout_width="fill_parent"
-        android:layout_height="355dp"
-        android:stretchColumns="1"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        >
+        android:layout_height="88dp"
+        android:stretchColumns="1">
         <TableRow>
             <TextView
                 android:id="@+id/widget33"
+                android:layout_marginLeft="48dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="活动标题"
@@ -50,13 +49,14 @@
                 >
             </TextView>
             <EditText
-                android:id="@+id/widget32"
+                android:id="@+id/acTitle"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@android:drawable/alert_light_frame"
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="12dp"
+                android:layout_marginRight="58dp"
                 >
             </EditText>
 
@@ -65,6 +65,7 @@
         <TableRow>
             <TextView
                 android:id="@+id/widget34"
+                android:layout_marginLeft="48dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="举办方"
@@ -73,37 +74,72 @@
                 >
             </TextView>
             <EditText
-                android:id="@+id/widget37"
+                android:id="@+id/acOrganizer"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@android:drawable/alert_light_frame"
                 android:textSize="15sp"
-                android:layout_x="130dp"
-                android:layout_y="92dp"
+
+                android:layout_marginRight="58dp"
                 >
             </EditText>
         </TableRow>
 
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
         <TableRow>
             <TextView
                 android:id="@+id/widget36"
+                android:layout_marginLeft="48dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="开始时间"
-                android:layout_x="50dp"
-                android:layout_y="102dp"
+
                 >
             </TextView>
-            <EditText
-                android:id="@+id/widget42"
-                android:layout_width="170dp"
-                android:layout_height="45dp"
-                android:background="@android:drawable/alert_light_frame"
-                android:textSize="15sp"
-                android:layout_x="130dp"
-                android:layout_y="172dp"
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinner00"
+                android:entries="@array/year"
+
+
+
+                />
+            <TextView
+                android:id="@+id/widget366"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="——"
+
                 >
-            </EditText>
+            </TextView>
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinner000"
+                android:entries="@array/month"
+                />
+
+            <TextView
+                android:id="@+id/widget3666"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="——"
+                />
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinner0000"
+                android:entries="@array/day"
+                />
+
         </TableRow>
 
         <TableRow>
@@ -114,19 +150,57 @@
                 android:text="结束时间"
                 android:layout_x="50dp"
                 android:layout_y="142dp"
+                android:layout_marginLeft="48dp"
                 >
             </TextView>
-            <EditText
-                android:id="@+id/widget46"
-                android:layout_width="170dp"
-                android:layout_height="45dp"
-                android:textSize="15sp"
-                android:background="@android:drawable/alert_light_frame"
-                android:layout_x="130dp"
-                android:layout_y="252dp"
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinner11"
+                android:entries="@array/year"
+
+
+
+                />
+            <TextView
+                android:id="@+id/widget367"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="——"
+
                 >
-            </EditText>
+            </TextView>
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinner111"
+                android:entries="@array/month"
+                />
+
+            <TextView
+                android:id="@+id/widget3676"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="——"
+
+                />
+            <Spinner
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinner1111"
+                android:entries="@array/day"
+                />
+
+
         </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
         <TableRow>
             <TextView
@@ -136,17 +210,17 @@
                 android:text="活动地点"
                 android:layout_x="50dp"
                 android:layout_y="182dp"
+                android:layout_marginLeft="48dp"
                 >
 
             </TextView>
             <EditText
-                android:id="@+id/widget47"
+                android:id="@+id/acPlace"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:textSize="15sp"
                 android:background="@android:drawable/alert_light_frame"
-                android:layout_x="130dp"
-                android:layout_y="52dp"
+
                 >
             </EditText>
         </TableRow>
@@ -157,18 +231,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="活动内容"
-                android:layout_x="50dp"
-                android:layout_y="222dp"
+
+                android:layout_marginLeft="48dp"
                 >
             </TextView>
             <EditText
-                android:id="@+id/widget59"
+                android:id="@+id/acContent"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:textSize="15sp"
                 android:background="@android:drawable/alert_light_frame"
-                android:layout_x="130dp"
-                android:layout_y="292dp"
+
+
                 >
             </EditText>
         </TableRow>
@@ -181,16 +255,19 @@
                 android:text="活动受众"
                 android:layout_x="50dp"
                 android:layout_y="262dp"
+                android:layout_marginLeft="48dp"
                 >
             </TextView>
+
             <EditText
-                android:id="@+id/widget40"
+                android:id="@+id/acAudiences"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@android:drawable/alert_light_frame"
                 android:textSize="15sp"
                 android:layout_x="131dp"
                 android:layout_y="130dp"
+
                 >
             </EditText>
         </TableRow>
@@ -203,21 +280,24 @@
                 android:layout_height="wrap_content"
                 android:text="推送范围"
                 android:layout_x="50dp"
+                android:layout_marginLeft="48dp"
                 android:layout_y="302dp"
                 >
             </TextView>
             <EditText
-                android:id="@+id/widget44"
+                android:id="@+id/acPushScope"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:textSize="15sp"
                 android:background="@android:drawable/alert_light_frame"
                 android:layout_x="131dp"
                 android:layout_y="210dp"
+
                 >
             </EditText>
         </TableRow>
     </TableLayout>
+
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -230,10 +310,12 @@
                 android:text="活动标签"
                 android:layout_x="50dp"
                 android:layout_y="342dp"
+                android:layout_marginLeft="48dp"
                 >
 
             </TextView>
             <CheckBox
+               android:layout_marginLeft="18dp"
                 android:id="@+id/present"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -243,6 +325,7 @@
                 >
             </CheckBox>
             <CheckBox
+                android:layout_marginLeft="18dp"
                 android:id="@+id/outdoors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -253,6 +336,7 @@
             </CheckBox>
 
             <CheckBox
+                android:layout_marginLeft="18dp"
                 android:id="@+id/official"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -261,10 +345,16 @@
                 android:layout_y="382dp"
                 >
             </CheckBox>
+        </TableRow>
+    </TableLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
 
 
-
+<TableRow>
             <CheckBox
+                android:layout_marginLeft="122dp"
                 android:id="@+id/celebrity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -275,10 +365,8 @@
             </CheckBox>
 
 
-
-
-
             <CheckBox
+                android:layout_marginLeft="18dp"
                 android:id="@+id/grade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -292,7 +380,7 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/widget66"
+        android:id="@+id/acIssue"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="发布"
