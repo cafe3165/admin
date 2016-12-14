@@ -28,7 +28,7 @@ public class newMain extends BaseActivity implements View.OnClickListener {
     private YiFaBuHuoDong mFragmentTwo;
     private YiFaBuTongZhi mFragmentThree;
     private YiJieShuHuoDong mFragmentFour;
-    private FragmentSetting mFragmentSetting;
+    private FaBuZheSetting mFragmentSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +90,7 @@ public class newMain extends BaseActivity implements View.OnClickListener {
                     .add(R.id.vf_container, mFragmentFour, TAG_FOUR).commit();
         }
         if (mFragmentSetting == null) {
-            mFragmentSetting = new FragmentSetting();
+            mFragmentSetting = new FaBuZheSetting();
             mFragmentManager.beginTransaction()
                     .add(R.id.vf_container, mFragmentSetting, TAG_SETTING).commit();
         }
