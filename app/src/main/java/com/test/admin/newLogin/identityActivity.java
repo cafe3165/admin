@@ -38,8 +38,9 @@ public class identityActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(identityActivity.this,register1_1Activity.class);
+                Intent intent = new Intent(identityActivity.this,register1_2Activity.class);
                 startActivity(intent);
+
             }
         });
     }
