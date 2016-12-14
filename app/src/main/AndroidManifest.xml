@@ -59,7 +59,7 @@
         <!-- <activity android:name=".activitypromulgator.ViewActivity" /> -->
         <activity android:name=".Participant.ImformViewActivity" />
         <activity android:name=".promulgator.ActInfomation" />
-        <!--/////////////////////////////////////////////////////////-->
+        <!-- ///////////////////////////////////////////////////////// -->
         <activity android:name=".Participant.newMain" />
         <activity android:name=".Participant.BaseActivity" />
         <activity android:name=".promulgator.BaseActivity" />
@@ -71,8 +71,8 @@
         <activity android:name=".newLogin.register2_1Activity" />
         <activity android:name=".newLogin.register2_2Activity" />
         <activity android:name=".newLogin.register1_2Activity" />
-        <activity android:name=".newLogin.register3_1Activity"/>
-        <activity android:name=".promulgator.PromulgatorActivityDetail"></activity>
+        <activity android:name=".newLogin.register3_1Activity" />
+        <activity android:name=".promulgator.PromulgatorActivityDetail" />
     </application>
 
 </manifest>

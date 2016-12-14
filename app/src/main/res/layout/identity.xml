@@ -11,90 +11,103 @@
         android:orientation="vertical"
         android:paddingBottom="50dp"
         android:background="@drawable/loginbackground">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-        <ImageButton
-            android:id="@+id/imgBtn0"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="left"
-            android:background="@drawable/back1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-
-    <LinearLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        >
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
+            android:layout_height="50dp">
+            <ImageButton
+                android:id="@+id/imgBtn0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left|center"
+                android:background="@drawable/back2"/>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="20sp"
-                android:text="参与者"
-
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center|top">
-            <ImageButton
-                android:id="@+id/imgBtn1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/participant"
-                />
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="发布者"
-                android:textSize="20sp"
-                />
+                android:gravity="center"
+                android:layout_marginRight="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical|center_horizontal"
+                    android:text="选择学院"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center|top">
-            <ImageButton
-                android:id="@+id/imgBtn2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/promul"
-                />
-        </LinearLayout>
+            android:orientation="vertical"
+            >
 
-    </LinearLayout>
-    </LinearLayout>
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:text="参与者"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|top">
+                    <ImageButton
+                        android:id="@+id/imgBtn1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/back2"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发布者"
+                        android:textSize="15sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|top">
+                    <ImageButton
+                        android:id="@+id/imgBtn2"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/back2"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
