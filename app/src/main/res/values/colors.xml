@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#555555</color>
     <color name="colorAccent">#000103</color>
     <color name="login_register">#f5f5f7</color>
-    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <color name="littleGray">#cdcfd6</color>
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <!--<color name="colorAccent">#FF4081</color>-->
 
