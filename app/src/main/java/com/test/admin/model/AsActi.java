@@ -12,6 +12,7 @@ import java.util.List;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
+import cn.bmob.v3.listener.QueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
 
@@ -41,6 +42,7 @@ public class AsActi {
         asActivity.setAcPushScope_2(acPushScope2);
         asActivity.setAcLabel(acLabel);
         asActivity.setAcPromulgator(proObjectId);
+        asActivity.setAcStatus(true);
 
         asActivity.save(new SaveListener<String>() {
             @Override
@@ -137,6 +139,44 @@ public class AsActi {
                     showToast("编辑成功");
                 }else{
                     showToast("编辑失败");
+                }
+            }
+        });
+    }
+
+    //发布者结束活动
+    public void endActivity(final Button endActivity,String acObjectId){
+
+        BmobQuery<AsActivity> query = new BmobQuery<>();
+        query.getObject(acObjectId, new QueryListener<AsActivity>() {
+            @Override
+            public void done(AsActivity asActivity, BmobException e) {
+
+                if(e == null){
+
+                    asActivity.setAcStatus(false);
+                    asActivity.save(new SaveListener<String>() {
+                        @Override
+                        public void done(String s, BmobException e) {
+
+                            if(e == null){
+
+                                showToast("结束活动成功");
+                                //更改按钮状态
+                                endActivity.setText("活动已结束");
+                            }else{
+
+                                showToast("结束活动操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                                //更改按钮状态
+                                endActivity.setEnabled(true);
+                            }
+                        }
+                    });
+                }else{
+
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    endActivity.setEnabled(true);
                 }
             }
         });

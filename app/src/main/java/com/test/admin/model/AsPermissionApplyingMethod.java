@@ -28,6 +28,7 @@ public class AsPermissionApplyingMethod {
         asPromulgator.setProIdentity(perIdentity);
         asPromulgator.setMobilePhoneNumber(perTelNumber);
         asPromulgator.setProQQNumber(perQQNumber);
+        asPromulgator.setEmail(perEmail);
         asPromulgator.setParStuNumber(perEmail);//新增该字段赋值避免唯一键发生冲突
         asPromulgator.setProImPermission_1(perImPushScope_1);
         asPromulgator.setProImPermission_2(perImPushScope_2);
@@ -56,6 +57,9 @@ public class AsPermissionApplyingMethod {
 
                         }
                     });
+                    //向权限申请者发送审核通过邮件
+                    Function function = new Function();
+                    function.sendEmial(s);
                     //创建活动发布者对应的用来保存已发布活动Id或者通知Id的表
                     /*AsPromulgator_AcImId asPromulgator_acOrImId = new AsPromulgator_AcImId();
                     asPromulgator_acOrImId.setProId(s.getObjectId());
@@ -66,8 +70,8 @@ public class AsPermissionApplyingMethod {
                         }
                     });*/
                 }else{
-                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
                     //更改按钮状态
+                    showToast("审核通过操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
                     pass.setEnabled(true);
                 }
             }
@@ -92,7 +96,7 @@ public class AsPermissionApplyingMethod {
                     not_pass.setEnabled(false);
                 }else{
 
-                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    showToast("审核未通过操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
                     not_pass.setEnabled(true);
                 }
             }
