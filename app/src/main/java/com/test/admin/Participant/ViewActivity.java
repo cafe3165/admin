@@ -83,7 +83,7 @@ public class ViewActivity extends AppCompatActivity {
                 apply.setEnabled(false);
                 pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
                 AsAppForm asAppForm = new AsAppForm();
-                asAppForm.acParApply(staticObjectdId,pObjectdId);
+                asAppForm.acParApply(apply,staticObjectdId,pObjectdId);
             }
         });
     }
