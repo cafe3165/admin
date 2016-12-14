@@ -22,7 +22,7 @@ import cn.bmob.v3.listener.QueryListener;
 import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
-public class ProActivityDetail extends AppCompatActivity {
+public class PromulgatorActivityDetail extends AppCompatActivity {
 
     private TextView acTitle;
     private TextView acParNumbers;
@@ -78,7 +78,7 @@ public class ProActivityDetail extends AppCompatActivity {
                     acAudiences.setText(asActivity.getAcAudiences());
                     acLabel.setText(asActivity.getAcLabel().toString());
 
-                    if(asActivity.getAcStatus() == true)endActivity.setEnabled(true);
+                    if(asActivity.getAcStatus().equals(true))endActivity.setEnabled(true);
                     else endActivity.setEnabled(false);
                 }
             }
@@ -95,10 +95,10 @@ public class ProActivityDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //更改按钮状态
-                endActivity.setEnabled(false);
+                //endActivity.setEnabled(false);
                 //结束活动
-                AsActi asActi = new AsActi();
-                asActi.endActivity(endActivity,staticObjectdId);
+                //AsActi asActi = new AsActi();
+                //asActi.endActivity(endActivity,staticObjectdId);
             }
         });
 
