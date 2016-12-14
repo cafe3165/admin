@@ -20,18 +20,18 @@ import static com.test.admin.model.Function.showToast;
 
 public class AsAcApply {
 
-    public void acApplyAdd(final Button acIssue,String acTitle, String acOrgan, String acStart, String acPlace, String acEnd,
-                           String acContent, String acAudience, String acPushScope_1, String acPushScope_2, List<String> acLabel,
-                           String proObjectdId) {
+    public void acApplyAdd(final Button acIssue,String acTitle, String acOrganizer, String acStartTime, String acDeadLine,
+                           String acPlace, String acContent, String acAudience, String acPushScope_1, String acPushScope_2,
+                           List<String> acLabel, String proObjectdId) {
 
         List<String> list = new ArrayList<String>();
         list.add(acTitle);
-        list.add(acOrgan);
+        list.add(acOrganizer);
+        list.add(acStartTime);
+        list.add(acDeadLine);
+        list.add(acPlace);
         list.add(acContent);
         list.add(acAudience);
-        list.add(acStart);
-        list.add(acEnd);
-        list.add(acPlace);
         list.add(acPushScope_1);
         list.add(acPushScope_2);
         list.addAll(acLabel);
@@ -41,11 +41,11 @@ public class AsAcApply {
         AsAcApplying acApplying = new AsAcApplying();
 
         acApplying.setAcApplyTitle(acTitle);
-        acApplying.setAcApplyOrganizer(acOrgan);
+        acApplying.setAcApplyOrganizer(acOrganizer);
         acApplying.setAcApplyContent(acContent);
         acApplying.setAcApplyAudiences(acAudience);
-        acApplying.setAcApplyStartTime(acStart);
-        acApplying.setAcApplyDeadline(acEnd);
+        acApplying.setAcApplyStartTime(acStartTime);
+        acApplying.setAcApplyDeadline(acDeadLine);
         acApplying.setAcApplyPlace(acPlace);
         acApplying.setAcApplyPushScope_1(acPushScope_1);
         acApplying.setAcApplyPushScope_2(acPushScope_2);
