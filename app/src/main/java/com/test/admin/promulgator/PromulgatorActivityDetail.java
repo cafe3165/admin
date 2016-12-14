@@ -95,10 +95,10 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //更改按钮状态
-                //endActivity.setEnabled(false);
+                endActivity.setEnabled(false);
                 //结束活动
-                //AsActi asActi = new AsActi();
-                //asActi.endActivity(endActivity,staticObjectdId);
+                AsActi asActi = new AsActi();
+                asActi.endActivity(endActivity,staticObjectdId);
             }
         });
 
