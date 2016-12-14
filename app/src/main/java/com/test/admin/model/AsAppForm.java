@@ -1,5 +1,6 @@
 package com.test.admin.model;
 
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.test.admin.bean.AsApplicationForm;
@@ -42,7 +43,7 @@ public class AsAppForm {
     }
 
     //参与者报名
-    public void acParApply(final String acObjectdId, final String parObjectdId){
+    public void acParApply(final Button apply,final String acObjectdId, final String parObjectdId){
 
         //获取当前活动对应的报名表
         BmobQuery<AsApplicationForm> query = new BmobQuery<AsApplicationForm>();
@@ -61,7 +62,8 @@ public class AsAppForm {
                         if(e == null){
 
                             showToast("报名成功");
-
+                            //更改按钮状态
+                            apply.setText("报名成功");
                             //将用户报名的活动添加到用户已报名的活动数组
                             BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
                             query.addWhereEqualTo("objectId",parObjectdId);
@@ -81,8 +83,9 @@ public class AsAppForm {
                                 }
                             });
                         }else{
-
-                            showToast("报名失败");
+                            showToast("报名操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                            //更改按钮状态
+                            apply.setEnabled(true);
                         }
                     }
                 });

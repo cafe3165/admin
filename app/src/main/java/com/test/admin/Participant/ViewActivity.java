@@ -41,18 +41,18 @@ public class ViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_view);
+        setContentView(R.layout.participant_activity_detail);
 
-        acTitle = (TextView)findViewById(R.id.act_biao);
-        acStatus = (TextView)findViewById(R.id.act_zhuangtai);
-        acOrganizer = (TextView)findViewById(R.id.act_fang);
-        acStartTime = (TextView)findViewById(R.id.act_time);
-        acDeadLine = (TextView)findViewById(R.id.act_time2);
-        acPlace = (TextView)findViewById(R.id.act_place);
-        acContent = (TextView)findViewById(R.id.act_nei);
-        acAudiences = (TextView)findViewById(R.id.act_shouzhong);
-        acLabel = (TextView)findViewById(R.id.act_biaoq);
-        apply = (Button)findViewById(R.id.button);
+        acTitle = (TextView)findViewById(R.id.acTitle);
+        acStatus = (TextView)findViewById(R.id.acStatus);
+        acOrganizer = (TextView)findViewById(R.id.acOrganizer);
+        acStartTime = (TextView)findViewById(R.id.acStartTime);
+        acDeadLine = (TextView)findViewById(R.id.acDeadLine);
+        acPlace = (TextView)findViewById(R.id.acPlace);
+        acContent = (TextView)findViewById(R.id.acContent);
+        acAudiences = (TextView)findViewById(R.id.acAudiences);
+        acLabel = (TextView)findViewById(R.id.acLabel);
+        apply = (Button)findViewById(R.id.apply);
 
         //查找当前item对应的活动申请对象并返回值显示在TextView上
         BmobQuery<AsActivity> query = new BmobQuery<AsActivity>();
@@ -79,7 +79,8 @@ public class ViewActivity extends AppCompatActivity {
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //更改按钮状态为不可按
+                apply.setEnabled(false);
                 pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
                 AsAppForm asAppForm = new AsAppForm();
                 asAppForm.acParApply(staticObjectdId,pObjectdId);
