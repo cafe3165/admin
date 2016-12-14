@@ -18,7 +18,7 @@
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="夜间模式"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="17sp"/>
             <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:button="@drawable/check_selector"/>
@@ -31,7 +31,7 @@
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="接收推送"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="17sp"/>
             <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:button="@drawable/check_selector"/>
@@ -44,7 +44,7 @@
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="功能隐藏"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
@@ -58,7 +58,7 @@
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="账号绑定"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
@@ -72,7 +72,7 @@
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="意见反馈"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
@@ -86,7 +86,7 @@
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="账号安全"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
