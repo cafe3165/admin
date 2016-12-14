@@ -69,7 +69,8 @@
         <activity android:name=".newLogin.register1_1Activity" />
         <activity android:name=".newLogin.register2_1Activity" />
         <activity android:name=".newLogin.register2_2Activity" />
-        <activity android:name=".newLogin.register1_2Activity"></activity>
+        <activity android:name=".newLogin.register1_2Activity" />
+        <activity android:name=".newLogin.register3_1Activity"></activity>
     </application>
 
 </manifest>
