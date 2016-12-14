@@ -19,7 +19,7 @@
                 android:layout_height="50dp"
                 android:layout_width="50dp"
                 android:layout_gravity="left"
-                android:background="@drawable/back2"
+                android:background="@drawable/back1"
                 />
 
             <LinearLayout

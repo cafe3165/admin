@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingBottom="50dp"
         android:background="@drawable/loginbackground">
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="left"
-            android:background="@drawable/back2"/>
+            android:background="@drawable/back1"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,27 +31,68 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:gravity="center"
+        android:orientation="vertical"
         android:layout_weight="1"
         >
-        <ImageButton
-            android:id="@+id/imgBtn1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#00000000"
-            android:src="@drawable/loginbackground"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:text="参与者"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top">
+            <ImageButton
+                android:id="@+id/imgBtn1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/participant"
+                />
+        </LinearLayout>
+
+
+
     </LinearLayout>
     <LinearLayout
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:gravity="center"
+        android:orientation="vertical"
         android:layout_weight="1"
         >
-        <ImageButton
-            android:id="@+id/imgBtn2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#00000000"
-            android:src="@drawable/login_register"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布者"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top">
+            <ImageButton
+                android:id="@+id/imgBtn2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/promul"
+                />
+        </LinearLayout>
+
     </LinearLayout>
     </LinearLayout>
     </LinearLayout>
