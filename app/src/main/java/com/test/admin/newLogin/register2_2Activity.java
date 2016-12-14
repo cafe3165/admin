@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.test.admin.R;
@@ -18,12 +19,19 @@ public class register2_2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.register_step2);
+
+        ImageButton btn1 = (ImageButton)findViewById(R.id.imgBtn1);
         ListView lv1 = (ListView)findViewById(R.id.lv1);
         lv1.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,getData()));
 
-
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(register2_2Activity.this,register1_2Activity.class);
+                startActivity(intent);
+            }
+        });
         lv1.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
