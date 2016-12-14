@@ -65,13 +65,22 @@ public class ViewActivity extends AppCompatActivity {
                     myAsAcApplying.add(asActivity);
 
                     acTitle.setText(asActivity.getAcTitle());
-                    acStatus.setText("报名中");
                     acOrganizer.setText(asActivity.getAcOtganizer());
                     acStartTime.setText(asActivity.getAcStartTime());
                     acDeadLine.setText(asActivity.getAcDeadline());
                     acPlace.setText(asActivity.getAcPlace());
                     acContent.setText(asActivity.getAcContent());
                     acAudiences.setText(asActivity.getAcAudiences());
+
+                    if(asActivity.getAcStatus() == true){
+
+                        acStatus.setText("报名中");
+                        apply.setEnabled(true);
+                    }else{
+
+                        acStatus.setText("活动已结束");
+                        apply.setEnabled(false);
+                    }
                 }
             }
         });
