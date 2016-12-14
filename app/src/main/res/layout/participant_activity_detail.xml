@@ -22,7 +22,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:textSize="17sp"
-            android:id="@+id/acApplyTitle"/>
+            android:id="@+id/acTitle"/>
     </TableRow>
 
     <TableRow>
@@ -37,7 +37,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:textSize="17sp"
-            android:id="@+id/acApplyStatus"/>
+            android:id="@+id/acStatus"/>
     </TableRow>
 
     <TableRow>
@@ -53,7 +53,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:textSize="17sp"
-            android:id="@+id/acApplyOrganizer"/>
+            android:id="@+id/acOrganizer"/>
 
     </TableRow>
 
@@ -69,7 +69,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:textSize="17sp"
-            android:id="@+id/acApplyStartTime"/>
+            android:id="@+id/acStartTime"/>
     </TableRow>
 
 
@@ -85,7 +85,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:textSize="17sp"
-            android:id="@+id/acApplyDeadLine"/>
+            android:id="@+id/acDeadLine"/>
     </TableRow>
 
     <TableRow>
@@ -100,7 +100,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:textSize="17sp"
-            android:id="@+id/acApplyPlace"/>
+            android:id="@+id/acPlace"/>
     </TableRow>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
@@ -114,7 +114,7 @@
         android:background="@drawable/frame_gray"
         android:padding="10dp"
         android:textSize="17sp"
-        android:id="@+id/acApplyContent"/>
+        android:id="@+id/acContent"/>
 
     <TableRow>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
@@ -128,7 +128,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:textSize="17sp"
-            android:id="@+id/acApplyAudiences"/>
+            android:id="@+id/acAudiences"/>
     </TableRow>
 
     <TableRow>
@@ -143,7 +143,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:textSize="17sp"
-            android:id="@+id/acApplyLabel"/>
+            android:id="@+id/acLabel"/>
     </TableRow>
 
 
@@ -157,22 +157,14 @@
         <TableRow>
 
             <Button
-                android:id="@+id/actNoPass_button"
+                android:id="@+id/apply"
                 android:layout_height="wrap_content"
                 android:background="#ccd1d8"
                 android:layout_weight="0.6"
-                android:text="不通过"
+                android:text="报名"
                 android:onClick="onClick"
                 android:layout_margin="0.5dip" />
 
-            <Button
-                android:id="@+id/actPass_button"
-                android:layout_height="wrap_content"
-                android:background="#c6cdd5"
-                android:layout_weight="0.6"
-                android:layout_margin="0.5dip"
-                android:onClick="onClick"
-                android:text="通过" />
 
         </TableRow>
     </TableLayout>

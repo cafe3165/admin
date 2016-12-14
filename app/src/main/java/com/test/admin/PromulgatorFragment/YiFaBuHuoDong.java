@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.test.admin.Participant.ViewActivity;
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
 import com.test.admin.adapter.AcApplyAdapter;
@@ -17,6 +18,7 @@ import com.test.admin.adapter.ActivityAdapter;
 import com.test.admin.bean.AsAcApplying;
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsPromulgator;
+import com.test.admin.promulgator.ProActivityDetail;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -69,6 +71,15 @@ public class YiFaBuHuoDong extends Fragment {
             }
         });
 
+        lv_activity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getActivity(), ProActivityDetail.class));
+
+                AsActivity asActivity  = asActivityList.get(position);
+                staticObjectdId = asActivity.getObjectId().toString();
+            }
+        });
 
         return view;
     }
