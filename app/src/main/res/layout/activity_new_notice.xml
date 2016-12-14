@@ -41,6 +41,7 @@
         android:stretchColumns="1">
         <TableRow>
             <TextView
+                android:layout_marginLeft="48dp"
                 android:id="@+id/widget138"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,12 +57,14 @@
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="52dp"
+                android:layout_marginRight="58dp"
                 >
             </EditText>
         </TableRow>
 
         <TableRow>
             <TextView
+                android:layout_marginLeft="48dp"
                 android:id="@+id/widget139"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,6 +79,7 @@
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="242dp"
+                android:layout_marginRight="58dp"
                 >
             </EditText>
 
@@ -83,6 +87,7 @@
 
         <TableRow>
             <TextView
+                android:layout_marginLeft="48dp"
                 android:id="@+id/widget140"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,6 +105,7 @@
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="342dp"
+                android:layout_marginRight="58dp"
                 >
             </EditText>
 
@@ -107,6 +113,7 @@
 
         <TableRow>
             <TextView
+                android:layout_marginLeft="48dp"
                 android:id="@+id/widget141"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -124,12 +131,14 @@
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="137dp"
+                android:layout_marginRight="58dp"
                 >
             </EditText>
         </TableRow>
 
         <TableRow>
             <TextView
+                android:layout_marginLeft="48dp"
                 android:id="@+id/widget142"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,6 +154,7 @@
                 android:background="@android:drawable/alert_light_frame"
                 android:layout_x="130dp"
                 android:layout_y="95dp"
+                android:layout_marginRight="58dp"
                 >
             </EditText>
 
@@ -152,12 +162,14 @@
         </TableRow>
 
         <Button
+            android:layout_marginLeft="58dp"
             android:id="@+id/publish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="发布"
             android:layout_x="130dp"
             android:layout_y="400dp"
+            android:layout_marginRight="58dp"
             >
         </Button>
 
