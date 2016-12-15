@@ -69,11 +69,18 @@
         <activity android:name=".newLogin.loginActivity" />
         <activity android:name=".newLogin.register1_1Activity" />
         <activity android:name=".newLogin.register2_1Activity" />
-        <activity android:name=".newLogin.register2_2Activity" />
-        <activity android:name=".newLogin.register1_2Activity" />
+        <activity android:name=".newLogin.register1_2_2Activity" />
+        <activity android:name=".newLogin.register1_2_1Activity" />
         <activity android:name=".newLogin.register3_1Activity" />
         <activity android:name=".promulgator.PromulgatorActivityDetail" />
-        <activity android:name=".newLogin.register4_1Activity"></activity>
+        <activity android:name=".newLogin.register4_1Activity" />
+        <activity android:name=".newLogin.register5_1Activity" />
+        <activity android:name=".newLogin.register1_2Activity" />
+        <activity android:name=".newLogin.register2_2Activity" />
+        <activity android:name=".newLogin.register3_2Activity" />
+        <activity android:name=".newLogin.register2_2xActivity" />
+        <activity android:name=".newLogin.register3_2xActivity" />
+        <activity android:name=".newLogin.newForgetPasswordActivity"></activity>
     </application>
 
 </manifest>
