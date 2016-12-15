@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +41,8 @@ public class loginActivity extends AppCompatActivity {
     private static final String[] items = new String[]{"管理员", "发布者", "参与者"};
     private String str1 = "忘记密码?";
     private String str2 = "还未注册?";
-    Button btn1, btn2, btn3, btn4;
+    Button btn1;
+    ImageButton imgBtn1;
     TextView tv1, tv2;
     String str;//选择的身份
     String s1 = "管理员";
@@ -63,6 +65,8 @@ public class loginActivity extends AppCompatActivity {
         final Spinner Spinner1 = (Spinner) findViewById(R.id.Spinner1);
         Spinner1.setAdapter(source);
         btn1 = (Button) findViewById(R.id.login);
+        imgBtn1 = (ImageButton)findViewById(R.id.imgBtn1);
+
         //tv1=(TextView)findViewById(tv5);
         //tv2=(TextView)findViewById(tv6);
 
@@ -120,6 +124,13 @@ public class loginActivity extends AppCompatActivity {
 
         });
 
+        imgBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginActivity.this,loginRegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //忘记密码跳转
 

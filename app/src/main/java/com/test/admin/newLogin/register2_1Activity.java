@@ -36,7 +36,7 @@ public class register2_1Activity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent = new Intent(register2_1Activity.this,register2_1Activity.class);
+                        Intent intent = new Intent(register2_1Activity.this,register3_1Activity.class);
                         startActivity(intent);
                     }
                 }

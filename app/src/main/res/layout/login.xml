@@ -11,13 +11,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/loginbackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageButton
+            android:id="@+id/imgBtn1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|left"
+            android:background="@drawable/back2"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@drawable/loginbackground"
         android:orientation="vertical"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         >
         <LinearLayout
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -115,5 +130,6 @@
             android:text="忘记密码"
             />
             </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
