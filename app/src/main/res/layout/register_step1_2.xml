@@ -15,12 +15,12 @@
             android:gravity="center"
             android:background="@color/login_register">
             <ImageButton
-                    android:id="@+id/imgBtn1"
-                    android:layout_height="30dp"
-                    android:layout_width="30dp"
-                    android:layout_gravity="left|center"
-                    android:background="@drawable/back2"
-            />
+                android:id="@+id/imgBtn1"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_gravity="left|center"
+                android:background="@drawable/back2"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|center_vertical|center_horizontal"
-                    android:text="选择学院"
+                    android:text="身份"
                     android:textSize="15sp"
                     />
             </LinearLayout>
@@ -41,12 +41,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    <ListView
-        android:id="@+id/lv1"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:choiceMode="singleChoice"
-        />
+            <ListView
+                android:id="@+id/lv1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:choiceMode="singleChoice"
+                />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
