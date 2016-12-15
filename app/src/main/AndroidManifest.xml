@@ -80,7 +80,9 @@
         <activity android:name=".newLogin.register3_2Activity" />
         <activity android:name=".newLogin.register2_2xActivity" />
         <activity android:name=".newLogin.register3_2xActivity" />
-        <activity android:name=".newLogin.newForgetPasswordActivity"></activity>
+        <activity android:name=".newLogin.newForgetPasswordActivity1" />
+        <activity android:name=".newLogin.newForgetPasswordActivity2" />
+        <activity android:name=".newLogin.newForgetPasswordActivity3"></activity>
     </application>
 
 </manifest>

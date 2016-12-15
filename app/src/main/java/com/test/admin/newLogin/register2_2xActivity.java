@@ -3,6 +3,7 @@ package com.test.admin.newLogin;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -33,5 +34,14 @@ public class register2_2xActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            finish();
+            Intent intent = new Intent(register2_2xActivity.this, register1_1Activity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
