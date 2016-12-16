@@ -94,9 +94,8 @@ public class AsAppForm {
     }
 
     //参与者取消报名
-    public void acParCancleApply(String acObjectdId, final String parObjectdId){
+    public void acParCancleApply(final Button apply,final String acObjectdId, final String parObjectdId){
 
-        final boolean[] flag = new boolean[1];
         //获取当前活动对应的报名表
         BmobQuery<AsApplicationForm> query = new BmobQuery<AsApplicationForm>();
         query.addWhereEqualTo("apParId",acObjectdId);
@@ -113,6 +112,7 @@ public class AsAppForm {
                 list2.addAll(list.get(0).getApParStatus());
                 list2.remove(index);
                 //将当前用户的Id从报名表中删除
+                list.get(0).setApParStatus(list2);
                 list.get(0).removeAll("apParId", Arrays.asList(parObjectdId));
                 list.get(0).update(new UpdateListener() {
                     @Override
@@ -120,24 +120,34 @@ public class AsAppForm {
 
                         if(e == null){
                             showToast("取消报名成功");
-                            flag[0] = true;
+                            //更改按钮状态和text
+                            apply.setText("报名");
+                            apply.setEnabled(true);
+                            //将用户报名的活动Id从用户已报名的活动数组删除
+                            BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
+                            query.addWhereEqualTo("objectId",parObjectdId);
+                            query.findObjects(new FindListener<AsParticipant>() {
+                                @Override
+                                public void done(List<AsParticipant> list, BmobException e) {
+
+                                    if (e == null) {
+                                        list.get(0).removeAll("parAcId", Arrays.asList(acObjectdId));
+                                        list.get(0).update(new UpdateListener() {
+                                            @Override
+                                            public void done(BmobException e) {
+
+                                            }
+                                        });
+                                    }
+                                }
+                            });
                         }else{
-                            showToast("取消报名失败");
+                            showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                            //更改按钮状态和text
+                            apply.setEnabled(true);
                         }
                     }
                 });
-                //判断取消报名是否成功
-                if(flag[0]){
-
-                    //更新当前报名表的参与者状态数组
-                    list.get(0).setApParStatus(list2);
-                    list.get(0).update(new UpdateListener() {
-                        @Override
-                        public void done(BmobException e) {
-
-                        }
-                    });
-                }
             }
         });
     }
