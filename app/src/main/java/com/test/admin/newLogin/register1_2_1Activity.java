@@ -15,12 +15,13 @@ import com.test.admin.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class register1_1Activity extends AppCompatActivity {
+public class register1_2_1Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_step1);
+
         ImageButton btn1 = (ImageButton)findViewById(R.id.imgBtn1);
         ListView lv1 = (ListView)findViewById(R.id.lv1);
         lv1.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,getData()));
@@ -29,7 +30,7 @@ public class register1_1Activity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent = new Intent(register1_1Activity.this,register2_1Activity.class);
+                        Intent intent = new Intent(register1_2_1Activity.this,register1_2_2Activity.class);
                         startActivity(intent);
                     }
                 }
@@ -37,7 +38,7 @@ public class register1_1Activity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(register1_1Activity.this,identityActivity.class);
+                Intent intent = new Intent(register1_2_1Activity.this,identityActivity.class);
                 startActivity(intent);
             }
         });
@@ -72,7 +73,7 @@ public class register1_1Activity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             finish();
-            Intent intent = new Intent(register1_1Activity.this, identityActivity.class);
+            Intent intent = new Intent(register1_2_1Activity.this, register1_2Activity.class);
             startActivity(intent);
             return true;
         }

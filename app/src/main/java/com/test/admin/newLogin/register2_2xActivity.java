@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 import com.test.admin.R;
 
-public class register2_2Activity extends AppCompatActivity {
+public class register2_2xActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +23,14 @@ public class register2_2Activity extends AppCompatActivity {
         imgBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(register2_2Activity.this,register1_2_2Activity.class);
+                Intent intent = new Intent(register2_2xActivity.this,register1_2Activity.class);
                 startActivity(intent);
             }
         });
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(register2_2Activity.this,register3_2Activity.class);
+                Intent intent = new Intent(register2_2xActivity.this,register3_2xActivity.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class register2_2Activity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             finish();
-            Intent intent = new Intent(register2_2Activity.this, register1_2_2Activity.class);
+            Intent intent = new Intent(register2_2xActivity.this, register1_1Activity.class);
             startActivity(intent);
             return true;
         }

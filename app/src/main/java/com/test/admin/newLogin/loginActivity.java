@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +41,8 @@ public class loginActivity extends AppCompatActivity {
     private static final String[] items = new String[]{"管理员", "发布者", "参与者"};
     private String str1 = "忘记密码?";
     private String str2 = "还未注册?";
-    Button btn1, btn2, btn3, btn4;
+    Button btn1;
+    ImageButton imgBtn1;
     TextView tv1, tv2;
     String str;//选择的身份
     String s1 = "管理员";
@@ -63,6 +65,8 @@ public class loginActivity extends AppCompatActivity {
         final Spinner Spinner1 = (Spinner) findViewById(R.id.Spinner1);
         Spinner1.setAdapter(source);
         btn1 = (Button) findViewById(R.id.login);
+        imgBtn1 = (ImageButton) findViewById(R.id.imgBtn1);
+
         //tv1=(TextView)findViewById(tv5);
         //tv2=(TextView)findViewById(tv6);
 
@@ -86,6 +90,7 @@ public class loginActivity extends AppCompatActivity {
                 //管理员
                 if (s1.equals(str)) {
                     Username.setHint("管理员账号");
+                    Username.setTextSize(15);
                     btn1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -96,6 +101,7 @@ public class loginActivity extends AppCompatActivity {
                 //发布者
                 else if (s2.equals(str)) {
                     Username.setHint("邮箱");
+                    Username.setTextSize(15);
                     btn1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -106,6 +112,7 @@ public class loginActivity extends AppCompatActivity {
                 //参与者
                 else if (s3.equals(str)) {
                     Username.setHint("手机号");
+                    Username.setTextSize(15);
                     btn1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -120,20 +127,26 @@ public class loginActivity extends AppCompatActivity {
 
         });
 
+        imgBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginActivity.this, loginRegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //忘记密码跳转
 
-        TextView textView1=(TextView)findViewById(R.id.text3);
+        TextView textView1 = (TextView) findViewById(R.id.text3);
 
 
-
-        String text1="忘记密码?";
-        SpannableString spannableString1=new SpannableString(text1);
+        String text1 = "忘记密码?";
+        SpannableString spannableString1 = new SpannableString(text1);
 
         spannableString1.setSpan(new ClickableSpan() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(loginActivity.this,forgetPasswordActivity.class);
+                Intent intent = new Intent(loginActivity.this, newForgetPasswordActivity1.class);
                 startActivity(intent);
             }
         }, 0, text1.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -257,6 +270,16 @@ public class loginActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            finish();
+            Intent intent = new Intent(loginActivity.this, loginRegisterActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
 

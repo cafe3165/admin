@@ -10,12 +10,14 @@ import android.widget.ImageButton;
 
 import com.test.admin.R;
 
-public class register2_2Activity extends AppCompatActivity {
+import static com.test.admin.R.id.btn1;
+
+public class register3_2xActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register_step2_2);
+        setContentView(R.layout.register_step3_2);
 
         ImageButton imgBtn1 = (ImageButton)findViewById(R.id.imgBtn1);
         Button btn1 = (Button)findViewById(R.id.btn1);
@@ -23,14 +25,15 @@ public class register2_2Activity extends AppCompatActivity {
         imgBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(register2_2Activity.this,register1_2_2Activity.class);
+                Intent intent = new Intent(register3_2xActivity.this,register2_2xActivity.class);
                 startActivity(intent);
             }
         });
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(register2_2Activity.this,register3_2Activity.class);
+                Intent intent = new Intent(register3_2xActivity.this,loginRegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +41,7 @@ public class register2_2Activity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             finish();
-            Intent intent = new Intent(register2_2Activity.this, register1_2_2Activity.class);
+            Intent intent = new Intent(register3_2xActivity.this, register2_2xActivity.class);
             startActivity(intent);
             return true;
         }
