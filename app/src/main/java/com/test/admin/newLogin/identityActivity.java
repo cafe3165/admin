@@ -1,17 +1,13 @@
 package com.test.admin.newLogin;
 
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
 import com.test.admin.R;
-import com.test.admin.login.applyPromulgator;
-import com.test.admin.login.registerActivity;
-
-import static android.R.attr.onClick;
 
 public class identityActivity extends AppCompatActivity {
 
@@ -19,13 +15,23 @@ public class identityActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.identity);
-        ImageButton btn1 = (ImageButton) findViewById(R.id.imaBtn1);
-        ImageButton btn2 = (ImageButton) findViewById(R.id.imaBtn2);
+
+        ImageButton btn0 = (ImageButton) findViewById(R.id.imgBtn0);
+        ImageButton btn1 = (ImageButton) findViewById(R.id.imgBtn1);
+        ImageButton btn2 = (ImageButton) findViewById(R.id.imgBtn2);
+
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(identityActivity.this,loginRegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(identityActivity.this,register1Activity.class);
+                Intent intent = new Intent(identityActivity.this,register1_1Activity.class);
                 startActivity(intent);
             }
         });
@@ -33,9 +39,19 @@ public class identityActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(identityActivity.this,register1Activity.class);
+                Intent intent = new Intent(identityActivity.this,register1_2Activity.class);
                 startActivity(intent);
+
             }
         });
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            finish();
+            Intent intent = new Intent(identityActivity.this, loginRegisterActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

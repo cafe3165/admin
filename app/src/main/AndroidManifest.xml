@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="cn.bmob.permission.push" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -60,7 +59,7 @@
         <!-- <activity android:name=".activitypromulgator.ViewActivity" /> -->
         <activity android:name=".Participant.ImformViewActivity" />
         <activity android:name=".promulgator.ActInfomation" />
-        /////////////////////////////////////////////////////////
+        <!-- ///////////////////////////////////////////////////////// -->
         <activity android:name=".Participant.newMain" />
         <activity android:name=".Participant.BaseActivity" />
         <activity android:name=".promulgator.BaseActivity" />
@@ -68,9 +67,22 @@
         <activity android:name=".newLogin.loginRegisterActivity" />
         <activity android:name=".newLogin.identityActivity" />
         <activity android:name=".newLogin.loginActivity" />
-        <activity android:name=".newLogin.register1Activity" />
+        <activity android:name=".newLogin.register1_1Activity" />
         <activity android:name=".newLogin.register2_1Activity" />
-        <activity android:name=".newLogin.register2_2Activity"></activity>
+        <activity android:name=".newLogin.register1_2_2Activity" />
+        <activity android:name=".newLogin.register1_2_1Activity" />
+        <activity android:name=".newLogin.register3_1Activity" />
+        <activity android:name=".promulgator.PromulgatorActivityDetail" />
+        <activity android:name=".newLogin.register4_1Activity" />
+        <activity android:name=".newLogin.register5_1Activity" />
+        <activity android:name=".newLogin.register1_2Activity" />
+        <activity android:name=".newLogin.register2_2Activity" />
+        <activity android:name=".newLogin.register3_2Activity" />
+        <activity android:name=".newLogin.register2_2xActivity" />
+        <activity android:name=".newLogin.register3_2xActivity" />
+        <activity android:name=".newLogin.newForgetPasswordActivity1" />
+        <activity android:name=".newLogin.newForgetPasswordActivity2" />
+        <activity android:name=".newLogin.newForgetPasswordActivity3"></activity>
     </application>
 
 </manifest>

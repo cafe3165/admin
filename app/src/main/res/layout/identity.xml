@@ -9,35 +9,101 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/loginbackground"
-        >
+        android:paddingBottom="50dp"
+        android:background="@drawable/loginbackground">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageButton
+                android:id="@+id/imgBtn0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left|center"
+                android:background="@drawable/back2"/>
 
-    <LinearLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_weight="1"
-        >
-        <ImageButton
-            android:id="@+id/imaBtn1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#00000000"
-            android:src="@drawable/login_register"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_weight="1"
-        >
-        <ImageButton
-            android:id="@+id/imaBtn2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="#00000000"
-            android:src="@drawable/login_register"/>
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="选择身份"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="30dp"
+                    android:gravity="center|bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="参与者"
+
+                        />
+
+                    <ImageButton
+                        android:id="@+id/imgBtn1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/participant"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center|top"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发布者"
+                        android:textSize="15sp"
+                        />
+                    <ImageButton
+                        android:id="@+id/imgBtn2"
+                        android:layout_width="140dp"
+                        android:layout_height="159dp"
+                        android:background="@drawable/promul"
+                        android:layout_weight="0.18" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

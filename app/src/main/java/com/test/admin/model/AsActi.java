@@ -155,9 +155,9 @@ public class AsActi {
                 if(e == null){
 
                     asActivity.setAcStatus(false);
-                    asActivity.save(new SaveListener<String>() {
+                    asActivity.update(new UpdateListener() {
                         @Override
-                        public void done(String s, BmobException e) {
+                        public void done(BmobException e) {
 
                             if(e == null){
 
