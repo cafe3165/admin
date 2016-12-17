@@ -16,20 +16,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class register1_2_2Activity extends AppCompatActivity {
+    Bundle bundle2 = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_step2);
 
-        ImageButton btn1 = (ImageButton)findViewById(R.id.imgBtn1);
+        final Bundle bundle1 = this.getIntent().getExtras();
+        bundle2.putString("identity",bundle1.getString("identity"));
+        final ImageButton btn1 = (ImageButton)findViewById(R.id.imgBtn1);
         ListView lv1 = (ListView)findViewById(R.id.lv1);
         lv1.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,getData()));
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(register1_2_2Activity.this,register1_2_1Activity.class);
+                intent.putExtras(bundle2);
                 startActivity(intent);
             }
         });
@@ -37,6 +42,11 @@ public class register1_2_2Activity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent = new Intent(register1_2_2Activity.this,register2_2Activity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("college",bundle1.getString("college"));
+                        bundle.putString("grade",getData().get(position));
+                        bundle.putString("identity",bundle1.getString("identity"));
+                        intent.putExtras(bundle);
                         startActivity(intent);
                     }
                 }
@@ -71,6 +81,7 @@ public class register1_2_2Activity extends AppCompatActivity {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             finish();
             Intent intent = new Intent(register1_2_2Activity.this, register1_2_1Activity.class);
+            intent.putExtras(bundle2);
             startActivity(intent);
             return true;
         }

@@ -25,12 +25,17 @@ public class register1_2_1Activity extends AppCompatActivity {
         ImageButton btn1 = (ImageButton)findViewById(R.id.imgBtn1);
         ListView lv1 = (ListView)findViewById(R.id.lv1);
         lv1.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,getData()));
+        final Bundle bundle1 = this.getIntent().getExtras();
 
         lv1.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent = new Intent(register1_2_1Activity.this,register1_2_2Activity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("college",getData().get(position));
+                        bundle.putString("identity",bundle1.getString("identity"));
+                        intent.putExtras(bundle);
                         startActivity(intent);
                     }
                 }

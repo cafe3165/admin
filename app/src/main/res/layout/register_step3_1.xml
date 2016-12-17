@@ -70,6 +70,7 @@
                         android:background="@drawable/number"/>
                 </LinearLayout>
                 <EditText
+                    android:id="@+id/stuno"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -105,6 +106,7 @@
                         android:background="@drawable/name"/>
                 </LinearLayout>
                 <EditText
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -137,6 +139,7 @@
                         android:layout_weight="4"
                         android:background="@drawable/phone"/>
                 </LinearLayout>
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -144,7 +147,7 @@
                     android:textSize="15sp"
                     android:hint="手机号"
                     android:background="@null"
-                    />
+                    android:id="@+id/pnum" />
             </LinearLayout>
         </LinearLayout>
             <LinearLayout

@@ -16,10 +16,11 @@ public class identityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.identity);
 
-        ImageButton btn0 = (ImageButton) findViewById(R.id.imgBtn0);
-        ImageButton btn1 = (ImageButton) findViewById(R.id.imgBtn1);
-        ImageButton btn2 = (ImageButton) findViewById(R.id.imgBtn2);
+        ImageButton btn0 = (ImageButton) findViewById(R.id.imgBtn0);//返回键
+        ImageButton btn1 = (ImageButton) findViewById(R.id.imgBtn1);//参与者
+        ImageButton btn2 = (ImageButton) findViewById(R.id.imgBtn2);//发布者
 
+        //返回
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +29,7 @@ public class identityActivity extends AppCompatActivity {
             }
         });
 
+        //参与者
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +38,7 @@ public class identityActivity extends AppCompatActivity {
             }
         });
 
+        //发布者
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

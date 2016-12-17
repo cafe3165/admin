@@ -6,9 +6,16 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.test.admin.R;
+import com.test.admin.bean.AsParticipant;
+
+import cn.bmob.v3.BmobSMS;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.UpdateListener;
 
 public class newForgetPasswordActivity2 extends AppCompatActivity {
 
@@ -17,9 +24,13 @@ public class newForgetPasswordActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_step4_1);
 
+        final EditText verifycode = (EditText) findViewById(R.id.verifycode);
         ImageButton imgBtn1 = (ImageButton)findViewById(R.id.imgBtn1);
         Button btn2 = (Button)findViewById(R.id.btn2);
+        //Bundle bundle1 = this.getIntent().getExtras();
+        //final String phonenumber=bundle1.getString("phonenumber");
 
+        //返回
         imgBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,10 +39,16 @@ public class newForgetPasswordActivity2 extends AppCompatActivity {
             }
         });
 
+        //下一步
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //直接传递验证码跳转
                 Intent intent = new Intent(newForgetPasswordActivity2.this,newForgetPasswordActivity3.class);
+                Bundle bundle = new Bundle();
+                //bundle.putString("phonenumber",phonenumber);
+                bundle.putString("verifycode",verifycode.getText().toString());
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });

@@ -8,33 +8,6 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:background="@color/login_register">
-        <ImageButton
-            android:id="@+id/imgBtn1"
-            android:layout_height="30dp"
-            android:layout_width="30dp"
-            android:layout_gravity="left|center"
-            android:background="@drawable/back2"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginRight="30dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_vertical|center_horizontal"
-                android:text="设置密码"
-                android:textSize="15sp"
-                />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="20dp"
@@ -65,12 +38,14 @@
                         android:background="@drawable/password"/>
                 </LinearLayout>
                 <EditText
+                    android:id="@+id/pw"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:textSize="15sp"
                     android:hint="密码"
                     android:background="@null"
+                    android:inputType="textPassword"
                     />
             </LinearLayout>
 
@@ -98,12 +73,14 @@
                         android:background="@drawable/password"/>
                 </LinearLayout>
                 <EditText
+                    android:id="@+id/pwcon"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:textSize="15sp"
                     android:hint="确认"
                     android:background="@null"
+                    android:inputType="textPassword"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -129,5 +106,33 @@
                 android:background="@drawable/login_shape"/>
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/login_register">
+        <ImageButton
+            android:id="@+id/imgBtn1"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="left|center"
+            android:background="@drawable/back2"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical|center_horizontal"
+                android:text="设置密码"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

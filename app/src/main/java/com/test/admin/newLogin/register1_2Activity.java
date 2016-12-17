@@ -42,11 +42,17 @@ public class register1_2Activity extends AppCompatActivity {
                 if(str.equals("院级负责人"))
                 {
                     Intent intent = new Intent(register1_2Activity.this,register1_2_1Activity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("identity","院级负责人");
+                    intent.putExtras(bundle);
                     startActivity(intent);
                 }
                 else
                 {
                     Intent intent = new Intent(register1_2Activity.this,register2_2xActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("identity","校级负责人");
+                    intent.putExtras(bundle);
                     startActivity(intent);
                 }
 
