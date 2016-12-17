@@ -5,49 +5,32 @@
     android:gravity="center"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFFFFF"
+
     >
-
-    <!--<LinearLayout-->
-        <!--android:fitsSystemWindows="true"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="?attr/colorPrimary"-->
-        <!--android:gravity="center"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:minHeight="?attr/actionBarSize"-->
-
-        <!--&gt;-->
-
-
-        <!--<TextView-->
-            <!--android:id="@+id/view_titile"-->
-            <!--android:gravity="center"-->
-            <!--android:text="活动助手"-->
-            <!--android:textSize="@dimen/biao_z"-->
-            <!--android:textColor="#FFFFFF"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--/>-->
-
-    <!--</LinearLayout>-->
-
-    <View
+    <ImageView
         android:layout_width="fill_parent"
-
-        android:layout_height="70dp"
-        android:background="#FFF"
+        android:layout_height="204dp"
+        android:src="@drawable/toubeijing"
         android:id="@+id/view2" />
+
+
 
     <TableLayout
         android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF">
+        android:layout_width="316dp"
+        android:layout_height="165dp"
+        android:background="@drawable/xiantiaokuang"
+        android:weightSum="1">
+        <View
+            android:layout_width="fill_parent"
 
+            android:layout_height="40dp"
+
+            android:layout_weight="0.62" />
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            style="@style/border2">
 
             <TextView
                 android:id="@+id/widget31"
@@ -76,7 +59,7 @@
         <View
             android:layout_width="fill_parent"
 
-            android:layout_height="20dp"
+            android:layout_height="10dp"
             android:background="#FFF" />
         <TableRow>
             <TextView
@@ -103,7 +86,7 @@
         <View
             android:layout_width="fill_parent"
 
-            android:layout_height="20dp"
+            android:layout_height="10dp"
             android:background="#FFF" />
         <TableRow>
 
@@ -139,26 +122,67 @@
         android:layout_height="50dp"
         android:background="#FFF"
         android:id="@+id/view4" />
+    <TextView
 
-    <Button
-        android:id="@+id/widget39"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="发布新活动"
-        android:textSize="23dp"
-        android:layout_x="0dp"
-        android:layout_y="182dp"
-        >
-    </Button>
-    <Button
-        android:id="@+id/widget40"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="发布新通知"
-        android:textSize="23dp"
 
+        android:text="我要发布"
+
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="#268BFF"
         >
-    </Button>
+    </TextView>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:layout_height="2dp"
+        android:background="#268BFF"
+        />
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/widget39"
+            android:layout_width="159dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:text="新活动"
+            style="@style/button"
+            android:background="@drawable/button_selector"
+            >
+        </Button>
+        <View
+            android:layout_height="1dp"
+            android:layout_width="10dp"
+            ></View>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="60dp"
+            android:background="#268BFF"></View>
+        <View
+            android:layout_height="1dp"
+            android:layout_width="10dp"
+            ></View>
+        <Button
+            android:id="@+id/widget40"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:text="新通知"
+            android:layout_marginTop="20dp"
+            style="@style/button"
+            android:background="@drawable/button_selector"
+            >
+        </Button>
+    </TableRow>
+
+</TableLayout>
+
 
 
 

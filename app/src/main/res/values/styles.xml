@@ -29,9 +29,21 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+<style name="button">
+
+    <item name="android:layout_width">190dp</item>
+    <item name="android:layout_height">62dp</item>
+    <item name="android:textColor">#268BFF</item>
+    <item name="android:textSize">30sp</item>
+
+</style>
+
+    <style name="border2">
+
+        <item name="android:windowBackground">@drawable/xiantiaokuang</item>
+        <item name="android:windowFrame">@drawable/border</item>
+        <item name="android:windowNoTitle">true</item>
 
 
-
-
-
+    </style>
 </resources>
