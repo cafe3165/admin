@@ -18,6 +18,7 @@ import com.test.admin.adapter.ActivityAdapter;
 import com.test.admin.bean.AsAcApplying;
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsPromulgator;
+import com.test.admin.model.AsActi;
 import com.test.admin.promulgator.PromulgatorActivityDetail;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
 /**
- * Created by hc6 on 2016/11/16.
+ *发布者已发布活动列表
  */
 
 public class YiFaBuHuoDong extends Fragment {
@@ -55,9 +56,16 @@ public class YiFaBuHuoDong extends Fragment {
 
         pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
 
-        BmobQuery<AsActivity> bmobQuery = new BmobQuery<AsActivity>();
-        bmobQuery.addWhereContainsAll("acPromulgator", Arrays.asList(pObjectdId));
-        bmobQuery.findObjects(new FindListener<AsActivity>() {
+        BmobQuery<AsActivity> eq1 = new BmobQuery<AsActivity>();
+        eq1.addWhereEqualTo("acPromulgator", pObjectdId);
+        BmobQuery<AsActivity> eq2 = new BmobQuery<AsActivity>();
+        eq2.addWhereEqualTo("acStatus",true);
+        List<BmobQuery<AsActivity>> andQuery = new ArrayList<BmobQuery<AsActivity>>();
+        andQuery.add(eq1);
+        andQuery.add(eq2);
+        BmobQuery<AsActivity> query = new BmobQuery<AsActivity>();
+        query.and(andQuery);
+        query.findObjects(new FindListener<AsActivity>() {
             @Override
             public void done(List<AsActivity> list, BmobException e) {
 
