@@ -5,7 +5,7 @@
     android:gravity="center"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFFFFF"
+
     >
     <LinearLayout
         android:fitsSystemWindows="true"
@@ -15,7 +15,7 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
+
         >
 
 
@@ -36,7 +36,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/frame_gray"
+
 
         >
         <TableRow>
@@ -49,6 +49,11 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/act_biao1" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
@@ -62,7 +67,9 @@
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
         <TableRow>
 
             <TextView
@@ -74,7 +81,11 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/act_zhuangtai1" />
-
+            <View
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:text="报名阶段"
                 android:layout_marginLeft="50dp"
@@ -89,17 +100,24 @@
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
         <TableRow>
             <TextView
                 android:text="举办方"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/act_time1" />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
@@ -113,7 +131,9 @@
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
         <TableRow>
             <TextView
                 android:text="活动时间"
@@ -124,6 +144,11 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/inform_nei1" />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
@@ -137,7 +162,9 @@
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
         <TableRow>
             <TextView
                 android:text="活动时间"
@@ -148,6 +175,11 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/inform_nei2" />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
@@ -162,7 +194,9 @@
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
         <TableRow>
             <TextView
                 android:text="活动地点"
@@ -173,7 +207,11 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/act_place1" />
-
+            <View
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
@@ -187,7 +225,9 @@
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
         <TableRow>
             <TextView
                 android:text="活动内容"
@@ -198,6 +238,11 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/act_nei1" />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
@@ -205,13 +250,16 @@
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
-                android:id="@+id/act_nei" />
+                android:id="@+id/act_nei"
+                />
         </TableRow>
         <View
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
         <TableRow>
             <TextView
                 android:text="活动受众"
@@ -222,7 +270,11 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/act_shouzhong1" />
-
+            <View
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
@@ -236,7 +288,9 @@
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
         <TableRow>
             <TextView
                 android:text="活动标签"
@@ -247,6 +301,11 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/act_biaoq1" />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:background="#000000"
+                ></View>
             <TextView
                 android:text="综测 礼品 名人 "
                 android:layout_marginLeft="50dp"
@@ -261,17 +320,13 @@
 
     </TableLayout>
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_marginTop="1dp"
-        android:layout_height="1dp"
-        android:background="#000000" />
+
 
     <View
         android:layout_width="fill_parent"
         android:layout_marginTop="1dp"
         android:layout_height="1dp"
-        android:background="#000000" />
+        android:background="#01f333" />
 
     <Button
         android:layout_width="match_parent"
@@ -280,7 +335,7 @@
         android:textSize="22dp"
         android:id="@+id/button"
         android:textColor="#FFFFFF"
-        android:background="#ccd1d8"
+        android:background="@drawable/blue_button"
         />
 
     <View
