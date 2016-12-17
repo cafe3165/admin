@@ -14,6 +14,7 @@ public class headAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       // setTheme(android.R.style.border2);
         setContentView(R.layout.activity_head);
 
         Button bNewNotice=(Button) findViewById(R.id.widget40) ;

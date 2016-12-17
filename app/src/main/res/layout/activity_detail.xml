@@ -109,7 +109,8 @@
         android:text="活动内容"
         android:textSize="17sp"/>
 
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@drawable/frame_gray"
         android:padding="10dp"
