@@ -22,6 +22,10 @@ import cn.bmob.v3.listener.QueryListener;
 import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
+/**
+ *发布者活动详情界面
+ */
+
 public class PromulgatorActivityDetail extends AppCompatActivity {
 
     private TextView acTitle;
@@ -78,19 +82,26 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
                     acAudiences.setText(asActivity.getAcAudiences());
                     acLabel.setText(asActivity.getAcLabel().toString());
 
-                    if(asActivity.getAcStatus().equals(true))endActivity.setEnabled(true);
-                    else endActivity.setEnabled(false);
+                    if(asActivity.getAcStatus().equals(true)){
+                        endActivity.setEnabled(true);
+                        modifyActivity.setEnabled(true);
+                    }
+                    else {
+                        endActivity.setText("活动已结束");
+                        endActivity.setEnabled(false);
+                        modifyActivity.setEnabled(false);
+                    }
                 }
             }
         });
-
+        //编辑活动按钮
         modifyActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
         });
-
+        //结束活动按钮
         endActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +112,7 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
                 asActi.endActivity(endActivity,staticObjectdId);
             }
         });
-
+        //报名表按钮
         applicationForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
