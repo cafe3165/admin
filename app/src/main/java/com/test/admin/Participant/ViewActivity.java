@@ -8,15 +8,18 @@ import android.widget.TextView;
 
 import com.test.admin.R;
 import com.test.admin.bean.AsActivity;
+import com.test.admin.bean.AsApplicationForm;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsAppForm;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListener;
 
 import static com.test.admin.bean.Parameters.pObjectdId;
@@ -85,14 +88,33 @@ public class ViewActivity extends AppCompatActivity {
             }
         });
 
+        pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
+
+        BmobQuery<AsApplicationForm> query1 = new BmobQuery<>();
+        query1.addWhereContainsAll("apParId", Arrays.asList(pObjectdId))
+                .findObjects(new FindListener<AsApplicationForm>() {
+                    @Override
+                    public void done(List<AsApplicationForm> list, BmobException e) {
+
+                        if(e == null){
+
+                            if(list.size() > 0)apply.setText("取消报名");
+                            else apply.setText("报名");
+                        }
+                    }
+                });
+
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //更改按钮状态为不可按
                 apply.setEnabled(false);
-                pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
                 AsAppForm asAppForm = new AsAppForm();
-                asAppForm.acParApply(apply,staticObjectdId,pObjectdId);
+                if(apply.getText().equals("报名")){
+                    asAppForm.acParApply(apply,staticObjectdId,pObjectdId);
+                }else{
+                    asAppForm.acParCancleApply(apply,staticObjectdId,pObjectdId);
+                }
             }
         });
     }
