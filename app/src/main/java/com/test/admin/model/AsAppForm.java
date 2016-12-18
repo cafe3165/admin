@@ -155,50 +155,12 @@ public class AsAppForm {
                 }else{
                     showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
                 }
-
-                //将当前用户的Id从报名表中删除
-                /*list.get(0).setApParStatus(list2);
-                list.get(0).removeAll("apParId", Arrays.asList(parObjectdId));
-                list.get(0).update(new UpdateListener() {
-                    @Override
-                    public void done(BmobException e) {
-
-                        if(e == null){
-                            showToast("取消报名成功");
-                            //更改按钮状态和text
-                            apply.setText("报名");
-                            apply.setEnabled(true);
-                            //将用户报名的活动Id从用户已报名的活动数组删除
-                            BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
-                            query.addWhereEqualTo("objectId",parObjectdId);
-                            query.findObjects(new FindListener<AsParticipant>() {
-                                @Override
-                                public void done(List<AsParticipant> list, BmobException e) {
-
-                                    if (e == null) {
-                                        list.get(0).removeAll("parAcId", Arrays.asList(acObjectdId));
-                                        list.get(0).update(new UpdateListener() {
-                                            @Override
-                                            public void done(BmobException e) {
-
-                                            }
-                                        });
-                                    }
-                                }
-                            });
-                        }else{
-                            showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
-                            //更改按钮状态和text
-                            apply.setEnabled(true);
-                        }
-                    }
-                });*/
             }
         });
     }
 
     //发布者签到
-    public void acProSignIn(String acObjectId,int position){
+    public void acParSignIn(final Button signIn,final String acObjectId,final int position){
 
         BmobQuery<AsApplicationForm> query = new BmobQuery<AsApplicationForm>();
         query.addWhereEqualTo("apAcId",acObjectId);
@@ -206,13 +168,76 @@ public class AsAppForm {
             @Override
             public void done(List<AsApplicationForm> list, BmobException e) {
 
-                list.get(0).setValue("apParStatus.position","1");
-                list.get(0).update(new UpdateListener() {
-                    @Override
-                    public void done(BmobException e) {
+                if(e == null) {
+                    //修改签到状态数组并更新
+                    List<String> list1 = new ArrayList<String>();
+                    list1.addAll(list.get(0).getApParStatus());
+                    list1.set(position,"1");
+                    list.get(0).setApParStatus(list1);
+                    list.get(0).update(new UpdateListener() {
+                        @Override
+                        public void done(BmobException e) {
 
-                    }
-                });
+                            if (e == null) {
+
+                                showToast("签到成功");
+                                //更改按钮状态
+                                signIn.setText("已签到");
+                                signIn.setEnabled(true);
+                            } else {
+
+                                showToast("操作失败" + "\t" + acObjectId + "\t" + position + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                                //更改按钮状态
+                                signIn.setEnabled(true);
+                            }
+                        }
+                    });
+                }else {
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    signIn.setEnabled(true);
+                }
+            }
+        });
+    }
+
+    //发布者取消签到
+    public void acParSignOut(final Button signIn, final String acObjectId, final int position){
+
+        BmobQuery<AsApplicationForm> query = new BmobQuery<AsApplicationForm>();
+        query.addWhereEqualTo("apAcId",acObjectId);
+        query.findObjects(new FindListener<AsApplicationForm>() {
+            @Override
+            public void done(List<AsApplicationForm> list, BmobException e) {
+
+                if(e == null) {
+                    List<String> list1 = new ArrayList<String>();
+                    list1.addAll(list.get(0).getApParStatus());
+                    list1.set(position,"0");
+                    list.get(0).setApParStatus(list1);
+                    list.get(0).update(new UpdateListener() {
+                        @Override
+                        public void done(BmobException e) {
+
+                            if (e == null) {
+
+                                showToast("取消签到成功");
+                                //更改按钮状态
+                                signIn.setText("签到");
+                                signIn.setEnabled(true);
+                            } else {
+
+                                showToast("操作失败" + "\t" + acObjectId + "\t" + position + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                                //更改按钮状态
+                                signIn.setEnabled(true);
+                            }
+                        }
+                    });
+                }else{
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    signIn.setEnabled(true);
+                }
             }
         });
     }

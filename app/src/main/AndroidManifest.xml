@@ -82,7 +82,8 @@
         <activity android:name=".newLogin.register3_2xActivity" />
         <activity android:name=".newLogin.newForgetPasswordActivity1" />
         <activity android:name=".newLogin.newForgetPasswordActivity2" />
-        <activity android:name=".newLogin.newForgetPasswordActivity3"></activity>
+        <activity android:name=".newLogin.newForgetPasswordActivity3" />
+        <activity android:name=".promulgator.ApplicationFormViewList"></activity>
     </application>
 
 </manifest>

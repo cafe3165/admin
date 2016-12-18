@@ -1,5 +1,6 @@
 package com.test.admin.promulgator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.test.admin.R;
+import com.test.admin.adapter.ApplicationFormAdapter;
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.model.AsActi;
@@ -117,6 +119,8 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(PromulgatorActivityDetail.this, ApplicationFormViewList.class);
+                startActivity(intent);
             }
         });
     }
