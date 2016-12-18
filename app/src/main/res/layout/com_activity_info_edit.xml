@@ -91,7 +91,7 @@
                 android:id="@+id/ge_touchuan" />
         </TableRow>
         <View
-            android:layout_margintTop="20dp"
+
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
