@@ -35,7 +35,7 @@ public class register3_1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_step3_1);
         ImageButton imgBtn1 = (ImageButton)findViewById(R.id.imgBtn1);
-        Button btn1 = (Button)findViewById(R.id.btn1);
+        final Button btn1 = (Button)findViewById(R.id.btn1);
         final Bundle bundle1 = this.getIntent().getExtras();
         final EditText stuno = (EditText) findViewById(R.id.stuno);
         final EditText name = (EditText) findViewById(R.id.name);
@@ -55,7 +55,7 @@ public class register3_1Activity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //btn1.setEnabled(false);
+                btn1.setEnabled(false);
                 if (!TextUtils.isEmpty(stuno.getText().toString())&&!TextUtils.isEmpty(name.getText().toString())&&!TextUtils.isEmpty(pnum.getText().toString())){
                     if (pnum.getText().toString().matches("^((13[0-9])|(15[^4,\\D])|(18[0,5-9])|(17[0-8])|(147))\\d{8}$")){
                         //检测手机号是否已注册
@@ -66,7 +66,7 @@ public class register3_1Activity extends AppCompatActivity {
                             public void done(List<AsParticipant> list, BmobException e) {
                                 if (e==null&&list.size()!=0){
                                     Toast.makeText(register3_1Activity.this,"手机号已被注册",Toast.LENGTH_SHORT).show();
-                                    //btn1.setEnabled(true);
+                                    btn1.setEnabled(true);
                                 }
                                 else if(e==null&&list.isEmpty()){
                                     //发送验证短信
@@ -84,18 +84,18 @@ public class register3_1Activity extends AppCompatActivity {
                                                 bundle.putString("pnum",pnum.getText().toString());
                                                 intent.putExtras(bundle);
                                                 startActivity(intent);
-                                                //btn1.setEnabled(true);
+                                                btn1.setEnabled(true);
                                             }
                                             else{
                                                 Toast.makeText(register3_1Activity.this,"验证码发送失败，请点击按钮重新发送",Toast.LENGTH_SHORT).show();
-                                                //btn1.setEnabled(true);
+                                                btn1.setEnabled(true);
                                             }
                                         }
                                     });
                                 }
                                 else{
                                     Toast.makeText(register3_1Activity.this,"查询手机号是否已注册失败",Toast.LENGTH_SHORT).show();
-                                    //btn1.setEnabled(true);
+                                    btn1.setEnabled(true);
                                 }
                             }
                         });
@@ -103,12 +103,12 @@ public class register3_1Activity extends AppCompatActivity {
                     }
                     else{
                         Toast.makeText(register3_1Activity.this,"请输入正确的手机号",Toast.LENGTH_SHORT).show();
-                        //btn1.setEnabled(true);
+                        btn1.setEnabled(true);
                     }
                 }
                 else{
                     Toast.makeText(register3_1Activity.this,"请输入完整的信息",Toast.LENGTH_SHORT).show();
-                    //btn1.setEnabled(true);
+                    btn1.setEnabled(true);
                 }
             }
         });
