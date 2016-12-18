@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.test.admin.R;
 import com.test.admin.adapter.ApplicationFormAdapter;
 import com.test.admin.bean.AsActivity;
+import com.test.admin.bean.AsApplicationForm;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.model.AsActi;
 import com.test.admin.model.AsAppForm;
@@ -19,10 +21,13 @@ import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.QueryListener;
 
+import static cn.bmob.v3.Bmob.getApplicationContext;
 import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
+import static com.test.admin.model.Function.showToast;
 
 /**
  *发布者活动详情界面
@@ -75,7 +80,6 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
                     myAsAcApplying.add(asActivity);
 
                     acTitle.setText(asActivity.getAcTitle());
-                    acParNumbers.setText("报名中");
                     acOrganizer.setText(asActivity.getAcOtganizer());
                     acStartTime.setText(asActivity.getAcStartTime());
                     acDeadLine.setText(asActivity.getAcDeadline());
@@ -96,6 +100,23 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
                 }
             }
         });
+
+        //查询活动报名人数
+        BmobQuery<AsApplicationForm> query1 = new BmobQuery<AsApplicationForm>();
+        query1.addWhereEqualTo("apAcId",staticObjectdId);
+        query1.findObjects(new FindListener<AsApplicationForm>() {
+            @Override
+            public void done(List<AsApplicationForm> list, BmobException e) {
+
+                if(e == null){
+                    //设置报名人数
+                    acParNumbers.setText(String.valueOf(list.get(0).getApParId().size()));
+                }else{
+                    showToast("报名人数显示错误" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                }
+            }
+        });
+
         //编辑活动按钮
         modifyActivity.setOnClickListener(new View.OnClickListener() {
             @Override
