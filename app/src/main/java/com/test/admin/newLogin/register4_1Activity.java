@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.test.admin.R;
@@ -34,6 +35,13 @@ public class register4_1Activity extends AppCompatActivity {
         final Bundle bundle1 = this.getIntent().getExtras();
         final EditText verifycode = (EditText)findViewById(R.id.verifycode);
         bundle2 = this.getIntent().getExtras();
+        TextView phone = (TextView)findViewById(R.id.tv1);
+
+        Intent intent = getIntent();
+        String phonenumber = intent.getStringExtra("pnum");
+        phone.setText(phonenumber);
+        phone.setTextColor(0xFF2BDCDC);
+        phone.setTextSize(15);
 
 
         //返回

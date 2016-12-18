@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.test.admin.R;
@@ -27,10 +28,16 @@ public class newForgetPasswordActivity2 extends AppCompatActivity {
         final EditText verifycode = (EditText) findViewById(R.id.verifycode);
         ImageButton imgBtn1 = (ImageButton)findViewById(R.id.imgBtn1);
         Button btn2 = (Button)findViewById(R.id.btn2);
+        TextView phone = (TextView)findViewById(R.id.tv1);
         //Bundle bundle1 = this.getIntent().getExtras();
         //final String phonenumber=bundle1.getString("phonenumber");
 
         //返回
+        Intent intent = getIntent();
+        String phonenumber = intent.getStringExtra("phonenumber");
+        phone.setText(phonenumber);
+        phone.setTextColor(0xFF2BDCDC);
+        phone.setTextSize(15);
         imgBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
