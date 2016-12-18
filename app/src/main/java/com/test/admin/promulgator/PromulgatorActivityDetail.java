@@ -112,7 +112,7 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
                     //设置报名人数
                     acParNumbers.setText(String.valueOf(list.get(0).getApParId().size()));
                 }else{
-                    showToast("报名人数显示错误" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    acParNumbers.setText("0");
                 }
             }
         });
