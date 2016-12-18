@@ -70,6 +70,7 @@
                             android:background="@drawable/qq"/>
                     </LinearLayout>
                     <EditText
+                        android:id="@+id/qqnum"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"
@@ -104,7 +105,9 @@
                             android:layout_weight="4"
                             android:background="@drawable/phone"/>
                     </LinearLayout>
+
                     <EditText
+                        android:id="@+id/phnum"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"
@@ -138,6 +141,7 @@
                             android:background="@drawable/email"/>
                     </LinearLayout>
                     <EditText
+                        android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"

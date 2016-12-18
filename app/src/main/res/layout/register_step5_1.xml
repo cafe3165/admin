@@ -65,12 +65,14 @@
                         android:background="@drawable/password"/>
                 </LinearLayout>
                 <EditText
+                    android:id="@+id/newpw"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:textSize="15sp"
                     android:hint="密码"
                     android:background="@null"
+                    android:inputType="textPassword"
                     />
             </LinearLayout>
 
@@ -98,12 +100,14 @@
                         android:background="@drawable/password"/>
                 </LinearLayout>
                 <EditText
+                    android:id="@+id/newpwcon"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:textSize="15sp"
                     android:hint="确认"
                     android:background="@null"
+                    android:inputType="textPassword"
                     />
             </LinearLayout>
         </LinearLayout>

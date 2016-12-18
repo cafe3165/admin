@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.test.admin.R;
 
@@ -22,6 +23,8 @@ public class register2_1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_step2);
 
+        final Bundle bundle1 = this.getIntent().getExtras();
+        final String college = bundle1.getString("college");
         ImageButton btn1 = (ImageButton)findViewById(R.id.imgBtn1);
         ListView lv1 = (ListView)findViewById(R.id.lv1);
         lv1.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,getData()));
@@ -38,6 +41,10 @@ public class register2_1Activity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent = new Intent(register2_1Activity.this,register3_1Activity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("college",college);
+                        bundle.putString("grade",getData().get(position));
+                        intent.putExtras(bundle);
                         startActivity(intent);
                     }
                 }

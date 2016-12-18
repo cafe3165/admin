@@ -17,6 +17,15 @@ public class AsPermissionApplying extends BmobObject {
     private String perAcPermission_2;//活动权限_年级
     private String perAcPermission_1;//活动权限_学院
     private String perUserName;//用户名
+    private String perPassword;//密码
+
+    public String getPerPassword() {
+        return perPassword;
+    }
+
+    public void setPerPassword(String perPassword) {
+        this.perPassword = perPassword;
+    }
 
     public String getPerTelNumber() {
         return perTelNumber;
