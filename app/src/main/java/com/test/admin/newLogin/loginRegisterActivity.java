@@ -9,9 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.test.admin.R;
-import com.test.admin.login.MainActivity;
-import com.test.admin.login.applyPromulgator;
-import com.test.admin.login.registerActivity;
+
 
 public class loginRegisterActivity extends AppCompatActivity {
 
