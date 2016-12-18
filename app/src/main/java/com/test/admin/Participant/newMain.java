@@ -6,6 +6,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.test.admin.PaticipantFragment.HuoDongChaZhao;
 import com.test.admin.PaticipantFragment.PersonData;
@@ -13,9 +14,17 @@ import com.test.admin.PaticipantFragment.Setting;
 import com.test.admin.PaticipantFragment.TongZhi;
 import com.test.admin.R;
 import com.test.admin.PaticipantFragment.Head;//////
+import com.test.admin.bean.AsParticipant;
+import com.test.admin.bean.AsPromulgator;
 import com.test.admin.fragment.FragmentSetting;
 import com.test.admin.fragment.FragmentThree;
 import com.test.admin.fragment.FragmentTwo;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.QueryListener;
+
+import static com.test.admin.bean.Parameters.pObjectdId;
 
 
 public class newMain extends BaseActivity implements View.OnClickListener {
@@ -33,13 +42,27 @@ public class newMain extends BaseActivity implements View.OnClickListener {
     private TongZhi mFragmentFour;                      //xcz
     private Setting mFragmentSetting;///////////
 
+    private TextView parName;//参与者姓名
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.par_main11);//////////////
         //设置ToolBar
         setCustomTitle(getString(R.string.app_name), true);
+        //显示参与者姓名
+        parName = (TextView)findViewById(R.id.parName);
+        pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+        BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
+        query.getObject(pObjectdId, new QueryListener<AsParticipant>() {
+            @Override
+            public void done(AsParticipant asParticipant, BmobException e) {
 
+                if(e == null){
+
+                    parName.setText(asParticipant.getParName());
+                }
+            }
+        });
 
         initFragment(savedInstanceState);
 

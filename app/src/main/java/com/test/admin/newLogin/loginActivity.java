@@ -25,15 +25,14 @@ import com.test.admin.R;
 import com.test.admin.bean.AsAdministrator;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
-import com.test.admin.login.forgetPasswordActivity;
-import com.test.admin.login.noLine;
+
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
-import static com.test.admin.R.layout.forget_password_activity;
+
 import static com.test.admin.bean.Parameters.pObjectdId;
 
 

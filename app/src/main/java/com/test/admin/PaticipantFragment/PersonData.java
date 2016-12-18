@@ -15,8 +15,7 @@ import com.test.admin.R;
 import com.test.admin.activity.PersonDetail;
 import com.test.admin.adapter.PermissionAdapter;
 import com.test.admin.bean.AsPermissionApplying;
-import com.test.admin.login.MainActivity;
-import com.test.admin.login.forgetPasswordActivity;
+
 
 import java.util.ArrayList;
 import java.util.List;

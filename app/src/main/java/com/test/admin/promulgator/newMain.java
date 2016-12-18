@@ -6,13 +6,22 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.test.admin.R;
+import com.test.admin.bean.AsPromulgator;
 import com.test.admin.fragment.FragmentOne;
 import com.test.admin.fragment.FragmentSetting;
 import com.test.admin.fragment.FragmentThree;
 import com.test.admin.fragment.FragmentTwo;
 import com.test.admin.PromulgatorFragment.*;
+import com.test.admin.model.AsProm;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.QueryListener;
+
+import static com.test.admin.bean.Parameters.pObjectdId;
 
 public class newMain extends BaseActivity implements View.OnClickListener {
 
@@ -30,13 +39,28 @@ public class newMain extends BaseActivity implements View.OnClickListener {
     private YiJieShuHuoDong mFragmentFour;
     private FaBuZheSetting mFragmentSetting;
 
+    private TextView proIdentity;//发布者身份
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.promul_main11);
         //设置ToolBar
         setCustomTitle(getString(R.string.app_name), true);
+        //显示发布者身份
+        proIdentity = (TextView)findViewById(R.id.proIdentity);
+        pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+        BmobQuery<AsPromulgator> query = new BmobQuery<AsPromulgator>();
+        query.getObject(pObjectdId, new QueryListener<AsPromulgator>() {
+            @Override
+            public void done(AsPromulgator asPromulgator, BmobException e) {
 
+                if(e == null){
+
+                    proIdentity.setText(asPromulgator.getProIdentity());
+                }
+            }
+        });
 
         initFragment(savedInstanceState);
 

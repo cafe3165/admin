@@ -38,7 +38,6 @@
         <activity android:name=".login.forgetPasswordActivity" />
         <activity android:name=".login.registerActivity" />
         <activity android:name=".login.Registered" />
-        <activity android:name=".promulgator.MainActivity" />
         <activity android:name=".promulgator.settingAct" />
         <activity android:name=".promulgator.headAct" />
         <activity android:name=".promulgator.Main2Activity" />
@@ -50,7 +49,6 @@
         <activity android:name=".Participant.ComHead" />
         <activity android:name=".Participant.HistoryAct" />
         <activity android:name=".Participant.InfoEdit" />
-        <activity android:name=".Participant.MainActivity" />
         <activity android:name=".Participant.MyAct" />
         <activity android:name=".Participant.ActFind" />
         <activity android:name=".Participant.no_find" />

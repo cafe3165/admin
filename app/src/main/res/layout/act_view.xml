@@ -80,6 +80,7 @@
                 android:textSize="@dimen/biao_z"
                 android:textColor="#000000"
                 android:id="@+id/act_zhuangtai1" />
+
             <View
                 style="@style/view"
                 ></View>

@@ -9,8 +9,7 @@ import android.view.Window;
 import android.widget.Toast;
 import android.widget.ImageView;
 
-import com.test.admin.login.MainActivity;
-import com.test.admin.login.registerActivity;
+
 
 import static com.test.admin.R.id.activity_login_register;
 import static com.test.admin.R.id.login;
