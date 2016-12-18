@@ -35,7 +35,7 @@
             <TextView
                 android:id="@+id/view_titile"
 
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="30dp"
                 android:text="编辑资料"
                 android:textSize="@dimen/biao_k"
                 android:textColor="#FFFFFF"

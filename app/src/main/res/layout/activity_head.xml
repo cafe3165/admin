@@ -9,7 +9,7 @@
     >
     <ImageView
         android:layout_width="fill_parent"
-        android:layout_height="204dp"
+        android:layout_height="158dp"
         android:src="@drawable/toubeijing"
         android:id="@+id/view2" />
 
@@ -17,8 +17,8 @@
 
     <TableLayout
         android:orientation="vertical"
-        android:layout_width="316dp"
-        android:layout_height="165dp"
+        android:layout_width="323dp"
+        android:layout_height="189dp"
         android:background="@drawable/xiantiaokuang"
         android:weightSum="1">
         <View
@@ -119,7 +119,7 @@
     <View
         android:layout_width="fill_parent"
 
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:background="#FFF"
         android:id="@+id/view4" />
     <TextView
@@ -149,9 +149,9 @@
         <Button
             android:id="@+id/widget39"
             android:layout_width="109dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="110dp"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="90dp"
+            android:layout_height="50dp"
             android:text="新活动"
             android:textSize="25dp"
             style="@style/button"
@@ -165,7 +165,7 @@
             ></View>
         <View
             android:layout_width="2dp"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:background="#268BFF"></View>
         <View
@@ -176,10 +176,10 @@
             android:textSize="25dp"
             android:id="@+id/widget40"
             android:layout_width="109dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="新通知"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             style="@style/button"
             android:background="@drawable/button_selector"
             >
