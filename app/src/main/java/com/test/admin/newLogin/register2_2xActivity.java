@@ -56,7 +56,7 @@ public class register2_2xActivity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             finish();
-            Intent intent = new Intent(register2_2xActivity.this, register1_1Activity.class);
+            Intent intent = new Intent(register2_2xActivity.this, register1_2Activity.class);
             startActivity(intent);
             return true;
         }
