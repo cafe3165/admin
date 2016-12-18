@@ -148,13 +148,15 @@
 
         <Button
             android:id="@+id/widget39"
-            android:layout_width="159dp"
+            android:layout_width="109dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="110dp"
             android:layout_height="wrap_content"
             android:text="新活动"
+            android:textSize="25dp"
             style="@style/button"
-            android:background="@drawable/button_selector"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_select2"
             >
         </Button>
         <View
@@ -164,16 +166,19 @@
         <View
             android:layout_width="2dp"
             android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
             android:background="#268BFF"></View>
         <View
             android:layout_height="1dp"
             android:layout_width="10dp"
             ></View>
         <Button
+            android:textSize="25dp"
             android:id="@+id/widget40"
-            android:layout_width="159dp"
+            android:layout_width="109dp"
             android:layout_height="wrap_content"
             android:text="新通知"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             style="@style/button"
             android:background="@drawable/button_selector"

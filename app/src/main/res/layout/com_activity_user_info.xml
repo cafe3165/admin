@@ -17,114 +17,122 @@
 
     <TableLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/frame_gray"
+
 
         >
         <TableRow>
             <ImageView
+
                 android:layout_width="200px"
                 android:layout_height="200px"
-                android:layout_marginLeft="0dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/tou"
                 android:id="@+id/ge_touxian" />
             <TableLayout>
                 <TableRow>
                     <TextView
+                        android:layout_marginLeft="20dp"
                         android:text="小明"
                         android:layout_marginTop="28dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:textColor="#FFFFFF"
+                        android:textSize="25dp"
+                        android:textColor="#000000"
                         android:id="@+id/ge_name" />
                     <Button
                         android:text="编辑资料"
-                        android:layout_marginLeft="50dp"
+                        android:layout_marginLeft="70dp"
                         android:layout_marginTop="28dp"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:textSize="20dp"
-                        android:background="#FFFFFF"
-                        android:textColor="#4c5caf"
+                        android:background="@drawable/button_select2"
+                        android:textColor="#ffffff"
                         android:id="@+id/ge_edit" />
                 </TableRow>
 
                 <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
                     android:text="福州大学"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:id="@+id/ge_school" />
 
                 <TextView
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="20dp"
                     android:text="数学与计算机科学"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:id="@+id/ge_yuan" />
 
             </TableLayout>
 
         </TableRow>
+  </TableLayout>
         <View
-            android:layout_width="fill_parent"
-            android:layout_marginTop="1dp"
-            android:layout_height="1dp"
-            android:background="#FFFAFA" />
-        <TableRow>
-
-            <TextView
-                android:text="我的报名"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/biao_z"
-                android:textColor="#FFFFFF"
-                android:id="@+id/my_apply1" />
-
-            <ImageButton
-                android:id="@+id/my_apply"
-                android:layout_width="100dp"
-                android:layout_marginLeft="50dp"
-                android:layout_height="match_parent"
-                android:padding="6dp"
-                android:background="@drawable/frame_gray"
-                android:src="@mipmap/ic_action_arrow_right" />
-        </TableRow>
-        <View
-            android:layout_width="fill_parent"
-            android:layout_marginTop="1dp"
-            android:layout_height="1dp"
-            android:background="#FFFAFA" />
-        <TableRow>
-            <TextView
-                android:text="历史参与活动"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/biao_z"
-                android:textColor="#FFFFFF"
-                android:id="@+id/my_applied1" />
-
-            <ImageButton
-                android:id="@+id/my_applied"
-                android:layout_width="100dp"
-                android:layout_marginLeft="50dp"
-                android:layout_height="match_parent"
-                android:padding="6dp"
-                android:background="@drawable/frame_gray"
-                android:src="@mipmap/ic_action_arrow_right" />
-        </TableRow>
-        <View
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="30dp"
             android:layout_width="fill_parent"
             android:layout_marginTop="5dp"
-            android:layout_height="3dp"
-            android:background="#FFFAFA" />
+            android:layout_height="1dp"
+            android:background="#268BFF" />
+        <TableLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TableRow>
+
+                <TextView
+                    android:text="我的报名"
+                    style="@style/xiang_ge"
+                    android:id="@+id/my_apply1" />
+
+                <ImageButton
+                    android:id="@+id/my_apply"
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="match_parent"
+                    android:padding="6dp"
+                    android:background="#268BFF"
+                    android:src="@mipmap/ic_action_arrow_right" />
+            </TableRow>
+            <View
+                style="@style/view_ge"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="20dp"/>
+            <TableRow>
+                <TextView
+                    android:text="历史参与活动"
+
+                    style="@style/xiang_ge"
+                    android:id="@+id/my_applied1" />
+
+                <ImageButton
+                    android:id="@+id/my_applied"
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="match_parent"
+                    android:padding="6dp"
+                    android:background="#268BFF"
+                    android:src="@mipmap/ic_action_arrow_right" />
+            </TableRow>
+
+            <View
+                style="@style/view_ge"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="20dp"/>
+
     </TableLayout>
 
     <View
