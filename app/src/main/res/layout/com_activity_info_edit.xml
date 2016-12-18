@@ -91,17 +91,17 @@
                 android:id="@+id/ge_touchuan" />
         </TableRow>
         <View
+            android:layout_margintTop="20dp"
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="?attr/colorPrimary" />
+            android:background="?attr/colorPrimary"
+            android:layout_marginRight="90dp"/>
         <TableRow>
             <TextView
                 android:text="性别"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
+                style="@style/xiang_ge"
                 android:textColor="#000000"
                 android:id="@+id/ge_sex1" />
             <Spinner
@@ -115,17 +115,17 @@
                 android:id="@+id/ge_sex" />
         </TableRow>
         <View
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="85dp"
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="?attr/colorPrimary" />
+            android:background="#000000" />
         <TableRow>
             <TextView
                 android:text="年龄"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:textSize="@dimen/biao_z"
+                style="@style/xiang_ge"
                 android:textColor="#000000"
                 android:id="@+id/ge_age1" />
             <EditText
@@ -139,10 +139,12 @@
                 android:id="@+id/ge_age" />
         </TableRow>
         <View
+            android:layout_marginRight="25dp"
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="?attr/colorPrimary" />
+            android:background="#000000"
+        android:layout_marginLeft="85dp"/>
 
 
 
@@ -151,11 +153,7 @@
             android:layout_height="match_parent">
             <TextView
                 android:text="学院"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                style="@style/xiang_ge"
                 android:id="@+id/ge_yuan1" />
             <Spinner
                 android:text="2016.10.15"
@@ -168,19 +166,17 @@
                 android:id="@+id/ge_yuan" />
         </TableRow>
         <View
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="85dp"
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="?attr/colorPrimary" />
+            android:background="#000000" />
         <TableRow>
 
             <TextView
                 android:text="年级"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                style="@style/xiang_ge"
                 android:id="@+id/ge_grade1" />
 
             <Spinner
@@ -193,18 +189,16 @@
                 android:id="@+id/ge_grade" />
         </TableRow>
         <View
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="85dp"
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="?attr/colorPrimary" />
+            android:background="#000000" />
         <TableRow>
             <TextView
-                android:text="手机信息"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:text="手机"
+                style="@style/xiang_ge"
                 android:id="@+id/ge_phone1" />
             <TextView
 
@@ -216,18 +210,16 @@
                 android:id="@+id/ge_phone" />
         </TableRow>
         <View
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="85dp"
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="?attr/colorPrimary"/>
+            android:background="#000000"/>
         <TableRow>
             <TextView
                 android:text="学号"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                style="@style/xiang_ge"
                 android:id="@+id/ge_num1" />
 
             <TextView
@@ -240,18 +232,16 @@
                 android:id="@+id/ge_num" />
         </TableRow>
         <View
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="85dp"
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="?attr/colorPrimary" />
+            android:background="#000000" />
         <TableRow>
             <TextView
                 android:text="姓名"
-                android:layout_marginLeft="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                style="@style/xiang_ge"
                 android:id="@+id/ge_name1" />
             <TextView
 
@@ -262,19 +252,34 @@
                 android:textColor="#000000"
                 android:id="@+id/ge_name" />
         </TableRow>
+        <View
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="85dp"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="1dp"
+            android:layout_height="1dp"
+            android:background="#000000" />
     </TableLayout>
 
     <View
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="20dp"
+         />
+    <View
+        android:paddingTop="40dp"
+        android:layout_marginRight="25dp"
+
         android:layout_width="fill_parent"
         android:layout_marginTop="1dp"
         android:layout_height="1dp"
         android:background="?attr/colorPrimary" />
 
-
     <TextView
         android:layout_marginTop="20dp"
         android:text="修改学号和姓名请联系管理员"
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="45dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/biao_z"
