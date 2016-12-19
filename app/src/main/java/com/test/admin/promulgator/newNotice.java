@@ -27,7 +27,7 @@ public class newNotice extends AppCompatActivity {
         setContentView(R.layout.activity_new_notice);
 
         imTitle = (EditText)findViewById(R.id.imTitle);
-        imOrganizer = (EditText)findViewById(R.id.imOrganizer);
+        //imOrganizer = (EditText)findViewById(R.id.imOrganizer);
         imContent = (EditText)findViewById(R.id.imContent);
         imAudiences = (EditText)findViewById(R.id.imAudiences);
         imPushScope = (EditText)findViewById(R.id.imPushScope);
