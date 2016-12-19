@@ -143,7 +143,7 @@ public class loginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }, 0, text1.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-       // textView1.setText(spannableString1);
+        textView1.setText(spannableString1);
         textView1.setMovementMethod(LinkMovementMethod.getInstance());
 
         noLine mNoUnderlineSpan = new noLine();
