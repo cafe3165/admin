@@ -7,13 +7,13 @@
     <color name="littleGray">#cdcfd6</color>
     <!--<color name="colorPrimaryDark">#303F9F</color>-->
     <!--<color name="colorAccent">#FF4081</color>-->
-
+    <color name="colorhui">#747477</color>
 
     <!--
     -->
 
     <!---->
-
+<color name="beijinghui">#f7f7f9</color>
 
     <color name="tou">#f00</color>
     <color name="white">#FFFFFF</color><!--白色 -->
