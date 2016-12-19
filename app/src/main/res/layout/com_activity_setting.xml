@@ -2,91 +2,123 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#f7f7f9"
     android:orientation="vertical">
+    <!--<LinearLayout-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="?attr/colorPrimary"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--&gt;-->
 
 
+    <!--<TextView-->
+    <!--android:id="@+id/view_titile"-->
+    <!--android:gravity="center"-->
+    <!--android:text="设置"-->
+    <!--android:textSize="@dimen/biao_z"-->
+    <!--android:textColor="#FFFFFF"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--/>-->
+    <!--&lt;!&ndash; 定义返回按钮 &ndash;&gt;-->
+
+    <!--</LinearLayout>-->
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#546E7A"
+        android:background="#f7f7f9"
         android:orientation="vertical">
 
+        <View  android:layout_height="100px"
+            android:layout_width="match_parent"
+            android:background="#f7f7f9"
+            />
         <LinearLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
             android:padding="10dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="夜间模式"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:textSize="17sp"/>
             <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:button="@drawable/check_selector"/>
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
             android:gravity="center_vertical"
             android:padding="10dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="接收推送"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:textSize="17sp"/>
             <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:button="@drawable/check_selector"/>
         </LinearLayout>
+        <View  android:layout_height="100px"
+            android:layout_width="match_parent"
+            android:background="#f7f7f9"
+            />
         <LinearLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
             android:gravity="center_vertical"
             android:padding="10dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="功能隐藏"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
             android:gravity="center_vertical"
             android:padding="10dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="账号绑定"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
             android:gravity="center_vertical"
             android:padding="10dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="意见反馈"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
         </LinearLayout>
-
+        <View  android:layout_height="100px"
+            android:layout_width="match_parent"
+            android:background="#f7f7f9"
+            />
         <LinearLayout android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
             android:gravity="center_vertical"
             android:padding="10dp">
             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="账号安全"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
