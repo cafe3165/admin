@@ -47,13 +47,13 @@
                         <Button
                             android:id="@+id/ge_edit"
                             android:text="编辑"
-                            android:layout_marginTop="48dp"
-                            android:layout_width="86dp"
-                            android:layout_height="35dp"
-                            android:textSize="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:textSize="12dp"
                             android:layout_marginLeft="70dp"
                             android:background="#ffffff"
-                            android:drawableLeft="@drawable/edit48"
+                            android:drawableLeft="@drawable/edit32"
                             android:textColor="#000000"
                             />
 
@@ -108,11 +108,12 @@
 
                 <ImageButton
                     android:id="@+id/my_apply"
-                    android:layout_width="50dp"
+                    android:layout_width="120dp"
                    android:layout_marginLeft="150dp"
                     android:layout_height="50dp"
+
                     android:background="#ffffff"
-                    android:src="@drawable/more" />
+                    android:src="@drawable/more32" />
             </TableRow>
             <View
                android:layout_height="3dp"
@@ -128,13 +129,11 @@ android:layout_marginLeft="10dp"
 
                 <ImageButton
                     android:id="@+id/my_applied"
-                    android:layout_width="100dp"
+                    android:layout_width="30dp"
                     android:layout_marginLeft="150dp"
                     android:layout_height="match_parent"
-
-
                     android:background="#ffffff"
-                    android:src="@drawable/more" />
+                    android:src="@drawable/more32" />
             </TableRow>
 
             <View
