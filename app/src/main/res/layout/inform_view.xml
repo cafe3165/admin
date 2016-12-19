@@ -40,7 +40,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/frame_gray"
+        android:background="#fff"
         android:stretchColumns="2"
         >
         <TableRow>
@@ -51,7 +51,7 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_biao1" />
             <TextView
                 android:layout_marginLeft="50dp"
@@ -59,14 +59,14 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_biao" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#747477" />
         <TableRow>
             <TextView
                 android:text="通知方"
@@ -75,7 +75,7 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_fang1" />
             <TextView
                 android:layout_marginLeft="50dp"
@@ -83,14 +83,14 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_fang" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#747477" />
         <TableRow>
             <TextView
                 android:text="通知时间"
@@ -99,7 +99,7 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_time1" />
             <TextView
                 android:layout_marginLeft="50dp"
@@ -107,15 +107,16 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_time" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#747477" />
         <TableRow>
+
             <TextView
                 android:text="通知内容"
                 android:layout_marginLeft="50dp"
@@ -123,15 +124,16 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_nei1" />
+
             <TextView
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_nei" />
         </TableRow>
 
@@ -139,7 +141,7 @@
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#747477" />
         <TableRow>
 
             <TextView
@@ -149,7 +151,7 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_shouzhong1" />
 
             <TextView
@@ -158,18 +160,18 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:textSize="@dimen/biao_z"
-                android:textColor="#000000"
+                android:textColor="#747477"
                 android:id="@+id/inform_shouzhong" />
         </TableRow>
         <View
             android:layout_width="fill_parent"
             android:layout_marginTop="1dp"
             android:layout_height="1dp"
-            android:background="#000000" />
+            android:background="#747477" />
     </TableLayout>
     <View
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:background="#FFFAFA"
+        android:background="#f7f7f9"
         />
 </LinearLayout>

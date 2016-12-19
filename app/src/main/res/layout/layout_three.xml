@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background_1to4">
+    android:background="#f7f7f9">
     <!-- padding 内边距   layout_margin 外边距
   		android:layout_alignParentTop 布局的位置是否处于顶部 -->
 
@@ -73,7 +73,7 @@
             android:id="@+id/signin_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#FF72CAE1"
+            android:background="#fff"
             android:text="修改"
             android:layout_marginRight="12dp"
             android:layout_marginEnd="12dp"
@@ -106,7 +106,7 @@
                 android:id="@+id/signout_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#FF72CAE1"
+                android:background="#fff"
                 android:text="修改" />
         </TableRow>
     </TableLayout>

@@ -40,9 +40,6 @@
         <activity android:name=".login.Registered" />
         <activity android:name=".promulgator.settingAct" />
         <activity android:name=".promulgator.headAct" />
-        <activity android:name=".promulgator.Main2Activity" />
-        <activity android:name=".promulgator.Main3Activity" />
-        <activity android:name=".promulgator.Main4Activity" />
         <activity android:name=".promulgator.newActivity" />
         <activity android:name=".promulgator.newNotice" />
         <activity android:name=".login.applyPromulgator" />
