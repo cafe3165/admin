@@ -72,7 +72,7 @@
 
 
     <style name="xiang_ge">
-        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:gravity">center</item>
