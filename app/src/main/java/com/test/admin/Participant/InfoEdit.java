@@ -3,6 +3,7 @@ package com.test.admin.Participant;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -10,8 +11,12 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.test.admin.R;
@@ -22,6 +27,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
@@ -39,8 +45,95 @@ public class InfoEdit extends AppCompatActivity {
         setContentView(R.layout.com_activity_info_edit);
 
         ge_touxian=(ImageView)findViewById(R.id.ge_touxian);
+        Button save = (Button)findViewById(R.id.ge_edit_baocun);
         Button button=(Button) findViewById(R.id.ge_edit_quxiao);
         Button uploadhpic=(Button) findViewById(R.id.ge_touchuan);
+        final EditText ge_age = (EditText)findViewById(R.id.ge_age);
+        TextView ge_phone = (TextView) findViewById(R.id.ge_phone);
+        TextView ge_num = (TextView) findViewById(R.id.ge_num);
+        TextView ge_name = (TextView)findViewById(R.id.ge_name);
+        Spinner ge_sex = (Spinner)findViewById(R.id.ge_sex);
+        Spinner ge_yuan = (Spinner)findViewById(R.id.ge_yuan);
+        Spinner ge_grade = (Spinner)findViewById(R.id.ge_grade);
+        final String[] college = new String[1];
+        final String[] sex = new String[1];
+        final String[] grade = new String[1];
+
+        //加载头像
+//        AsParticipant par=BmobUser.getCurrentUser(AsParticipant.class);
+//        BmobFile hpic = par.getParHeadPortrait();
+//        Bitmap icon = BitmapFactory.decodeFile(hpic.getFileUrl());
+//        ge_touxian.setImageBitmap(icon);
+
+        AsParticipant par = BmobUser.getCurrentUser(AsParticipant.class);
+        ge_age.setText(par.getParAge());
+        ge_phone.setText(par.getMobilePhoneNumber());
+        ge_num.setText(par.getParStuNumber());
+        ge_name.setText(par.getParName());
+        String collegelist[] = getResources().getStringArray(R.array.xueyuan);
+        String gradelist[] = getResources().getStringArray(R.array.grade);
+        String scollege = par.getParCollege();
+        String sgrade = par.getParGrade();
+        switch (par.getParGender()){
+            case "男":
+                ge_sex.setSelection(1);break;
+            case "女":
+                ge_sex.setSelection(2);break;
+            default:
+                ge_sex.setSelection(0);break;
+        }
+        for (int i=0;i<gradelist.length;i++){
+            if (sgrade.equals(gradelist[i])){
+                ge_grade.setSelection(i);
+            }
+            else continue;
+        }
+
+        for(int i=0;i<collegelist.length;i++){
+            if (scollege.equals(collegelist[i])){
+                ge_yuan.setSelection(i);
+            }
+            else continue;
+        }
+
+        ge_yuan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String[] collgelist = getResources().getStringArray(R.array.xueyuan);
+                college[0] = collgelist[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        ge_sex.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String[] sexlist = getResources().getStringArray(R.array.sex);
+                sex[0] = sexlist[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        ge_grade.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String[] gradelist = getResources().getStringArray(R.array.grade);
+                grade[0] = gradelist[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        //取消
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +148,31 @@ public class InfoEdit extends AppCompatActivity {
                 showChoosePicDialog();
             }
         });
+
+        //保存
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AsParticipant par = new AsParticipant();
+                par.setParAge(ge_age.getText().toString());
+                par.setParCollege(college[0]);
+                par.setParGender(sex[0]);
+                par.setParGrade(grade[0]);
+                AsParticipant currentuser = BmobUser.getCurrentUser(AsParticipant.class);
+                par.update(currentuser.getObjectId(), new UpdateListener() {
+                    @Override
+                    public void done(BmobException e) {
+                        if (e==null){
+                            toast("更新成功");
+                        }
+                        else {
+                            toast("更新失败");
+                        }
+                    }
+                });
+            }
+        });
+
     }
 
     public void toast(String msg) {

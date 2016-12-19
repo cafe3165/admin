@@ -67,7 +67,7 @@ public class register1_1Activity extends AppCompatActivity {
         data.add("电气工程及自动化学院");
         data.add("马克思主义学院");
         data.add("紫金矿业学院");
-        data.add("海洋学院学院");
+        data.add("海洋学院");
         data.add("其他学院");
 
         return data;
