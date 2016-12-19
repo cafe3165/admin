@@ -52,7 +52,7 @@ public class newActivity extends AppCompatActivity {
         acPlace = (EditText)findViewById(R.id.acPlace);
         acContent = (EditText)findViewById(R.id.acContent);
         acAudiences = (EditText)findViewById(R.id.acAudiences);
-        acPushScope_1 = (EditText)findViewById(R.id.acPushScope);
+        //acPushScope_1 = (EditText)findViewById(R.id.acPushScope);
         acIssue = (Button)findViewById(R.id.acIssue);
         present = (CheckBox)findViewById(R.id.present);
         outdoors = (CheckBox)findViewById(R.id.outdoors);
