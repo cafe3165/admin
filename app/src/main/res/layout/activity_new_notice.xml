@@ -39,6 +39,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:stretchColumns="1">
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
+        <View  android:layout_height="30px"
+            android:layout_width="match_parent"
+            android:background="#f7f7f9"
+            />
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
         <TableRow>
             <TextView
                 android:layout_marginLeft="48dp"
@@ -53,7 +65,7 @@
                 android:id="@+id/imTitle"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:background="@android:drawable/alert_light_frame"
+                android:background="@null"
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="52dp"
@@ -61,7 +73,18 @@
                 >
             </EditText>
         </TableRow>
-
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
+        <View  android:layout_height="30px"
+            android:layout_width="match_parent"
+            android:background="#f7f7f9"
+            />
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
         <TableRow>
             <TextView
                 android:layout_marginLeft="48dp"
@@ -75,7 +98,7 @@
                 android:id="@+id/imAudiences"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:background="@android:drawable/alert_light_frame"
+                android:background="@null"
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="242dp"
@@ -84,7 +107,18 @@
             </EditText>
 
         </TableRow>
-
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
+        <View  android:layout_height="30px"
+            android:layout_width="match_parent"
+            android:background="#f7f7f9"
+            />
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
         <TableRow>
             <TextView
                 android:layout_marginLeft="48dp"
@@ -101,7 +135,7 @@
                 android:id="@+id/imPushScope"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:background="@android:drawable/alert_light_frame"
+                android:background="@null"
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="342dp"
@@ -110,7 +144,18 @@
             </EditText>
 
         </TableRow>
-
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
+        <View  android:layout_height="30px"
+            android:layout_width="match_parent"
+            android:background="#f7f7f9"
+            />
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
         <TableRow>
             <TextView
                 android:layout_marginLeft="48dp"
@@ -127,7 +172,7 @@
                 android:id="@+id/imContent"
                 android:layout_width="170dp"
                 android:layout_height="100dp"
-                android:background="@android:drawable/alert_light_frame"
+                android:background="@null"
                 android:textSize="15sp"
                 android:layout_x="130dp"
                 android:layout_y="137dp"
@@ -135,7 +180,18 @@
                 >
             </EditText>
         </TableRow>
-
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
+        <View  android:layout_height="30px"
+            android:layout_width="match_parent"
+            android:background="#f7f7f9"
+            />
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
         <TableRow>
             <TextView
                 android:layout_marginLeft="48dp"
@@ -147,20 +203,27 @@
                 android:layout_y="342dp"
                 >
             </TextView>
-            <EditText
-                android:id="@+id/imOrganizer"
-                android:layout_width="170dp"
-                android:layout_height="50dp"
-                android:background="@android:drawable/alert_light_frame"
-                android:layout_x="130dp"
-                android:layout_y="95dp"
-                android:layout_marginRight="58dp"
-                >
-            </EditText>
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:id="@+id/imOrganizer_1"
+                android:entries="@array/xueyuan"
+                />
 
-
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:id="@+id/imOrganizer_2"
+                android:entries="@array/grade"
+                />
         </TableRow>
-
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#747477"
+            />
         <Button
             android:layout_marginLeft="58dp"
             android:id="@+id/publish"
