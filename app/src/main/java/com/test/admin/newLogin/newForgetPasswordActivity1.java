@@ -63,11 +63,13 @@ public class newForgetPasswordActivity1 extends AppCompatActivity {
                                     @Override
                                     public void done(Integer integer, BmobException e) {
                                         if (e==null){
+                                            String phone = phonenumber.getText().toString();
                                             Toast.makeText(newForgetPasswordActivity1.this,"验证码发送成功",Toast.LENGTH_SHORT).show();
                                             Intent intent = new Intent(newForgetPasswordActivity1.this,newForgetPasswordActivity2.class);
                                             //Bundle bundle = new Bundle();
                                             //bundle.putString("phonenumber",phonenumber.getText().toString());
                                             //intent.putExtras(bundle);
+                                            intent.putExtra("phonenumber",phone);
                                             startActivity(intent);
                                             btn1.setEnabled(true);
                                         }

@@ -83,6 +83,8 @@ public class register3_1Activity extends AppCompatActivity {
                                                 bundle.putString("name",name.getText().toString());
                                                 bundle.putString("pnum",pnum.getText().toString());
                                                 intent.putExtras(bundle);
+                                                String phone = pnum.getText().toString();
+                                                intent.putExtra("pnum",phone);
                                                 startActivity(intent);
                                                 btn1.setEnabled(true);
                                             }

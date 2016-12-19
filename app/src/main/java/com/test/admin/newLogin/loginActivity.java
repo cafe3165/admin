@@ -43,7 +43,7 @@ public class loginActivity extends AppCompatActivity {
     Button btn1;
     ImageButton imgBtn1;
     TextView tv1, tv2;
-    String str;//选择的身份
+    String str = "管理员";
     String s1 = "管理员";
     String s2 = "发布者";
     String s3 = "参与者";
@@ -65,19 +65,8 @@ public class loginActivity extends AppCompatActivity {
         Spinner1.setAdapter(source);
         btn1 = (Button) findViewById(R.id.login);
         imgBtn1 = (ImageButton) findViewById(R.id.imgBtn1);
-
-        //tv1=(TextView)findViewById(tv5);
-        //tv2=(TextView)findViewById(tv6);
-
-        //par=new AsParticipant();
-        //prom=new AsProm();
-        //admin=new Asadmin();
-
         Username = (EditText) findViewById(R.id.Username);
         Password = (EditText) findViewById(R.id.Password);
-
-
-        //SpannableString ss1 = new SpannableString(str1);
 
         Spinner1.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
 
@@ -145,11 +134,16 @@ public class loginActivity extends AppCompatActivity {
         spannableString1.setSpan(new ClickableSpan() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(loginActivity.this, newForgetPasswordActivity1.class);
+                Intent intent;
+                if(str.equals("管理员")||str.equals("参与者"))
+                {
+                    intent = new Intent(loginActivity.this, newForgetPasswordActivity1.class);
+                }
+                else intent = new Intent(loginActivity.this, newEmailForgetPasswordActivity.class);
                 startActivity(intent);
             }
         }, 0, text1.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        textView1.setText(spannableString1);
+       // textView1.setText(spannableString1);
         textView1.setMovementMethod(LinkMovementMethod.getInstance());
 
         noLine mNoUnderlineSpan = new noLine();

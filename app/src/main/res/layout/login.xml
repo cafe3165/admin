@@ -61,8 +61,8 @@
                         android:layout_height="30dp"
                         android:layout_weight="3"
                         android:layout_gravity="center"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
                         android:background="@drawable/identity"/>
                 </LinearLayout>
 
@@ -90,8 +90,8 @@
                     <TextView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_gravity="center"
                         android:layout_weight="3"
                         android:background="@drawable/name"
@@ -124,8 +124,8 @@
                     <TextView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_gravity="center"
                         android:layout_weight="3"
                         android:background="@drawable/password"
@@ -175,7 +175,8 @@
                 android:id="@+id/text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="忘记密码"
+                android:text="忘记密码?"
+                android:textColorLink="@color/blue"
                 />
                 </LinearLayout>
             </LinearLayout>
