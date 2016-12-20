@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string-array name="grade">
+    <item>2020</item>
+    <item>2019</item>
+    <item>2018</item>
     <item>2017</item>
     <item>2016</item>
     <item>2015</item>

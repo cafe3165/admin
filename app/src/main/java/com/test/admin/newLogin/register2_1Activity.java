@@ -53,9 +53,6 @@ public class register2_1Activity extends AppCompatActivity {
     private List<String> getData()
     {
         List<String> data = new ArrayList<String>();
-        data.add("2009级");
-        data.add("2010级");
-        data.add("2011级");
         data.add("2012级");
         data.add("2013级");
         data.add("2014级");
@@ -65,13 +62,6 @@ public class register2_1Activity extends AppCompatActivity {
         data.add("2018级");
         data.add("2019级");
         data.add("2020级");
-        data.add("2021级");
-        data.add("2022级");
-        data.add("2023级");
-        data.add("2024级");
-        data.add("2025级");
-        data.add("2026级");
-        data.add("2027级");
 
         return data;
     }
