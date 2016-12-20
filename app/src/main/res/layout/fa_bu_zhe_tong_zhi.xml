@@ -171,7 +171,7 @@
             android:background="#747477" />
         <Button
             android:layout_marginLeft="58dp"
-            android:id="@+id/publish"
+            android:id="@+id/modify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="编辑"

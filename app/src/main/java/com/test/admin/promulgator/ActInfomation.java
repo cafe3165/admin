@@ -1,7 +1,10 @@
 package com.test.admin.promulgator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.test.admin.R;
@@ -23,6 +26,7 @@ public class ActInfomation extends BaseActivity {
     private TextView imTime;
     private TextView imContent;
     private TextView imAudiences;
+    private Button modify;
 
     //声明通知对象，保存当前查找到的活动申请对象
     private List<AsImformation> mAsImformation = new ArrayList<AsImformation>();
@@ -38,6 +42,7 @@ public class ActInfomation extends BaseActivity {
         imTime = (TextView)findViewById(R.id.inform_time);
         imContent = (TextView)findViewById(R.id.inform_nei);
         imAudiences = (TextView)findViewById(R.id.inform_shouzhong);
+        modify = (Button)findViewById(R.id.modify);
 
         //查找当前item对应的活动申请对象并返回值显示在TextView上
         BmobQuery<AsImformation> query = new BmobQuery<AsImformation>();
@@ -54,6 +59,14 @@ public class ActInfomation extends BaseActivity {
                     imContent.setText(asImformation.getImContent());
                     imAudiences.setText(asImformation.getImAudiences());
                 }
+            }
+        });
+
+        modify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ActInfomation.this,PromulgatorImformationModify.class);
+                startActivity(intent);
             }
         });
     }
