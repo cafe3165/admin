@@ -99,6 +99,8 @@
     <color name="green_dark">#1e3e4a</color>
 
     <color name="night_mask">#90000000</color>
+    <color name="colorhui">#747477</color>
+    <color name="beijinghui">#f7f7f9</color>
 
 
 </resources>
