@@ -7,7 +7,7 @@ import android.app.Application;
  * 描述
  * 版本信息，版本号 v1.0
  * 创建日期 2016/12/20
- * 版权声明 Created by ZengYinan
+ * 版权声明 Created by  牛妍辉
  */
 
 public class BaseApplication extends Application{

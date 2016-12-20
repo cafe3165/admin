@@ -1,6 +1,7 @@
 package com.test.admin.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -8,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 
 import com.test.admin.R;
 import com.test.admin.fragment.FragmentOne;
@@ -48,6 +50,35 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_setting).setOnClickListener(this);
         findViewById(R.id.btn_exit).setOnClickListener(this);
 
+        if(BaseApplication.getInstance().getIsNight()) {
+            ((Button)findViewById(R.id.btn_01)).setBackgroundColor(Color.parseColor("#202c38"));
+            ((Button)findViewById(R.id.btn_01)).setTextColor(Color.parseColor("#ffffff"));
+            ((Button)findViewById(R.id.btn_02)).setBackgroundColor(Color.parseColor("#202c38"));
+            ((Button)findViewById(R.id.btn_02)).setTextColor(Color.parseColor("#ffffff"));
+            ((Button)findViewById(R.id.btn_03)).setBackgroundColor(Color.parseColor("#202c38"));
+            ((Button)findViewById(R.id.btn_03)).setTextColor(Color.parseColor("#ffffff"));
+            ((Button)findViewById(R.id.btn_setting)).setBackgroundColor(Color.parseColor("#202c38"));
+            ((Button)findViewById(R.id.btn_setting)).setTextColor(Color.parseColor("#ffffff"));
+            ((Button)findViewById(R.id.btn_exit)).setBackgroundColor(Color.parseColor("#202c38"));
+            ((Button)findViewById(R.id.btn_exit)).setTextColor(Color.parseColor("#ffffff"));
+
+            findViewById(R.id.textView3).setBackgroundColor(Color.parseColor("#202c38"));
+
+        } else {
+            findViewById(R.id.btn_01).setBackgroundColor(Color.parseColor("#ffffff"));
+            ((Button) findViewById(R.id.btn_01)).setBackgroundColor(Color.parseColor("#ffffff"));
+            ((Button) findViewById(R.id.btn_01)).setTextColor(Color.parseColor("#000000"));
+            ((Button) findViewById(R.id.btn_02)).setBackgroundColor(Color.parseColor("#ffffff"));
+            ((Button) findViewById(R.id.btn_02)).setTextColor(Color.parseColor("#000000"));
+            ((Button) findViewById(R.id.btn_03)).setBackgroundColor(Color.parseColor("#ffffff"));
+            ((Button) findViewById(R.id.btn_03)).setTextColor(Color.parseColor("#000000"));
+            ((Button) findViewById(R.id.btn_setting)).setBackgroundColor(Color.parseColor("#ffffff"));
+            ((Button) findViewById(R.id.btn_setting)).setTextColor(Color.parseColor("#000000"));
+            ((Button) findViewById(R.id.btn_exit)).setBackgroundColor(Color.parseColor("#ffffff"));
+            ((Button) findViewById(R.id.btn_exit)).setTextColor(Color.parseColor("#000000"));
+
+            findViewById(R.id.textView3).setBackgroundColor(Color.parseColor("#ffffff"));
+        }
         //设置抽屉DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 

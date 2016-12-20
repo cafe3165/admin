@@ -1,5 +1,6 @@
 package com.test.admin.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,11 +40,12 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
 
     //声明权限申请对象，保存当前查找到的权限申请对象
     private List<AsPermissionApplying> myAsPermissionApplying = new ArrayList<AsPermissionApplying>();
-
+    private View mView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.person_detail);
+        mView = View.inflate(this, R.layout.person_detail, null);
+        setContentView(mView);
 
         setCustomTitle("权限申请详情", false);
 
@@ -56,6 +58,68 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
         perAcPermission_1 = (TextView) findViewById(R.id.acPushScope_1);
         perAcPermission_2 = (TextView) findViewById(R.id.acPushScope_2);
         perSupplement = (TextView) findViewById(R.id.proSupplement);
+
+        if(BaseApplication.getInstance().getIsNight()) {
+            perIdentity.setTextColor(Color.parseColor("#ffffff"));
+            perEmail.setTextColor(Color.parseColor("#ffffff"));
+            perTelNumber.setTextColor(Color.parseColor("#ffffff"));
+            perQQNumber.setTextColor(Color.parseColor("#ffffff"));
+            perImPermission_2.setTextColor(Color.parseColor("#ffffff"));
+            perImPermission_1.setTextColor(Color.parseColor("#ffffff"));
+            perAcPermission_2.setTextColor(Color.parseColor("#ffffff"));
+            perAcPermission_1.setTextColor(Color.parseColor("#ffffff"));
+            perSupplement.setTextColor(Color.parseColor("#ffffff"));
+            perIdentity.setBackgroundColor(Color.parseColor("#202c38"));
+            perEmail.setBackgroundColor(Color.parseColor("#202c38"));
+            perTelNumber.setBackgroundColor(Color.parseColor("#202c38"));
+            perQQNumber.setBackgroundColor(Color.parseColor("#202c38"));
+            perImPermission_2.setBackgroundColor(Color.parseColor("#202c38"));
+            perImPermission_1.setBackgroundColor(Color.parseColor("#202c38"));
+            perAcPermission_2.setBackgroundColor(Color.parseColor("#202c38"));
+            perAcPermission_1.setBackgroundColor(Color.parseColor("#202c38"));
+            perSupplement.setBackgroundColor(Color.parseColor("#202c38"));
+            mView.setBackgroundColor(Color.parseColor("#273340"));
+
+            findViewById(R.id.tv_shenfen).setBackgroundColor(Color.parseColor("#202c38"));
+            findViewById(R.id.tv_permission_shenqing).setBackgroundColor(Color.parseColor("#202c38"));
+            findViewById(R.id.tv_activity_shenqing).setBackgroundColor(Color.parseColor("#202c38"));
+            findViewById(R.id.tv_notice_shenqing).setBackgroundColor(Color.parseColor("#202c38"));
+            findViewById(R.id.tv_tel).setBackgroundColor(Color.parseColor("#202c38"));
+            findViewById(R.id.tv_email).setBackgroundColor(Color.parseColor("#202c38"));
+            findViewById(R.id.tv_qq).setBackgroundColor(Color.parseColor("#202c38"));
+            findViewById(R.id.imPushScope_1).setBackgroundColor(Color.parseColor("#202c38"));
+            findViewById(R.id.proSupplement).setBackgroundColor(Color.parseColor("#202c38"));
+        }else {
+            perIdentity.setTextColor(Color.parseColor("#000000"));
+            perEmail.setTextColor(Color.parseColor("#000000"));
+            perTelNumber.setTextColor(Color.parseColor("#000000"));
+            perQQNumber.setTextColor(Color.parseColor("#000000"));
+            perImPermission_2.setTextColor(Color.parseColor("#000000"));
+            perImPermission_1.setTextColor(Color.parseColor("#000000"));
+            perAcPermission_2.setTextColor(Color.parseColor("#000000"));
+            perAcPermission_1.setTextColor(Color.parseColor("#000000"));
+            perSupplement.setTextColor(Color.parseColor("#000000"));
+            perIdentity.setBackgroundColor(Color.parseColor("#ffffff"));
+            perEmail.setBackgroundColor(Color.parseColor("#ffffff"));
+            perTelNumber.setBackgroundColor(Color.parseColor("#ffffff"));
+            perQQNumber.setBackgroundColor(Color.parseColor("#ffffff"));
+            perImPermission_2.setBackgroundColor(Color.parseColor("#ffffff"));
+            perImPermission_1.setBackgroundColor(Color.parseColor("#ffffff"));
+            perAcPermission_2.setBackgroundColor(Color.parseColor("#ffffff"));
+            perAcPermission_1.setBackgroundColor(Color.parseColor("#ffffff"));
+            perSupplement.setBackgroundColor(Color.parseColor("#ffffff"));
+            mView.setBackgroundColor(Color.parseColor("#dedede"));
+
+            findViewById(R.id.tv_shenfen).setBackgroundColor(Color.parseColor("#ffffff"));
+            findViewById(R.id.tv_permission_shenqing).setBackgroundColor(Color.parseColor("#ffffff"));
+            findViewById(R.id.tv_activity_shenqing).setBackgroundColor(Color.parseColor("#ffffff"));
+            findViewById(R.id.tv_notice_shenqing).setBackgroundColor(Color.parseColor("#ffffff"));
+            findViewById(R.id.tv_tel).setBackgroundColor(Color.parseColor("#ffffff"));
+            findViewById(R.id.tv_email).setBackgroundColor(Color.parseColor("#ffffff"));
+            findViewById(R.id.tv_qq).setBackgroundColor(Color.parseColor("#ffffff"));
+        }
+
+
 
         //查找当前item对应的权限申请对象并返回值显示在TextView上
         BmobQuery<AsPermissionApplying> query = new BmobQuery<AsPermissionApplying>();

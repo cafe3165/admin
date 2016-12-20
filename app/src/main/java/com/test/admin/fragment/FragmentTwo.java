@@ -1,6 +1,7 @@
 package com.test.admin.fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.test.admin.R;
+import com.test.admin.activity.BaseApplication;
 import com.test.admin.activity.PersonDetail;
 import com.test.admin.activity.RefreshableView;
 import com.test.admin.adapter.PermissionAdapter;
@@ -49,6 +51,14 @@ public class FragmentTwo extends Fragment {
 
         lv_permission = (ListView) view.findViewById(R.id.lv_permission);
         refreshableView = (RefreshableView) view.findViewById(R.id.refreshable_view);
+        if(BaseApplication.getInstance().getIsNight()) {
+            view.findViewById(R.id.ll_title).setBackgroundColor(Color.parseColor("#acacac"));
+            lv_permission.setBackgroundColor(Color.parseColor("#202c38"));
+        } else {
+            view.findViewById(R.id.ll_title).setBackgroundColor(Color.parseColor("#A5C5E1"));
+            lv_permission.setBackgroundColor(Color.parseColor("#ffffff"));
+        }
+
 
         BmobQuery<AsPermissionApplying> bmobQuery = new BmobQuery<AsPermissionApplying>();
         bmobQuery.addQueryKeys("perIdentity,perSupplement");

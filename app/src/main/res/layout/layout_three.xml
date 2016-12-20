@@ -73,7 +73,7 @@
             android:id="@+id/signin_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#afadad"
+            android:background="#cac7c7"
             android:text="修改"
             android:layout_marginRight="12dp"
             android:layout_marginEnd="12dp"
@@ -82,8 +82,6 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="12dp" />
     </RelativeLayout>
-
-
 
     <TableLayout
         android:id="@+id/log_out"
@@ -96,19 +94,19 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-              <EditText
-                  android:id="@+id/userout_edit"
-                  android:layout_width="fill_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@android:drawable/alert_light_frame"
-                  android:hint="请输入您要注销的学号"
-                  android:singleLine="true" />
+            <EditText
+                android:id="@+id/userout_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_light_frame"
+                android:hint="请输入您要注销的学号"
+                android:singleLine="true" />
 
             <Button
                 android:id="@+id/signout_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#afadad"
+                android:background="#cac7c7"
                 android:text="修改" />
         </TableRow>
     </TableLayout>

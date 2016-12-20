@@ -1,6 +1,7 @@
 package com.test.admin.activity;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -49,7 +50,21 @@ public class BaseActivity extends AppCompatActivity {
 
         TextView textView = (TextView) findViewById(R.id.toolbar_title);
         textView.setText(title);
+
+
+        if(BaseApplication.getInstance().getIsNight()) {
+            mToolbar.setBackgroundColor(Color.parseColor("#222c2e"));
+            textView.setTextColor(Color.parseColor("#95abb8"));
+            getWindow().setBackgroundDrawableResource(R.drawable.night);
+            return;
+        }
+        mToolbar.setBackgroundColor(Color.parseColor("#61ABE8"));
+        textView.setTextColor(Color.parseColor("#000000"));
+        getWindow().setBackgroundDrawableResource(R.drawable.night);
+
     }
+
+
 
 
     @Override

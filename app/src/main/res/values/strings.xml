@@ -141,4 +141,7 @@
     <string name="inform_act">Sample_10_1</string>
     <string name="inform_view">Sample_10_1</string>
     <string name="activity_help">活动助手</string>
+
+    <drawable name="night">#212d2d</drawable>
+    <drawable name="day">#61ABE8</drawable>
 </resources>
