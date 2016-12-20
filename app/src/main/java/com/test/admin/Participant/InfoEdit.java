@@ -31,6 +31,7 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.DownloadFileListener;
 import cn.bmob.v3.listener.UpdateListener;
 import cn.bmob.v3.listener.UploadFileListener;
 import cn.bmob.v3.update.UpdateDialogActivity;
@@ -59,11 +60,6 @@ public class InfoEdit extends AppCompatActivity {
         final String[] sex = new String[1];
         final String[] grade = new String[1];
 
-        //加载头像
-//        AsParticipant par=BmobUser.getCurrentUser(AsParticipant.class);
-//        BmobFile hpic = par.getParHeadPortrait();
-//        Bitmap icon = BitmapFactory.decodeFile(hpic.getFileUrl());
-//        ge_touxian.setImageBitmap(icon);
 
         AsParticipant par = BmobUser.getCurrentUser(AsParticipant.class);
         ge_age.setText(par.getParAge());
@@ -95,6 +91,10 @@ public class InfoEdit extends AppCompatActivity {
             }
             else continue;
         }
+
+        //下载头像
+        BmobFile headpic = par.getParHeadPortrait();
+        downloadpic(headpic);
 
         ge_yuan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -173,6 +173,28 @@ public class InfoEdit extends AppCompatActivity {
             }
         });
 
+    }
+
+    //下载头像
+    private void downloadpic(BmobFile file) {
+        File saveFile = new File(Environment.getExternalStorageDirectory(),file.getFilename());
+        file.download(saveFile, new DownloadFileListener() {
+            @Override
+            public void done(String s, BmobException e) {
+                if (e==null){
+                    Bitmap icon = BitmapFactory.decodeFile(s);
+                    ge_touxian.setImageBitmap(icon);
+                }
+                else{
+                    toast("头像加载失败");
+                }
+            }
+
+            @Override
+            public void onProgress(Integer integer, long l) {
+
+            }
+        });
     }
 
     public void toast(String msg) {

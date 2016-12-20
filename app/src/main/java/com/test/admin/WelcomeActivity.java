@@ -5,11 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ImageView;
 
 
+import com.test.admin.bean.AsAdministrator;
+import com.test.admin.bean.AsParticipant;
+import com.test.admin.bean.AsPromulgator;
+import com.test.admin.model.AsProm;
+
+import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.helper.GsonUtil;
 
 import static com.test.admin.R.id.activity_login_register;
 import static com.test.admin.R.id.login;
@@ -23,6 +33,7 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+
         new Handler().postDelayed(new Runnable(){
     @Override
     public void run() {
@@ -30,7 +41,7 @@ public class WelcomeActivity extends AppCompatActivity {
         startActivity(intent);
         WelcomeActivity.this.finish();
 
-        Intent intent2 = new Intent(WelcomeActivity.this,com.test.admin.newLogin.loginRegisterActivity.class);
+        Intent intent2 =new Intent(WelcomeActivity.this,com.test.admin.newLogin.loginRegisterActivity.class);
         startActivity(intent2);
     }
 
@@ -71,7 +82,5 @@ public class WelcomeActivity extends AppCompatActivity {
 //        Intent intent2 = new Intent(WelcomeActivity.this,com.test.admin.login.MainActivity.class);
 //       startActivity(intent2);
 }
-//
-
 
 }
