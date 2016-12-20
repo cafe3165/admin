@@ -84,6 +84,6 @@ public class ApplicationFormViewList extends AppCompatActivity {
                 }
                 refreshableView.finishRefreshing();
             }
-        },0);
+        },7);
     }
 }
