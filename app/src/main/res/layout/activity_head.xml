@@ -44,9 +44,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/widget32"
-
-                android:text="XXXX"
+                android:id="@+id/acPermission"
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,8 +71,7 @@
                 >
             </TextView>
             <TextView
-                android:id="@+id/widget38"
-                android:text="XXXX"
+                android:id="@+id/imPermission"
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -103,8 +100,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/widget34"
-                android:text="XXXX"
+                android:id="@+id/proIdentity"
                 android:layout_marginLeft="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

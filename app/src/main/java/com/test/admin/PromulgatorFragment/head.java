@@ -10,12 +10,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.test.admin.Participant.InfoEdit;
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
 import com.test.admin.adapter.AcApplyAdapter;
 import com.test.admin.bean.AsAcApplying;
+import com.test.admin.bean.AsPromulgator;
 import com.test.admin.promulgator.newActivity;
 import com.test.admin.promulgator.newNotice;
 
@@ -25,7 +27,9 @@ import java.util.List;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
+import cn.bmob.v3.listener.QueryListener;
 
+import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
 /**
@@ -34,9 +38,11 @@ import static com.test.admin.bean.Parameters.staticObjectdId;
 
 public class head extends Fragment {
 
-    private ListView lv_activity;
-    private AcApplyAdapter mAdapter;
-    private List<AsAcApplying> asActivityList = new ArrayList<AsAcApplying>();
+    private TextView acPermission;
+    private TextView imPermission;
+    private TextView proIdentity;
+    private Button buttonAct;
+    private Button buttonNotice;
     public head() {
         // Required empty public constructor
     }
@@ -47,7 +53,27 @@ public class head extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_head, container, false);
 
-        Button buttonAct =(Button) view.findViewById(R.id.widget39);
+        acPermission = (TextView)view.findViewById(R.id.acPermission);
+        imPermission = (TextView)view.findViewById(R.id.imPermission);
+        proIdentity = (TextView)view.findViewById(R.id.proIdentity);
+        buttonAct =(Button) view.findViewById(R.id.widget39);
+        buttonNotice =(Button) view.findViewById(R.id.widget40);
+
+        pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+        BmobQuery<AsPromulgator> query  = new BmobQuery<AsPromulgator>();
+        query.getObject(pObjectdId, new QueryListener<AsPromulgator>() {
+            @Override
+            public void done(AsPromulgator asPromulgator, BmobException e) {
+
+                if(e == null){
+
+                    acPermission.setText(asPromulgator.getProAcPermission_1()/* + " " + asPromulgator.getProAcPermission_2()*/);
+                    imPermission.setText(asPromulgator.getProImPermission_1()/* + " " + asPromulgator.getProImPermission_2()*/);
+                    proIdentity.setText(asPromulgator.getProIdentity());
+                }
+            }
+        });
+
         buttonAct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +81,7 @@ public class head extends Fragment {
                 startActivity(intent);
             }
         });
-        Button buttonNotice =(Button) view.findViewById(R.id.widget40);
+
         buttonNotice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
