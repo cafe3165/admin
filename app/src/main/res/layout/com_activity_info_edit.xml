@@ -309,7 +309,16 @@
         android:textColor="#000001"
         android:background="@color/beijinghui"
         android:id="@+id/ge_editm" />
-
+    <Button
+        android:id="@+id/ge_edit_baocun"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        android:textColor="#747477"
+        android:layout_x="130dp"
+        android:layout_y="420dp"
+        >
+    </Button>
     <View
         android:layout_width="fill_parent"
         android:layout_height="match_parent"

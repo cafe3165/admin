@@ -47,7 +47,7 @@ public class InfoEdit extends BaseActivity {
         setCustomTitle("编辑资料", false);
         ge_touxian=(ImageView)findViewById(R.id.ge_touxian);
         Button save = (Button)findViewById(R.id.ge_edit_baocun);
-        Button button=(Button) findViewById(R.id.ge_edit_quxiao);
+        //Button button=(Button) findViewById(R.id.ge_edit_quxiao);
         Button uploadhpic=(Button) findViewById(R.id.ge_touchuan);
         final EditText ge_age = (EditText)findViewById(R.id.ge_age);
         TextView ge_phone = (TextView) findViewById(R.id.ge_phone);
@@ -134,12 +134,12 @@ public class InfoEdit extends BaseActivity {
         });
 
         //取消
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
 
         //上传头像
         uploadhpic.setOnClickListener(new View.OnClickListener() {
