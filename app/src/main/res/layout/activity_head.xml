@@ -130,11 +130,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/widget39"
-                android:layout_width="109dp"
+                android:layout_width="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="50dp"
                 android:layout_height="50dp"
@@ -148,7 +150,7 @@
             </Button>
             <View
                 android:layout_height="1dp"
-                android:layout_width="10dp"
+                android:layout_width="20dp"
                 ></View>
             <View
                 android:layout_width="2dp"
@@ -157,18 +159,20 @@
                 android:background="#268BFF"></View>
             <View
                 android:layout_height="1dp"
-                android:layout_width="10dp"
+                android:layout_width="20dp"
                 ></View>
+
             <Button
                 android:textSize="25dp"
                 android:id="@+id/widget40"
-                android:layout_width="109dp"
+                android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="新通知"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 style="@style/button"
                 android:textColor="#747477"
+                android:layout_marginRight="50dp"
                 android:background="@drawable/button_selector"
                 >
             </Button>
