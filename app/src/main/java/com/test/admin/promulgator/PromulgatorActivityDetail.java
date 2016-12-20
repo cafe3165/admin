@@ -122,6 +122,8 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(PromulgatorActivityDetail.this, PromulgatorActivityModify.class);
+                startActivity(intent);
             }
         });
         //结束活动按钮
