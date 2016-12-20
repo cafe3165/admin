@@ -1,6 +1,7 @@
 package com.test.admin.fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.os.Handler;
 
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
+import com.test.admin.activity.BaseApplication;
 import com.test.admin.activity.RefreshableView;
 import com.test.admin.adapter.AcApplyAdapter;
 import com.test.admin.adapter.PermissionAdapter;
@@ -58,6 +60,19 @@ public class FragmentOne extends Fragment {
         lv_activity = (ListView) view.findViewById(R.id.lv_activity);
         refreshableView = (RefreshableView) view.findViewById(R.id.refreshable_view);
 
+        if(BaseApplication.getInstance().getIsNight()) {
+            view.setBackgroundColor(Color.parseColor("#202c38"));
+            view.findViewById(R.id.ll_title).setBackgroundColor(Color.parseColor("#acacac"));
+            lv_activity.setBackgroundColor(Color.parseColor("#202c38"));
+        } else {
+            view.setBackgroundColor(Color.parseColor("#ffffff"));
+            view.findViewById(R.id.ll_title).setBackgroundColor(Color.parseColor("#A5C5E1"));
+            lv_activity.setBackgroundColor(Color.parseColor("#ffffff"));
+        }
+
+            //final Message msg = new Message();
+            //msg.what = UPDATE_TEXT;
+            //从数据库拉出活动审核列表信息，通过适配器获取信息
         BmobQuery<AsAcApplying> bmobQuery = new BmobQuery<AsAcApplying>();
         bmobQuery.addQueryKeys("objectId,acApplyTitle,acApplyContent");
         bmobQuery.findObjects(new FindListener<AsAcApplying>() {

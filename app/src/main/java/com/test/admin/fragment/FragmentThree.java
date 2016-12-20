@@ -1,5 +1,6 @@
 package com.test.admin.fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.test.admin.R;
+import com.test.admin.activity.BaseApplication;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.model.Asadmin;
 
@@ -50,6 +52,12 @@ public class FragmentThree extends Fragment {
         removeStudentNumber = (EditText)view.findViewById(R.id.userout_edit);
         modify_1 = (Button)view.findViewById(R.id.signin_button);
         modify_2 = (Button)view.findViewById(R.id.signout_button);
+
+        if(BaseApplication.getInstance().getIsNight()) {
+            view.setBackgroundColor(Color.parseColor("#202c38"));
+        } else {
+            view.setBackgroundColor(Color.parseColor("#ffffff"));
+        }
 
         modify_1.setOnClickListener(new View.OnClickListener() {
             @Override

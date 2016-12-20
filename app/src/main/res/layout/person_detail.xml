@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <TableLayout
+<TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,6 +11,7 @@
     <TableRow>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
+            android:id="@+id/tv_shenfen"
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:text="申请者身份 "
@@ -30,6 +31,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:text="邮箱  "
+            android:id="@+id/tv_email"
             android:textSize="17sp"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
@@ -45,6 +47,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:text="手机"
+            android:id="@+id/tv_tel"
             android:textSize="17sp"/>
 
         <TextView android:layout_width="match_parent" android:layout_weight="1"
@@ -62,6 +65,7 @@
             android:background="@drawable/frame_gray"
             android:padding="10dp"
             android:text="QQ "
+            android:id="@+id/tv_qq"
             android:textSize="17sp"/>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"
@@ -76,6 +80,7 @@
         android:layout_marginTop="2dp"
         android:background="@drawable/frame_gray"
         android:padding="10dp"
+        android:id="@+id/tv_notice_shenqing"
         android:text="通知权限申请"
         android:textSize="17sp"/>
     <TableRow>
@@ -98,6 +103,7 @@
         android:layout_marginTop="2dp"
         android:background="@drawable/frame_gray"
         android:padding="10dp"
+        android:id="@+id/tv_activity_shenqing"
         android:text="活动权限申请"
         android:textSize="17sp"/>
     <TableRow>
@@ -121,6 +127,7 @@
         android:layout_marginTop="2dp"
         android:background="@drawable/frame_gray"
         android:padding="10dp"
+        android:id="@+id/tv_permission_shenqing"
         android:text="权限申请补充"
         android:textSize="17sp"/>
 
