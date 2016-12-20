@@ -38,7 +38,6 @@
         <activity android:name=".login.forgetPasswordActivity" />
         <activity android:name=".login.registerActivity" />
         <activity android:name=".login.Registered" />
-        <activity android:name=".promulgator.settingAct" />
         <activity android:name=".promulgator.headAct" />
         <activity android:name=".promulgator.newActivity" />
         <activity android:name=".promulgator.newNotice" />

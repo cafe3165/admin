@@ -7,30 +7,30 @@
     android:orientation="vertical"
     tools:context="com.test.admin.promulgator.newActivity">
 
+    <include layout="@layout/include_app_bar"/>
+    <!--<LinearLayout-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--&gt;-->
 
-    <LinearLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:minHeight="?attr/actionBarSize"
-        >
 
+        <!--<TextView-->
+            <!--android:id="@+id/view_titile"-->
+            <!--android:gravity="center"-->
+            <!--android:text="活动发布"-->
+            <!--android:textSize="@dimen/biao_z"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--/>-->
+        <!--&lt;!&ndash; 定义返回按钮 &ndash;&gt;-->
 
-        <TextView
-            android:id="@+id/view_titile"
-            android:gravity="center"
-            android:text="活动详情"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-        <!-- 定义返回按钮 -->
-
-    </LinearLayout>
+    <!--</LinearLayout>-->
     <View  android:layout_height="30px"
         android:layout_width="match_parent"
         android:background="#f7f7f9"
@@ -55,8 +55,10 @@
                 android:layout_y="22dp"
                 >
             </TextView>
+
             <EditText
                 android:id="@+id/acTitle"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@null"
@@ -84,6 +86,7 @@
             </TextView>
             <EditText
                 android:id="@+id/acOrganizer"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@null"
@@ -122,6 +125,7 @@
             </TextView>
             <EditText
                 android:id="@+id/acStartTime"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@null"
@@ -150,6 +154,7 @@
 
             <EditText
                 android:id="@+id/acDeadLine"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@null"
@@ -190,6 +195,7 @@
             </TextView>
             <EditText
                 android:id="@+id/acPlace"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:textSize="15sp"
@@ -215,6 +221,7 @@
 
             <EditText
                 android:id="@+id/acContent"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:textSize="15sp"
@@ -242,6 +249,7 @@
 
             <EditText
                 android:id="@+id/acAudiences"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@null"
