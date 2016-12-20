@@ -100,7 +100,7 @@
             android:layout_width="fill_parent"
 
 
-             android:layout_height="8dp"
+             android:layout_height="17dp"
              android:layout_marginTop="1dp"
             android:background="#f7f7f9"
 
