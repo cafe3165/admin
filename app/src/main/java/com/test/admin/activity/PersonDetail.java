@@ -99,7 +99,8 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
                         myAsPermissionApplying.get(0).getPerEmail(), myAsPermissionApplying.get(0).getPerTelNumber(),
                         myAsPermissionApplying.get(0).getPerQQNumber(), myAsPermissionApplying.get(0).getPerImPermission_1(),
                         myAsPermissionApplying.get(0).getPerImPermission_2(), myAsPermissionApplying.get(0).getPerAcPermission_1(),
-                        myAsPermissionApplying.get(0).getPerAcPermission_2(), myAsPermissionApplying.get(0).getObjectId());
+                        myAsPermissionApplying.get(0).getPerAcPermission_2(), myAsPermissionApplying.get(0).getPerPassword(),
+                        myAsPermissionApplying.get(0).getObjectId());
             }
         });
 
