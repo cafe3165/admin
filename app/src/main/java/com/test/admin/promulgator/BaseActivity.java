@@ -1,14 +1,18 @@
 package com.test.admin.promulgator;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.test.admin.R;
+import com.test.admin.newLogin.loginActivity;
+import com.test.admin.newLogin.newForgetPasswordActivity1;
 
 import static com.test.admin.R.id.toolbar;
 
@@ -60,5 +64,4 @@ public class BaseActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

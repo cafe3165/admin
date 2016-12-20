@@ -5,47 +5,50 @@
     android:background="#F1F1F3"
     android:orientation="vertical">
 
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:showDividers="end"
+        android:divider="#0d0d0d"
+        android:dividerHeight="1px"
+        android:background="#faf7f7"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="我的参与"
+            android:layout_weight="1"
+            android:id="@+id/button1"
+            android:textColor="#000a0d" />
+        <View android:layout_height="fill_parent"
+            android:layout_width="1px"
+            android:background="#90909090"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/separator1" />
 
+        <Button        android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="更多详情"
+            android:id="@+id/inform_more2"
+            android:layout_weight="1"
+            android:textColor="#000a0d" />
 
-    <TableLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:background="#A5C5E1"
-        android:stretchColumns="1"
-        >
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <TextView
-                android:text="通知"
-                android:layout_marginLeft="10dp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#000000"
-
-                />
-            <TextView
-                android:text="更多"
-                android:layout_marginLeft="250dp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#000000"
-                android:id="@+id/inform_more2"
-                />
-
-        </TableRow>
-
-
-    </TableLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#7b7676"
+        />
 
     <ListView android:id="@+id/p_activity"
         android:background="#ffffff"
+        android:divider="#0d0d0d"
+        android:dividerHeight="1px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

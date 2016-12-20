@@ -3,12 +3,14 @@ package com.test.admin.PromulgatorFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.test.admin.Participant.ImformViewActivity;
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
 import com.test.admin.adapter.AcApplyAdapter;
@@ -64,6 +66,16 @@ public class YiFaBuTongZhi extends Fragment {
 
                     lv_imformation.setAdapter(myImformationAdapter);
                 }
+            }
+        });
+
+        lv_imformation.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getActivity(), ImformViewActivity.class));
+
+                AsImformation asImformation  = asImformationsList.get(position);
+                staticObjectdId = asImformation.getObjectId().toString();
             }
         });
 
