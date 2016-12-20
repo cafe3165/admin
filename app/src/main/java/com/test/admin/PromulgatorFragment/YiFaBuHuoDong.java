@@ -13,10 +13,12 @@ import android.widget.ListView;
 import com.test.admin.Participant.ViewActivity;
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
+import com.test.admin.activity.RefreshableView;
 import com.test.admin.adapter.AcApplyAdapter;
 import com.test.admin.adapter.ActivityAdapter;
 import com.test.admin.bean.AsAcApplying;
 import com.test.admin.bean.AsActivity;
+import com.test.admin.bean.AsPermissionApplying;
 import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsActi;
 import com.test.admin.promulgator.PromulgatorActivityDetail;
@@ -31,6 +33,7 @@ import cn.bmob.v3.listener.FindListener;
 
 import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
+import static com.test.admin.model.Function.showToast;
 
 /**
  *发布者已发布活动列表
@@ -41,6 +44,7 @@ public class YiFaBuHuoDong extends Fragment {
     private ListView lv_activity;
     private ActivityAdapter myActivityAdapter;
     private List<AsActivity> asActivityList = new ArrayList<AsActivity>();
+    private RefreshableView refreshableView;
 
     public YiFaBuHuoDong() {
         // Required empty public constructor
@@ -55,6 +59,7 @@ public class YiFaBuHuoDong extends Fragment {
         lv_activity = (ListView) view.findViewById(R.id.lv_activity);
 
         pObjectdId = (String) AsPromulgator.getObjectByKey("objectId");
+        refreshableView = (RefreshableView) view.findViewById(R.id.refreshable_view);
 
         BmobQuery<AsActivity> eq1 = new BmobQuery<AsActivity>();
         eq1.addWhereEqualTo("acPromulgator", pObjectdId);
@@ -89,11 +94,41 @@ public class YiFaBuHuoDong extends Fragment {
             }
         });
 
+        refreshableView.setOnRefreshListener(new RefreshableView.PullToRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                try{
+                    Thread.sleep(2000);
+                    BmobQuery<AsActivity> eq1 = new BmobQuery<AsActivity>();
+                    eq1.addWhereEqualTo("acPromulgator", pObjectdId);
+                    BmobQuery<AsActivity> eq2 = new BmobQuery<AsActivity>();
+                    eq2.addWhereEqualTo("acStatus",true);
+                    List<BmobQuery<AsActivity>> andQuery = new ArrayList<BmobQuery<AsActivity>>();
+                    andQuery.add(eq1);
+                    andQuery.add(eq2);
+                    BmobQuery<AsActivity> query = new BmobQuery<AsActivity>();
+                    query.and(andQuery);
+                    query.findObjects(new FindListener<AsActivity>() {
+                        @Override
+                        public void done(List<AsActivity> list, BmobException e) {
+
+                            if (e == null) {
+                                asActivityList.clear();
+                                asActivityList.addAll(list);
+                                myActivityAdapter.notifyDataSetChanged();
+                                showToast("刷新成功");
+                            }
+                        }
+                    });
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                refreshableView.finishRefreshing();
+            }
+        },0);
         return view;
     }
-
-
-
 }
 
 
