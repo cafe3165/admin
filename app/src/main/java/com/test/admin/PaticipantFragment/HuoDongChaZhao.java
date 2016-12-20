@@ -49,9 +49,16 @@ public class HuoDongChaZhao extends Fragment {
         lv_activity = (ListView)view.findViewById(R.id.itemList);
         refreshableView = (RefreshableView) view.findViewById(R.id.refreshable_view);
 
-        BmobQuery<AsActivity> bmobQuery = new BmobQuery<AsActivity>();
-        bmobQuery.addQueryKeys("objectId,acTitle,acContent");
-        bmobQuery.findObjects(new FindListener<AsActivity>() {
+        BmobQuery<AsActivity> eq1 = new BmobQuery<AsActivity>();
+        eq1.addQueryKeys("objectId,acTitle,acContent");
+        BmobQuery<AsActivity> eq2 = new BmobQuery<AsActivity>();
+        eq2.addWhereEqualTo("acStatus",true);
+        List<BmobQuery<AsActivity>> andQuery = new ArrayList<BmobQuery<AsActivity>>();
+        andQuery.add(eq1);
+        andQuery.add(eq2);
+        BmobQuery<AsActivity> query = new BmobQuery<AsActivity>();
+        query.and(andQuery);
+        query.findObjects(new FindListener<AsActivity>() {
             @Override
             public void done(List<AsActivity> list, BmobException e) {
 
