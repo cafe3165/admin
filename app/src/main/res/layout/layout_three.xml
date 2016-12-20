@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:padding="15dip"
         android:layout_margin="15dip"
-        android:background="@drawable/background_1to4_div" >
+        android:background="@drawable/bk" >
         <!-- 手机 -->
         <TextView
             android:id="@+id/login_phNum_input"
@@ -73,7 +73,7 @@
             android:id="@+id/signin_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#fff"
+            android:background="#afadad"
             android:text="修改"
             android:layout_marginRight="12dp"
             android:layout_marginEnd="12dp"
@@ -83,13 +83,15 @@
             android:layout_marginTop="12dp" />
     </RelativeLayout>
 
+
+
     <TableLayout
         android:id="@+id/log_out"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="15dip"
         android:layout_margin="15dip"
-        android:background="@drawable/background_1to4_div" >
+        android:background="@drawable/bk" >
         <!-- 账号注销 -->
         <TableRow
             android:layout_width="match_parent"
@@ -106,7 +108,7 @@
                 android:id="@+id/signout_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#fff"
+                android:background="#afadad"
                 android:text="修改" />
         </TableRow>
     </TableLayout>
