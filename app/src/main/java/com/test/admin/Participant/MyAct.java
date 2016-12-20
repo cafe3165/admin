@@ -13,6 +13,7 @@ import com.test.admin.adapter.ApplicationFormAdapter;
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPromulgator;
+import com.test.admin.model.AsActi;
 import com.test.admin.promulgator.PromulgatorActivityDetail;
 
 import java.util.ArrayList;
@@ -37,29 +38,39 @@ public class MyAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_activity_my);
 
-        lv_activity = (ListView) findViewById(R.id.lv_activity);
-        lv_activity.setAdapter(mActivityAdapter);
+        lv_activity = (ListView) findViewById(R.id.itemList);
 
         pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
 
-        BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
+        final BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
         query.getObject(pObjectdId, new QueryListener<AsParticipant>() {
             @Override
-            public void done(AsParticipant asParticipant, BmobException e) {
+            public void done(final AsParticipant asParticipant, BmobException e) {
 
                 if(e == null) {
                     for(int i = 0; i < asParticipant.getParAcId().size(); i ++) {
 
+                        final int count = i;
                         BmobQuery<AsActivity> eq1 = new BmobQuery<AsActivity>();
-                        eq1.getObject(asParticipant.getParAcId().get(i), new QueryListener<AsActivity>() {
+                        eq1.addWhereEqualTo("objectId",asParticipant.getParAcId().get(i));
+                        BmobQuery<AsActivity> eq2 = new BmobQuery<AsActivity>();
+                        eq2.addWhereEqualTo("acStatus",true);
+                        List<BmobQuery<AsActivity>> andQuery = new ArrayList<BmobQuery<AsActivity>>();
+                        andQuery.add(eq1);
+                        andQuery.add(eq2);
+                        BmobQuery<AsActivity> query1 = new BmobQuery<AsActivity>();
+                        query1.and(andQuery);
+                        query1.findObjects(new FindListener<AsActivity>() {
                             @Override
-                            public void done(AsActivity asActivity, BmobException e) {
+                            public void done(List<AsActivity> list, BmobException e) {
 
                                 if(e == null) {
 
-                                    asActivityList.add(asActivity);
-                                    mActivityAdapter = new ActivityAdapter(MyAct.this,asActivityList);
-                                    mActivityAdapter.notifyDataSetChanged();
+                                    asActivityList.addAll(list);
+                                    if(asParticipant.getParAcId().size() == count + 1){
+                                        mActivityAdapter = new ActivityAdapter(MyAct.this,asActivityList);
+                                        lv_activity.setAdapter(mActivityAdapter);
+                                    }
                                 }
                             }
                         });

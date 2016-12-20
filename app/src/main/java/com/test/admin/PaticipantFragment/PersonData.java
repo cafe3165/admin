@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.test.admin.Participant.HistoryAct;
 import com.test.admin.Participant.InfoEdit;
 import com.test.admin.R;
 import com.test.admin.activity.PersonDetail;
@@ -91,7 +92,7 @@ public class PersonData extends Fragment {
         Ibutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),MyAct.class);
+                Intent intent=new Intent(getActivity(),HistoryAct.class);
                 startActivity(intent);
             }
         });
