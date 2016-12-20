@@ -13,6 +13,7 @@ import com.test.admin.adapter.ActivityAdapter;
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPermissionApplying;
+import com.test.admin.promulgator.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 import static com.test.admin.model.Function.showToast;
 
-public class HistoryAct extends AppCompatActivity {
+public class HistoryAct extends BaseActivity {
 
     private ListView lv_activity;
     private ActivityAdapter mActivityAdapter;
@@ -37,7 +38,7 @@ public class HistoryAct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_activity_history);
-
+        setCustomTitle("历史参与活动", false);
         lv_activity = (ListView) findViewById(R.id.itemList);
         refreshableView = (RefreshableView) findViewById(R.id.refreshable_view);
 

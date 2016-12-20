@@ -36,7 +36,7 @@ import cn.bmob.v3.listener.UpdateListener;
 import cn.bmob.v3.listener.UploadFileListener;
 import cn.bmob.v3.update.UpdateDialogActivity;
 
-public class InfoEdit extends AppCompatActivity {
+public class InfoEdit extends BaseActivity {
     protected static Uri tempUri;
     private ImageView ge_touxian;
 
@@ -44,7 +44,7 @@ public class InfoEdit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_activity_info_edit);
-
+        setCustomTitle("编辑资料", false);
         ge_touxian=(ImageView)findViewById(R.id.ge_touxian);
         Button save = (Button)findViewById(R.id.ge_edit_baocun);
         Button button=(Button) findViewById(R.id.ge_edit_quxiao);

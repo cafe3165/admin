@@ -17,40 +17,40 @@
         android:orientation="horizontal"
 
         >
+        <include layout="@layout/include_app_bar"/>
+        <!--<TableRow>-->
 
-        <TableRow>
+            <!--<Button-->
+                <!--android:id="@+id/ge_edit_quxiao"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_marginTop="7dp"-->
+                <!--android:layout_marginBottom="7dp"-->
+                <!--android:background="@drawable/back32"-->
+                <!--android:layout_width="30dp" />-->
 
-            <Button
-                android:id="@+id/ge_edit_quxiao"
-                android:layout_height="30dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="7dp"
-                android:background="@drawable/back32"
-                android:layout_width="30dp" />
+            <!--<TextView-->
+                <!--android:id="@+id/view_titile"-->
+                <!--android:layout_marginLeft="60dp"-->
+                <!--android:text="编辑资料"-->
+                <!--android:textSize="@dimen/biao_k"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_gravity="center"-->
 
-            <TextView
-                android:id="@+id/view_titile"
-                android:layout_marginLeft="60dp"
-                android:text="编辑资料"
-                android:textSize="@dimen/biao_k"
-                android:textColor="#FFFFFF"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
+                <!--/>-->
 
-                />
-
-            <Button
-                android:id="@+id/ge_edit_baocun"
-                android:textColor="#4c5caf"
-                android:background="@drawable/save"
-                android:layout_marginTop="7dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginBottom="7dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp" />
-        </TableRow>
+            <!--<Button-->
+                <!--android:id="@+id/ge_edit_baocun"-->
+                <!--android:textColor="#4c5caf"-->
+                <!--android:background="@drawable/save"-->
+                <!--android:layout_marginTop="7dp"-->
+                <!--android:layout_marginLeft="60dp"-->
+                <!--android:layout_marginBottom="7dp"-->
+                <!--android:layout_width="25dp"-->
+                <!--android:layout_height="25dp" />-->
+        <!--</TableRow>-->
 
 
 

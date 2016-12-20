@@ -30,7 +30,7 @@ import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 import static com.test.admin.model.Function.showToast;
 
-public class MyAct extends AppCompatActivity {
+public class MyAct extends BaseActivity {
 
     private ListView lv_activity;
     private ActivityAdapter mActivityAdapter;
@@ -41,6 +41,8 @@ public class MyAct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_activity_my);
+
+        setCustomTitle("我的报名", false);
 
         lv_activity = (ListView) findViewById(R.id.itemList);
         refreshableView = (RefreshableView) findViewById(R.id.refreshable_view);
