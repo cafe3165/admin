@@ -54,7 +54,7 @@ public class PersonData extends Fragment {
     private PermissionAdapter mAdapter;
     private List<AsPermissionApplying> asPermissionApplyingList = new ArrayList<AsPermissionApplying>();
 
-    private ImageView ge_touxaing;
+    private ImageView ge_touxain;
     private TextView ge_name;
     private TextView ge_yuan;
 
@@ -98,7 +98,7 @@ public class PersonData extends Fragment {
         });
 
         //加载头像及个人信息
-        ge_touxaing = (ImageView) view.findViewById(R.id.ge_touxiang);
+        ge_touxain = (ImageView) view.findViewById(R.id.ge_touxian);
         ge_name = (TextView) view.findViewById(R.id.ge_name);
         ge_yuan = (TextView) view.findViewById(R.id.ge_yuan);
         AsParticipant par = BmobUser.getCurrentUser(AsParticipant.class);
@@ -146,7 +146,7 @@ public class PersonData extends Fragment {
             public void done(String s, BmobException e) {
                 if (e==null){
                     Bitmap icon = BitmapFactory.decodeFile(s);
-                    ge_touxaing.setImageBitmap(icon);
+                    ge_touxain.setImageBitmap(icon);
                 }
             }
 
