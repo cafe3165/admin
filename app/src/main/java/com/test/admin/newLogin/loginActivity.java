@@ -135,12 +135,15 @@ public class loginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                if(str.equals("管理员")||str.equals("参与者"))
+                if(str.equals("参与者"))
                 {
                     intent = new Intent(loginActivity.this, newForgetPasswordActivity1.class);
+                    startActivity(intent);
                 }
-                else intent = new Intent(loginActivity.this, newEmailForgetPasswordActivity.class);
-                startActivity(intent);
+                else if(str.equals("发布者")){
+                    intent = new Intent(loginActivity.this, newEmailForgetPasswordActivity.class);
+                    startActivity(intent);
+                }
             }
         }, 0, text1.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         textView1.setText(spannableString1);
