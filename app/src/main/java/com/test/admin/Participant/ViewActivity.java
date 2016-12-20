@@ -90,19 +90,26 @@ public class ViewActivity extends AppCompatActivity {
 
         pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
 
+        BmobQuery<AsApplicationForm> eq1 = new BmobQuery<AsApplicationForm>();
+        eq1.addWhereEqualTo("apAcId",staticObjectdId);
+        BmobQuery<AsApplicationForm> eq2 = new BmobQuery<AsApplicationForm>();
+        eq2.addWhereContainsAll("apParId", Arrays.asList(pObjectdId));
+        List<BmobQuery<AsApplicationForm>> andQuery = new ArrayList<BmobQuery<AsApplicationForm>>();
+        andQuery.add(eq1);
+        andQuery.add(eq2);
         BmobQuery<AsApplicationForm> query1 = new BmobQuery<>();
-        query1.addWhereContainsAll("apParId", Arrays.asList(pObjectdId))
-                .findObjects(new FindListener<AsApplicationForm>() {
-                    @Override
-                    public void done(List<AsApplicationForm> list, BmobException e) {
+        query1.and(andQuery);
+        query1.findObjects(new FindListener<AsApplicationForm>() {
+            @Override
+            public void done(List<AsApplicationForm> list, BmobException e) {
 
-                        if(e == null){
+                if(e == null){
 
-                            if(list.size() > 0)apply.setText("取消报名");
-                            else apply.setText("报名");
-                        }
-                    }
-                });
+                    if(list.size() > 0)apply.setText("取消报名");
+                    else apply.setText("报名");
+                }
+            }
+        });
 
         apply.setOnClickListener(new View.OnClickListener() {
             @Override

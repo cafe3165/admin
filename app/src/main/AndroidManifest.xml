@@ -38,7 +38,6 @@
         <activity android:name=".login.forgetPasswordActivity" />
         <activity android:name=".login.registerActivity" />
         <activity android:name=".login.Registered" />
-        <activity android:name=".promulgator.settingAct" />
         <activity android:name=".promulgator.headAct" />
         <activity android:name=".promulgator.newActivity" />
         <activity android:name=".promulgator.newNotice" />
@@ -79,7 +78,8 @@
         <activity android:name=".newLogin.newForgetPasswordActivity2" />
         <activity android:name=".newLogin.newForgetPasswordActivity3" />
         <activity android:name=".promulgator.ApplicationFormViewList" />
-        <activity android:name=".newLogin.newEmailForgetPasswordActivity"></activity>
+        <activity android:name=".newLogin.newEmailForgetPasswordActivity" />
+        <activity android:name=".promulgator.PromulgatorActivityModify"></activity>
     </application>
 
 </manifest>

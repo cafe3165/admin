@@ -21,7 +21,7 @@ public class AsPermissionApplyingMethod {
     //审核通过
     public void applyAccess(final Button pass,final Button not_pass,String perIdentity, String perEmail, String perTelNumber, String perQQNumber,
                             String perImPushScope_1, String perImPushScope_2, String perAsPushScope_1,
-                            String perAsPushScope_2, final String perObjectId){
+                            String perAsPushScope_2, String perPassword,final String perObjectId){
 
         AsPromulgator asPromulgator = new AsPromulgator();
 
@@ -36,7 +36,7 @@ public class AsPermissionApplyingMethod {
         asPromulgator.setProAcPermission_2(perAsPushScope_2);
 
         asPromulgator.setUsername(perEmail);
-        asPromulgator.setPassword("123456");
+        asPromulgator.setPassword(perPassword);
         asPromulgator.signUp(new SaveListener<AsPromulgator>() {
 
             public void done(AsPromulgator s, BmobException e){
@@ -60,15 +60,7 @@ public class AsPermissionApplyingMethod {
                     //向权限申请者发送审核通过邮件
                     Function function = new Function();
                     function.sendEmial(s);
-                    //创建活动发布者对应的用来保存已发布活动Id或者通知Id的表
-                    /*AsPromulgator_AcImId asPromulgator_acOrImId = new AsPromulgator_AcImId();
-                    asPromulgator_acOrImId.setProId(s.getObjectId());
-                    asPromulgator_acOrImId.save(new SaveListener<String>() {
-                        @Override
-                        public void done(String s, BmobException e) {
 
-                        }
-                    });*/
                 }else{
                     //更改按钮状态
                     showToast("审核通过操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());

@@ -69,7 +69,11 @@
                 <ImageView
                     android:layout_width="200px"
                     android:layout_height="200px"
-                    android:layout_marginLeft="0dp"
+
+                    
+
+                    android:layout_marginLeft="20dp"
+
                     android:layout_marginTop="5dp"
                     android:src="@drawable/tou"
 
@@ -109,7 +113,11 @@
                 <Spinner
                     android:layout_marginLeft="80dp"
 
-                    android:layout_width="40dp"
+
+                    
+
+                    android:layout_width="80dp"
+
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/biao_z"
                     android:entries="@array/sex"
@@ -134,7 +142,11 @@
                     android:id="@+id/ge_age1" />
                 <EditText
                     android:layout_marginLeft="80dp"
-                    android:layout_width="40dp"
+
+                    
+
+                    android:layout_width="80dp"
+
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/biao_z"
                     android:textColor="@color/black"

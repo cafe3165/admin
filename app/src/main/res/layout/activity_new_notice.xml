@@ -7,29 +7,31 @@
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.test.admin.promulgator.newNotice">
-    <LinearLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:minHeight="?attr/actionBarSize"
-        >
+
+    <include layout="@layout/include_app_bar"/>
+    <!--<LinearLayout-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--&gt;-->
 
 
-        <TextView
-            android:id="@+id/view_titile"
-            android:gravity="center"
-            android:text="通知详情"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-        <!-- 定义返回按钮 -->
+        <!--<TextView-->
+            <!--android:id="@+id/view_titile"-->
+            <!--android:gravity="center"-->
+            <!--android:text="通知详情"-->
+            <!--android:textSize="@dimen/biao_z"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--/>-->
+        <!--&lt;!&ndash; 定义返回按钮 &ndash;&gt;-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <TableLayout
         android:id="@+id/widget136"
@@ -38,6 +40,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:background="#fff"
         android:stretchColumns="1">
         <View  android:layout_height="1px"
             android:layout_width="match_parent"
@@ -63,6 +66,7 @@
 
             <EditText
                 android:id="@+id/imTitle"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -96,6 +100,7 @@
                 android:layout_y="102dp" />
             <EditText
                 android:id="@+id/imOrganizer"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -133,6 +138,7 @@
 
             <EditText
                 android:id="@+id/imAudiences"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -170,6 +176,7 @@
 
             <EditText
                 android:id="@+id/imContent"
+                android:layout_marginLeft="10dp"
                 android:layout_width="170dp"
                 android:layout_height="100dp"
                 android:background="@null"

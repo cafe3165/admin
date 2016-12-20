@@ -11,8 +11,10 @@ import android.widget.ListView;
 
 import com.test.admin.Participant.ViewActivity;
 import com.test.admin.R;
+import com.test.admin.activity.RefreshableView;
 import com.test.admin.adapter.ActivityAdapter;
 import com.test.admin.bean.AsActivity;
+import com.test.admin.bean.AsPermissionApplying;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
 import static com.test.admin.bean.Parameters.staticObjectdId;
+import static com.test.admin.model.Function.showToast;
 
 /**
  * Created by hc6 on 2016/11/16.
@@ -32,6 +35,7 @@ public class HuoDongChaZhao extends Fragment {
     private ListView lv_activity;
     private ActivityAdapter myActivityAdapter;
     private List<AsActivity> asActivityList = new ArrayList<AsActivity>();
+    private RefreshableView refreshableView;
 
     public HuoDongChaZhao() {
         // Required empty public constructor
@@ -43,10 +47,18 @@ public class HuoDongChaZhao extends Fragment {
         View view = inflater.inflate(R.layout.com_activity_act_find, container, false);
 
         lv_activity = (ListView)view.findViewById(R.id.itemList);
+        refreshableView = (RefreshableView) view.findViewById(R.id.refreshable_view);
 
-        BmobQuery<AsActivity> bmobQuery = new BmobQuery<AsActivity>();
-        bmobQuery.addQueryKeys("objectId,acTitle,acContent");
-        bmobQuery.findObjects(new FindListener<AsActivity>() {
+        BmobQuery<AsActivity> eq1 = new BmobQuery<AsActivity>();
+        eq1.addQueryKeys("objectId,acTitle,acContent");
+        BmobQuery<AsActivity> eq2 = new BmobQuery<AsActivity>();
+        eq2.addWhereEqualTo("acStatus",true);
+        List<BmobQuery<AsActivity>> andQuery = new ArrayList<BmobQuery<AsActivity>>();
+        andQuery.add(eq1);
+        andQuery.add(eq2);
+        BmobQuery<AsActivity> query = new BmobQuery<AsActivity>();
+        query.and(andQuery);
+        query.findObjects(new FindListener<AsActivity>() {
             @Override
             public void done(List<AsActivity> list, BmobException e) {
 
@@ -69,6 +81,33 @@ public class HuoDongChaZhao extends Fragment {
                 staticObjectdId = asActivity.getObjectId().toString();
             }
         });
+
+        refreshableView.setOnRefreshListener(new RefreshableView.PullToRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                try{
+                    Thread.sleep(2000);
+                    BmobQuery<AsActivity> bmobQuery = new BmobQuery<AsActivity>();
+                    bmobQuery.addQueryKeys("objectId,acTitle,acContent");
+                    bmobQuery.findObjects(new FindListener<AsActivity>() {
+                        @Override
+                        public void done(List<AsActivity> list, BmobException e) {
+
+                            if (e == null) {
+                                asActivityList.clear();
+                                asActivityList.addAll(list);
+                                myActivityAdapter.notifyDataSetChanged();
+                                showToast("刷新成功");
+                            }
+                        }
+                    });
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                refreshableView.finishRefreshing();
+            }
+        },2);
         return view;
     }
 

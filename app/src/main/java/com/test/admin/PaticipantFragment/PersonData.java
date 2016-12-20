@@ -1,5 +1,6 @@
 package com.test.admin.PaticipantFragment;
 
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,11 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.test.admin.Participant.HistoryAct;
 import com.test.admin.Participant.InfoEdit;
 import com.test.admin.R;
 import com.test.admin.activity.PersonDetail;
@@ -23,6 +26,8 @@ import com.test.admin.adapter.PermissionAdapter;
 import com.test.admin.bean.AsParticipant;
 import com.test.admin.bean.AsPermissionApplying;
 
+
+import com.test.admin.Participant.MyAct;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -68,6 +73,26 @@ public class PersonData extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getActivity(),InfoEdit.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        ImageButton Ibutton1=(ImageButton) view.findViewById(R.id.my_apply);
+        Ibutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),MyAct.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton Ibutton2=(ImageButton) view.findViewById(R.id.my_applied);
+        Ibutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),HistoryAct.class);
                 startActivity(intent);
             }
         });
