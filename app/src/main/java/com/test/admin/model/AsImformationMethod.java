@@ -109,9 +109,9 @@ public class AsImformationMethod {
         });
     }
 
-    //活动修改
-    public void asAcModify(String imObjectdId,String imTitle, String imOrganizer, String imContent, String imAudiences,
-                           String imPushScope_1,String imPushScope_2){
+    //通知修改
+    public void asImModify(final Button modify,String imObjectdId,String imTitle, String imOrganizer,
+                           String imContent, String imAudiences, String imPushScope_1,String imPushScope_2){
 
         AsImformation asImformation = new AsImformation();
 
@@ -128,8 +128,13 @@ public class AsImformationMethod {
 
                 if(e == null){
                     showToast("编辑成功");
+                    //更改按钮状态
+                    modify.setText("编辑成功");
+                    modify.setEnabled(false);
                 }else{
-                    showToast("编辑失败");
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    modify.setEnabled(true);
                 }
             }
         });

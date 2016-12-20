@@ -26,7 +26,6 @@
         <activity
             android:name=".activity.PersonDetail"
             android:label="@string/title_activity_detail" />
-
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,16 +34,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Participant.ViewActivity" />
-
         <activity android:name=".promulgator.newActivity" />
         <activity android:name=".promulgator.newNotice" />
-
-        <activity android:name=".Participant.ComHead" />
         <activity android:name=".Participant.HistoryAct" />
         <activity android:name=".Participant.InfoEdit" />
         <activity android:name=".Participant.MyAct" />
-        <activity android:name=".Participant.ActFind" />
-        <activity android:name=".Participant.no_find" />
 
         <!-- <activity android:name=".activitypromulgator.ViewActivity" /> -->
         <activity android:name=".Participant.ImformViewActivity" />
@@ -75,7 +69,8 @@
         <activity android:name=".newLogin.newForgetPasswordActivity3" />
         <activity android:name=".promulgator.ApplicationFormViewList" />
         <activity android:name=".newLogin.newEmailForgetPasswordActivity" />
-        <activity android:name=".promulgator.PromulgatorActivityModify"></activity>
+        <activity android:name=".promulgator.PromulgatorActivityModify" />
+        <activity android:name=".promulgator.PromulgatorImformationModify"></activity>
     </application>
 
 </manifest>
