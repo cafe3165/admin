@@ -8,62 +8,41 @@
 
     >
 
-    <LinearLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
-        >
 
-        <TextView
-            android:id="@+id/view_titile"
-            android:gravity="center"
-            android:text="@string/activity_help"
-            android:textSize="@dimen/biao_k"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-        <!-- 定义返回按钮 -->
-
-    </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
         android:layout_marginTop="1dp"
         android:layout_height="1dp"
-        android:background="#FFFAFA" />
+        android:background="#ffffff" />
 
     <TableLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:background="#A5C5E1"
+        android:layout_height="fill_parent"
+
+        android:background="#f6f7f7"
         android:stretchColumns="1"
         >
 
         <TableRow>
 
 
-            <TextView
-                android:text="通知"
-                android:layout_marginLeft="10dp"
-                android:layout_width="fill_parent"
+            <Button
+                android:text="我的参与"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
                 android:textColor="#000000"
 
+
                 />
-            <TextView
-                android:text="更多"
-                android:layout_marginLeft="250dp"
-                android:layout_width="fill_parent"
+
+            <Button
+                android:text="更多详情"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:layout_weight="1"
                 android:textColor="#000000"
                 android:id="@+id/inform_more2"
                 />
