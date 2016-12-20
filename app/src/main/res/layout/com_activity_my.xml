@@ -7,30 +7,32 @@
     android:layout_height="fill_parent"
 
     >
-    <LinearLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
-        >
+    <include layout="@layout/include_app_bar"/>
+
+    <!--<LinearLayout-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
+        <!--&gt;-->
 
 
-        <TextView
-            android:id="@+id/view_titile"
-            android:gravity="center"
-            android:text="我的报名"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-        <!-- 定义返回按钮 -->
+        <!--<TextView-->
+            <!--android:id="@+id/view_titile"-->
+            <!--android:gravity="center"-->
+            <!--android:text="我的报名"-->
+            <!--android:textSize="@dimen/biao_z"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--/>-->
+        <!--&lt;!&ndash; 定义返回按钮 &ndash;&gt;-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
 
 

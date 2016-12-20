@@ -7,29 +7,31 @@
     android:background="#dedede"
     android:orientation="horizontal"
     >
-    <LinearLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:minHeight="?attr/actionBarSize"
-        >
+
+    <include layout="@layout/include_app_bar"/>
+    <!--<LinearLayout-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--&gt;-->
 
 
-        <TextView
-            android:id="@+id/view_titile"
-            android:gravity="center"
-            android:text="活动详情"
-            android:textSize="@dimen/biao_z"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-        <!-- 定义返回按钮 -->
+        <!--<TextView-->
+            <!--android:id="@+id/view_titile"-->
+            <!--android:gravity="center"-->
+            <!--android:text="活动详情"-->
+            <!--android:textSize="@dimen/biao_z"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--/>-->
+        <!--&lt;!&ndash; 定义返回按钮 &ndash;&gt;-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
     <TableRow>
         <TextView android:layout_width="match_parent" android:layout_weight="1"
             android:layout_marginTop="2dp"

@@ -7,31 +7,31 @@
     android:layout_height="fill_parent"
 
     >
+    <include layout="@layout/include_app_bar"/>
+    <!--<LinearLayout-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
+        <!--&gt;-->
 
-    <LinearLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
-        >
 
+        <!--<TextView-->
+            <!--android:id="@+id/view_titile"-->
+            <!--android:gravity="center"-->
+            <!--android:text="历史参与活动"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--/>-->
+        <!--&lt;!&ndash; 定义返回按钮 &ndash;&gt;-->
 
-        <TextView
-            android:id="@+id/view_titile"
-            android:gravity="center"
-            android:text="历史参与活动"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-        <!-- 定义返回按钮 -->
-
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <View
         android:layout_width="fill_parent"

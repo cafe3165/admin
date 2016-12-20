@@ -16,7 +16,7 @@ import cn.bmob.v3.listener.QueryListener;
 
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
-public class ImformViewActivity extends AppCompatActivity {
+public class ImformViewActivity extends BaseActivity {
 
     private TextView imTitle;
     private TextView imOrganizer;
@@ -30,7 +30,7 @@ public class ImformViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inform_view);
-
+        setCustomTitle("通知详情", false);
         imTitle = (TextView)findViewById(R.id.inform_biao);
         imOrganizer = (TextView)findViewById(R.id.inform_fang);
         imTime = (TextView)findViewById(R.id.inform_time);

@@ -25,7 +25,7 @@ import cn.bmob.v3.listener.QueryListener;
 import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
-public class ViewActivity extends AppCompatActivity {
+public class ViewActivity extends BaseActivity {
 
     private TextView acTitle;
     private TextView acStatus;
@@ -45,6 +45,8 @@ public class ViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.participant_activity_detail);
+
+        setCustomTitle("活动详情", false);
 
         acTitle = (TextView)findViewById(R.id.acTitle);
         acStatus = (TextView)findViewById(R.id.acStatus);
