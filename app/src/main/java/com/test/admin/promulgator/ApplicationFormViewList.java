@@ -28,7 +28,7 @@ import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 import static com.test.admin.model.Function.showToast;
 
-public class ApplicationFormViewList extends AppCompatActivity {
+public class ApplicationFormViewList extends BaseActivity {
 
     private ListView lv_paticipant;
     private ApplicationFormAdapter mApplicationFormAdapter;
@@ -39,6 +39,8 @@ public class ApplicationFormViewList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_pro_application_form);
+
+        setCustomTitle("报名表", false);
 
         lv_paticipant = (ListView)findViewById(R.id.lv_participant);
         refreshableView = (RefreshableView) findViewById(R.id.refreshable_view);

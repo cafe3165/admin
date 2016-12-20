@@ -15,7 +15,7 @@ import com.test.admin.model.AsImformationMethod;
 
 import static com.test.admin.bean.Parameters.pObjectdId;
 
-public class newNotice extends AppCompatActivity {
+public class newNotice extends BaseActivity {
 
     private EditText imTitle;
     private EditText imOrganizer;
@@ -35,6 +35,7 @@ public class newNotice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_notice);
 
+        setCustomTitle("发布通知", false);
 
         String[] college = this.getResources().getStringArray(R.array.xueyuan);
         String[] grade1 = this.getResources().getStringArray(R.array.grade);

@@ -27,7 +27,7 @@ import cn.bmob.v3.listener.QueryListener;
 import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
-public class PromulgatorActivityModify extends AppCompatActivity {
+public class PromulgatorActivityModify extends BaseActivity {
 
     private EditText acTitle;
     private EditText acOrganizer;
@@ -60,6 +60,8 @@ public class PromulgatorActivityModify extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.promulgator_activity_modify);
+
+        setCustomTitle("活动修改", false);
 
         String[] college = this.getResources().getStringArray(R.array.xueyuan);
         String[] grade1 = this.getResources().getStringArray(R.array.grade);
