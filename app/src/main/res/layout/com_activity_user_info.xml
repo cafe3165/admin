@@ -5,12 +5,12 @@
     android:gravity="center"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#f7f7f9"
+    android:background="#e2e7e6"
     >
 
     <View
         android:layout_width="fill_parent"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="2dp"
         android:layout_height="1dp"
         android:background="#FFFAFA" />
 
@@ -19,10 +19,11 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
+        android:background="@drawable/bk"
 
         >
         <TableRow>
+
             <ImageView
 
                 android:layout_width="200px"
@@ -30,8 +31,9 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/tou"
-                android:id="@+id/ge_touxiang" />
-            <TableLayout>
+                android:id="@+id/ge_touxian" />
+
+ <TableLayout>
                 <TableRow>
 
                     <TextView
@@ -43,6 +45,10 @@
                         android:textSize="20dp"
                         android:textColor="#000000"
                         android:id="@+id/ge_name" />
+
+
+
+
 
                     <TableRow
                         >
@@ -68,7 +74,9 @@
                             android:textColor="#747477"
                             />
                                 </TableRow>
+
                 </TableRow>
+
 
                 <TextView
                     android:layout_marginTop="5dp"
@@ -76,8 +84,12 @@
                     android:text="福州大学"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    
+
                     android:textSize="15dp"
                     android:textColor="@color/colorhui"
+
                     android:id="@+id/ge_school" />
 
                 <TextView
@@ -86,80 +98,92 @@
                     android:text="数学与计算机科学"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:textSize="15dp"
                     android:textColor="@color/colorhui"
+
                     android:id="@+id/ge_yuan" />
 
             </TableLayout>
 
         </TableRow>
+
   </TableLayout>
+
 
     <View
 
-            android:layout_width="fill_parent"
+        android:layout_width="fill_parent"
+
 
 
              android:layout_height="17dp"
              android:layout_marginTop="1dp"
             android:background="#f7f7f9"
 
+
+        />
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bk"
+        >
+
+        <TableRow>
+
+            <TextView
+                android:text="我的报名      "
+                style="@style/xiang_ge"
+                android:id="@+id/my_apply1" />
+
+            <ImageButton
+                android:id="@+id/my_apply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:layout_marginLeft="190dp"
+                android:src="@drawable/ic_arrow_right"/>
+        </TableRow>
+        <View
+            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:background="#b8b8ba"
             />
-        <TableLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
-            >
+        <TableRow>
+            <TextView
+                android:text="历史参与活动"
+                android:layout_marginLeft="10dp"
+                style="@style/xiang_ge"
+                android:id="@+id/my_applied1" />
+            <ImageButton
+                android:id="@+id/my_applied"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:layout_marginLeft="190dp"
+                android:src="@drawable/ic_arrow_right"/>
+            <!--ImageButton
+                android:id="@+id/my_applied"
+                android:layout_width="30dp"
+                android:layout_marginLeft="150dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:src="@drawable/ic_arrow_right"-->
+        </TableRow>
 
-            <TableRow>
-
-                <TextView
-                    android:text="我的报名      "
-                    style="@style/xiang_ge"
-                    android:id="@+id/my_apply1" />
-
-                <ImageButton
-                    android:id="@+id/my_apply"
-                    android:layout_width="120dp"
-                   android:layout_marginLeft="150dp"
-                    android:layout_height="50dp"
-
-                    android:background="#ffffff"
-                    android:src="@drawable/more32" />
-            </TableRow>
-            <View
-               android:layout_height="3dp"
-                android:layout_marginTop="1dp"
-                android:background="#f7f7f9"
-                />
-            <TableRow>
-                <TextView
-                    android:text="历史参与活动"
-                    android:layout_marginLeft="10dp"
-                    style="@style/xiang_ge"
-                    android:id="@+id/my_applied1" />
-
-                <ImageButton
-                    android:id="@+id/my_applied"
-                    android:layout_width="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_height="match_parent"
-                    android:background="#ffffff"
-                    android:src="@drawable/more32" />
-            </TableRow>
-
-            <View
-                android:layout_height="3dp"
-                android:layout_marginTop="1dp"
-                android:background="#f7f7f9"
-                />
+        <View
+            android:layout_height="3dp"
+            android:layout_marginTop="1dp"
+            android:background="#b8b8ba"
+            />
 
     </TableLayout>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:background="#f7f7f9"
+        android:background="#e2e7e6"
         android:id="@+id/view" />
 </LinearLayout>
