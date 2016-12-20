@@ -1,14 +1,19 @@
 package com.test.admin.Participant;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.test.admin.PaticipantFragment.HuoDongChaZhao;
 import com.test.admin.PaticipantFragment.PersonData;
@@ -22,8 +27,13 @@ import com.test.admin.fragment.FragmentSetting;
 import com.test.admin.fragment.FragmentThree;
 import com.test.admin.fragment.FragmentTwo;
 
+import java.io.File;
+
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.DownloadFileListener;
 import cn.bmob.v3.listener.QueryListener;
 
 import static com.test.admin.bean.Parameters.pObjectdId;
@@ -45,6 +55,7 @@ public class newMain extends BaseActivity implements View.OnClickListener {
     private Setting mFragmentSetting;///////////
 
     private TextView parName;//参与者姓名
+    private ImageView parheadpic;//参与者头像
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +76,11 @@ public class newMain extends BaseActivity implements View.OnClickListener {
                 }
             }
         });
+        //加载头像
+        parheadpic = (ImageView)findViewById(R.id.imageView2);
+        AsParticipant par = BmobUser.getCurrentUser(AsParticipant.class);
+        BmobFile headpic = par.getParHeadPortrait();
+        downloadpic(headpic);
 
         initFragment(savedInstanceState);
 
@@ -86,6 +102,28 @@ public class newMain extends BaseActivity implements View.OnClickListener {
         mDrawerLayout.setDrawerListener(toggle);
         toggle.syncState();
 
+    }
+
+    //下载头像
+    private void downloadpic(BmobFile file) {
+        File saveFile = new File(Environment.getExternalStorageDirectory(),file.getFilename());
+        file.download(saveFile, new DownloadFileListener() {
+            @Override
+            public void done(String s, BmobException e) {
+                if (e==null){
+                    Bitmap icon = BitmapFactory.decodeFile(s);
+                    parheadpic.setImageBitmap(icon);
+                }
+                else{
+                    Toast.makeText(newMain.this,"头像加载失败",Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onProgress(Integer integer, long l) {
+
+            }
+        });
     }
 
     private void initFragment(Bundle savedInstanceState) {

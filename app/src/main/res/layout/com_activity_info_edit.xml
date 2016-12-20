@@ -70,8 +70,6 @@
                 android:layout_height="200px"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/tou"
-
                 android:id="@+id/ge_touxian" />
 
             <Button
