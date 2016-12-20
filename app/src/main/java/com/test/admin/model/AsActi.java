@@ -116,20 +116,22 @@ public class AsActi {
     }
 
     //活动修改
-    public void asAcModify(String acObjectdId,String acAudiences, String acStart, String acPushScope1, String acPushScope2,
-                           String acPlace, String acOrgan, String acEnd, String acContent, String acTitle){
+    public void asAcModify(final Button modify,String acTitle, String acOrganizer, String acStartTime,
+                           String acDeadline, String acPlace, String acContent, String acAudiences,
+                           String acPushScope1, String acPushScope2,List<String> acLabel,String acObjectdId){
 
         AsActivity asActivity = new AsActivity();
 
+        asActivity.setAcTitle(acTitle);
+        asActivity.setAcOtganizer(acOrganizer);
+        asActivity.setAcStartTime(acStartTime);
+        asActivity.setAcDeadline(acDeadline);
+        asActivity.setAcPlace(acPlace);
+        asActivity.setAcContent(acContent);
         asActivity.setAcAudiences(acAudiences);
-        asActivity.setAcStartTime(acStart);
         asActivity.setAcPushScope_1(acPushScope1);
         asActivity.setAcPushScope_2(acPushScope2);
-        asActivity.setAcPlace(acPlace);
-        asActivity.setAcOtganizer(acOrgan);
-        asActivity.setAcDeadline(acEnd);
-        asActivity.setAcContent(acContent);
-        asActivity.setAcTitle(acTitle);
+        asActivity.setAcLabel(acLabel);
 
         asActivity.update(acObjectdId, new UpdateListener() {
             @Override
@@ -137,8 +139,13 @@ public class AsActi {
 
                 if(e == null){
                     showToast("编辑成功");
+                    //更改按钮状态
+                    modify.setText("编辑成功");
+                    modify.setEnabled(true);
                 }else{
-                    showToast("编辑失败");
+                    showToast("操作失败" + "\t" + e.getErrorCode() + ":" + e.getMessage());
+                    //更改按钮状态
+                    modify.setEnabled(true);
                 }
             }
         });

@@ -79,7 +79,8 @@
         <activity android:name=".newLogin.newForgetPasswordActivity2" />
         <activity android:name=".newLogin.newForgetPasswordActivity3" />
         <activity android:name=".promulgator.ApplicationFormViewList" />
-        <activity android:name=".newLogin.newEmailForgetPasswordActivity"></activity>
+        <activity android:name=".newLogin.newEmailForgetPasswordActivity" />
+        <activity android:name=".promulgator.PromulgatorActivityModify"></activity>
     </application>
 
 </manifest>
