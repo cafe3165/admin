@@ -33,30 +33,41 @@
                 android:id="@+id/ge_touxiang" />
             <TableLayout>
                 <TableRow>
+
                     <TextView
                         android:layout_marginLeft="20dp"
                         android:text="小明"
                         android:layout_marginTop="28dp"
-                        android:layout_width="match_parent"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         android:textColor="#000000"
                         android:id="@+id/ge_name" />
 
+                    <TableRow
+                        >
 
-                        <Button
-                            android:id="@+id/ge_edit"
-                            android:text="编辑"
+
+                    <Button
+
+                              android:id="@+id/ge_edit"
                             android:layout_marginTop="30dp"
-                            android:layout_width="70dp"
-                            android:layout_height="50dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
                             android:textSize="12dp"
-                            android:layout_marginLeft="70dp"
-                            android:background="#ffffff"
-                            android:drawableLeft="@drawable/edit32"
+                            android:layout_marginLeft="50dp"
+                            android:background="@drawable/edit32"
+
                             android:textColor="#000000"
                             />
-
+                        <TextView
+                            android:text="编辑"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="35dp"
+                            android:textSize="12dp"
+                            android:textColor="#747477"
+                            />
+                                </TableRow>
                 </TableRow>
 
                 <TextView
@@ -65,7 +76,7 @@
                     android:text="福州大学"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textColor="#000000"
                     android:id="@+id/ge_school" />
 
@@ -75,7 +86,7 @@
                     android:text="数学与计算机科学"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textColor="#000000"
                     android:id="@+id/ge_yuan" />
 
@@ -83,7 +94,8 @@
 
         </TableRow>
   </TableLayout>
-        <View
+
+    <View
 
             android:layout_width="fill_parent"
 

@@ -38,6 +38,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:background="#fff"
         android:stretchColumns="1">
         <View  android:layout_height="1px"
             android:layout_width="match_parent"
