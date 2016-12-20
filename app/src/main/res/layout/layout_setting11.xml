@@ -32,10 +32,17 @@
         android:background="#f7f7f9"
         android:orientation="vertical">
 
-        <View  android:layout_height="100px"
+        <View  android:layout_height="30px"
             android:layout_width="match_parent"
             android:background="#f7f7f9"
             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bk"
+            android:orientation="vertical">
+
+
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
@@ -61,10 +68,19 @@
             <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:button="@drawable/check_selector"/>
         </LinearLayout>
-        <View  android:layout_height="100px"
+        </LinearLayout>
+
+
+        <View  android:layout_height="50px"
             android:layout_width="match_parent"
             android:background="#f7f7f9"
             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bk"
+            android:orientation="vertical">
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
@@ -106,10 +122,18 @@
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
         </LinearLayout>
-        <View  android:layout_height="100px"
+        </LinearLayout>
+
+        <View  android:layout_height="50px"
             android:layout_width="match_parent"
             android:background="#f7f7f9"
             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bk"
+            android:orientation="vertical">
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/frame_gray_with_bg"
@@ -122,6 +146,7 @@
                 android:textSize="17sp"/>
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
