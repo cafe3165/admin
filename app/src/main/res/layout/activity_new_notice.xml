@@ -95,7 +95,7 @@
                 android:layout_x="50dp"
                 android:layout_y="102dp" />
             <EditText
-                android:id="@+id/imAudiences"
+                android:id="@+id/imOrganizer"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -125,14 +125,14 @@
                 android:id="@+id/widget140"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="通知内容"
+                android:text="通知受众"
                 android:layout_x="50dp"
                 android:layout_y="142dp"
                 >
             </TextView>
 
             <EditText
-                android:id="@+id/imPushScope"
+                android:id="@+id/imAudiences"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -162,7 +162,7 @@
                 android:id="@+id/widget141"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="通知受众"
+                android:text="通知内容"
                 android:layout_x="50dp"
                 android:layout_y="242dp"
                 >
@@ -208,7 +208,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="45dp"
-                android:id="@+id/imOrganizer_1"
+                android:id="@+id/imPushScope_1"
                 android:entries="@array/xueyuan"
                 />
 
@@ -216,7 +216,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="45dp"
-                android:id="@+id/imOrganizer_2"
+                android:id="@+id/imPushScope_2"
                 android:entries="@array/grade"
                 />
         </TableRow>
