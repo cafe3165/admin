@@ -21,7 +21,7 @@ import java.util.List;
 
 import static com.test.admin.bean.Parameters.pObjectdId;
 
-public class newActivity extends AppCompatActivity{
+public class newActivity extends BaseActivity{
 
     private EditText acTitle;
     private EditText acOrganizer;
@@ -56,6 +56,8 @@ public class newActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new);
+
+        setCustomTitle("发布活动", false);
 
         String[] college = this.getResources().getStringArray(R.array.xueyuan);
         String[] grade1 = this.getResources().getStringArray(R.array.grade);

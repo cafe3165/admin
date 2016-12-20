@@ -16,7 +16,7 @@ import cn.bmob.v3.listener.QueryListener;
 
 import static com.test.admin.bean.Parameters.staticObjectdId;
 
-public class ActInfomation extends AppCompatActivity {
+public class ActInfomation extends BaseActivity {
 
     private TextView imTitle;
     private TextView imOrganizer;
@@ -29,7 +29,9 @@ public class ActInfomation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inform_view);
+        setContentView(R.layout.fa_bu_zhe_tong_zhi);
+
+        setCustomTitle("通知详情", false);
 
         imTitle = (TextView)findViewById(R.id.inform_biao);
         imOrganizer = (TextView)findViewById(R.id.inform_fang);

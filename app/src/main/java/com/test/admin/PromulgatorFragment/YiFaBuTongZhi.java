@@ -20,6 +20,7 @@ import com.test.admin.bean.AsAcApplying;
 import com.test.admin.bean.AsImformation;
 import com.test.admin.bean.AsPermissionApplying;
 import com.test.admin.bean.AsPromulgator;
+import com.test.admin.promulgator.ActInfomation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -77,7 +78,7 @@ public class YiFaBuTongZhi extends Fragment {
         lv_imformation.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(getActivity(), ImformViewActivity.class));
+                startActivity(new Intent(getActivity(), ActInfomation.class));
 
                 AsImformation asImformation  = asImformationsList.get(position);
                 staticObjectdId = asImformation.getObjectId().toString();

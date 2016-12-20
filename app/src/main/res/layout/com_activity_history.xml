@@ -24,7 +24,7 @@
             android:id="@+id/view_titile"
             android:gravity="center"
             android:text="历史参与活动"
-            android:textSize="@dimen/biao_k"
+            android:textSize="20sp"
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

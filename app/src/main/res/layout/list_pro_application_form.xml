@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.test.admin.promulgator.newActivity">
+
+    <include layout="@layout/include_app_bar"/>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list_pro_application_form"
@@ -23,3 +32,4 @@
     </com.test.admin.activity.RefreshableView>
 
 </RelativeLayout>
+</LinearLayout>

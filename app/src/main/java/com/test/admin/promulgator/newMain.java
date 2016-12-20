@@ -140,7 +140,7 @@ public class newMain extends BaseActivity implements View.OnClickListener {
             mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).hide(mFragmentThree).show(mFragmentFour).hide(mFragmentSetting).commit();
             setCustomTitle("已结束活动", true);
         }else if (tag.equals(TAG_SETTING)) {
-            mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).show(mFragmentThree).hide(mFragmentFour).show(mFragmentSetting).commit();
+            mFragmentManager.beginTransaction().hide(mFragmentOne).hide(mFragmentTwo).hide(mFragmentThree).hide(mFragmentFour).show(mFragmentSetting).commit();
             setCustomTitle("设置", true);
         }
 

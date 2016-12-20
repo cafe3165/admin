@@ -33,7 +33,7 @@ import static com.test.admin.model.Function.showToast;
  *发布者活动详情界面
  */
 
-public class PromulgatorActivityDetail extends AppCompatActivity {
+public class PromulgatorActivityDetail extends BaseActivity {
 
     private TextView acTitle;
     private TextView acParNumbers;
@@ -55,6 +55,8 @@ public class PromulgatorActivityDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.promulgator_activity_detail);
+
+        setCustomTitle("活动详情", false);
 
         acTitle = (TextView)findViewById(R.id.acTitle);
         acParNumbers = (TextView)findViewById(R.id.parNumbers);
