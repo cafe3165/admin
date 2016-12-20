@@ -10,9 +10,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.test.admin.promulgator.ApplicationFormViewList">
 
-    <ListView android:id="@+id/lv_participant"
-        android:background="#ffffff"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <com.test.admin.activity.RefreshableView
+        android:id="@+id/refreshable_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <ListView android:id="@+id/lv_participant"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.test.admin.activity.RefreshableView>
 
 </RelativeLayout>

@@ -13,8 +13,11 @@ import android.os.Handler;
 
 import com.test.admin.R;
 import com.test.admin.activity.ActivityDetail;
+import com.test.admin.activity.RefreshableView;
 import com.test.admin.adapter.AcApplyAdapter;
+import com.test.admin.adapter.PermissionAdapter;
 import com.test.admin.bean.AsAcApplying;
+import com.test.admin.bean.AsPermissionApplying;
 import com.test.admin.model.AsAcApply;
 
 import org.json.JSONObject;
@@ -29,6 +32,7 @@ import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.ValueEventListener;
 
 import static com.test.admin.bean.Parameters.staticObjectdId;
+import static com.test.admin.model.Function.showToast;
 
 /**
  *活动审核列表
@@ -36,40 +40,10 @@ import static com.test.admin.bean.Parameters.staticObjectdId;
 
 public class FragmentOne extends Fragment {
 
-    //public static final int UPDATE_TEXT = 1;
-
     private ListView lv_activity;
     private List<AsAcApplying> asActivityList = new ArrayList<AsAcApplying>();
     public AcApplyAdapter myAcApplyAdapter;
-
-    /*public  Handler handler = new Handler(){
-
-        public void handleMessage(Message msg){
-
-            if(msg.what == UPDATE_TEXT){
-
-
-                //从数据库拉出活动审核列表信息，通过适配器获取信息
-                BmobQuery<AsAcApplying> bmobQuery = new BmobQuery<AsAcApplying>();
-                bmobQuery.addQueryKeys("objectId,acApplyTitle,acApplyContent");
-                bmobQuery.findObjects(new FindListener<AsAcApplying>() {
-                    @Override
-                    public void done(List<AsAcApplying> list, BmobException e) {
-
-                        if (e == null) {
-
-                            asActivityList.clear();
-                            asActivityList.addAll(list);
-
-                            myAcApplyAdapter = new AcApplyAdapter(getActivity(),asActivityList);
-
-                            lv_activity.setAdapter(myAcApplyAdapter);
-                        }
-                    }
-                });
-            }
-        }
-    };*/
+    private RefreshableView refreshableView;
 
     public FragmentOne() {
         // Required empty public constructor
@@ -82,10 +56,8 @@ public class FragmentOne extends Fragment {
         View view = inflater.inflate(R.layout.layout_one, container, false);
 
         lv_activity = (ListView) view.findViewById(R.id.lv_activity);
+        refreshableView = (RefreshableView) view.findViewById(R.id.refreshable_view);
 
-        //final Message msg = new Message();
-        //msg.what = UPDATE_TEXT;
-        //从数据库拉出活动审核列表信息，通过适配器获取信息
         BmobQuery<AsAcApplying> bmobQuery = new BmobQuery<AsAcApplying>();
         bmobQuery.addQueryKeys("objectId,acApplyTitle,acApplyContent");
         bmobQuery.findObjects(new FindListener<AsAcApplying>() {
@@ -112,25 +84,34 @@ public class FragmentOne extends Fragment {
             }
         });
 
-        /*BmobRealTimeData rtd = new BmobRealTimeData();
-        rtd.start(new ValueEventListener() {
+        refreshableView.setOnRefreshListener(new RefreshableView.PullToRefreshListener() {
             @Override
-            public void onConnectCompleted(Exception e) {
+            public void onRefresh() {
 
+                try{
+                    Thread.sleep(2000);
+                    BmobQuery<AsAcApplying> bmobQuery = new BmobQuery<AsAcApplying>();
+                    bmobQuery.addQueryKeys("objectId,acApplyTitle,acApplyContent");
+                    bmobQuery.findObjects(new FindListener<AsAcApplying>() {
+                        @Override
+                        public void done(List<AsAcApplying> list, BmobException e) {
+
+                            if (e == null) {
+                                asActivityList.clear();
+                                asActivityList.addAll(list);
+                                myAcApplyAdapter.notifyDataSetChanged();
+                                showToast("刷新成功");
+                            }
+                        }
+                    });
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                refreshableView.finishRefreshing();
             }
-
-            @Override
-            public void onDataChange(JSONObject jsonObject) {
-
-                handler.sendMessage(msg);
-            }
-        });
-
-        if(rtd.isConnected())rtd.subTableDelete("AsAcApplying");*/
-
+        },0);
         return view;
     }
-
 }
 
 
