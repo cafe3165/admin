@@ -8,10 +8,12 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.test.admin.R;
+import com.test.admin.activity.RefreshableView;
 import com.test.admin.adapter.ActivityAdapter;
 import com.test.admin.adapter.ApplicationFormAdapter;
 import com.test.admin.bean.AsActivity;
 import com.test.admin.bean.AsParticipant;
+import com.test.admin.bean.AsPermissionApplying;
 import com.test.admin.bean.AsPromulgator;
 import com.test.admin.model.AsActi;
 import com.test.admin.promulgator.PromulgatorActivityDetail;
@@ -26,12 +28,14 @@ import cn.bmob.v3.listener.QueryListener;
 
 import static com.test.admin.bean.Parameters.pObjectdId;
 import static com.test.admin.bean.Parameters.staticObjectdId;
+import static com.test.admin.model.Function.showToast;
 
 public class MyAct extends AppCompatActivity {
 
     private ListView lv_activity;
     private ActivityAdapter mActivityAdapter;
     private List<AsActivity> asActivityList = new ArrayList<AsActivity>();
+    private RefreshableView refreshableView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +43,10 @@ public class MyAct extends AppCompatActivity {
         setContentView(R.layout.com_activity_my);
 
         lv_activity = (ListView) findViewById(R.id.itemList);
+        refreshableView = (RefreshableView) findViewById(R.id.refreshable_view);
 
         pObjectdId = (String) AsParticipant.getObjectByKey("objectId");
-
-        final BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
+        BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
         query.getObject(pObjectdId, new QueryListener<AsParticipant>() {
             @Override
             public void done(final AsParticipant asParticipant, BmobException e) {
@@ -88,5 +92,65 @@ public class MyAct extends AppCompatActivity {
                 staticObjectdId = asActivity.getObjectId().toString();
             }
         });
+
+        refreshableView.setOnRefreshListener(new RefreshableView.PullToRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+                try{
+                    Thread.sleep(2000);
+                    BmobQuery<AsPermissionApplying> bmobQuery = new BmobQuery<AsPermissionApplying>();
+                    bmobQuery.addQueryKeys("perIdentity,perSupplement");
+                    bmobQuery.findObjects(new FindListener<AsPermissionApplying>() {
+                        @Override
+                        public void done(List<AsPermissionApplying> list, BmobException e) {
+
+                            if (e == null) {
+                                BmobQuery<AsParticipant> query = new BmobQuery<AsParticipant>();
+                                query.getObject(pObjectdId, new QueryListener<AsParticipant>() {
+                                    @Override
+                                    public void done(final AsParticipant asParticipant, BmobException e) {
+
+                                        if(e == null) {
+                                            for(int i = 0; i < asParticipant.getParAcId().size(); i ++) {
+
+                                                final int count = i;
+                                                BmobQuery<AsActivity> eq1 = new BmobQuery<AsActivity>();
+                                                eq1.addWhereEqualTo("objectId",asParticipant.getParAcId().get(i));
+                                                BmobQuery<AsActivity> eq2 = new BmobQuery<AsActivity>();
+                                                eq2.addWhereEqualTo("acStatus",true);
+                                                List<BmobQuery<AsActivity>> andQuery = new ArrayList<BmobQuery<AsActivity>>();
+                                                andQuery.add(eq1);
+                                                andQuery.add(eq2);
+                                                BmobQuery<AsActivity> query1 = new BmobQuery<AsActivity>();
+                                                query1.and(andQuery);
+                                                query1.findObjects(new FindListener<AsActivity>() {
+                                                    @Override
+                                                    public void done(List<AsActivity> list, BmobException e) {
+
+                                                        if(e == null) {
+
+                                                            asActivityList.clear();
+                                                            asActivityList.addAll(list);
+                                                            if(asParticipant.getParAcId().size() == count + 1){
+                                                                mActivityAdapter.notifyDataSetChanged();
+                                                                showToast("刷新成功");
+                                                            }
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    });
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                refreshableView.finishRefreshing();
+            }
+        },8);
     }
 }

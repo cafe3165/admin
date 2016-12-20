@@ -122,7 +122,7 @@ public class YiJieShuHuoDong extends Fragment {
                 }
                 refreshableView.finishRefreshing();
             }
-        },0);
+        },6);
         return view;
     }
 

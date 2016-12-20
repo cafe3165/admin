@@ -100,7 +100,7 @@ public class TongZhi extends Fragment {
                 }
                 refreshableView.finishRefreshing();
             }
-        },0);
+        },3);
         return view;
     }
 

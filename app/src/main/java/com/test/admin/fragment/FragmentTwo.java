@@ -102,7 +102,7 @@ public class FragmentTwo extends Fragment {
                 }
                 refreshableView.finishRefreshing();
             }
-        },0);
+        },1);
         return view;
     }
 }

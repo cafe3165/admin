@@ -109,7 +109,7 @@ public class YiFaBuTongZhi extends Fragment {
                 }
                 refreshableView.finishRefreshing();
             }
-        },0);
+        },5);
         return view;
     }
 

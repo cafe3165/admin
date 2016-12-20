@@ -107,7 +107,7 @@ public class HuoDongChaZhao extends Fragment {
                 }
                 refreshableView.finishRefreshing();
             }
-        },0);
+        },2);
         return view;
     }
 

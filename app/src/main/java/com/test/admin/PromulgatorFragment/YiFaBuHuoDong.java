@@ -126,7 +126,7 @@ public class YiFaBuHuoDong extends Fragment {
                 }
                 refreshableView.finishRefreshing();
             }
-        },0);
+        },4);
         return view;
     }
 }
