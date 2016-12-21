@@ -58,6 +58,9 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
         perAcPermission_1 = (TextView) findViewById(R.id.acPushScope_1);
         perAcPermission_2 = (TextView) findViewById(R.id.acPushScope_2);
         perSupplement = (TextView) findViewById(R.id.proSupplement);
+        pass = (Button) findViewById(R.id.actPass_button);
+        not_pass = (Button) findViewById(R.id.actNoPass_button);
+
 
         if(BaseApplication.getInstance().getIsNight()) {
             perIdentity.setTextColor(Color.parseColor("#ffffff"));
@@ -69,6 +72,10 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
             perAcPermission_2.setTextColor(Color.parseColor("#ffffff"));
             perAcPermission_1.setTextColor(Color.parseColor("#ffffff"));
             perSupplement.setTextColor(Color.parseColor("#ffffff"));
+
+            pass.setTextColor(Color.parseColor("#000000"));
+            not_pass.setTextColor(Color.parseColor("#000000"));
+
             perIdentity.setBackgroundColor(Color.parseColor("#202c38"));
             perEmail.setBackgroundColor(Color.parseColor("#202c38"));
             perTelNumber.setBackgroundColor(Color.parseColor("#202c38"));
@@ -78,6 +85,11 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
             perAcPermission_2.setBackgroundColor(Color.parseColor("#202c38"));
             perAcPermission_1.setBackgroundColor(Color.parseColor("#202c38"));
             perSupplement.setBackgroundColor(Color.parseColor("#202c38"));
+
+
+            pass.setBackgroundColor(Color.parseColor("#FF454444"));
+            not_pass.setBackgroundColor(Color.parseColor("#FF454444"));
+
             mView.setBackgroundColor(Color.parseColor("#273340"));
 
             findViewById(R.id.tv_shenfen).setBackgroundColor(Color.parseColor("#202c38"));
@@ -99,6 +111,10 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
             perAcPermission_2.setTextColor(Color.parseColor("#000000"));
             perAcPermission_1.setTextColor(Color.parseColor("#000000"));
             perSupplement.setTextColor(Color.parseColor("#000000"));
+
+            pass.setTextColor(Color.parseColor("#ffffff"));
+            not_pass.setTextColor(Color.parseColor("#ffffff"));
+
             perIdentity.setBackgroundColor(Color.parseColor("#ffffff"));
             perEmail.setBackgroundColor(Color.parseColor("#ffffff"));
             perTelNumber.setBackgroundColor(Color.parseColor("#ffffff"));
@@ -108,6 +124,10 @@ public class PersonDetail extends BaseActivity implements View.OnClickListener {
             perAcPermission_2.setBackgroundColor(Color.parseColor("#ffffff"));
             perAcPermission_1.setBackgroundColor(Color.parseColor("#ffffff"));
             perSupplement.setBackgroundColor(Color.parseColor("#ffffff"));
+
+            pass.setBackgroundColor(Color.parseColor("#488ddb"));
+            not_pass.setBackgroundColor(Color.parseColor("#488ddb"));
+
             mView.setBackgroundColor(Color.parseColor("#dedede"));
 
             findViewById(R.id.tv_shenfen).setBackgroundColor(Color.parseColor("#ffffff"));
