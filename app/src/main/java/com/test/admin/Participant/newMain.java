@@ -79,8 +79,11 @@ public class newMain extends BaseActivity implements View.OnClickListener {
         //加载头像
         parheadpic = (ImageView)findViewById(R.id.imageView2);
         AsParticipant par = BmobUser.getCurrentUser(AsParticipant.class);
-        BmobFile headpic = par.getParHeadPortrait();
-        downloadpic(headpic);
+        if (par.getParHeadPortrait()!=null){
+            BmobFile headpic = par.getParHeadPortrait();
+            downloadpic(headpic);
+        }
+
 
         initFragment(savedInstanceState);
 

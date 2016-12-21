@@ -70,20 +70,23 @@ public class InfoEdit extends BaseActivity {
         String gradelist[] = getResources().getStringArray(R.array.grade);
         String scollege = par.getParCollege();
         String sgrade = par.getParGrade();
-        switch (par.getParGender()){
-            case "男":
-                ge_sex.setSelection(1);break;
-            case "女":
-                ge_sex.setSelection(2);break;
-            default:
-                ge_sex.setSelection(0);break;
-        }
-        for (int i=0;i<gradelist.length;i++){
-            if (sgrade.equals(gradelist[i])){
-                ge_grade.setSelection(i);
+        if (par.getParGender()!=null){
+            switch (par.getParGender()){
+                case "男":
+                    ge_sex.setSelection(1);break;
+                case "女":
+                    ge_sex.setSelection(2);break;
+                default:
+                    ge_sex.setSelection(0);break;
             }
-            else continue;
+            for (int i=0;i<gradelist.length;i++){
+                if (sgrade.equals(gradelist[i])){
+                    ge_grade.setSelection(i);
+                }
+                else continue;
+            }
         }
+
 
         for(int i=0;i<collegelist.length;i++){
             if (scollege.equals(collegelist[i])){
@@ -93,8 +96,11 @@ public class InfoEdit extends BaseActivity {
         }
 
         //下载头像
-        BmobFile headpic = par.getParHeadPortrait();
-        downloadpic(headpic);
+        if (par.getParHeadPortrait()!=null){
+            BmobFile headpic = par.getParHeadPortrait();
+            downloadpic(headpic);
+        }
+
 
         ge_yuan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

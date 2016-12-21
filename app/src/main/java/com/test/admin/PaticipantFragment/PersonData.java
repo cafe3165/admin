@@ -104,8 +104,11 @@ public class PersonData extends Fragment {
         AsParticipant par = BmobUser.getCurrentUser(AsParticipant.class);
         ge_name.setText(par.getParName());
         ge_yuan.setText(par.getParCollege());
-        BmobFile headpic = par.getParHeadPortrait();
-        downloadpic(headpic);
+        if (par.getParHeadPortrait()!=null){
+            BmobFile headpic = par.getParHeadPortrait();
+            downloadpic(headpic);
+        }
+
 
 //        lv_permission = (ListView) view.findViewById(R.id.lv_permission);
 //

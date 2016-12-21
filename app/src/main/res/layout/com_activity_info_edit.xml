@@ -70,7 +70,7 @@
                     android:layout_width="200px"
                     android:layout_height="200px"
 
-                    
+
 
                     android:layout_marginLeft="20dp"
 
@@ -114,7 +114,7 @@
                     android:layout_marginLeft="80dp"
 
 
-                    
+
 
                     android:layout_width="80dp"
 
@@ -143,7 +143,7 @@
                 <EditText
                     android:layout_marginLeft="80dp"
 
-                    
+
 
                     android:layout_width="80dp"
 

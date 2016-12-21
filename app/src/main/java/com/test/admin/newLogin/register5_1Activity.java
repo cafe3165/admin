@@ -60,6 +60,7 @@ public class register5_1Activity extends AppCompatActivity {
                         par.setParCollege(bundle1.getString("college"));
                         par.setParStuNumber(bundle1.getString("stuno"));
                         par.setParName(bundle1.getString("name"));
+                        par.setPassword(newpw.getText().toString());
                         par.signUp(new SaveListener<AsParticipant>() {
                             @Override
                             public void done(AsParticipant asParticipant, BmobException e) {
@@ -68,7 +69,7 @@ public class register5_1Activity extends AppCompatActivity {
                                     Intent intent = new Intent(register5_1Activity.this,loginRegisterActivity.class);
                                     startActivity(intent);
                                 }else{
-                                    Toast.makeText(register5_1Activity.this,"注册失败",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(register5_1Activity.this,"注册失败"+e.getMessage(),Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
